@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Best Time to Visit Sri Lanka (Month-by-Month Guide) | The Trails of Ceylon"
+  description="When is the best time to visit Sri Lanka? A complete month-by-month guide to Sri Lanka's seasons, monsoons and what to expect throughout the year."
+  type="article"
+  publishDate="2025-02-10"
+>
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/mirissa-beach.jpg" alt="Golden sunset over a Sri Lanka beach — timing your visit matters" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/guides" class="hover:text-white">Guides</a><span>/</span>
+          <span class="text-white">Best Time to Visit</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Planning</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Best Time to Visit Sri Lanka</h1>
+        <div class="flex items-center gap-4 mt-3 text-white/70 text-sm">
+          <span>February 10, 2025</span><span>&bull;</span><span>11 min read</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+
+      <p>Sri Lanka is a year-round destination — but the two monsoon seasons mean that <strong>the best time to visit depends on which part of the island you're going to</strong>. This guide breaks it all down so you can plan your trip with confidence.</p>
+
+      <div class="not-prose grid sm:grid-cols-2 gap-4 my-8">
+        {[
+          { season: 'Dec – Mar', label: 'Peak Season', desc: 'Best for west & south coasts, Cultural Triangle, Hill Country', color: 'bg-green-50 border-green-200' },
+          { season: 'Apr – Jun', label: 'Shoulder Season', desc: 'East coast opens up; west coast quietens', color: 'bg-blue-50 border-blue-200' },
+          { season: 'Jul – Sep', label: 'Second Peak', desc: 'East coast is perfect; Cultural Triangle is great', color: 'bg-amber-50 border-amber-200' },
+          { season: 'Oct – Nov', label: 'Off Season', desc: 'Inter-monsoon — rain possible everywhere', color: 'bg-gray-50 border-gray-200' },
+        ].map(s => (
+          <div class={`rounded-2xl border-2 p-5 ${s.color}`}>
+            <p class="text-xs font-bold uppercase tracking-wider text-gray-500">{s.season}</p>
+            <p class="font-serif font-bold text-gray-900 text-lg mt-1">{s.label}</p>
+            <p class="text-gray-600 text-sm mt-1">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <h2>Sri Lanka's Two Seasons</h2>
+      <p>Sri Lanka has two distinct monsoons, which affect different parts of the island at different times:</p>
+      <ul>
+        <li><strong>Southwest Monsoon (May–September):</strong> Brings heavy rain to the west and south coasts, Colombo and the Hill Country.</li>
+        <li><strong>Northeast Monsoon (October–January):</strong> Affects the north and east coasts.</li>
+      </ul>
+      <p>Fortunately, when one coast is wet, the other side is usually dry — so you can always find somewhere to go.</p>
+
+      <h2>Month-by-Month Breakdown</h2>
+
+      <h3>December – March (Best Overall)</h3>
+      <p>This is Sri Lanka's peak tourist season and the best time to visit for most travellers. The south and west coasts are dry and sunny, the Hill Country is cool and clear, and the Cultural Triangle is at its most pleasant. Expect higher prices and bigger crowds.</p>
+
+      <h3>April (Shoulder Season)</h3>
+      <p>April can be unpredictable — the southwest monsoon is building, making the south and west coasts increasingly rainy. However, <strong>Sinhala New Year</strong> in mid-April is a wonderful cultural celebration. The east coast starts drying out.</p>
+
+      <h3>May – September (East Coast Season)</h3>
+      <p>The southwest monsoon makes the west and south coasts wet and windy, but the east coast — Trincomalee, Arugam Bay — is at its absolute best. <strong>Arugam Bay</strong> is in prime surfing season from June to October.</p>
+
+      <h3>October – November (Off Season)</h3>
+      <p>The inter-monsoon period brings unpredictable rain to much of the island. Prices drop significantly and crowds thin out — great for budget travellers willing to work around the weather.</p>
+
+    </article>
+  </div>
+</BaseLayout>

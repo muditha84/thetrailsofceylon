@@ -1,0 +1,92 @@
+---
+const navLinks = [
+  { href: '/places', label: 'Places to Visit' },
+  { href: '/things-to-do', label: 'Things to Do' },
+  { href: '/guides', label: 'Travel Guides' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/about', label: 'About' },
+];
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-ceylon-green-100 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 group" aria-label="The Trails of Ceylon - Home">
+        <div class="w-9 h-9 rounded-full bg-gradient-to-br from-ceylon-green-600 to-ceylon-green-800 flex items-center justify-center flex-shrink-0">
+          <span class="text-white font-serif font-bold text-sm">TC</span>
+        </div>
+        <div class="leading-tight">
+          <span class="block font-serif font-bold text-ceylon-green-900 text-lg leading-none group-hover:text-ceylon-green-700 transition-colors">The Trails of Ceylon</span>
+          <span class="block text-ceylon-gold-600 text-xs tracking-widest uppercase font-medium">Sri Lanka Travel</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+        {navLinks.map(link => (
+          <a
+            href={link.href}
+            class={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+              currentPath.startsWith(link.href)
+                ? 'text-ceylon-green-700 bg-ceylon-green-50'
+                : 'text-gray-700 hover:text-ceylon-green-700 hover:bg-ceylon-green-50'
+            }`}
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- CTA + Mobile toggle -->
+      <div class="flex items-center gap-3">
+        <a href="/guides" class="hidden sm:inline-flex items-center gap-2 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-sm font-semibold px-4 py-2 rounded-full transition-colors duration-200">
+          Plan Your Trip
+        </a>
+        <button
+          id="mobile-menu-toggle"
+          class="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white">
+    <nav class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1" aria-label="Mobile navigation">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+            currentPath.startsWith(link.href)
+              ? 'text-ceylon-green-700 bg-ceylon-green-50'
+              : 'text-gray-700 hover:text-ceylon-green-700 hover:bg-ceylon-green-50'
+          }`}
+        >
+          {link.label}
+        </a>
+      ))}
+      <a href="/guides" class="mt-2 text-center bg-ceylon-green-700 text-white text-sm font-semibold px-4 py-3 rounded-lg">
+        Plan Your Trip
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle?.addEventListener('click', () => {
+    const isOpen = !menu?.classList.contains('hidden');
+    menu?.classList.toggle('hidden', isOpen);
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+  });
+</script>

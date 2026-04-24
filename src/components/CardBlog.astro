@@ -1,0 +1,39 @@
+---
+interface Props {
+  href: string;
+  image: string;
+  title: string;
+  category: string;
+  date: string;
+  readTime: string;
+  excerpt: string;
+  author?: string;
+}
+const { href, image, title, category, date, readTime, excerpt, author = 'The Trails of Ceylon' } = Astro.props;
+---
+
+<a href={href} class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+  <div class="relative overflow-hidden aspect-[16/9]">
+    <img
+      src={image}
+      alt={title}
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+      loading="lazy"
+      decoding="async"
+      width="640"
+      height="360"
+    />
+    <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-ceylon-green-700 text-xs font-semibold px-3 py-1 rounded-full">
+      {category}
+    </span>
+  </div>
+  <div class="p-6">
+    <div class="flex items-center gap-3 text-xs text-gray-400 mb-3">
+      <span>{date}</span>
+      <span>&bull;</span>
+      <span>{readTime} read</span>
+    </div>
+    <h3 class="font-serif font-bold text-gray-900 text-lg leading-snug mb-2 group-hover:text-ceylon-green-700 transition-colors line-clamp-2">{title}</h3>
+    <p class="text-gray-500 text-sm leading-relaxed line-clamp-3">{excerpt}</p>
+  </div>
+</a>

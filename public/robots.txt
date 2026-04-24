@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.thetrailsofceylon.com/sitemap-index.xml

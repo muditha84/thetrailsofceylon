@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+import CardBlog from '../../components/CardBlog.astro';
+---
+
+<BaseLayout
+  title="The Perfect 2-Week Sri Lanka Itinerary (2025) | The Trails of Ceylon"
+  description="The ultimate 2-week Sri Lanka itinerary covering the Cultural Triangle, Hill Country, southern beaches and wildlife safaris. Day-by-day breakdown with tips."
+  type="article"
+  publishDate="2025-04-10"
+>
+
+  <!-- Hero -->
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img
+      src="/images/tea-plantation.jpg"
+      alt="Sri Lanka highland tea country — a view from the 2-week itinerary"
+      class="w-full h-full object-cover"
+      fetchpriority="high"
+      width="1600"
+      height="900"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a>
+          <span>/</span>
+          <a href="/blog" class="hover:text-white">Blog</a>
+          <span>/</span>
+          <span class="text-white">2-Week Itinerary</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Itineraries</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl max-w-3xl text-balance">The Perfect 2-Week Sri Lanka Itinerary</h1>
+        <div class="flex items-center gap-4 mt-4 text-white/70 text-sm">
+          <span>April 10, 2025</span>
+          <span>&bull;</span>
+          <span>12 min read</span>
+          <span>&bull;</span>
+          <span>By The Trails of Ceylon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Article -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_260px] gap-12">
+
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">📋 Quick Overview</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Duration', '14 days / 13 nights'],
+              ['Best For', 'First-time visitors'],
+              ['Best Time', 'Dec–April or Jul–Sep'],
+              ['Budget', 'USD $60–200/day'],
+              ['Transport', 'Mix of trains & driver'],
+              ['Difficulty', 'Easy to moderate'],
+            ].map(([k, v]) => (
+              <>
+                <dt class="font-semibold text-gray-700">{k}</dt>
+                <dd class="text-gray-600">{v}</dd>
+              </>
+            ))}
+          </dl>
+        </div>
+
+        <p>
+          Two weeks in Sri Lanka is enough time to experience the very best the island has to offer without feeling rushed. This expertly crafted itinerary takes you through <strong>ancient ruins, misty highlands, lush national parks and golden beaches</strong> — hitting every major highlight and a few hidden gems along the way.
+        </p>
+
+        <p>
+          We've designed this route to flow geographically — minimising backtracking while maximising variety. It can be adjusted to suit your budget, travel style, and interests.
+        </p>
+
+        <h2>Days 1–2: Colombo</h2>
+        <p>
+          Most international flights arrive into <strong>Colombo Bandaranaike International Airport (CMB)</strong>. Spend your first day recovering from jet lag and exploring Colombo's vibrant neighbourhoods.
+        </p>
+        <ul>
+          <li><strong>Day 1:</strong> Arrive, check in, explore Pettah market and the Dutch Hospital shopping precinct. Try hoppers and string hoppers for dinner.</li>
+          <li><strong>Day 2:</strong> Visit Gangaramaya Temple, stroll Galle Face Green at sunset, explore the National Museum. Take an evening tuk-tuk food tour.</li>
+        </ul>
+
+        <AffiliateBox
+          title="Best Hotels in Colombo"
+          description="From boutique city stays to five-star Colombo hotels — find the perfect base for your arrival."
+          buttonText="Search Colombo Hotels"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Colombo"
+          variant="hotel"
+        />
+
+        <h2>Days 3–5: Cultural Triangle (Sigiriya, Dambulla, Polonnaruwa)</h2>
+        <p>
+          Take the morning train or hire a driver to head north into the <strong>Cultural Triangle</strong> — home to Sri Lanka's most impressive ancient sites.
+        </p>
+        <ul>
+          <li><strong>Day 3:</strong> Transfer to Sigiriya. Afternoon visit to Dambulla Cave Temple. Overnight near Sigiriya.</li>
+          <li><strong>Day 4:</strong> Early morning climb of <a href="/places/sigiriya">Sigiriya Rock</a> (arrive before 7am). Afternoon at Minneriya for the famous elephant gathering.</li>
+          <li><strong>Day 5:</strong> Full day exploring <a href="/places/polonnaruwa">Polonnaruwa ancient city</a> by bicycle — one of Asia's great archaeological sites.</li>
+        </ul>
+
+        <h2>Days 6–8: Kandy & Hill Country</h2>
+        <p>
+          Head south to <strong>Kandy</strong>, Sri Lanka's cultural capital and gateway to the Hill Country.
+        </p>
+        <ul>
+          <li><strong>Day 6:</strong> Transfer to Kandy. Visit the Temple of the Tooth Relic and watch the evening Kandyan dance performance.</li>
+          <li><strong>Day 7:</strong> Take the scenic train from Kandy to Nanu Oya for <strong>Nuwara Eliya</strong>. Visit a tea factory and walk the tea estate paths.</li>
+          <li><strong>Day 8:</strong> Transfer by train or tuk-tuk to <strong>Ella</strong> — arguably the most beautiful train journey in the world. Evening walk to Little Adam's Peak.</li>
+        </ul>
+
+        <AffiliateBox
+          title="Book Your Kandy–Ella Train Ticket"
+          description="The Kandy to Ella train is one of the world's great train journeys. Book well in advance — observation class seats sell out fast."
+          buttonText="Book Train via 12Go Asia"
+          buttonHref="https://12go.asia/en/travel/kandy/ella"
+          variant="flight"
+        />
+
+        <h2>Days 9–10: Yala National Park</h2>
+        <p>
+          Travel south to <strong>Yala National Park</strong> for two days of world-class wildlife safaris.
+        </p>
+        <ul>
+          <li><strong>Day 9:</strong> Transfer to Yala. Afternoon safari — spot elephants, crocodiles and if you're lucky, leopards.</li>
+          <li><strong>Day 10:</strong> Early morning safari (best for leopard sightings). Afternoon to Mirissa or Unawatuna beach.</li>
+        </ul>
+
+        <h2>Days 11–13: Southern Coast (Galle, Mirissa, Unawatuna)</h2>
+        <p>
+          The Sri Lanka south coast is a string of gorgeous beaches and charming coastal towns.
+        </p>
+        <ul>
+          <li><strong>Day 11:</strong> Explore <a href="/places/galle">Galle Fort</a> — spend a full afternoon wandering the ramparts, antique shops and cafes.</li>
+          <li><strong>Day 12:</strong> Beach day at Unawatuna. Sunset whale watching tour from Mirissa (Nov–Apr).</li>
+          <li><strong>Day 13:</strong> Relax at Mirissa beach. Optional: visit Weligama for a surf lesson.</li>
+        </ul>
+
+        <h2>Day 14: Return to Colombo</h2>
+        <p>
+          Transfer back to Colombo for your departure flight. If you have time, pick up last-minute gifts at the Dutch Hospital or Odel shopping centre.
+        </p>
+
+        <h2>Where to Book Your Trip</h2>
+        <AffiliateBox
+          title="Book Your Sri Lanka Tour Package"
+          description="Prefer to have everything organised? Get a custom Sri Lanka tour with an expert local guide and private driver."
+          buttonText="Find Sri Lanka Tours"
+          buttonHref="https://www.getyourguide.com/sri-lanka-l976/"
+          variant="tour"
+        />
+
+        <AffiliateBox
+          title="Travel Insurance for Sri Lanka"
+          description="Don't visit Sri Lanka without travel insurance. We recommend World Nomads for comprehensive adventure travel cover."
+          buttonText="Get a Quote from World Nomads"
+          buttonHref="https://www.worldnomads.com/"
+          variant="insurance"
+        />
+
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Quick Navigation</h3>
+          <nav class="space-y-2 text-sm">
+            {[
+              ['Days 1–2', '#days-12-colombo'],
+              ['Days 3–5', '#days-35-cultural-triangle'],
+              ['Days 6–8', '#days-68-kandy--hill-country'],
+              ['Days 9–10', '#days-910-yala-national-park'],
+              ['Days 11–13', '#days-1113-southern-coast'],
+              ['Day 14', '#day-14-return-to-colombo'],
+            ].map(([label, href]) => (
+              <a href={href} class="flex items-center gap-2 text-gray-600 hover:text-ceylon-green-700 font-medium">
+                <svg class="w-3 h-3 text-ceylon-green-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                {label}
+              </a>
+            ))}
+          </nav>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Related Guides</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/guides/best-time-to-visit', label: 'Best Time to Visit' },
+              { href: '/guides/sri-lanka-visa-guide', label: 'Visa Guide' },
+              { href: '/guides/getting-around-sri-lanka', label: 'Getting Around' },
+            ].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</BaseLayout>

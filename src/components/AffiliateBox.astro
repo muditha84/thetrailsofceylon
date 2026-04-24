@@ -1,0 +1,47 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonHref: string;
+  disclaimer?: string;
+  variant?: 'hotel' | 'tour' | 'flight' | 'insurance';
+}
+const {
+  title,
+  description,
+  buttonText,
+  buttonHref,
+  disclaimer = 'This post contains affiliate links. We earn a small commission at no extra cost to you.',
+  variant = 'hotel',
+} = Astro.props;
+
+const icons: Record<string, string> = {
+  hotel: '🏨',
+  tour: '🗺️',
+  flight: '✈️',
+  insurance: '🛡️',
+};
+---
+
+<div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-6 my-8">
+  <div class="flex items-start gap-4">
+    <span class="text-3xl flex-shrink-0">{icons[variant]}</span>
+    <div class="flex-1">
+      <h4 class="font-serif font-bold text-ceylon-green-900 text-lg mb-1">{title}</h4>
+      <p class="text-gray-600 text-sm mb-4">{description}</p>
+      <a
+        href={buttonHref}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        class="inline-flex items-center gap-2 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white font-semibold px-5 py-2.5 rounded-full text-sm transition-colors"
+      >
+        {buttonText}
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+      </a>
+    </div>
+  </div>
+  <p class="text-xs text-gray-400 mt-4 border-t border-ceylon-green-200 pt-3">{disclaimer}</p>
+</div>

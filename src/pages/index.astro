@@ -1,0 +1,453 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CardDestination from '../components/CardDestination.astro';
+import CardBlog from '../components/CardBlog.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+
+const destinations = [
+  {
+    href: '/places/sigiriya',
+    image: '/images/sigiriya.jpg',
+    title: 'Sigiriya Rock Fortress',
+    subtitle: 'Cultural Triangle',
+    tag: 'Must Visit',
+    description: 'Climb an ancient rock fortress rising 200m above the jungle floor, adorned with 5th-century frescoes.',
+  },
+  {
+    href: '/places/ella',
+    image: '/images/ella.jpg',
+    title: 'Ella',
+    subtitle: 'Hill Country',
+    tag: 'Trending',
+    description: 'A misty mountain village surrounded by emerald tea plantations and dramatic waterfalls.',
+  },
+  {
+    href: '/places/galle',
+    image: '/images/galle-fort.jpg',
+    title: 'Galle Fort',
+    subtitle: 'Southern Coast',
+    tag: null,
+    description: 'A UNESCO World Heritage Dutch colonial fort with cobblestone streets, boutiques and ocean views.',
+  },
+  {
+    href: '/places/kandy',
+    image: '/images/kandy.jpg',
+    title: 'Kandy',
+    subtitle: 'Hill Capital',
+    tag: null,
+    description: 'The cultural heartland of Sri Lanka, home to the sacred Temple of the Tooth Relic.',
+  },
+  {
+    href: '/places/yala',
+    image: '/images/yala.jpg',
+    title: 'Yala National Park',
+    subtitle: 'Wildlife',
+    tag: null,
+    description: "Sri Lanka's most popular safari destination with the world's highest density of leopards.",
+  },
+  {
+    href: '/places/mirissa',
+    image: '/images/mirissa-beach.jpg',
+    title: 'Mirissa Beach',
+    subtitle: 'Southern Coast',
+    tag: null,
+    description: 'A crescent of golden sand — perfect for swimming, whale watching and watching the sunset.',
+  },
+];
+
+const activities = [
+  {
+    href: '/things-to-do/whale-watching',
+    image: '/images/whale-watching.jpg',
+    title: 'Whale Watching',
+    subtitle: 'Ocean Experience',
+    tag: 'Popular',
+    description: 'Spot blue whales — the largest animals on earth — just off the southern coast of Sri Lanka.',
+  },
+  {
+    href: '/things-to-do/tea-plantation-tours',
+    image: '/images/tea-plantation.jpg',
+    title: 'Tea Plantation Tours',
+    subtitle: 'Hill Country',
+    tag: null,
+    description: 'Walk through endless green terraces and learn how Ceylon tea is grown and processed.',
+  },
+  {
+    href: '/things-to-do/train-rides',
+    image: '/images/scenic-train.jpg',
+    title: 'Scenic Train Rides',
+    subtitle: 'Highland Railways',
+    tag: null,
+    description: "Ride one of the world's most beautiful train journeys from Kandy to Ella through cloud-wreathed mountains.",
+  },
+];
+
+const blogPosts = [
+  {
+    href: '/blog/2-weeks-in-sri-lanka-itinerary',
+    image: '/images/hero.jpg',
+    title: 'The Perfect 2-Week Sri Lanka Itinerary',
+    category: 'Itineraries',
+    date: 'April 10, 2025',
+    readTime: '12 min',
+    excerpt: 'From ancient ruins to pristine beaches — the ultimate two-week route to see the best of Sri Lanka.',
+  },
+  {
+    href: '/blog/best-beaches-sri-lanka',
+    image: '/images/mirissa-beach.jpg',
+    title: "Sri Lanka's 10 Best Beaches: A Complete Guide",
+    category: 'Beaches',
+    date: 'March 28, 2025',
+    readTime: '8 min',
+    excerpt: "From surfers' paradise to hidden coves — discover Sri Lanka's most beautiful beaches for every type of traveller.",
+  },
+  {
+    href: '/blog/sri-lanka-budget-travel',
+    image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80',
+    title: 'Sri Lanka on a Budget: How to Travel Cheap',
+    category: 'Budget Travel',
+    date: 'March 15, 2025',
+    readTime: '10 min',
+    excerpt: 'Everything you need to know to visit Sri Lanka without breaking the bank — accommodation, food, transport and more.',
+  },
+];
+---
+
+<BaseLayout
+  title="The Trails of Ceylon | Sri Lanka Travel Guide"
+  description="Your expert guide to travelling Sri Lanka. Discover the best places to visit, things to do, travel tips and itineraries for the wonder island of Ceylon."
+>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center overflow-hidden" id="hero-section">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/images/hero.jpg"
+        alt="Sigiriya Rock Fortress rising above the Sri Lankan jungle at sunrise"
+        class="absolute w-full object-cover"
+        id="hero-parallax-img"
+        fetchpriority="high"
+        width="1920"
+        height="1080"
+        style="top:-10%; height:120%; will-change:transform; object-fit:cover;"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+          <span class="w-2 h-2 rounded-full bg-ceylon-gold-400 animate-pulse"></span>
+          <span class="text-white/90 text-xs font-medium tracking-wide uppercase">Sri Lanka Travel Guide</span>
+        </div>
+        <h1 class="font-serif font-black text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.05] text-balance">
+          Discover the<br/>
+          <span class="text-ceylon-gold-400">Wonder Island</span><br/>
+          of Ceylon
+        </h1>
+        <p class="mt-6 text-lg sm:text-xl text-white/85 leading-relaxed max-w-xl">
+          Ancient ruins, misty highlands, golden beaches and incredible wildlife — Sri Lanka is the world's most rewarding island destination.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="/guides/sri-lanka-itinerary-2-weeks" class="inline-flex items-center justify-center gap-2 bg-ceylon-gold-500 hover:bg-ceylon-gold-400 text-white font-bold px-7 py-4 rounded-full text-base transition-all duration-200 hover:shadow-lg hover:shadow-ceylon-gold-500/30">
+            Start Planning Your Trip
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="/places" class="inline-flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/30 text-white font-semibold px-7 py-4 rounded-full text-base transition-all duration-200">
+            Explore Destinations
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="absolute bottom-0 left-0 right-0 z-10 bg-black/30 backdrop-blur-sm border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-3 divide-x divide-white/20 py-4">
+          {[
+            { value: '50+', label: 'Destinations' },
+            { value: '100+', label: 'Travel Guides' },
+            { value: '1M+', label: 'Travellers Helped' },
+          ].map(stat => (
+            <div class="text-center px-4">
+              <div class="font-serif font-bold text-white text-xl sm:text-2xl">{stat.value}</div>
+              <div class="text-white/60 text-xs">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Facts Banner -->
+  <section class="bg-ceylon-green-800 py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center gap-x-8 gap-y-2">
+        {[
+          { icon: '🌡️', text: 'Year-round warm weather' },
+          { icon: '✈️', text: 'Colombo hub airport' },
+          { icon: '🪙', text: 'Budget-friendly' },
+          { icon: '🐘', text: 'Wildlife paradise' },
+          { icon: '🌊', text: '1,340km of coastline' },
+          { icon: '🏛️', text: '8 UNESCO World Heritage Sites' },
+        ].map(fact => (
+          <div class="flex items-center gap-2 text-ceylon-green-200 text-sm">
+            <span>{fact.icon}</span>
+            <span>{fact.text}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Destinations -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-12">
+        <SectionHeader
+          eyebrow="Places to Visit"
+          title="Sri Lanka's Most Iconic Destinations"
+          subtitle="From ancient rock fortresses to tropical beaches — explore the landmarks that define this extraordinary island."
+        />
+        <a href="/places" class="hidden md:inline-flex items-center gap-2 text-ceylon-green-700 font-semibold text-sm hover:gap-3 transition-all">
+          All destinations
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {destinations.map(dest => (
+          <CardDestination {...dest} />
+        ))}
+      </div>
+      <div class="text-center mt-10 md:hidden">
+        <a href="/places" class="inline-flex items-center gap-2 border-2 border-ceylon-green-700 text-ceylon-green-700 font-semibold px-6 py-3 rounded-full hover:bg-ceylon-green-700 hover:text-white transition-colors">
+          View All Destinations
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Region Selector -->
+  <section class="py-20 bg-ceylon-green-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeader
+        eyebrow="Explore by Region"
+        title="Where Do You Want to Go?"
+        subtitle="Sri Lanka packs incredible diversity into a small island. Find the perfect region for your travel style."
+        centered
+      />
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-12">
+        {[
+          { name: 'Cultural Triangle', icon: '🏛️', href: '/places/cultural-triangle', color: 'bg-amber-50 border-amber-200 hover:bg-amber-100' },
+          { name: 'Hill Country',      icon: '🌿', href: '/places/hill-country',      color: 'bg-ceylon-green-50 border-ceylon-green-200 hover:bg-ceylon-green-100' },
+          { name: 'South Coast',       icon: '🏖️', href: '/places/south-coast',       color: 'bg-blue-50 border-blue-200 hover:bg-blue-100' },
+          { name: 'East Coast',        icon: '🌊', href: '/places/east-coast',        color: 'bg-cyan-50 border-cyan-200 hover:bg-cyan-100' },
+          { name: 'North & Jaffna',    icon: '🦚', href: '/places/north-jaffna',      color: 'bg-purple-50 border-purple-200 hover:bg-purple-100' },
+          { name: 'Wildlife Parks',    icon: '🐆', href: '/places/wildlife',          color: 'bg-orange-50 border-orange-200 hover:bg-orange-100' },
+        ].map(region => (
+          <a href={region.href} class={`flex flex-col items-center text-center p-5 rounded-2xl border-2 transition-all duration-200 hover:-translate-y-1 ${region.color}`}>
+            <span class="text-3xl mb-2">{region.icon}</span>
+            <span class="font-semibold text-gray-800 text-sm">{region.name}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Things to Do -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-12">
+        <SectionHeader
+          eyebrow="Things to Do"
+          title="Unforgettable Experiences in Sri Lanka"
+          subtitle="From whale watching to ancient train rides — Sri Lanka offers experiences like nowhere else on earth."
+        />
+        <a href="/things-to-do" class="hidden md:inline-flex items-center gap-2 text-ceylon-green-700 font-semibold text-sm hover:gap-3 transition-all">
+          All activities
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {activities.map(act => (
+          <CardDestination {...act} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Sri Lanka -->
+  <section class="py-20 bg-ceylon-green-900 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-25">
+      <img
+        src="/images/hero.jpg"
+        alt=""
+        class="w-full h-full object-cover object-center"
+        loading="lazy"
+        width="1920"
+        height="1080"
+        style="object-fit:cover;"
+      />
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeader
+        eyebrow="Why Sri Lanka"
+        title="The World's Best-Kept Secret"
+        subtitle="Voted the #1 travel destination in the world, Sri Lanka packs the diversity of an entire continent into an island you can cross in a day."
+        light
+        centered
+      />
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+        {[
+          { icon: '🦁', title: 'Epic Wildlife',   body: 'Leopards, elephants, blue whales and 400+ species of birds — all in a tiny island.' },
+          { icon: '🌿', title: 'Ancient Culture', body: '2,500 years of history, 8 UNESCO sites and some of the world\'s oldest Buddhist traditions.' },
+          { icon: '🍛', title: 'Incredible Food', body: 'Sri Lankan cuisine is among the world\'s most aromatic — coconut curries, hoppers and fresh seafood.' },
+          { icon: '💰', title: 'Great Value',     body: 'World-class experiences at a fraction of the cost of other tropical destinations.' },
+        ].map(item => (
+          <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-colors">
+            <span class="text-4xl">{item.icon}</span>
+            <h3 class="font-serif font-bold text-white text-xl mt-3 mb-2">{item.title}</h3>
+            <p class="text-ceylon-green-200 text-sm leading-relaxed">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Guides CTA -->
+  <section class="py-20 bg-ceylon-gold-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <SectionHeader
+            eyebrow="Travel Guides"
+            title="Plan the Perfect Sri Lanka Trip"
+            subtitle="Expert-written guides to help you plan every aspect of your Sri Lanka adventure — from 1-week sprints to month-long explorations."
+          />
+          <div class="mt-8 flex flex-col gap-3">
+            {[
+              { href: '/guides/sri-lanka-itinerary-2-weeks', label: '2-Week Sri Lanka Itinerary' },
+              { href: '/guides/best-time-to-visit',          label: 'Best Time to Visit Sri Lanka' },
+              { href: '/guides/sri-lanka-visa-guide',        label: 'Sri Lanka Visa Guide' },
+              { href: '/guides/getting-around-sri-lanka',    label: 'Getting Around Sri Lanka' },
+            ].map(guide => (
+              <a href={guide.href} class="flex items-center gap-3 bg-white rounded-xl px-5 py-3.5 shadow-sm hover:shadow-md hover:text-ceylon-green-700 font-medium text-gray-700 text-sm transition-all group">
+                <svg class="w-4 h-4 text-ceylon-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                </svg>
+                {guide.label}
+                <svg class="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            ))}
+          </div>
+          <a href="/guides" class="inline-flex items-center gap-2 mt-6 text-ceylon-green-700 font-semibold text-sm hover:gap-3 transition-all">
+            View all guides
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+        <div class="relative">
+          <img
+            src="/images/ella.jpg"
+            alt="Nine Arch Bridge in Ella — iconic hill country scenery"
+            class="rounded-3xl w-full object-cover shadow-2xl aspect-[4/3]"
+            loading="lazy"
+            width="800"
+            height="600"
+            style="object-fit:cover;"
+          />
+          <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-lg">
+            <p class="font-serif font-bold text-gray-900 text-lg">✨ Top Rated</p>
+            <p class="text-gray-500 text-sm">World's Best Island 2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-12">
+        <SectionHeader
+          eyebrow="Travel Blog"
+          title="Latest Sri Lanka Travel Stories"
+          subtitle="Inspiration, insider tips and honest advice from the trails of Ceylon."
+        />
+        <a href="/blog" class="hidden md:inline-flex items-center gap-2 text-ceylon-green-700 font-semibold text-sm hover:gap-3 transition-all">
+          All articles
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {blogPosts.map(post => (
+          <CardBlog {...post} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="py-20 bg-ceylon-green-900 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-25">
+      <img
+        src="/images/mirissa-beach.jpg"
+        alt=""
+        class="w-full h-full object-cover object-center"
+        loading="lazy"
+        width="800"
+        height="600"
+        style="object-fit:cover;"
+      />
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-5xl block mb-4">🌴</span>
+      <h2 class="font-serif font-bold text-4xl mb-4 text-balance text-white">Ready to Explore Sri Lanka?</h2>
+      <p class="text-ceylon-green-200 text-lg mb-8">
+        Get our free weekly newsletter packed with travel tips, destination guides and exclusive deals for Sri Lanka travel.
+      </p>
+      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" action="#" method="POST">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          required
+          class="flex-1 px-5 py-4 rounded-full text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-ceylon-gold-400 text-sm"
+        />
+        <button type="submit" class="bg-ceylon-gold-500 hover:bg-ceylon-gold-400 text-white font-bold px-8 py-4 rounded-full transition-colors whitespace-nowrap text-sm">
+          Get Free Tips
+        </button>
+      </form>
+      <p class="text-ceylon-green-400 text-xs mt-4">No spam. Unsubscribe any time.</p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script>
+  const heroImg = document.getElementById('hero-parallax-img') as HTMLElement | null;
+  if (heroImg) {
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          heroImg.style.transform = `translateY(${window.scrollY * 0.35}px)`;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+</script>

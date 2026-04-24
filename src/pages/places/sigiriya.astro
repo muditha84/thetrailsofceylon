@@ -1,0 +1,198 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+
+<BaseLayout
+  title="Sigiriya Rock Fortress, Sri Lanka: Complete Visitor Guide | The Trails of Ceylon"
+  description="Everything you need to know about visiting Sigiriya Rock — entrance fees, tips to beat the crowds, what to see and nearby accommodation."
+  type="article"
+  publishDate="2025-03-01"
+>
+
+  <!-- Hero -->
+  <div class="relative h-[60vh] min-h-[400px] overflow-hidden">
+    <img
+      src="/images/sigiriya.jpg"
+      alt="Sigiriya Rock Fortress rising above the Sri Lankan jungle"
+      class="w-full h-full object-cover"
+      style="object-fit:cover;"
+      fetchpriority="high"
+      width="1600"
+      height="900"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a>
+          <span>/</span>
+          <a href="/places" class="hover:text-white">Places to Visit</a>
+          <span>/</span>
+          <span class="text-white">Sigiriya</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Sigiriya Rock Fortress</h1>
+        <p class="text-white/80 mt-2">Cultural Triangle, Sri Lanka &bull; UNESCO World Heritage Site</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Article body -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+
+      <!-- Main content -->
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Location', 'Matale District, Central Province'],
+              ['Entrance Fee', 'USD $30 (foreigners)'],
+              ['Best Time to Visit', 'Early morning (6–8am)'],
+              ['Time Needed', '3–4 hours'],
+              ['Nearest Town', 'Dambulla (17km)'],
+              ['UNESCO Status', 'World Heritage Site 1982'],
+            ].map(([k, v]) => (
+              <>
+                <dt class="font-semibold text-gray-700">{k}</dt>
+                <dd class="text-gray-600">{v}</dd>
+              </>
+            ))}
+          </dl>
+        </div>
+
+        <p>
+          Rising 200 metres above the surrounding jungle plains, <strong>Sigiriya</strong> — also known as the Lion Rock — is Sri Lanka's most visited attraction and one of the most dramatic ruins in all of Asia. Built in the 5th century AD by King Kashyapa I, this ancient rock fortress is a testament to extraordinary engineering, artistry and ambition.
+        </p>
+
+        <h2>What is Sigiriya?</h2>
+        <p>
+          Sigiriya was built between 477 and 495 AD as both a palace and a fortress. King Kashyapa I chose this isolated monolith as his capital, constructing an extraordinary complex of gardens, pools, galleries and a palace on the summit. After his death, it became a Buddhist monastery until the 14th century.
+        </p>
+        <p>
+          Today it is a UNESCO World Heritage Site and the most visited attraction in Sri Lanka, drawing hundreds of thousands of visitors each year.
+        </p>
+
+        <h2>What to See at Sigiriya</h2>
+        <h3>The Water Gardens</h3>
+        <p>
+          Entering through the west, you first pass through the <strong>Water Gardens</strong> — a sophisticated hydraulic system of pools, fountains and pavilions that still operates partially today. The symmetrical gardens are among the oldest landscaped gardens in the world.
+        </p>
+
+        <h3>The Frescoes</h3>
+        <p>
+          Halfway up the rock, sheltered in a natural cavity, are the famous <strong>Sigiriya frescoes</strong> — a series of paintings depicting beautiful female figures, believed to represent either celestial nymphs or the king's consorts. Only 21 of the original 500 paintings remain visible.
+        </p>
+
+        <h3>The Mirror Wall</h3>
+        <p>
+          Just past the frescoes, the <strong>Mirror Wall</strong> was once so highly polished the king could see his reflection in it. Today it contains hundreds of ancient graffiti poems left by visitors from as early as the 8th century — one of the oldest collections of verse in the Sinhala language.
+        </p>
+
+        <h3>The Lion's Paws</h3>
+        <p>
+          The final ascent passes through a pair of enormous brick <strong>lion's paws</strong> — the only surviving part of what was once a gigantic lion statue carved into the rock face. The stairway passes through the lion's mouth.
+        </p>
+
+        <h3>The Summit Palace</h3>
+        <p>
+          The <strong>summit</strong> rewards the 1,200-step climb with breathtaking 360-degree views over the jungle and beyond. The ruins of the palace complex are clearly visible, with foundation walls, a swimming pool and a throne carved into the rock.
+        </p>
+
+        <AffiliateBox
+          title="Best Hotels Near Sigiriya"
+          description="Stay in one of the many excellent lodges and jungle resorts within walking distance of the rock. Prices range from budget guesthouses to luxury eco-resorts."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Sigiriya"
+          variant="hotel"
+        />
+
+        <h2>Practical Tips</h2>
+        <h3>When to Visit</h3>
+        <p>
+          <strong>Early morning is essential.</strong> Arrive at opening time (6am) to beat the tour buses that arrive from 8am onwards. The summit can become dangerously crowded by mid-morning, making the narrow staircases unpleasant. Early morning light is also best for photography.
+        </p>
+        <h3>How to Get There</h3>
+        <ul>
+          <li><strong>By tuk-tuk:</strong> From Dambulla (LKR 800–1,000 one way)</li>
+          <li><strong>By bus:</strong> Regular buses from Dambulla and Habarana</li>
+          <li><strong>By train:</strong> Nearest station is Habarana (15km away)</li>
+          <li><strong>Hire a driver:</strong> Most visitors use a private driver as part of a Cultural Triangle tour</li>
+        </ul>
+        <h3>What to Bring</h3>
+        <ul>
+          <li>Plenty of water — there is none on the rock</li>
+          <li>Sun protection: hat, sunscreen</li>
+          <li>Comfortable closed shoes (not flip flops)</li>
+          <li>USD $30 cash or card for entry</li>
+        </ul>
+
+        <AffiliateBox
+          title="Book a Sigiriya Guided Tour"
+          description="Get more from your visit with an expert guide who brings the history to life. Half-day and full-day tours available from Colombo, Dambulla and Kandy."
+          buttonText="Find Tours on GetYourGuide"
+          buttonHref="https://www.getyourguide.com/sigiriya-l97371/"
+          variant="tour"
+        />
+
+        <h2>Nearby Attractions</h2>
+        <p>
+          Sigiriya sits in the heart of the <strong>Cultural Triangle</strong> — consider combining it with:
+        </p>
+        <ul>
+          <li><a href="/places/polonnaruwa">Polonnaruwa</a> — ancient capital, 1 hour away</li>
+          <li><a href="/places/dambulla-cave-temple">Dambulla Cave Temple</a> — 17km, equally impressive</li>
+          <li><a href="/places/minneriya">Minneriya National Park</a> — famous elephant gathering, 30km</li>
+        </ul>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[
+              { label: 'Opening Hours', value: '6:00am – 5:30pm daily' },
+              { label: 'Entry Fee', value: 'USD $30 adults' },
+              { label: 'Best Months', value: 'Jan–Apr & Jul–Sep' },
+              { label: 'Difficulty', value: 'Moderate (1,200 steps)' },
+            ].map(item => (
+              <div class="flex justify-between gap-4">
+                <span class="font-medium text-gray-700">{item.label}</span>
+                <span class="text-gray-600 text-right">{item.value}</span>
+              </div>
+            ))}
+          </div>
+          <a
+            href="https://www.booking.com/searchresults.html?ss=Sigiriya"
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors"
+          >
+            Book Nearby Hotel
+          </a>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">More in Cultural Triangle</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/places/polonnaruwa', label: 'Polonnaruwa' },
+              { href: '/places/anuradhapura', label: 'Anuradhapura' },
+              { href: '/places/kandy', label: 'Kandy' },
+            ].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

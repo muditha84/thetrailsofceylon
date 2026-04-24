@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+
+<BaseLayout
+  title="Ella, Sri Lanka: Complete Travel Guide | The Trails of Ceylon"
+  description="Everything you need to know about Ella, Sri Lanka — what to do, where to stay, how to get there and the best hikes near Ella."
+  type="article"
+  publishDate="2025-03-10"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/ella.jpg" alt="Ella Nine Arch Bridge, Sri Lanka hill country" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <span class="text-white">Ella</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Ella</h1>
+        <p class="text-white/80 mt-2">Hill Country, Sri Lanka &bull; Elevation: 1,041m</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Province', 'Uva Province'],
+              ['Elevation', '1,041 metres'],
+              ['Best For', 'Hiking, relaxing, scenery'],
+              ['Budget', 'LKR 3,000–15,000/night'],
+              ['Days Needed', '2–3 days'],
+              ['Nearest City', 'Badulla (15km)'],
+            ].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>
+          Ella is a small mountain village in Sri Lanka's Uva Province that has earned a near-legendary reputation among travellers. Set at 1,041 metres above sea level, surrounded by emerald tea estates, waterfalls and dramatic rocky peaks, it's one of the most visually stunning places in all of Sri Lanka.
+        </p>
+
+        <h2>What to Do in Ella</h2>
+        <h3>Hike Ella Rock</h3>
+        <p>The hike to Ella Rock is the area's most rewarding activity — a 3-hour return trek through tea plantations to a summit with panoramic views of Ella Gap. Start early to catch the morning mist.</p>
+
+        <h3>Little Adam's Peak</h3>
+        <p>An easier 2-hour return hike that's perfect for sunset. The trail runs through fragrant tea estates with beautiful views of Ella Gap and the surrounding hills.</p>
+
+        <h3>Nine Arch Bridge</h3>
+        <p>Ella's most photographed landmark — a stunning colonial-era stone viaduct built entirely without steel. Time your visit for when the train crosses (check the schedule at your guesthouse).</p>
+
+        <h3>Ravana Falls</h3>
+        <p>A 25-metre curtain waterfall on the road to Wellawaya. Most easily visited as a short stop on the way to/from Ella.</p>
+
+        <AffiliateBox
+          title="Best Hotels in Ella"
+          description="Ella has accommodation for every budget — from jungle eco-lodges to boutique hilltop guesthouses with incredible views."
+          buttonText="Find Ella Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Ella+Sri+Lanka"
+          variant="hotel"
+        />
+
+        <h2>Getting to Ella</h2>
+        <p>The most popular (and beautiful) way to reach Ella is by <strong>train from Kandy</strong> — a 7-hour journey through some of the world's most spectacular mountain scenery. Book the observation class ticket in advance.</p>
+        <p>You can also reach Ella by bus from Colombo (6 hours) or by private car from anywhere in the island.</p>
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Ella Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[
+              ['Best Season', 'Dec–March & Jul–Sep'],
+              ['Days to Spend', '2–3 days'],
+              ['Top Activity', 'Ella Rock hike'],
+              ['Don\'t Miss', 'Nine Arch Bridge at sunrise'],
+            ].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Ella+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">
+            Book Ella Hotel
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">More Hill Country</h3>
+          <div class="space-y-3">
+            {[{ href: '/places/kandy', label: 'Kandy' }, { href: '/places/nuwara-eliya', label: 'Nuwara Eliya' }, { href: '/things-to-do/train-rides', label: 'Scenic Train Rides' }].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

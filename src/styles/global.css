@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ceylon-green-50: #f0f7f0;
+  --color-ceylon-green-100: #dceddc;
+  --color-ceylon-green-200: #bcdcbc;
+  --color-ceylon-green-300: #8ec48e;
+  --color-ceylon-green-400: #5ea85e;
+  --color-ceylon-green-500: #3d8b3d;
+  --color-ceylon-green-600: #2d6e2d;
+  --color-ceylon-green-700: #245724;
+  --color-ceylon-green-800: #1e461e;
+  --color-ceylon-green-900: #183a18;
+
+  --color-ceylon-gold-50: #fdf8ed;
+  --color-ceylon-gold-100: #faefd0;
+  --color-ceylon-gold-200: #f4da9c;
+  --color-ceylon-gold-300: #edbe60;
+  --color-ceylon-gold-400: #e6a020;
+  --color-ceylon-gold-500: #c97f0a;
+  --color-ceylon-gold-600: #a86208;
+  --color-ceylon-gold-700: #87490b;
+  --color-ceylon-gold-800: #6f3b10;
+  --color-ceylon-gold-900: #5c3011;
+
+  --color-ceylon-sunset-50: #fff5ed;
+  --color-ceylon-sunset-100: #ffe8d5;
+  --color-ceylon-sunset-200: #ffcda9;
+  --color-ceylon-sunset-300: #ffaa72;
+  --color-ceylon-sunset-400: #ff7c3a;
+  --color-ceylon-sunset-500: #ff5714;
+  --color-ceylon-sunset-600: #ef3a0a;
+  --color-ceylon-sunset-700: #c62a0a;
+  --color-ceylon-sunset-800: #9d2310;
+  --color-ceylon-sunset-900: #7e2010;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-sans);
+    color: #1a1a1a;
+    background: #fefefe;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}

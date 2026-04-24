@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About Us | The Trails of Ceylon — Sri Lanka Travel"
+  description="The Trails of Ceylon is an independent Sri Lanka travel guide run by passionate travellers. Learn about our mission and why we love Sri Lanka."
+>
+  <!-- Hero -->
+  <section class="relative py-24 bg-ceylon-green-900 overflow-hidden">
+    <div class="absolute inset-0 opacity-25">
+      <img src="/images/kandy.jpg" alt="" class="w-full h-full object-cover object-center" loading="eager" width="800" height="600" style="object-fit:cover;" />
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h1 class="font-serif font-black text-white text-5xl sm:text-6xl">About Us</h1>
+      <p class="text-ceylon-green-200 text-xl mt-4">The story behind The Trails of Ceylon</p>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+
+        <div class="not-prose flex justify-center mb-12">
+          <div class="w-32 h-32 rounded-full overflow-hidden ring-4 ring-ceylon-gold-300">
+            <img
+              src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=300&q=80"
+              alt="The Trails of Ceylon author"
+              class="w-full h-full object-cover"
+              width="128"
+              height="128"
+            />
+          </div>
+        </div>
+
+        <h2>Welcome to The Trails of Ceylon</h2>
+
+        <p>
+          <strong>The Trails of Ceylon</strong> is an independent travel guide dedicated entirely to Sri Lanka — the wonder island that the world is only just beginning to discover. We believe Sri Lanka is the world's most extraordinary travel destination: an island that packs the diversity of an entire continent into a space you can cross in a day.
+        </p>
+
+        <p>
+          This site was born from a deep love affair with Sri Lanka — its warmth, its food, its ancient history and its staggering natural beauty. After spending years exploring every corner of the island, we realised there wasn't a single comprehensive, honest and beautifully designed English-language resource to help travellers truly experience this island at its best.
+        </p>
+
+        <p>
+          So we built one.
+        </p>
+
+        <h2>What We Do</h2>
+        <p>
+          Every destination guide, itinerary and tip on this site is written from genuine first-hand experience. We don't rely on press trips or sponsored content to skew our opinions. When we tell you a guesthouse is wonderful or a beach is overrated, we mean it.
+        </p>
+
+        <p>
+          Our goal is simple: to give you everything you need to plan an incredible Sri Lanka trip — whether you have 5 days or 5 months.
+        </p>
+
+        <h2>How We Make Money</h2>
+        <p>
+          The Trails of Ceylon uses affiliate links and display advertising to keep the site free. When you book a hotel through one of our links or click on an advertisement, we earn a small commission at <strong>no extra cost to you</strong>. This is how we keep producing free, high-quality content.
+        </p>
+        <p>
+          We only recommend products and services we genuinely believe in. Our editorial integrity is not for sale.
+        </p>
+
+        <h2>Get in Touch</h2>
+        <p>
+          We love hearing from fellow Sri Lanka enthusiasts. Whether you have a question, a suggestion or want to work with us, <a href="/contact">reach out here</a>.
+        </p>
+
+      </div>
+
+      <!-- Values -->
+      <div class="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6">
+        {[
+          { icon: '✍️', title: 'Honest', body: 'We tell you the truth — even if that means saying a famous attraction is overrated.' },
+          { icon: '🌿', title: 'Responsible', body: 'We promote ethical wildlife experiences and sustainable tourism practices.' },
+          { icon: '🎯', title: 'Practical', body: 'Real, actionable information — not vague inspiration. We help you actually plan your trip.' },
+        ].map(val => (
+          <div class="text-center bg-ceylon-green-50 rounded-2xl p-6">
+            <span class="text-4xl">{val.icon}</span>
+            <h3 class="font-serif font-bold text-gray-900 text-lg mt-3 mb-2">{val.title}</h3>
+            <p class="text-gray-500 text-sm">{val.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

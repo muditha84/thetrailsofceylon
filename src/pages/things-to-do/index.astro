@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CardDestination from '../../components/CardDestination.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+
+const activities = [
+  { href: '/things-to-do/whale-watching',      image: '/images/whale-watching.jpg',  title: 'Whale Watching',              subtitle: 'Ocean Experience',   tag: 'Popular',  description: 'Spot blue whales and sperm whales just off Mirissa and Trincomalee between November and April.' },
+  { href: '/things-to-do/tea-plantation-tours', image: '/images/tea-plantation.jpg', title: 'Tea Plantation Tours',        subtitle: 'Hill Country',       tag: null,       description: 'Walk through vast emerald estates and learn how world-famous Ceylon tea is grown, picked and processed.' },
+  { href: '/things-to-do/train-rides',          image: '/images/scenic-train.jpg',   title: 'Scenic Train Rides',         subtitle: 'Highland Railways',  tag: null,       description: 'Ride the iconic Kandy to Ella train through misty mountains, waterfalls and emerald tea terraces.' },
+  { href: '/things-to-do/wildlife-safaris',     image: '/images/yala.jpg',           title: 'Wildlife Safaris',           subtitle: 'National Parks',     tag: null,       description: 'Track leopards, elephants and crocodiles in Yala, Udawalawe and Minneriya national parks.' },
+  { href: '/things-to-do/surfing',              image: 'https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=800&q=80', title: 'Surfing',                    subtitle: 'East & South Coast', tag: null,       description: "Sri Lanka has world-class breaks at Arugam Bay, Mirissa and Weligama — perfect for all levels." },
+  { href: '/things-to-do/snorkelling-diving',   image: 'https://images.unsplash.com/photo-1582967788606-a171c1080cb0?w=800&q=80', title: 'Snorkelling & Diving',       subtitle: 'Coastal Waters',     tag: null,       description: 'Explore coral gardens, shipwrecks and swim with sea turtles around Hikkaduwa, Pigeon Island and Trincomalee.' },
+  { href: '/things-to-do/elephant-experiences', image: 'https://images.unsplash.com/photo-1551316679-9c6ae9dec224?w=800&q=80', title: 'Ethical Elephant Experiences', subtitle: 'Wildlife',           tag: 'Ethical',  description: 'Observe wild elephants ethically at Udawalawe and Minneriya — Sri Lanka\'s finest elephant destinations.' },
+  { href: '/things-to-do/ayurveda',             image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80', title: 'Ayurveda & Wellness',        subtitle: 'Spa & Wellness',     tag: null,       description: 'Indulge in traditional Ayurvedic treatments at specialist resorts across Sri Lanka.' },
+  { href: '/things-to-do/cooking-classes',      image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&q=80', title: 'Sri Lankan Cooking Classes', subtitle: 'Food & Culture',     tag: null,       description: 'Learn to cook aromatic curries, hoppers and kottu roti from local chefs in traditional kitchens.' },
+];
+---
+
+<BaseLayout
+  title="Things to Do in Sri Lanka | The Trails of Ceylon"
+  description="Discover the best activities and experiences in Sri Lanka — whale watching, safaris, surfing, tea tours, train rides and much more."
+>
+  <section class="bg-ceylon-green-900 py-20 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-30">
+      <img
+        src="/images/whale-watching.jpg"
+        alt=""
+        class="w-full h-full object-cover object-center"
+        loading="eager"
+        width="1920"
+        height="600"
+      />
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-ceylon-gold-400 text-xs font-semibold uppercase tracking-widest mb-3">Activities & Experiences</p>
+      <h1 class="font-serif font-black text-white text-5xl sm:text-6xl mb-4">Things to Do</h1>
+      <p class="text-ceylon-green-200 text-lg max-w-2xl mx-auto">
+        From riding ancient railways to swimming with whale sharks — Sri Lanka is a playground for the adventurous and curious traveller.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {activities.map(act => (
+          <CardDestination {...act} />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
