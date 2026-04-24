@@ -20,5 +20,8 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+# raw unoptimised source images (double-extension originals)
+public/images/*.jpg.jpg
+
 # jetbrains setting folder
 .idea/
