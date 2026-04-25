@@ -24,17 +24,19 @@ const icons: Record<string, string> = {
 };
 ---
 
-<div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-6 my-8">
+<div class="not-prose bg-gradient-to-br from-ceylon-gold-50 to-ceylon-green-50 border border-ceylon-gold-200 rounded-2xl p-6 my-10 shadow-sm">
   <div class="flex items-start gap-4">
-    <span class="text-3xl flex-shrink-0">{icons[variant]}</span>
+    <div class="w-12 h-12 bg-ceylon-gold-100 rounded-xl flex items-center justify-center flex-shrink-0 text-2xl">
+      {icons[variant]}
+    </div>
     <div class="flex-1">
-      <h4 class="font-serif font-bold text-ceylon-green-900 text-lg mb-1">{title}</h4>
-      <p class="text-gray-600 text-sm mb-4">{description}</p>
+      <h4 class="font-serif font-bold text-gray-900 text-lg mb-1 leading-snug">{title}</h4>
+      <p class="text-gray-600 text-sm leading-relaxed mb-4">{description}</p>
       <a
         href={buttonHref}
         target="_blank"
         rel="noopener noreferrer sponsored"
-        class="inline-flex items-center gap-2 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white font-semibold px-5 py-2.5 rounded-full text-sm transition-colors"
+        class="inline-flex items-center gap-2 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-colors shadow-sm"
       >
         {buttonText}
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -43,5 +45,5 @@ const icons: Record<string, string> = {
       </a>
     </div>
   </div>
-  <p class="text-xs text-gray-400 mt-4 border-t border-ceylon-green-200 pt-3">{disclaimer}</p>
+  <p class="text-xs text-gray-400 mt-5 border-t border-ceylon-gold-200 pt-3">{disclaimer}</p>
 </div>

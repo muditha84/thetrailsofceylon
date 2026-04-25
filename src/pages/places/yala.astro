@@ -28,8 +28,8 @@ import AffiliateBox from '../../components/AffiliateBox.astro';
   <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
     <div class="grid lg:grid-cols-[1fr_280px] gap-12">
       <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
-        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
-          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+        <div class="not-prose quick-facts-card">
+          <h2 >Quick Facts</h2>
           <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
             {[['Province','Southern Province'],['Size','979 sq km (Block 1: 141 sq km)'],['Leopard Density','Highest in the world'],['Best Season','Jun–Sep (dry season)'],['Safari Cost','~USD 50–80/person'],['Gateway Town','Tissamaharama']].map(([k,v])=>(<><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>))}
           </dl>
@@ -46,17 +46,17 @@ import AffiliateBox from '../../components/AffiliateBox.astro';
         <p>The gateway to Yala is Tissamaharama (usually just called "Tissa") — 6 hours from Colombo by bus (via Matara and Hambantota) or about 5 hours by car. From Ella, it is approximately 3 hours by car or tuk-tuk via Wellawaya. From Tangalle, 90km east (1.5 hours). There is no train to Tissa; buses are frequent from Matara. Most travellers combine Yala with the south coast beaches (Mirissa/Galle before, or Tangalle) as the natural end point of a Sri Lanka circuit.</p>
       </article>
       <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
-        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+        <div class="plan-visit-box">
           <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
           <div class="space-y-3 text-sm">
             {[['Best Season','Jun–Sep (dry)'],['Days to Spend','1–2 nights'],['Top Experience','Morning leopard safari'],["Don't Miss",'Sithulpawwa monastery']].map(([k,v])=>(<div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>))}
           </div>
-          <a href="https://www.booking.com/searchresults.html?ss=Yala+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">Book Hotel near Yala</a>
+          <a href="https://www.booking.com/searchresults.html?ss=Yala+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn">Book Hotel near Yala</a>
         </div>
-        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
           <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
           <div class="space-y-3">
-            {[{href:'/places/tangalle',label:'Tangalle'},{href:'/places/mirissa',label:'Mirissa'},{href:'/places/udawalawe',label:'Udawalawe'},{href:'/places/ella',label:'Ella'}].map(link=>(<a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group"><svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>{link.label}</a>))}
+            {[{href:'/places/tangalle',label:'Tangalle'},{href:'/places/mirissa',label:'Mirissa'},{href:'/places/udawalawe',label:'Udawalawe'},{href:'/places/ella',label:'Ella'}].map(link=>(<a href={link.href} class="nearby-pill"><svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>{link.label}</a>))}
           </div>
         </div>
       </aside>

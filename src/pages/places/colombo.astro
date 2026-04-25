@@ -9,7 +9,7 @@ import AffiliateBox from '../../components/AffiliateBox.astro';
   publishDate="2025-03-20"
 >
   <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
-    <img src="/images/hero.jpg" alt="Colombo skyline and Galle Face Green, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <img src="/images/colombo.jpg" alt="Colombo skyline and Galle Face Green, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
     <div class="absolute bottom-0 left-0 right-0 p-8">
       <div class="max-w-4xl mx-auto">
@@ -27,8 +27,8 @@ import AffiliateBox from '../../components/AffiliateBox.astro';
   <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
     <div class="grid lg:grid-cols-[1fr_280px] gap-12">
       <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
-        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
-          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+        <div class="not-prose quick-facts-card">
+          <h2 >Quick Facts</h2>
           <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
             {[['Province','Western Province'],['Airport','BIA, Katunayake (30km)'],['Best For','Food, culture, shopping'],['Budget','LKR 5,000–50,000/night'],['Days Needed','1–2 days'],['Getting Around','Tuk-tuk / PickMe app']].map(([k,v])=>(<><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>))}
           </dl>
@@ -48,17 +48,17 @@ import AffiliateBox from '../../components/AffiliateBox.astro';
         <p>Colombo's food scene is exceptional. For street food and local flavour: the Dutch Hospital courtyard, the Pettah market area at breakfast time (hoppers and string hoppers), and the Galle Face Green vendors in the evening. For restaurant dining: the Colombo 3 and 7 neighbourhoods (Kollupitiya and Cinnamon Gardens) have the best selection. Sri Lankan cuisine, Chinese, Indian, Japanese, Italian and Middle Eastern are all well represented. Don't leave without trying a proper rice and curry at a local "hotel" (Sri Lankan term for a cheap eatery).</p>
       </article>
       <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
-        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+        <div class="plan-visit-box">
           <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
           <div class="space-y-3 text-sm">
             {[['Best Time','Year-round'],['Days to Spend','1–2 days'],['Top Experience','Pettah market morning'],["Don't Miss",'Galle Face Green at dusk']].map(([k,v])=>(<div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>))}
           </div>
-          <a href="https://www.booking.com/searchresults.html?ss=Colombo+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">Book Hotel in Colombo</a>
+          <a href="https://www.booking.com/searchresults.html?ss=Colombo+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn">Book Hotel in Colombo</a>
         </div>
-        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
           <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
           <div class="space-y-3">
-            {[{href:'/places/negombo',label:'Negombo (30km)'},{href:'/places/kandy',label:'Kandy (116km)'},{href:'/places/galle',label:'Galle (116km)'}].map(link=>(<a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group"><svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>{link.label}</a>))}
+            {[{href:'/places/negombo',label:'Negombo (30km)'},{href:'/places/kandy',label:'Kandy (116km)'},{href:'/places/galle',label:'Galle (116km)'}].map(link=>(<a href={link.href} class="nearby-pill"><svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>{link.label}</a>))}
           </div>
         </div>
       </aside>
