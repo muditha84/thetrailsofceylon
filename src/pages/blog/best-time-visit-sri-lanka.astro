@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Best Time to Visit Sri Lanka (Month by Month Guide) | The Trails of Ceylon"
+  description="Sri Lanka's two monsoon seasons make timing crucial. This month-by-month guide tells you exactly when to visit based on where you want to go and what you want to do."
+  type="article"
+  publishDate="2025-02-10"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img
+      src="/images/heroes/hero-hills.jpg"
+      alt="Misty tea estate hills in Sri Lanka's hill country"
+      class="w-full h-full object-cover"
+      fetchpriority="high"
+      width="1920"
+      height="1080"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a>
+          <span>/</span>
+          <a href="/blog" class="hover:text-white">Blog</a>
+          <span>/</span>
+          <span class="text-white">Best Time to Visit</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Planning</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl max-w-3xl text-balance">Best Time to Visit Sri Lanka (Month by Month)</h1>
+        <div class="flex items-center gap-4 mt-4 text-white/70 text-sm">
+          <span>February 10, 2025</span>
+          <span>&bull;</span>
+          <span>11 min read</span>
+          <span>&bull;</span>
+          <span>By The Trails of Ceylon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_260px] gap-12">
+
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">📅 Season Summary</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['South & West Peak', 'Dec – April'],
+              ['East Coast Peak', 'May – September'],
+              ['Hill Country', 'Year-round (Dec–Mar best)'],
+              ['Cultural Triangle', 'Year-round'],
+              ['Whale Watching', 'Nov – April (Mirissa)'],
+              ['Peak Crowds', 'December & January'],
+            ].map(([k, v]) => (
+              <div><dt class="text-gray-500 font-medium">{k}</dt><dd class="text-gray-800 font-semibold">{v}</dd></div>
+            ))}
+          </dl>
+        </div>
+
+        <p>Sri Lanka is one of the few destinations where the answer to "when should I visit?" genuinely depends on where you want to go. Two monsoon systems sweep across the island at different times of year — the south-west monsoon (May–September) brings rain to the west and south coast, while the north-east monsoon (October–January) drenches the east. Understanding this split is the key to planning a perfect trip.</p>
+
+        <h2>The Two Sri Lanka Seasons</h2>
+        <p>Sri Lanka doesn't have a single dry season — it has two, running on opposite sides of the island at different times. <strong>December to April</strong> is the dry season for the south and west coast — Mirissa, Unawatuna, Galle, Negombo, Colombo and the Cultural Triangle are at their best. <strong>May to September</strong> is the dry season for the east coast — Arugam Bay, Trincomalee, Nilaveli and Passikudah are calm and beautiful.</p>
+        <p>The Hill Country (Ella, Kandy, Nuwara Eliya) and the Cultural Triangle (Sigiriya, Polonnaruwa, Anuradhapura) are broadly accessible year-round, though December to March is the driest period for the highlands.</p>
+
+        <h2>Month by Month Guide</h2>
+
+        <h3>December – February (Peak Season)</h3>
+        <p>The most popular months to visit. The south and west coast are at their driest and sunniest. Whale watching is excellent off Mirissa (blue whales from November, peak January–March). Christmas and New Year bring the biggest crowds and highest prices — book accommodation months in advance. The hill country is cool and dry — ideal for hiking. Cultural Triangle sites are busy but manageable early morning.</p>
+
+        <h3>March – April (Shoulder Season)</h3>
+        <p>Still excellent conditions on the south and west coast, with thinning crowds after the February peak. April brings the Sinhala and Tamil New Year (April 13–14) — a wonderful time to experience Sri Lankan culture, but expect transport and accommodation to be busy around the holiday. The east coast begins to open up by late April.</p>
+
+        <h3>May – September (East Coast Season)</h3>
+        <p>The south-west monsoon brings rain to the west and south coast — not constant downpours, but regular afternoon showers. The east coast, however, is brilliant: Arugam Bay surf season peaks July–August, Trincomalee and Nilaveli have calm, clear water, and Pigeon Island snorkelling is at its best. The hill country and Cultural Triangle remain largely unaffected. This period offers the best value — lower prices and fewer crowds on the west coast despite the weather being far from terrible.</p>
+
+        <h3>October – November (Inter-monsoon)</h3>
+        <p>October and November see the north-east monsoon arrive, bringing showers to the east coast. The south and west coast begin to clear. Whale watching resumes off Mirissa from November. Crowd levels are relatively low and prices are good — an underrated time to visit if you're focused on the south coast and cultural sites rather than the east coast beaches.</p>
+
+        <AffiliateBox
+          title="Plan Your Sri Lanka Trip"
+          description="Compare flights to Colombo Bandaranaike International Airport (CMB) from hundreds of airlines — find the best time to book for your season."
+          buttonText="Search Flights to Sri Lanka"
+          buttonHref="https://www.skyscanner.net/flights-to/cmb/cheap-flights-to-colombo-bandaranaike.html"
+          variant="flight"
+        />
+
+        <h2>Best Time for Specific Activities</h2>
+        <ul>
+          <li><strong>Whale watching (Mirissa):</strong> November–April, peak January–March</li>
+          <li><strong>Surfing Arugam Bay:</strong> June–September, peak July–August</li>
+          <li><strong>Surfing Weligama/Hikkaduwa:</strong> November–April</li>
+          <li><strong>East coast beaches:</strong> May–September</li>
+          <li><strong>South coast beaches:</strong> November–April</li>
+          <li><strong>Elephant gathering (Minneriya):</strong> July–October</li>
+          <li><strong>Yala leopard safari:</strong> February–July (dry season, animals concentrate near water)</li>
+          <li><strong>Hiking Adam's Peak:</strong> December–May (pilgrimage season; avoid monsoon months)</li>
+          <li><strong>Cultural Triangle:</strong> Year-round, best December–April</li>
+        </ul>
+
+        <h2>When to Avoid</h2>
+        <p>There is genuinely no "bad" time to visit Sri Lanka — every month has a viable travel area. But if you're limited to one coast, note: the south and west coast are wet May–September, and the east coast is wet October–January. Flying into Colombo and doing a circuit that includes both coasts in December–April or May–September covers most eventualities.</p>
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Trip</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/guides/sri-lanka-itinerary-2-weeks', label: '2-Week Itinerary' },
+              { href: '/guides/sri-lanka-visa-guide', label: 'Visa Guide' },
+              { href: '/guides/sri-lanka-budget-guide', label: 'Budget Guide' },
+              { href: '/guides/getting-around-sri-lanka', label: 'Getting Around' },
+            ].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-base mb-3">More Blog Posts</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/blog/2-weeks-in-sri-lanka-itinerary', label: '2-Week Sri Lanka Itinerary' },
+              { href: '/blog/best-beaches-sri-lanka', label: "Sri Lanka's 10 Best Beaches" },
+              { href: '/blog/sri-lanka-budget-travel', label: 'Sri Lanka on a Budget' },
+            ].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-gray-600 hover:text-ceylon-green-700 text-sm transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-ceylon-gold-400 flex-shrink-0"></span>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

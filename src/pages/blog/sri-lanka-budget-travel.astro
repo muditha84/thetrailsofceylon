@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Sri Lanka on a Budget: How to Travel Cheap (2025) | The Trails of Ceylon"
+  description="Everything you need to visit Sri Lanka without breaking the bank — budget accommodation, cheap food, transport tips, free things to do and realistic daily costs."
+  type="article"
+  publishDate="2025-03-15"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img
+      src="/images/heroes/hero-beach.jpg"
+      alt="Golden beach in Sri Lanka — affordable paradise for budget travellers"
+      class="w-full h-full object-cover"
+      fetchpriority="high"
+      width="1920"
+      height="1080"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a>
+          <span>/</span>
+          <a href="/blog" class="hover:text-white">Blog</a>
+          <span>/</span>
+          <span class="text-white">Budget Travel</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Budget Travel</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl max-w-3xl text-balance">Sri Lanka on a Budget: How to Travel Cheap</h1>
+        <div class="flex items-center gap-4 mt-4 text-white/70 text-sm">
+          <span>March 15, 2025</span>
+          <span>&bull;</span>
+          <span>10 min read</span>
+          <span>&bull;</span>
+          <span>By The Trails of Ceylon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_260px] gap-12">
+
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">💰 Budget Summary</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Backpacker', 'USD $25–40/day'],
+              ['Mid-range', 'USD $60–100/day'],
+              ['Currency', 'Sri Lankan Rupee'],
+              ['ATMs', 'Available in most towns'],
+              ['Tipping', 'Not mandatory but appreciated'],
+              ['Best Value', 'Local "hotels" & buses'],
+            ].map(([k, v]) => (
+              <div><dt class="text-gray-500 font-medium">{k}</dt><dd class="text-gray-800 font-semibold">{v}</dd></div>
+            ))}
+          </dl>
+        </div>
+
+        <p>Sri Lanka is one of the most rewarding budget destinations in Asia. You can eat well for under $3, sleep comfortably for $10–20, and travel the entire island by bus for a fraction of what a taxi costs. Knowing where to spend and where to save is the key — and this guide tells you exactly that.</p>
+
+        <h2>Realistic Daily Budgets</h2>
+        <p><strong>Backpacker ($25–40/day)</strong> — dormitory guesthouses, local "hotel" meals (rice and curry for under $2), public buses and trains, free beaches, self-guided temple visits. This is genuinely achievable and you will eat well. <strong>Mid-range ($60–100/day)</strong> — private guesthouse rooms, good restaurants, occasional tuk-tuk rather than bus, national park entry. <strong>Comfortable ($100–180/day)</strong> — boutique guesthouses, mix of transport, guided tours, one or two higher-end meals.</p>
+
+        <h2>Accommodation</h2>
+        <p>Sri Lanka's guesthouse network is outstanding value. Family-run guesthouses in Ella, Mirissa, Kandy and the Cultural Triangle typically charge $10–20/night for a clean private room with breakfast. Book direct rather than through booking platforms where possible — you'll get better rates and the family keeps more of the money. Dormitory beds in hostels run $5–10/night in the main traveller hubs.</p>
+        <p>Avoid staying in Colombo unless you arrive late or depart early — the capital is significantly more expensive than the rest of the island and most attractions are reachable without staying there.</p>
+
+        <h2>Food and Drink</h2>
+        <p>Sri Lanka's local "hotels" (the local term for canteen-style eateries) serve the best value food on the island. A full rice and curry plate with several curries, papadum and sambol costs $1–2. String hoppers and dhal for breakfast costs under $1. Fresh fruit, coconuts and street food are available everywhere at low cost. Cooking your own food is rarely worth it given how cheap and good local food is.</p>
+        <p>Tourist restaurants in Ella, Mirissa and Unawatuna charge $4–8 for mains — still reasonable but significantly more than local spots. Save tourist restaurants for evenings when atmosphere matters; eat local for breakfast and lunch.</p>
+
+        <AffiliateBox
+          title="Find Budget Guesthouses in Sri Lanka"
+          description="Browse thousands of family guesthouses, hostels and budget hotels across Sri Lanka — filter by price, location and reviews."
+          buttonText="Search Budget Accommodation"
+          buttonHref="https://www.booking.com/country/lk.html"
+          variant="hotel"
+        />
+
+        <h2>Getting Around</h2>
+        <p><strong>Buses</strong> are the cheapest way to travel — a 4-hour journey costs $1–2. The network is comprehensive and reaches everywhere tourists want to go. Intercity buses are faster than trains on most routes. <strong>Trains</strong> cost only slightly more than buses but are slower and more scenic — the Kandy–Ella route is world-famous. Book 2nd class reserved seats in advance ($3–5) rather than paying for observation car carriages ($15+). <strong>Tuk-tuks</strong> are cheap for short hops ($0.50–2 for in-town trips) but always negotiate the fare before getting in, or use the PickMe or Uber app for metered rides. <strong>Private drivers</strong> cost $40–70/day — not budget, but worth considering for 2+ people sharing covering a lot of ground.</p>
+
+        <h2>Free and Low-Cost Things to Do</h2>
+        <p>The beaches are free. Galle Fort is free to walk around. Most Buddhist temples charge $1–3 for entry or request a small donation. Hiking Ella Rock, Little Adam's Peak, and the Knuckles Range requires no entry fee. Watching the sunset from any beach costs nothing. The train ride from Ella to Haputale (20 minutes, $0.30) is one of the world's great short journeys.</p>
+        <p>The biggest costs are national park safaris ($20–40/person) and cultural triangle monument fees ($25 combined ticket for Sigiriya, Dambulla, Polonnaruwa, Anuradhapura) — budget for these rather than skipping them.</p>
+
+        <h2>Budget Travel Tips</h2>
+        <ul>
+          <li>Carry small denomination notes — local restaurants and tuk-tuks rarely make change for large bills</li>
+          <li>Use ATMs at Commercial Bank or People's Bank for the best exchange rates with lowest fees</li>
+          <li>Negotiate accommodation rates for stays of 3+ nights</li>
+          <li>Eat where locals eat — if there are no Sri Lankans in the restaurant, you're probably overpaying</li>
+          <li>Buy water in large bottles at supermarkets rather than small bottles at tourist shops</li>
+          <li>The Cultural Triangle combined ticket saves money if you plan to visit 3+ sites</li>
+          <li>Travel by bus between cities, reserve trains only for scenic routes</li>
+        </ul>
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Trip</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/guides/sri-lanka-itinerary-2-weeks', label: '2-Week Itinerary' },
+              { href: '/guides/getting-around-sri-lanka', label: 'Getting Around' },
+              { href: '/guides/sri-lanka-visa-guide', label: 'Visa Guide' },
+              { href: '/guides/best-time-to-visit', label: 'Best Time to Visit' },
+            ].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-base mb-3">More Blog Posts</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/blog/2-weeks-in-sri-lanka-itinerary', label: '2-Week Sri Lanka Itinerary' },
+              { href: '/blog/best-beaches-sri-lanka', label: "Sri Lanka's 10 Best Beaches" },
+              { href: '/blog/best-time-visit-sri-lanka', label: 'Best Time to Visit' },
+            ].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-gray-600 hover:text-ceylon-green-700 text-sm transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-ceylon-gold-400 flex-shrink-0"></span>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
