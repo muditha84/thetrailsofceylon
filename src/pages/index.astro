@@ -119,69 +119,104 @@ const blogPosts = [
 >
 
   <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center overflow-hidden" id="hero-section">
-    <div class="absolute inset-0 z-0">
-      <img
-        src="/images/hero.jpg"
-        alt="Sigiriya Rock Fortress rising above the Sri Lankan jungle at sunrise"
-        class="absolute w-full object-cover"
-        id="hero-parallax-img"
-        fetchpriority="high"
-        width="1920"
-        height="1080"
-        style="top:-10%; height:120%; will-change:transform; object-fit:cover;"
-      />
-      <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent"></div>
-    </div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <div class="max-w-2xl">
-        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-          <span class="w-2 h-2 rounded-full bg-ceylon-gold-400 animate-pulse"></span>
-          <span class="text-white/90 text-xs font-medium tracking-wide uppercase">Sri Lanka Travel Guide</span>
-        </div>
-        <h1 class="font-serif font-black text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.05] text-balance">
-          Discover the<br/>
-          <span class="text-ceylon-gold-400">Wonder Island</span><br/>
-          of Ceylon
-        </h1>
-        <p class="mt-6 text-lg sm:text-xl text-white/85 leading-relaxed max-w-xl">
-          Ancient ruins, misty highlands, golden beaches and incredible wildlife — Sri Lanka is the world's most rewarding island destination.
-        </p>
-        <div class="mt-8 flex flex-col sm:flex-row gap-4">
-          <a href="/guides/sri-lanka-itinerary-2-weeks" class="inline-flex items-center justify-center gap-2 bg-ceylon-gold-500 hover:bg-ceylon-gold-400 text-white font-bold px-7 py-4 rounded-full text-base transition-all duration-200 hover:shadow-lg hover:shadow-ceylon-gold-500/30">
-            Start Planning Your Trip
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
-          <a href="/places" class="inline-flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/30 text-white font-semibold px-7 py-4 rounded-full text-base transition-all duration-200">
-            Explore Destinations
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Stats bar -->
-    <div class="absolute bottom-0 left-0 right-0 z-10 bg-black/30 backdrop-blur-sm border-t border-white/10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-3 divide-x divide-white/20 py-4">
-          {[
-            { value: '22+', label: 'Destinations' },
-            { value: '10+', label: 'Travel Guides' },
-            { value: 'Growing', label: 'Community' },
-          ].map(stat => (
-            <div class="text-center px-4">
-              <div class="font-serif font-bold text-white text-xl sm:text-2xl">{stat.value}</div>
-              <div class="text-white/60 text-xs">{stat.label}</div>
-            </div>
+  {(() => {
+    const slides = [
+      { img: '/images/heroes/hero-beach.jpg',     alt: 'Golden beaches of Sri Lanka',                label: 'Golden Beaches'      },
+      { img: '/images/heroes/hero-hills.jpg',     alt: 'Misty hill country tea estates',             label: 'Misty Hill Country'  },
+      { img: '/images/heroes/hero-wildlife.jpg',  alt: 'Leopard in Yala National Park',              label: 'Incredible Wildlife' },
+      { img: '/images/heroes/hero-sigiriya.jpg',  alt: 'Sigiriya rock fortress Sri Lanka',           label: 'Ancient Wonders'     },
+      { img: '/images/heroes/hero-train.jpg',     alt: 'Scenic highland railway Sri Lanka',          label: 'Scenic Journeys'     },
+      { img: '/images/heroes/hero-galle.jpg',     alt: 'Galle Fort colonial heritage',               label: 'Colonial Heritage'   },
+      { img: '/images/heroes/hero-food.jpg',      alt: 'Sri Lankan cuisine and spices',              label: 'Incredible Cuisine'  },
+      { img: '/images/heroes/hero-whale.jpg',     alt: 'Blue whale off Mirissa Sri Lanka',           label: 'Ocean Adventures'    },
+      { img: '/images/heroes/hero-adventure.jpg', alt: 'White-water rafting Kitulgala Sri Lanka',    label: 'Thrilling Adventures'},
+      { img: '/images/heroes/hero-temple.jpg',    alt: 'Sacred Buddhist temple Sri Lanka',           label: 'Sacred Temples'      },
+    ];
+    return (
+      <section class="relative min-h-screen flex items-center overflow-hidden" id="hero-section">
+        <div class="absolute inset-0 z-0" id="hero-slideshow">
+          {slides.map((slide, i) => (
+            <img
+              src={slide.img}
+              alt={slide.alt}
+              class={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === 0 ? 'opacity-100' : 'opacity-0'}`}
+              data-slide={i}
+              fetchpriority={i === 0 ? 'high' : undefined}
+              loading={i === 0 ? 'eager' : 'lazy'}
+              width="1920"
+              height="1080"
+            />
           ))}
+          <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20 pointer-events-none"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+
+          <!-- Slide label -->
+          <div class="absolute top-6 right-6 z-20 hidden sm:block">
+            <span id="hero-label" class="text-white/70 text-xs font-medium tracking-widest uppercase bg-black/20 backdrop-blur-sm px-3 py-1.5 rounded-full transition-opacity duration-500">
+              {slides[0].label}
+            </span>
+          </div>
+
+          <!-- Dot indicators -->
+          <div class="absolute bottom-20 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
+            {slides.map((_, i) => (
+              <button
+                class={`rounded-full transition-all duration-300 ${i === 0 ? 'bg-white w-6 h-2' : 'bg-white/50 w-2 h-2 hover:bg-white/80'}`}
+                data-dot={i}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div class="max-w-2xl">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+              <span class="w-2 h-2 rounded-full bg-ceylon-gold-400 animate-pulse"></span>
+              <span class="text-white/90 text-xs font-medium tracking-wide uppercase">Sri Lanka Travel Guide</span>
+            </div>
+            <h1 class="font-serif font-black text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.05] text-balance">
+              Discover the<br/>
+              <span class="text-ceylon-gold-400">Wonder Island</span><br/>
+              of Ceylon
+            </h1>
+            <p class="mt-6 text-lg sm:text-xl text-white/85 leading-relaxed max-w-xl">
+              Ancient ruins, misty highlands, golden beaches and incredible wildlife — Sri Lanka is the world's most rewarding island destination.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <a href="/guides/sri-lanka-itinerary-2-weeks" class="inline-flex items-center justify-center gap-2 bg-ceylon-gold-500 hover:bg-ceylon-gold-400 text-white font-bold px-7 py-4 rounded-full text-base transition-all duration-200 hover:shadow-lg hover:shadow-ceylon-gold-500/30">
+                Start Planning Your Trip
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a href="/places" class="inline-flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/30 text-white font-semibold px-7 py-4 rounded-full text-base transition-all duration-200">
+                Explore Destinations
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats bar -->
+        <div class="absolute bottom-0 left-0 right-0 z-10 bg-black/30 backdrop-blur-sm border-t border-white/10">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-3 divide-x divide-white/20 py-4">
+              {[
+                { value: '22+', label: 'Destinations' },
+                { value: '10+', label: 'Travel Guides' },
+                { value: 'Growing', label: 'Community' },
+              ].map(stat => (
+                <div class="text-center px-4">
+                  <div class="font-serif font-bold text-white text-xl sm:text-2xl">{stat.value}</div>
+                  <div class="text-white/60 text-xs">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  })()}
 
   <!-- Quick Facts Banner -->
   <section class="bg-ceylon-green-800 py-5">
@@ -437,17 +472,46 @@ const blogPosts = [
 </BaseLayout>
 
 <script>
-  const heroImg = document.getElementById('hero-parallax-img') as HTMLElement | null;
-  if (heroImg) {
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          heroImg.style.transform = `translateY(${window.scrollY * 0.35}px)`;
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }, { passive: true });
+  const container = document.getElementById('hero-slideshow');
+  const slides = Array.from(document.querySelectorAll<HTMLElement>('[data-slide]'));
+  const dots = Array.from(document.querySelectorAll<HTMLElement>('[data-dot]'));
+  const label = document.getElementById('hero-label');
+
+  const labels = [
+    'Golden Beaches', 'Misty Hill Country', 'Incredible Wildlife', 'Ancient Wonders',
+    'Scenic Journeys', 'Colonial Heritage', 'Incredible Cuisine', 'Ocean Adventures',
+    'Thrilling Adventures', 'Sacred Temples',
+  ];
+
+  let current = 0;
+  let timer: ReturnType<typeof setInterval>;
+
+  function goTo(n: number) {
+    slides[current].classList.replace('opacity-100', 'opacity-0');
+    dots[current].classList.remove('bg-white', 'w-6');
+    dots[current].classList.add('bg-white/50', 'w-2');
+
+    current = ((n % slides.length) + slides.length) % slides.length;
+
+    slides[current].classList.replace('opacity-0', 'opacity-100');
+    dots[current].classList.remove('bg-white/50', 'w-2');
+    dots[current].classList.add('bg-white', 'w-6');
+
+    if (label) {
+      label.style.opacity = '0';
+      setTimeout(() => {
+        label.textContent = labels[current];
+        label.style.opacity = '1';
+      }, 300);
+    }
   }
+
+  function start() { timer = setInterval(() => goTo(current + 1), 5000); }
+  function stop()  { clearInterval(timer); }
+
+  dots.forEach((dot, i) => dot.addEventListener('click', () => { stop(); goTo(i); start(); }));
+  container?.addEventListener('mouseenter', stop);
+  container?.addEventListener('mouseleave', start);
+
+  start();
 </script>
