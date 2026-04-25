@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Surfing in Sri Lanka: The Complete Guide | The Trails of Ceylon" description="Sri Lanka has world-class surf year-round — from the legendary point break at Arugam Bay to beginner-friendly Weligama. A complete guide to surfing in Sri Lanka." type="article" publishDate="2025-03-05">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/mirissa-beach.jpg" alt="Surfing at Weligama Bay, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span><a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span><a href="/things-to-do/adventure" class="hover:text-white">Adventure</a><span>/</span><span class="text-white">Surfing</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Adventure</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Surfing in Sri Lanka</h1>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+      <p>Sri Lanka is a genuinely excellent surf destination — and one of the world's most underrated. The island has two distinct surf seasons on opposite coasts, which means there is always a working surf break somewhere in the country throughout the year. The south and west coasts fire from November to April (peak January–March); the east coast comes alive from May to October (peak July–September). Water temperature is a constant 27–30°C year-round — no wetsuit required. From the world-class point break at Arugam Bay to the gentle beginner beach break at Weligama, Sri Lanka has waves for every level.</p>
+      <h2>Best Surf Spots in Sri Lanka</h2>
+      <h3>Arugam Bay — The Legend</h3>
+      <p>A-Bay Point is Asia's most famous right-hander — a long, peeling wave over a sand-covered reef that can produce rides of 200+ metres on a good day. Best for intermediate to advanced surfers. Peak season June–September; the wave can reach 2–3 metres in July–August. The consistent right-hand shape rewards regular surfing over a week or more. The surrounding village is excellent — cheap, laid-back, full of international surfers.</p>
+      <h3>Weligama — The Beginner's Paradise</h3>
+      <p>The wide, sheltered bay at Weligama produces a gentle, forgiving beach break that is ideal for first-timers. Surf schools line the beach offering lessons from USD 20–30 for two hours including board. Most beginners stand up within their first session. The wave is consistent throughout the south coast season (November–April). No reef hazard — the sandy bottom is forgiving.</p>
+      <h3>Hikkaduwa</h3>
+      <p>A popular reef break on the south coast with multiple peaks — best for intermediate surfers. The reef can be shallow at low tide. Good infrastructure including board rental, repair shops and surf schools. Best November–March.</p>
+      <h3>Midigama</h3>
+      <p>A local favourite between Weligama and Hikkaduwa — a sharp reef break that produces punchy, hollow waves on its day. Less crowded than Hikkaduwa. Best for experienced surfers due to the shallow reef. The small beach has a handful of surf guesthouses. November–April.</p>
+      <h3>Hiriketiya</h3>
+      <p>Possibly the most photogenic surf spot in Sri Lanka — a perfectly bowl-shaped bay south of Dickwella with a fun left and right break working best in the smaller swell. Best November–March. Very popular with intermediate surfers and Instagram photographers. Accommodation on the beach is limited — book ahead.</p>
+      <AffiliateBox title="Book a Surf Lesson" description="Take your first surf lesson or improve with an experienced instructor — Weligama and Arugam Bay have excellent certified instructors." buttonText="Find Surf Lessons" buttonHref="https://www.getyourguide.com/sri-lanka-l976/" variant="tour" />
+      <h2>What to Bring</h2>
+      <p>Boards are rentable everywhere (LKR 800–1,200/day for a longboard or softboard). Bring reef shoes if surfing reef breaks (Hikkaduwa, Midigama). Reef rash guard recommended. Leash is usually provided with rental boards. Sunscreen is essential — the tropical sun reflects off the water and burns quickly. Most surfers use SPF 50 and reapply every hour in the water.</p>
+    </article>
+  </div>
+</BaseLayout>

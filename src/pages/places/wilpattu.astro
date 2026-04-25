@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Wilpattu National Park, Sri Lanka: Sri Lanka's Wildest Safari | The Trails of Ceylon"
+  description="Wilpattu is Sri Lanka's largest and most remote national park — famous for its unique lake basins (willus), sloth bears, leopards and a true wilderness experience away from the crowds."
+  type="article"
+  publishDate="2025-04-02"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/yala.jpg" alt="Wilpattu National Park wilderness, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/wildlife-parks" class="hover:text-white">Wildlife Parks</a><span>/</span>
+          <span class="text-white">Wilpattu</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Wilpattu</h1>
+        <p class="text-white/80 mt-2">North Western Province &bull; Sri Lanka's Largest National Park</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[['Province','North Western'],['Size','1,317 sq km (largest in SL)'],['Unique Feature','Natural lake basins (willus)'],['Best For','Sloth bears, solitude'],['Best Season','Nov–Apr'],['From Puttalam','30km']].map(([k,v])=>(<><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>))}
+          </dl>
+        </div>
+        <p>Wilpattu National Park is Sri Lanka's largest national park and one of its best-kept secrets. While Yala attracts thousands of visitors seeking leopard sightings, Wilpattu offers a genuinely different experience: vast, dense jungle, near-total solitude, and the most distinctive landscape of any Sri Lankan park — the willus. These natural lake basins, unique to Wilpattu, fill with rainwater to form mirror-like pools surrounded by dense forest. In the early morning light, with a heron standing motionless in the still water and a sloth bear emerging from the treeline to drink, Wilpattu is as close to a true wilderness experience as Sri Lanka offers.</p>
+        <h2>The Willus</h2>
+        <p>Wilpattu takes its name from the Sinhala word "willu" meaning lake. The park contains over 60 of these natural basins — flat, circular depressions that collect rainwater and remain full for months after the rains. They are unlike anything else in Sri Lanka: in the early morning mist, they create extraordinary reflections of the surrounding jungle and sky. The willus are also key wildlife habitats — animals come to drink at the willus and predators hunt along their edges. Some willus are large enough to support small boats; others are mere puddles in the dry season.</p>
+        <h2>Sloth Bears</h2>
+        <p>Wilpattu has one of the highest densities of sloth bears in Sri Lanka — some wildlife guides consider it the best place on the island to see these strange, shaggy, nocturnal animals. Sloth bears are largely nocturnal but are occasionally spotted in the early morning and late afternoon, particularly near fruiting trees or termite mounds (which they excavate for insects). The park also has Sri Lankan leopards (harder to see than in Yala due to the dense vegetation), elephants (less abundant than in Yala or Udawalawe), spotted deer, water buffalo, crocodiles, and an extraordinary diversity of birds.</p>
+        <h2>A True Wilderness</h2>
+        <p>Wilpattu was closed from 1988 to 2003 during the civil war — the lack of visitor infrastructure during this period means the park has not been as heavily developed for tourism as Yala. Jeep tracks are fewer, signage minimal, and the density of visitors is a fraction of Yala's. This is not a drawback but a feature: it means safaris feel genuinely exploratory, encounters with wildlife are less crowded, and the experience retains a rawness that is increasingly rare in Sri Lanka's more visited parks.</p>
+        <AffiliateBox title="Book a Wilpattu Safari" description="Book a knowledgeable local guide for Wilpattu — the dense jungle means a guide's expertise makes a real difference to your sightings." buttonText="Find Safari Tours" buttonHref="https://www.getyourguide.com/sri-lanka-l976/" variant="tour" />
+        <h2>Getting to Wilpattu</h2>
+        <p>Wilpattu is 30km from Puttalam and about 180km from Colombo (3–3.5 hours by car). From Anuradhapura it is about 90km (1.5 hours) — an excellent combination as part of a northern circuit. The most common route from Colombo: take the coastal road north through Chilaw to Puttalam, then head east to the park entrance at Hunuwilagama. Accommodation is limited near the park — book jungle lodges in advance (they fill quickly) or stay in Puttalam and arrange an early morning transfer. No accommodation is available inside the park itself.</p>
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[['Best Season','Nov–Apr'],['Days to Spend','1–2 nights'],['Top Experience','Willu lake reflections at dawn'],["Don't Miss",'Sloth bear sighting']].map(([k,v])=>(<div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Wilpattu+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">Book Hotel near Wilpattu</a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{href:'/places/anuradhapura',label:'Anuradhapura (90km)'},{href:'/places/negombo',label:'Negombo'},{href:'/places/colombo',label:'Colombo (180km)'}].map(link=>(<a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group"><svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>{link.label}</a>))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Tangalle, Sri Lanka: Unspoilt Beaches & Sea Turtles Guide | The Trails of Ceylon"
+  description="Tangalle is Sri Lanka's most unspoilt southern beach town — wild empty beaches, sea turtle nesting, a working fishing harbour and a gateway to Bundala National Park."
+  type="article"
+  publishDate="2025-02-25"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/hero.jpg" alt="Tangalle beach at sunrise, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/south-coast" class="hover:text-white">South Coast</a><span>/</span>
+          <span class="text-white">Tangalle</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Tangalle</h1>
+        <p class="text-white/80 mt-2">Southern Province &bull; Wild Beaches &bull; Sea Turtle Nesting</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[['Province','Southern Province'],['Best For','Wild beaches & turtles'],['Turtle Season','May–October (nesting)'],['Budget','LKR 2,000–15,000/night'],['Days Needed','2–3 days'],['From Galle','90km (1.5 hrs)']].map(([k,v])=>(<><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>))}
+          </dl>
+        </div>
+        <p>Tangalle sits at the point where the south coast tourism trail begins to thin out, and that is precisely its appeal. While Galle and Mirissa have become increasingly busy, Tangalle has held onto its character as an authentic Sri Lankan fishing town. The beaches here are wilder, emptier and in many ways more beautiful than those further west — long stretches of sand with crashing surf, backed by scrub jungle or lagoon rather than resort developments. It is the kind of place travellers discover and then return to year after year.</p>
+        <h2>Beaches Around Tangalle</h2>
+        <h3>Medaketiya Beach</h3>
+        <p>The main beach closest to Tangalle town — a long sandy arc with a handful of guesthouses and restaurants. The surf here can be strong (not always safe for swimming), but it is excellent for long dawn walks when the fishing boats are returning and the light is golden. The beach is rarely crowded even in high season.</p>
+        <h3>Rekawa Beach & Turtle Watching</h3>
+        <p>Twelve kilometres east of Tangalle, Rekawa Beach is one of Sri Lanka's most important sea turtle nesting sites — five species nest here, including green turtles and the enormous leatherback (which can exceed 600kg). From May to October, turtles come ashore at night to lay eggs. Local conservation groups organise guided night watches (book through the Rekawa Turtle Conservation Project) — a genuinely moving experience watching these ancient creatures in the dark. No torches, no flash photography — just moonlight and the sound of the ocean.</p>
+        <h3>Maracolliya & Silent Beach</h3>
+        <p>Further east, the coast becomes increasingly remote. Maracolliya is a pristine strip of sand backed by a brackish lagoon — accessible by tuk-tuk along a rough track, it is the kind of beach where you may be the only person for a kilometre in either direction. Silent Beach, named for its extraordinary peace, has a small cluster of high-quality eco-lodges that have made it a destination in itself for discerning travellers.</p>
+        <h2>Tangalle Fishing Harbour</h2>
+        <p>The working fishing harbour in Tangalle town is one of the most authentic on the south coast. Arrive at dawn (around 5:30–6am) to watch the outrigger fishing boats returning with the night's catch — the activity, colour and smell of a working Sri Lankan harbour is a world away from the beach resort experience. Fishermen sell fresh catches directly from the boats; the adjacent fish market has the best seafood in town.</p>
+        <AffiliateBox title="Best Hotels in Tangalle" description="From eco-lodges on secluded beaches to guesthouses near the fishing harbour — Tangalle's accommodation suits both budget travellers and those seeking seclusion." buttonText="Find Hotels on Booking.com" buttonHref="https://www.booking.com/searchresults.html?ss=Tangalle+Sri+Lanka" variant="hotel" />
+        <h2>Getting to Tangalle</h2>
+        <p>Tangalle is 195km from Colombo (about 3.5 hours via Southern Expressway to Hambantota then coast road) or 90km from Galle (1.5 hours). Buses run from Galle and Matara. From Yala National Park, it is about 90km west (1.5 hours by car). Tangalle makes a natural stop between Yala and the western south coast beaches.</p>
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[['Best Season','Dec–Apr'],['Days to Spend','2–3 days'],['Top Experience','Rekawa turtle watching'],["Don't Miss",'Dawn at the fishing harbour']].map(([k,v])=>(<div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Tangalle+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">Book Hotel in Tangalle</a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{href:'/places/mirissa',label:'Mirissa'},{href:'/places/yala',label:'Yala National Park'},{href:'/places/galle',label:'Galle'}].map(link=>(<a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group"><svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>{link.label}</a>))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Culture & History in Sri Lanka | The Trails of Ceylon" description="Sri Lanka's rich cultural experiences — ancient temple visits, the world's most scenic train ride, tea plantation tours, traditional cooking classes and Ayurveda." type="article" publishDate="2025-03-15">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/sigiriya.jpg" alt="Sigiriya Rock Fortress, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span><a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span><span class="text-white">Culture & History</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Culture & History</h1>
+        <p class="text-white/80 mt-2 text-lg">2,500 years of civilisation, temples and tradition</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-14">
+    <p class="text-xl text-gray-600 mb-12 max-w-3xl">Sri Lanka has one of the longest documented histories in Asia — eight UNESCO World Heritage Sites, a living Buddhist tradition over 2,000 years old, and cultural experiences ranging from the world's most scenic train journey to immersive cooking classes in a family home.</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {[
+        {href:'/things-to-do/temple-visits',img:'/images/sigiriya.jpg',alt:'Temple of the Tooth Kandy Sri Lanka',badge:'Heritage',title:'Temple Visits',desc:'The Temple of the Tooth in Kandy, the cave paintings of Dambulla, and the vast stupa complexes of Anuradhapura — Sri Lanka\'s sacred sites are among Asia\'s finest.'},
+        {href:'/things-to-do/train-rides',img:'/images/scenic-train.jpg',alt:'Scenic train Sri Lanka highlands',badge:'Experience',title:'Scenic Train Rides',desc:'The Kandy to Ella highland railway is one of the world\'s great train journeys — seven hours through tea estates, jungle and mountain scenery.'},
+        {href:'/things-to-do/tea-plantation-tours',img:'/images/tea-plantation.jpg',alt:'Tea plantation Sri Lanka',badge:'Culture',title:'Tea Plantation Tours',desc:'Visit a working tea factory, walk through the picking fields with estate workers, and drink the freshest cup of Ceylon tea at source.'},
+        {href:'/things-to-do/cooking-classes',img:'/images/hero.jpg',alt:'Sri Lankan cooking class',badge:'Food',title:'Cooking Classes',desc:'Learn to make rice and curry from scratch — tempering spices, making coconut sambol, preparing hoppers — in a family home or a dedicated cooking school.'},
+        {href:'/things-to-do/ayurveda',img:'/images/hero.jpg',alt:'Ayurveda treatment Sri Lanka',badge:'Wellness',title:'Ayurveda & Wellness',desc:'Sri Lanka has one of the world\'s most developed Ayurvedic traditions — from single treatments to multi-week residential retreats for genuine therapeutic benefit.'},
+      ].map(c=>(
+        <a href={c.href} class="group rounded-2xl overflow-hidden bg-white shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src={c.img} alt={c.alt} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" />
+          </div>
+          <div class="p-5">
+            <span class="text-xs font-bold uppercase tracking-wide text-ceylon-green-700">{c.badge}</span>
+            <h2 class="font-serif font-bold text-gray-900 text-xl mt-1 mb-2">{c.title}</h2>
+            <p class="text-gray-600 text-sm leading-relaxed">{c.desc}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

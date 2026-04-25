@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Polonnaruwa, Sri Lanka: Ancient City & Gal Vihara Guide | The Trails of Ceylon"
+  description="Polonnaruwa is Sri Lanka's best-preserved ancient city — UNESCO World Heritage Site famous for the Gal Vihara rock carvings and the medieval capital's extraordinary ruins."
+  type="article"
+  publishDate="2025-03-05"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/hero.jpg" alt="Gal Vihara rock carvings, Polonnaruwa, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/cultural-triangle" class="hover:text-white">Cultural Triangle</a><span>/</span>
+          <span class="text-white">Polonnaruwa</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Polonnaruwa</h1>
+        <p class="text-white/80 mt-2">North Central Province &bull; UNESCO World Heritage Site &bull; Medieval Capital</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Province', 'North Central'],
+              ['UNESCO', 'World Heritage Site'],
+              ['Capital', '1070–1215 AD'],
+              ['Best For', 'Archaeology, cycling'],
+              ['Days Needed', '1 day'],
+              ['Entry Fee', '~USD 25'],
+            ].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Polonnaruwa is arguably the most rewarding of Sri Lanka's ancient cities — compact enough to explore thoroughly in a single day, yet rich enough to fill it completely. As Sri Lanka's medieval capital from 1070 to 1215 AD, it reached its zenith under King Parakramabahu I, who united the whole island under a single ruler for the first time in centuries and embarked on an extraordinary programme of construction. The result is a well-preserved ruined city of palaces, temples, dagobas and the greatest collection of ancient stone sculpture in Asia.</p>
+
+        <h2>What to See in Polonnaruwa</h2>
+
+        <h3>Gal Vihara — The Rock Temple</h3>
+        <p>The crown jewel of Polonnaruwa and one of the finest works of art in the ancient world. Four colossal figures of the Buddha have been carved directly into a single face of granite — a seated meditating Buddha (1.5m tall), a standing Buddha (7m), a recumbent reclining Buddha (14m, the largest and most celebrated), and a smaller seated figure in a rock-cut cave. The craftsmanship is extraordinary — the flowing robes, the serene expressions, the sheer scale. No visit to Polonnaruwa is complete without standing before the reclining Buddha at dawn.</p>
+
+        <h3>The Quadrangle</h3>
+        <p>The ceremonial heart of ancient Polonnaruwa — a terrace containing the finest concentration of monuments in the city. The Vatadage is a circular relic house of remarkable architectural sophistication: concentric rings of columns, four entrances, guardian sculptures and a central dagoba. Also in the Quadrangle: the Hatadage (tooth relic shrine), the Lankatilake (tall brick image house) and the beautiful Lotus Pond.</p>
+
+        <h3>Parakrama Samudra</h3>
+        <p>Parakramabahu I famously declared "let not a drop of water that falls from the skies go to the sea without first serving man." The Parakrama Samudra (Sea of Parakrama) is his monument to this ambition — a vast artificial reservoir covering 2,500 hectares, still in use today and visible across the western edge of the city. A colossal stone figure (possibly the king himself) carved into a rocky outcrop overlooks the tank.</p>
+
+        <h3>Exploring by Bicycle</h3>
+        <p>Polonnaruwa is best explored by bicycle — the ancient city is spread over several kilometres and a bicycle lets you cover ground efficiently between monuments. Bicycles can be hired at the entrance gate (LKR 100–200/hour) or at your guesthouse. The flat terrain makes it easy going even in the heat. Plan to spend 4–6 hours covering the main sites.</p>
+
+        <AffiliateBox
+          title="Best Hotels in Polonnaruwa"
+          description="Comfortable guesthouses and hotels in and around Polonnaruwa town — the perfect base for exploring the ancient city."
+          buttonText="Find Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Polonnaruwa+Sri+Lanka"
+          variant="hotel"
+        />
+
+        <h2>Getting to Polonnaruwa</h2>
+        <p>Polonnaruwa is 215km from Colombo — roughly 5 hours by bus or 4 hours by car. From Sigiriya it is 60km (1–1.5 hours). From Habarana (the main Cultural Triangle base) it is 45km (1 hour). Trains run from Colombo to Polonnaruwa (about 5 hours) but the bus and car connections from Habarana are more useful for most itineraries. Polonnaruwa also combines perfectly with Minneriya National Park — the Elephant Gathering is just 30km away.</p>
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[
+              ['Best Season', 'Dec–Apr'],
+              ['Days to Spend', '1 day'],
+              ['Top Activity', 'Cycling the ruins'],
+              ["Don't Miss", 'Gal Vihara at dawn'],
+            ].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Polonnaruwa+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">
+            Book Hotel in Polonnaruwa
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/places/sigiriya', label: 'Sigiriya' },
+              { href: '/places/anuradhapura', label: 'Anuradhapura' },
+              { href: '/places/minneriya', label: 'Minneriya' },
+              { href: '/places/dambulla', label: 'Dambulla' },
+            ].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

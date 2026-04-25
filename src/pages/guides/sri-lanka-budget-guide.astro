@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Sri Lanka Budget Guide: How Much Does It Cost? | The Trails of Ceylon" description="How much does Sri Lanka cost? A complete budget guide — accommodation, food, transport, entry fees and daily budgets for backpackers, mid-range and luxury travellers." type="article" publishDate="2025-01-20">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/hero.jpg" alt="Sri Lanka budget travel tuk-tuk" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span><a href="/guides" class="hover:text-white">Travel Guides</a><span>/</span><span class="text-white">Budget Guide</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Planning</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Sri Lanka Budget Guide</h1>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+      <p>Sri Lanka offers exceptional value for money across all budget levels — from sub-USD 20 dorm beds and LKR 300 rice-and-curry meals to beautifully designed boutique hotels at USD 80–150 per night and Michelin-worthy dining experiences. The island's tourist economy is well-developed and competitive, which keeps prices reasonable. This guide covers what things actually cost and how to calibrate your daily budget.</p>
+
+      <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+        <h2 class="font-serif font-bold text-gray-900 text-xl mb-4">Daily Budget Summary (per person)</h2>
+        <div class="space-y-3">
+          {[
+            ['Backpacker','USD 25–40','Dorm/basic guesthouse, local food, buses/trains, self-guided sights'],
+            ['Mid-range','USD 60–120','Private guesthouse/boutique hotel, mix of local and tourist restaurants, tuk-tuks and occasional taxis'],
+            ['Comfortable','USD 120–250','Boutique hotel, good restaurants, private drivers for day trips, guided experiences'],
+            ['Luxury','USD 250+','Aman/MAS/Wallawwa-tier hotels, fine dining, private car with driver throughout'],
+          ].map(([tier,range,desc])=>(
+            <div class="bg-white rounded-xl p-4 border border-ceylon-gold-100">
+              <div class="flex justify-between items-baseline mb-1">
+                <span class="font-serif font-bold text-gray-900">{tier}</span>
+                <span class="font-bold text-ceylon-green-700">{range}</span>
+              </div>
+              <p class="text-sm text-gray-600">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <h2>Accommodation Costs</h2>
+      <p><strong>Budget (USD 10–30):</strong> Dormitory beds in guesthouses start at USD 10–15 in most tourist areas. Private rooms in basic guesthouses with fan and shared bathroom: USD 15–25. Ella and the beach towns have good hostels with social atmosphere; the Cultural Triangle has fewer options. <strong>Mid-range (USD 30–80):</strong> Private en-suite rooms at family-run guesthouses and small boutique hotels — this is the best value category in Sri Lanka, where USD 40–60 buys genuinely lovely accommodation with character. Many of the best-reviewed guesthouses in Ella, Kandy and Galle fall here. <strong>Boutique/luxury (USD 80–300+):</strong> Sri Lanka's high-end scene is excellent — from colonial tea planter bungalows converted to intimate hotels to contemporary design hotels overlooking the ocean. Aman, MAS and Wallawwa represent the top tier. Peak season (December–February) prices at popular properties can double — book early.</p>
+
+      <h2>Food Costs</h2>
+      <p><strong>Local "hotels" (canteens):</strong> A plate of rice and curry costs LKR 200–500 (USD 0.60–1.50). These basic local restaurants serve the best food in Sri Lanka. <strong>Tourist restaurants:</strong> Main courses at tourist-oriented restaurants in Ella, Mirissa and Galle run LKR 800–2,000 (USD 2.50–6). Pasta, pizza, burgers and Sri Lankan dishes side-by-side. <strong>Mid-range:</strong> Good restaurant meals with a beer: USD 8–15 per person. <strong>Fine dining:</strong> The Galle Fort area has several excellent restaurants charging USD 20–40 per person. Ministry of Crab in Colombo is the most celebrated — budget USD 40–70 per person.</p>
+
+      <h2>Transport Costs</h2>
+      <p><strong>Trains:</strong> Third class (unreserved) is cheapest — LKR 100–500 for most routes. Second class reserved: LKR 300–800. Observation class (Kandy–Ella): USD 10–15. Book via 12Go Asia or at Colombo Fort station. <strong>Buses:</strong> Public buses are the cheapest transport — LKR 50–200 for most routes. AC intercity buses are faster and more comfortable for LKR 200–500. <strong>Tuk-tuks:</strong> Negotiate before you get in. Short town journeys: LKR 150–300. Longer trips: LKR 1,000–3,000. Always agree the price first or use the meter in Colombo. <strong>Private driver:</strong> The most comfortable option for touring — USD 50–80 per day for a car with driver, covering up to 200km. For a group, this becomes very economical.</p>
+
+      <h2>Major Entry Fees (2025)</h2>
+      <p><strong>Sigiriya:</strong> USD 30 (the most expensive single sight in Sri Lanka). <strong>Polonnaruwa:</strong> USD 25. <strong>Anuradhapura:</strong> USD 25. <strong>Dambulla Cave Temple:</strong> USD 15. <strong>Temple of the Tooth, Kandy:</strong> USD 15. <strong>Horton Plains National Park:</strong> USD 30. <strong>Yala National Park:</strong> USD 15 entry + USD 30–40 for the jeep. <strong>Minneriya:</strong> USD 15 entry + jeep.</p>
+
+      <AffiliateBox title="Compare Accommodation Prices" description="Booking.com shows the full range of Sri Lanka accommodation — from USD 12 guesthouses to USD 400 luxury villas — with genuine guest reviews." buttonText="Compare Hotels" buttonHref="https://www.booking.com/country/lk.html" variant="hotel" />
+
+      <h2>Money-Saving Tips</h2>
+      <p>Eat where the locals eat — "hotels" (local canteens serving rice and curry) are not just cheaper but almost always better than tourist restaurants. Use trains for long journeys — they are cheap, scenic and atmospheric. Avoid peak season (December 20–January 10) if budget is a concern — prices at beach hotels double. Travel with a small group and split a private tuk-tuk or car. The Colombo to Galle expressway is toll-road but saves an hour versus the old coastal road — worth it. Carry cash (LKR) outside Colombo — many guesthouses and smaller restaurants don't take cards. Currency exchange at official money changers or banks gives better rates than hotel counters. The official exchange rate is generally available via normal bank ATMs; Sri Lanka has had currency restrictions in the past — check current conditions before travel.</p>
+    </article>
+  </div>
+</BaseLayout>

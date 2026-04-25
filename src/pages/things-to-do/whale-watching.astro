@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Whale Watching in Sri Lanka: The Complete Guide | The Trails of Ceylon"
+  description="Sri Lanka is one of the world's best whale watching destinations — blue whales, sperm whales and spinner dolphins off Mirissa from November to April. A complete guide."
+  type="article"
+  publishDate="2025-02-01"
+>
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/whale-watching.jpg" alt="Whale watching off Mirissa, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span>
+          <a href="/things-to-do/wildlife-nature" class="hover:text-white">Wildlife & Nature</a><span>/</span>
+          <span class="text-white">Whale Watching</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Wildlife</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Whale Watching in Sri Lanka</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+      <p>Sri Lanka is one of the world's great whale watching destinations — and surprisingly underrated as one. The warm waters off the southern tip of the island lie along the migratory route of the blue whale, the largest animal that has ever existed on Earth. Between November and April, these extraordinary creatures — up to 30 metres long and 180 tonnes — pass through in significant numbers, close enough to shore that relatively short boat trips are all that's needed. Add sperm whales (year-round residents), massive pods of spinner dolphins, and occasional sightings of orca, pilot whales and whale sharks, and the offshore waters of Sri Lanka rival any whale watching destination in the world.</p>
+
+      <h2>Where to Go Whale Watching in Sri Lanka</h2>
+      <h3>Mirissa — The Best Base</h3>
+      <p>Mirissa, on the southern coast 35km east of Galle, is the most popular and well-organised whale watching base. Boats depart the small harbour daily at around 6–6:30am for 4–5 hour trips. The blue whale feeding grounds are typically 15–20km offshore. January to March is statistically the best period — the sea is calmest and blue whale sightings most consistent. Multiple operators run trips; price competition keeps costs reasonable (around USD 35–50 per person). Choose operators certified by the Sri Lanka Tourism Development Authority and with a reputation for ethical practices — maintaining proper distances from whales and not charging fees to get closer.</p>
+      <h3>Trincomalee — Whale Sharks & Sperm Whales</h3>
+      <p>The east coast off Trincomalee has different cetacean populations. Sperm whales are more reliably sighted here than in the south. Whale sharks — the world's largest fish — visit between January and April. The waters are calmer and trips are generally rougher weather-free compared to the southwest. The whale watching industry in Trinco is less developed than Mirissa but quality operators are available.</p>
+      <h3>Kalpitiya — Spinner Dolphins</h3>
+      <p>The northwest coast near Kalpitiya is not whale watching territory but is famous for enormous pods of spinner dolphins — groups of 500–1,000 dolphins are recorded regularly from October to April. Combined with the kitesurfing and snorkelling at Bar Reef, it makes for an excellent marine wildlife destination.</p>
+
+      <h2>What You'll See</h2>
+      <p><strong>Blue whales (Balaenoptera musculus):</strong> The star attraction — a surfacing blue whale is an unforgettable sight, with a blow that can reach 12 metres in height and a body that seems to go on forever. <strong>Sperm whales (Physeter macrocephalus):</strong> The world's largest toothed predator, characterised by their distinctive block-shaped head and slow, rolling dives. <strong>Spinner dolphins:</strong> The ocean acrobats — pods of hundreds leaping and spinning bow-wave of the boat. <strong>Bryde's whales</strong> are also regularly sighted in these waters.</p>
+
+      <h2>Best Time to Go</h2>
+      <p>November to April for Mirissa (south coast). May to September for Trincomalee (east coast). January to March is peak season at Mirissa with the most reliable sightings and calmest sea conditions. The seas can be choppy in November–December; carry seasickness tablets. Morning trips (departing before 7am) have the calmest conditions and best sighting rates.</p>
+
+      <AffiliateBox
+        title="Book a Whale Watching Tour"
+        description="Book with a reputable, ethical whale watching operator — your choice supports responsible marine tourism in Sri Lanka."
+        buttonText="Find Whale Watching Tours"
+        buttonHref="https://www.getyourguide.com/sri-lanka-l976/"
+        variant="tour"
+      />
+
+      <h2>Tips for the Best Experience</h2>
+      <p>Take seasickness medication the night before and the morning of — even calm-looking seas can be rougher offshore. Bring sunscreen (the boat deck has no shade), a hat, a light jacket (sea breezes are cooler than expected) and a waterproof bag for your camera. A camera with a 200mm+ zoom lens dramatically improves whale photography. Sit toward the front of the boat for better sightings. Sightings, while highly likely, are never guaranteed — the ocean is wild and unpredictable.</p>
+    </article>
+  </div>
+</BaseLayout>

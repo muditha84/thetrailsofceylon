@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Arugam Bay, Sri Lanka: Surf, Safaris & Beach Village Guide | The Trails of Ceylon"
+  description="Arugam Bay is one of Asia's legendary surf destinations — a world-class right-hander, wildlife safaris on the lagoon, and a laid-back beach village vibe on Sri Lanka's east coast."
+  type="article"
+  publishDate="2025-04-05"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/hero.jpg" alt="Arugam Bay surf point, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/east-coast" class="hover:text-white">East Coast</a><span>/</span>
+          <span class="text-white">Arugam Bay</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Arugam Bay</h1>
+        <p class="text-white/80 mt-2">Eastern Province &bull; World-Class Surf &bull; Best June–October</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[['Province','Eastern Province'],['Best Season','June–October (surf)'],['Best For','Surfing, wildlife, beach'],['Budget','LKR 2,000–10,000/night'],['Days Needed','3–5 days'],['From Colombo','8–9 hours (overnight bus)']].map(([k,v])=>(<><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>))}
+          </dl>
+        </div>
+        <p>Arugam Bay is one of those rare destinations that surfers discover and immediately plan to return to. The A-Bay point break — a long, walling right-hander over a sand-covered reef — has been featured in surfing magazines worldwide and is consistently ranked among the top ten surf spots in Asia. But Arugam Bay is more than its wave: it is also a genuinely charming village of palm-shaded dirt roads, laid-back guesthouses, excellent cheap food, and extraordinary wildlife in the surrounding lagoon and jungle. The combination of world-class surf and a completely unpretentious, affordable beach lifestyle makes it uniquely compelling.</p>
+        <h2>The Surf</h2>
+        <p>The main point break (simply called "A-Bay Point" or "the Main Break") is a right-hander that can produce waves of 1–3 metres during the peak season of June to October. The wave is best for intermediate to advanced surfers — it has a fast take-off and a long wall that rewards surfers who can read the line. Beginners are better served by the Main Beach (in front of the village) where a gentler beach break provides more forgiving conditions. Boards can be rented along the main strip for around LKR 800–1,200 per day; lessons are available from several instructors for USD 20–30 for two hours. Several other breaks are accessible by tuk-tuk — Pottuvil Point (20 minutes north, more powerful), Peanut Farm (30 minutes south, less crowded) and the remote Elephant Rock point.</p>
+        <h2>Pottuvil Lagoon</h2>
+        <p>The broad lagoon behind the village is one of Arugam Bay's best-kept secrets — a wildlife-rich waterway of mangroves, mudflats and shallow channels that can be explored by canoe or motorboat at dawn. Elephants come to drink and bathe at the lagoon edges at sunrise; crocodiles bask on the mudbanks; kingfishers, herons, egrets and jacanas are everywhere. Several operators in the village offer early morning lagoon safaris — typically 2 hours for around USD 20–25 per person. The combination of surfing all day and a wildlife safari at dawn is what makes Arugam Bay so unexpectedly special.</p>
+        <h2>Nearby Surf Points & Attractions</h2>
+        <p>Panama Beach (30 minutes south by tuk-tuk) is a pristine, empty stretch of sand that few tourists reach. Kumana National Park (50km south) is an excellent wildlife reserve — particularly famous for its birds (the large painted stork colony is extraordinary) and also has elephants, leopards and crocodiles. The ancient monastery of Muhudu Maha Viharaya, dating to the 1st century BC, sits dramatically on a dune beside the sea near Panama.</p>
+        <AffiliateBox title="Best Hotels in Arugam Bay" description="Arugam Bay's accommodation ranges from basic surf camps to comfortable boutique guesthouses — almost everything is within walking distance of the beach." buttonText="Find Hotels on Booking.com" buttonHref="https://www.booking.com/searchresults.html?ss=Arugam+Bay+Sri+Lanka" variant="hotel" />
+        <h2>Getting to Arugam Bay</h2>
+        <p>The overnight bus from Colombo to Pottuvil (the nearest town, 2km from A-Bay) takes about 9 hours — a cheap and efficient option. Alternatively, take a train from Colombo to Batticola (5 hours), then a bus or tuk-tuk to A-Bay (2 hours). Private car from Ella takes approximately 4 hours via Wellawaya and Monaragala. FitsAir operates a domestic flight from Colombo to Batticaloa airport.</p>
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[['Best Season','Jun–Oct (surf)'],['Days to Spend','3–5 days'],['Top Activity','A-Bay Point surf'],["Don't Miss",'Lagoon safari at dawn']].map(([k,v])=>(<div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Arugam+Bay+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">Book Hotel in Arugam Bay</a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{href:'/places/trincomalee',label:'Trincomalee'},{href:'/places/yala',label:'Yala National Park'},{href:'/places/ella',label:'Ella (via Wellawaya)'}].map(link=>(<a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group"><svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>{link.label}</a>))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

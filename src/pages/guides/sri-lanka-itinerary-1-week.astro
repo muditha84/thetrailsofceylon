@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Sri Lanka 1-Week Itinerary: The Classic Route | The Trails of Ceylon" description="The perfect 1-week Sri Lanka itinerary — Colombo, Sigiriya, Polonnaruwa, Kandy, the scenic train to Ella, and the south coast. 7 days, expertly planned." type="article" publishDate="2025-02-15">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/scenic-train.jpg" alt="Scenic train through tea estates Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span><a href="/guides" class="hover:text-white">Travel Guides</a><span>/</span><span class="text-white">1-Week Itinerary</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Itinerary</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Sri Lanka: 1-Week Itinerary</h1>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+      <p>One week is tight for Sri Lanka — but with focused planning, you can hit the essential highlights: the ancient ruins of the Cultural Triangle, the scenic highland train, the hill country around Ella, and a taste of the south coast beaches. This itinerary is the classic, most-travelled route and for good reason — it covers the best of the island in the available time.</p>
+
+      <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+        <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Overview</h2>
+        <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+          {[['Duration','7 days'],['Best Season','Nov–Apr'],['Pace','Moderate'],['Transport','Train + tuk-tuk + driver'],['Budget/day','USD 60–150']].map(([k,v])=>(<><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>))}
+        </dl>
+      </div>
+
+      <h2>Day 1: Arrive Colombo — Transfer to Sigiriya</h2>
+      <p>Most international flights arrive at Bandaranaike International Airport (BIA), <a href="/places/negombo">Negombo</a> — skip Negombo for now and head directly to the Cultural Triangle (3 hours by car). Arrange a private transfer or hire a tuk-tuk driver for the day. Check into a guesthouse near Sigiriya and recover from the flight with a short afternoon walk around the Sigiriya village.</p>
+
+      <h2>Day 2: Sigiriya and Dambulla</h2>
+      <p>Rise early for <a href="/places/sigiriya">Sigiriya Rock Fortress</a> — aim to be at the gates when they open at 7am to climb before the heat and crowds arrive. Allow 3 hours for the climb and exploration. Afternoon: drive to <a href="/places/dambulla">Dambulla Cave Temple</a> (45 minutes) — the UNESCO-listed cave paintings and 157 Buddha statues are one of Sri Lanka's finest heritage sites. Return to Sigiriya for the night.</p>
+
+      <h2>Day 3: Polonnaruwa</h2>
+      <p>Drive to <a href="/places/polonnaruwa">Polonnaruwa</a> (1 hour from Sigiriya). Rent a bicycle at the entrance and spend the morning cycling between the Gal Vihara rock carvings, the Quadrangle (the ceremonial heart of the ancient city), and the vast Parakrama Samudra reservoir. Allow 4–5 hours for the site. Afternoon: optional visit to <a href="/places/minneriya">Minneriya National Park</a> for an evening elephant safari (July–October this is exceptional — the Elephant Gathering). Transfer to Kandy (3 hours).</p>
+
+      <h2>Day 4: Kandy</h2>
+      <p>Explore <a href="/places/kandy">Kandy</a> — Sri Lanka's cultural capital and a UNESCO World Heritage Site. Morning: visit the Temple of the Tooth (arrive for the 9:30am puja), walk through the adjacent Kandy Lake, visit the colourful Kandy Market. Afternoon: Royal Botanical Gardens at Peradeniya (6km from Kandy centre — one of Asia's finest botanical gardens). Evening: Kandyan cultural dance performance.</p>
+
+      <h2>Day 5: Kandy to Ella — The Scenic Train</h2>
+      <p>The highlight of any Sri Lanka trip. Board the morning train from Kandy (departing approximately 8:30am) for the 7-hour journey through the highlands to <a href="/places/ella">Ella</a>. Book observation class or second class reserved seats in advance (months ahead in peak season via 12Go Asia). Arrive Ella late afternoon — check in and recover with dinner in town. See our <a href="/things-to-do/train-rides">train rides guide</a>.</p>
+
+      <h2>Day 6: Ella</h2>
+      <p>Early morning hike to Ella Rock (depart by 6:30am for sunrise views over the Ella Gap) — a 3-hour return trek through tea estates to the granite summit. Afternoon: Little Adam's Peak (easier, 2-hour walk, with excellent valley views for sunset). Evening: explore Ella town, sample the wood-fired pizza and fresh juice cafes that have made Ella's food scene one of the best in the Hill Country.</p>
+
+      <h2>Day 7: Ella to the South Coast</h2>
+      <p>Drive from Ella to <a href="/places/mirissa">Mirissa</a> or <a href="/places/unawatuna">Unawatuna</a> (3 hours by private transfer — the mountain road via Wellawaya is spectacular). Afternoon: beach. If visiting November–April, book a whale-watching boat for dawn the following morning (<a href="/things-to-do/whale-watching">see our whale-watching guide</a>). If your flight is from Colombo, plan a pre-dawn departure on Day 8 (2.5 hours by highway).</p>
+
+      <AffiliateBox title="Find Hotels for This Route" description="Sigiriya, Kandy, Ella and the south coast all have excellent accommodation at every budget — book ahead in peak season." buttonText="Search Hotels" buttonHref="https://www.booking.com/country/lk.html" variant="hotel" />
+
+      <h2>What This Itinerary Misses</h2>
+      <p>One week inevitably leaves out much of Sri Lanka. Not covered: <a href="/places/anuradhapura">Anuradhapura</a> and the sacred city, <a href="/places/galle">Galle Fort</a>, <a href="/places/yala">Yala National Park</a> (leopard safaris), <a href="/places/jaffna">Jaffna</a> and the north, the east coast (<a href="/places/arugam-bay">Arugam Bay</a>, <a href="/places/trincomalee">Trincomalee</a>). If any of these matter to you, consider a <a href="/guides/sri-lanka-itinerary-2-weeks">2-week itinerary</a> instead.</p>
+    </article>
+  </div>
+</BaseLayout>

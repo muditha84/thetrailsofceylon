@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Nuwara Eliya, Sri Lanka: Hill Station & Tea Country Guide | The Trails of Ceylon"
+  description="Nuwara Eliya is Sri Lanka's colonial hill station at 1,868m — cool air, tea estates, Victoria Park, and the gateway to Horton Plains and World's End."
+  type="article"
+  publishDate="2025-03-15"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/tea-plantation.jpg" alt="Tea estates near Nuwara Eliya, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/hill-country" class="hover:text-white">Hill Country</a><span>/</span>
+          <span class="text-white">Nuwara Eliya</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Nuwara Eliya</h1>
+        <p class="text-white/80 mt-2">Central Province &bull; 1,868m elevation &bull; "Little England" of Sri Lanka</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Province', 'Central Province'],
+              ['Elevation', '1,868 metres'],
+              ['Climate', '8–22°C year-round'],
+              ['Best For', 'Tea tours, scenery'],
+              ['Days Needed', '1–2 days'],
+              ['Nearest Train', 'Nanu Oya (8km)'],
+            ].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Nuwara Eliya is Sri Lanka at its most surprising — a hill station in the central highlands where Victorian-era architecture, red pillar boxes, manicured hedges and a gentlemen's golf club give the impression of a fragment of England transplanted to the tropics. The British planted tea on these slopes from the 1860s and built a retreat from the coastal heat — today those same misty mountains, draped in vivid green tea bushes, are one of Sri Lanka's most iconic landscapes. The air at nearly 1,900 metres is genuinely cool and clean; after weeks on the coast it feels like a different planet.</p>
+
+        <h2>What to See & Do in Nuwara Eliya</h2>
+
+        <h3>Tea Factory Tours</h3>
+        <p>Nuwara Eliya sits in the heart of Ceylon's finest tea-growing country — the high-altitude Uva and Central Province teas are among the world's most prized. Tours of working tea factories (Pedro Tea Estate and Damro Labookellie are the most visitor-friendly) show the complete process from leaf to cup: withering, rolling, oxidation, firing and grading. Most tours end with a tasting session. The scenery walking through the picking fields alone is worth the trip — Tamil estate workers in brightly coloured saris moving through a sea of green.</p>
+
+        <h3>Victoria Park</h3>
+        <p>A beautifully maintained public garden in the centre of town — a surprising delight with well-tended flower beds, a stream, and resident birds including the Indian blue robin and the Kashmir flycatcher (a rare winter migrant). Worth an hour in the morning before the day warms up.</p>
+
+        <h3>Gregory Lake</h3>
+        <p>The scenic lake at the eastern edge of town, with a promenade ideal for an evening stroll. Pedal boats and horse rides are available on weekends. The backdrop of tea hills and colonial buildings makes it a characteristic Nuwara Eliya scene.</p>
+
+        <h3>Seetha Amman Temple</h3>
+        <p>One of the most visited Ramayana pilgrimage sites in Sri Lanka — the colourful Hindu temple is said to mark the spot where Ravana held Sita captive, identifiable by footprints in the rock that believers say are those of the demon king's henchman Hanuman. Fascinating for its mix of Hindu devotion and local legend.</p>
+
+        <AffiliateBox
+          title="Best Hotels in Nuwara Eliya"
+          description="From colonial grand hotels to cosy tea estate bungalows — Nuwara Eliya's accommodation is full of character and sweeping highland views."
+          buttonText="Find Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Nuwara+Eliya+Sri+Lanka"
+          variant="hotel"
+        />
+
+        <h2>Getting to Nuwara Eliya</h2>
+        <p>The train to Nanu Oya station (the stop for Nuwara Eliya) from Kandy takes about 2.5–3 hours — one of the most scenic sections of the famous highland railway, climbing steadily through tea estates and around hairpin bends. From Nanu Oya, take a tuk-tuk or bus the 8km to Nuwara Eliya town. Alternatively, buses run directly from Colombo (5 hours) and Kandy. From Ella, the train back to Nanu Oya takes about 2 hours. Nuwara Eliya to Horton Plains National Park is 30 minutes by tuk-tuk — a highly recommended day trip.</p>
+
+        <h2>What to Pack</h2>
+        <p>Pack more warmly than you think necessary. Night temperatures in Nuwara Eliya can drop to 8°C even in the dry season, and the town regularly has cold mist that chills quickly. A fleece, light waterproof jacket and long trousers are essential. Mornings at Horton Plains (which you should visit from here) can feel genuinely cold — 5–8°C is possible even in April.</p>
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[
+              ['Best Season', 'Dec–Apr'],
+              ['Days to Spend', '1–2 days'],
+              ['Top Activity', 'Tea factory tour'],
+              ["Don't Miss", 'Train from Kandy to Nanu Oya'],
+            ].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Nuwara+Eliya+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">
+            Book Hotel in Nuwara Eliya
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/places/horton-plains', label: "Horton Plains & World's End" },
+              { href: '/places/ella', label: 'Ella' },
+              { href: '/places/kandy', label: 'Kandy' },
+            ].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

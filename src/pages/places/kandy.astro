@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Kandy, Sri Lanka: Complete Travel Guide | The Trails of Ceylon"
+  description="Kandy is Sri Lanka's cultural capital — home to the sacred Temple of the Tooth Relic, the Royal Botanical Gardens and the gateway to the Hill Country's tea estates and mountain trains."
+  type="article"
+  publishDate="2025-03-12"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/kandy.jpg" alt="Temple of the Tooth Relic, Kandy, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/hill-country" class="hover:text-white">Hill Country</a><span>/</span>
+          <span class="text-white">Kandy</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Kandy</h1>
+        <p class="text-white/80 mt-2">Central Province &bull; UNESCO World Heritage Site &bull; Cultural Capital of Sri Lanka</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Province', 'Central Province'],
+              ['Elevation', '488 metres'],
+              ['UNESCO', 'World Heritage Site'],
+              ['Best For', 'Culture & Buddhism'],
+              ['Days Needed', '2–3 days'],
+              ['From Colombo', '3 hrs by train'],
+            ].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Kandy is Sri Lanka's second city and its cultural soul — a place where ancient tradition feels genuinely alive. Set in a natural bowl of green hills around a central lake, its streets fill with monks in saffron robes, the air carries the scent of incense from temple courtyards, and the evening puja ceremony at the Temple of the Tooth Relic draws hundreds of devotees who prostrate themselves before the world's most sacred Buddhist relic. For most visitors, Kandy marks the transition from the ancient cities of the Cultural Triangle to the misty highlands beyond — it is the perfect pivot point of any Sri Lanka itinerary.</p>
+
+        <h2>What to See & Do in Kandy</h2>
+
+        <h3>Temple of the Tooth Relic (Sri Dalada Maligawa)</h3>
+        <p>The most sacred Buddhist site in Sri Lanka enshrines a tooth of the Buddha — brought to the island in the 4th century AD hidden in the hair of a princess. The golden-roofed temple complex beside Kandy Lake contains the relic in a chamber of gilded silver caskets. Access to the relic itself is limited, but the surrounding temple is magnificent — and the puja ceremonies (held three times daily at 6:30am, 9:30am and 6:30pm) are among the most atmospheric religious experiences in Asia. Drums and horns announce each ceremony; devotees surge forward bearing offerings of flowers and incense.</p>
+
+        <h3>Royal Botanical Gardens, Peradeniya</h3>
+        <p>Five kilometres outside Kandy, the Royal Botanical Gardens at Peradeniya cover 147 acres and contain over 4,000 labelled plant species — one of the finest botanical gardens in Asia. Highlights include the great avenue of royal palms, the orchid house (over 300 orchid species), the giant Javan fig tree that covers half an acre with its aerial roots, and the bamboo garden. The gardens were established by the Kandyan kings in the 14th century and expanded by the British.</p>
+
+        <h3>Kandyan Dance Performance</h3>
+        <p>Kandyan dance is one of Sri Lanka's great art forms — a highly codified tradition of dance, drumming and acrobatics performed in elaborate costumes with elaborate headdresses. Nightly cultural performances (usually starting at 5pm at venues near the lake) compress a 90-minute show of different Kandyan dance forms and traditional Sri Lankan dances. The fire-walking at the end is genuinely dramatic.</p>
+
+        <h3>Kandy Lake & the Town</h3>
+        <p>The artificial lake at the centre of Kandy was built by the last Kandyan king, Sri Vikrama Rajasinha, in 1807. Walking the perimeter path at dawn, when the mist hangs over the water and white-robed pilgrims walk to the temple, is one of the most peaceful experiences in Sri Lanka. The market streets behind the lake are busy and atmospheric — good for spice shops, fabric stalls and local street food.</p>
+
+        <AffiliateBox
+          title="Best Hotels in Kandy"
+          description="From colonial hill hotels with lake views to boutique guesthouses in the hills above town — Kandy has excellent accommodation for every budget."
+          buttonText="Find Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Kandy+Sri+Lanka"
+          variant="hotel"
+        />
+
+        <h2>Getting to Kandy</h2>
+        <p>The train from Colombo Fort to Kandy (3 hours, via Peradeniya) is one of Sri Lanka's most enjoyable rail journeys — the line climbs through rubber plantations and begins to enter the highlands. Second-class reserved seats are comfortable and bookable in advance. By road, Kandy is 116km from Colombo — about 3 hours by bus or car. From Sigiriya/Dambulla, Kandy is 72km (about 2 hours). Kandy is also the starting point for the legendary train journey onward to Ella via Nuwara Eliya.</p>
+
+        <h2>The Esala Perahera Festival</h2>
+        <p>Every July–August, Kandy hosts the Esala Perahera — one of the greatest religious festivals in Asia. For ten nights, a procession of decorated elephants (up to 100), traditional drummers, dancers, fire-eaters and torch bearers circles the city in honour of the tooth relic. The final night (Randoli Perahera) is the most spectacular. If you can time your visit around this festival — typically in late July or early August — it is an unforgettable experience. Book accommodation many months in advance.</p>
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[
+              ['Best Season', 'Dec–Apr'],
+              ['Days to Spend', '2–3 days'],
+              ['Top Sight', 'Temple of the Tooth'],
+              ["Don't Miss", 'Evening puja ceremony'],
+            ].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Kandy+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">
+            Book Hotel in Kandy
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/places/ella', label: 'Ella (train journey)' },
+              { href: '/places/nuwara-eliya', label: 'Nuwara Eliya' },
+              { href: '/places/dambulla', label: 'Dambulla' },
+              { href: '/places/horton-plains', label: 'Horton Plains' },
+            ].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

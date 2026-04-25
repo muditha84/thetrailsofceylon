@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Sri Lanka Hill Country: Tea, Trains & Mountain Villages | The Trails of Ceylon"
+  description="Sri Lanka's Hill Country is a world of misty mountains, emerald tea estates and spectacular train journeys. A guide to Kandy, Ella, Nuwara Eliya and Horton Plains."
+>
+  <section class="relative py-24 bg-ceylon-green-900 overflow-hidden">
+    <div class="absolute inset-0 opacity-30">
+      <img src="/images/tea-plantation.jpg" alt="" class="w-full h-full object-cover" loading="eager" width="800" height="600" style="object-fit:cover;" />
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <nav class="flex items-center justify-center gap-2 text-white/60 text-xs mb-4" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-white">Home</a><span>/</span>
+        <a href="/places" class="hover:text-white">Places</a><span>/</span>
+        <span class="text-white">Hill Country</span>
+      </nav>
+      <h1 class="font-serif font-black text-white text-5xl sm:text-6xl">Hill Country</h1>
+      <p class="text-ceylon-green-200 text-xl mt-4 max-w-2xl mx-auto">Tea estates, mountain railways and misty peaks — Sri Lanka's breathtaking highlands</p>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <p class="text-gray-600 text-lg leading-relaxed mb-4">
+          Rising from the tropical lowlands to elevations above 2,500 metres, Sri Lanka's Hill Country is a place of extraordinary beauty. The central highlands are carpeted in vivid green tea estates, bisected by colonial-era railway lines, and dotted with villages where the air is cool and clean and waterfalls tumble from every hillside. It is, by common agreement among travellers, one of the most scenically beautiful regions in all of Asia.
+        </p>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          The British planted this landscape with tea in the 1860s, creating one of the world's great agricultural transformations — and one of its most picturesque. Today the Hill Country draws visitors for its hiking, its famous train journeys, its cool-climate retreat from the coastal heat, and its unique blend of colonial architecture and ancient Buddhist culture.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        {[
+          { href: '/places/kandy', image: '/images/kandy.jpg', name: 'Kandy', desc: "Sri Lanka's cultural capital and gateway to the highlands" },
+          { href: '/places/ella', image: '/images/ella.jpg', name: 'Ella', desc: 'Mountain village famous for Nine Arch Bridge and hiking' },
+          { href: '/places/nuwara-eliya', image: '/images/tea-plantation.jpg', name: 'Nuwara Eliya', desc: "Sri Lanka's 'Little England' — colonial hill station at 1,868m" },
+          { href: '/places/horton-plains', image: '/images/tea-plantation.jpg', name: 'Horton Plains', desc: "World's End — a sheer 870m drop with epic views" },
+        ].map(dest => (
+          <a href={dest.href} class="group block rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img src={dest.image} alt={dest.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" />
+            </div>
+            <div class="p-4 bg-white border border-t-0 border-gray-200 rounded-b-2xl">
+              <h3 class="font-serif font-bold text-gray-900">{dest.name}</h3>
+              <p class="text-gray-500 text-sm mt-1">{dest.desc}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="max-w-3xl mx-auto prose prose-lg prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+        <h2>The Famous Train Journey</h2>
+        <p>The train from Kandy to Ella via Nanu Oya (for Nuwara Eliya) is widely regarded as one of the world's great rail journeys. The line climbs from 488m at Kandy to over 1,800m at Pattipola, winding through tea estates, across stone viaducts and through dark mountain tunnels. The whole journey takes about 7 hours — book the observation class carriage in advance (through 12Go Asia or at Colombo Fort station) for guaranteed seats at the panoramic rear windows. Even the standard second-class unreserved carriages, with their open doors and views, are memorable.</p>
+
+        <h2>Best Time to Visit the Hill Country</h2>
+        <p>The Hill Country is pleasant year-round, but the clearest, driest weather is from December through April. The southwest monsoon (May–September) brings regular rain and mist to the highlands — which can actually be beautiful, though trekking is harder. Nuwara Eliya is at its most festive in April during the racing season and Sinhala New Year. For Horton Plains, plan an early morning visit any time of year — clouds roll in by mid-morning regardless of season.</p>
+
+        <h2>Getting Around the Hill Country</h2>
+        <p>The train is the most scenic way to travel between Kandy, Nuwara Eliya and Ella. For flexibility, hire a tuk-tuk for half-day excursions from a base in Ella or Nuwara Eliya. Private drivers are worthwhile for the winding mountain roads, particularly around Horton Plains. Many travellers take the train one way and a tuk-tuk or bus the other. Distances are deceptive in the mountains — 30km can take two hours on hairpin roads.</p>
+
+        <h2>What to Pack for the Hill Country</h2>
+        <p>Despite being in the tropics, the Hill Country can be cold — Nuwara Eliya regularly drops below 10°C at night, and even Ella can feel chilly in the evenings. Bring a fleece or light jacket, long trousers, and a waterproof layer. The mornings at Horton Plains can be genuinely cold — 5–8°C is possible. Good walking shoes are essential for the tea estate paths and mountain trails.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

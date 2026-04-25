@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Horton Plains National Park & World's End, Sri Lanka | The Trails of Ceylon"
+  description="Horton Plains National Park is Sri Lanka's most dramatic highland plateau — home to World's End, a sheer 870m escarpment, Baker's Falls and rare endemic wildlife."
+  type="article"
+  publishDate="2025-03-18"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/tea-plantation.jpg" alt="Horton Plains misty plateau, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/hill-country" class="hover:text-white">Hill Country</a><span>/</span>
+          <span class="text-white">Horton Plains</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Horton Plains</h1>
+        <p class="text-white/80 mt-2">Central Province &bull; National Park &bull; 2,100–2,300m elevation</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Province', 'Central Province'],
+              ['Elevation', '2,100–2,300m'],
+              ['Trail', '9.5km circular loop'],
+              ['Entry Fee', '~USD 30'],
+              ['Best Time', 'Before 9am (clouds)'],
+              ['From Nuwara Eliya', '30 min by tuk-tuk'],
+            ].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Horton Plains National Park is Sri Lanka's most dramatic and otherworldly landscape — a high plateau of montane grasslands and cloud forest at over 2,100 metres, cut dramatically at its southern edge by World's End: a sheer escarpment plunging 870 metres to the southern lowlands far below. On a clear morning, the view from the edge of World's End stretches across an enormous expanse of forested hills fading to the coast — it is one of the most extraordinary vistas in Sri Lanka. The key word is "morning" — by 10am most days, cloud rolls up from the south and the escarpment disappears entirely into white mist.</p>
+
+        <h2>The World's End Trail</h2>
+        <p>The classic 9.5-kilometre circular trail through Horton Plains takes 3–4 hours at a comfortable pace. The path is well-marked and easy to follow. From the park entrance, the trail crosses open grassland where sambar deer often graze at dawn, then enters dwarf cloud forest before emerging at the Small World's End viewpoint (a smaller but impressive drop) and continuing to the main World's End escarpment. From World's End the path descends slightly to Baker's Falls — a beautiful 20-metre waterfall in a lush forest gully — before looping back to the entrance.</p>
+
+        <h2>World's End</h2>
+        <p>The dramatic highlight of the park — a sheer cliff edge with an 870-metre drop. Stand at the precipice (there is a low rail) and on a clear day the view extends across the entire southern hill country, across the coastal lowlands and, in exceptional conditions, all the way to the sea. The best conditions are November through April. Arrive at the park gate at opening time (6am) to reach World's End by 7:30–8am before the clouds arrive. On weekends and Sri Lankan holidays, the trail can be busy — weekday visits are significantly quieter.</p>
+
+        <h2>Baker's Falls</h2>
+        <p>Named after the Victorian explorer Samuel Baker, who explored these highlands in the 1840s, Baker's Falls is a 20-metre cascade that feels like a different world from the open plateau above — a cool, mossy, fern-draped gorge with crystal-clear water. A perfect spot for a rest on the trail loop.</p>
+
+        <h2>Wildlife</h2>
+        <p>Horton Plains is a UNESCO World Heritage Site partly for its remarkable endemic fauna. Sambar deer are abundant and largely fearless. Purple-faced langur monkeys inhabit the forest edges. The park is an excellent birdwatching destination — the Sri Lanka whistling thrush, dull-blue flycatcher, Sri Lanka white-eye and several other highland endemics are found here. Leopards live in the park but are rarely seen. The highland grasslands support a community of endemic flora including rhododendrons and tree ferns.</p>
+
+        <AffiliateBox
+          title="Base Yourself in Nuwara Eliya"
+          description="Horton Plains is best visited as a day trip from Nuwara Eliya or Haputale — both have excellent accommodation options."
+          buttonText="Find Hotels in Nuwara Eliya"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Nuwara+Eliya+Sri+Lanka"
+          variant="hotel"
+        />
+
+        <h2>Getting to Horton Plains</h2>
+        <p>The park gate is 32km from Nuwara Eliya town and 18km from Haputale — both accessible by tuk-tuk (about LKR 1,500–2,000 each way from Nuwara Eliya). There is no accommodation within the park. Most visitors take a tuk-tuk from Nuwara Eliya early morning, spend 3–4 hours on the trail, then return for a late lunch. Alternatively, some guesthouses in Pattipola (the nearest village) can arrange early morning transfers. There are no buses to the park gate. A small café operates near the entrance selling tea and basic snacks.</p>
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[
+              ['Best Season', 'Nov–Apr (clearest)'],
+              ['Arrive By', '6–7am for clear views'],
+              ['Trail Length', '9.5km circular'],
+              ["Don't Miss", "World's End before 9am"],
+            ].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Nuwara+Eliya+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">
+            Book Hotel in Nuwara Eliya
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/places/nuwara-eliya', label: 'Nuwara Eliya' },
+              { href: '/places/ella', label: 'Ella' },
+              { href: '/places/kandy', label: 'Kandy' },
+            ].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

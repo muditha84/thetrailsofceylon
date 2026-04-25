@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Anuradhapura, Sri Lanka: Ancient Capital & Sacred City Guide | The Trails of Ceylon"
+  description="Anuradhapura is Sri Lanka's most ancient and sacred city — UNESCO World Heritage Site, home to the Sacred Bo Tree, colossal dagobas and 2,500 years of Buddhist history."
+  type="article"
+  publishDate="2025-03-01"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/hero.jpg" alt="Ruwanwelisaya Dagoba, Anuradhapura, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/cultural-triangle" class="hover:text-white">Cultural Triangle</a><span>/</span>
+          <span class="text-white">Anuradhapura</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Anuradhapura</h1>
+        <p class="text-white/80 mt-2">North Central Province &bull; Sri Lanka's Sacred Ancient Capital</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Province', 'North Central'],
+              ['UNESCO', 'World Heritage Site'],
+              ['Founded', '4th century BC'],
+              ['Best For', 'Archaeology & Buddhism'],
+              ['Days Needed', '1–2 days'],
+              ['Entry Fee', '~USD 25'],
+            ].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Anuradhapura is one of the ancient world's great cities — a vast archaeological landscape covering 40 square kilometres of temples, palaces, monasteries, reservoirs and dagobas that served as Sri Lanka's capital for over a thousand years. Founded in the 4th century BC, it grew into one of the most sophisticated urban centres of the ancient world, with a hydraulic engineering system that made the dry northern plains bloom. Today it is a UNESCO World Heritage Site and the holiest city in Theravada Buddhism — a living religious centre where white-robed pilgrims bathe the Sacred Bo Tree in flower petals every single day.</p>
+
+        <h2>What to See in Anuradhapura</h2>
+
+        <h3>Sri Maha Bodhi — The Sacred Bo Tree</h3>
+        <p>The most sacred site in Anuradhapura — and arguably all of Sri Lanka — is a fig tree. The Sri Maha Bodhi is said to be a sapling grown from the very tree under which the Buddha attained enlightenment in Bodh Gaya, India, brought to Sri Lanka by the princess Sanghamitta in 288 BC. It is the oldest historically documented tree in the world. Pilgrims come from across Sri Lanka and the Buddhist world to pray here — the atmosphere, particularly at dawn and dusk, is extraordinarily moving.</p>
+
+        <h3>Ruwanwelisaya Dagoba</h3>
+        <p>The great white dagoba of Ruwanwelisaya is Anuradhapura's most iconic structure — a 103-metre-tall bubble of whitewashed brick visible from miles across the plain. Built by King Dutugamunu in the 2nd century BC, it is one of the largest ancient structures in the world. The perimeter wall is decorated with a frieze of 344 elephants, symbolically supporting the relic chamber. Circumambulating the dagoba at sunset, as pilgrims do, is a profoundly memorable experience.</p>
+
+        <h3>Jetavanaramaya</h3>
+        <p>At its completion in the 3rd century AD, the Jetavanaramaya was the third tallest structure on Earth — only the two great Egyptian pyramids were higher. Today it stands at around 70 metres (having lost its upper portion), but the sheer mass of its ancient brick is still staggering. The Jetavana Museum nearby displays extraordinary relics excavated from the site.</p>
+
+        <h3>Thuparamaya & Twin Ponds</h3>
+        <p>Thuparamaya is Sri Lanka's oldest stupa, built by King Devanampiya Tissa to enshrine the Buddha's collarbone relic in the 3rd century BC. The nearby Twin Ponds (Kuttam Pokuna) are perfectly engineered ancient bathing pools for the monks of the Abhayagiri monastery — the precision of their stonework is remarkable.</p>
+
+        <h3>Mihintale</h3>
+        <p>Fifteen kilometres east of Anuradhapura, Mihintale is where Buddhism arrived in Sri Lanka. A monk named Mahinda — traditionally held to be the son of Emperor Ashoka — encountered the king Devanampiya Tissa on this rocky hilltop and converted him to Buddhism in 247 BC. The climb up 1,840 ancient stone steps to the summit dagoba is pilgrimage in miniature — and the views across the plains are spectacular.</p>
+
+        <AffiliateBox
+          title="Best Hotels in Anuradhapura"
+          description="From guesthouses near the sacred city to comfortable mid-range hotels — find the right base for exploring Anuradhapura's ancient ruins."
+          buttonText="Find Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Anuradhapura+Sri+Lanka"
+          variant="hotel"
+        />
+
+        <h2>Getting to Anuradhapura</h2>
+        <p>Anuradhapura is 5 hours from Colombo by train (the Yal Devi or Uttara Devi express) or 4.5 hours by bus. From Sigiriya, it is about 1.5 hours by car. From Jaffna, it is 3 hours south. The town has a main bus stand and railway station. Within the archaeological zone — which covers a large area — a tuk-tuk is essential for getting between sites efficiently. Negotiate a half-day rate (around LKR 1,500–2,500) to cover the main loop.</p>
+
+        <h2>Tips & Practical Information</h2>
+        <p>Remove shoes at all sacred sites. Dress conservatively — cover shoulders and knees. Photography is generally permitted but avoid photographing devotees in prayer. The entry ticket (around USD 25) covers the main archaeological zone — buy at the ticket office near the museum. The best time to visit is early morning (7am) when the light is beautiful and the temperature manageable. Anuradhapura can be done as a day trip from Sigiriya or Habarana but two days allows a more relaxed exploration including Mihintale.</p>
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[
+              ['Best Season', 'Dec–Apr'],
+              ['Days to Spend', '1–2 days'],
+              ['Top Activity', 'Sacred Bo Tree at dawn'],
+              ["Don't Miss", 'Ruwanwelisaya at sunset'],
+            ].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Anuradhapura+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">
+            Book Hotel in Anuradhapura
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/places/sigiriya', label: 'Sigiriya' },
+              { href: '/places/polonnaruwa', label: 'Polonnaruwa' },
+              { href: '/places/dambulla', label: 'Dambulla' },
+              { href: '/places/wilpattu', label: 'Wilpattu National Park' },
+            ].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

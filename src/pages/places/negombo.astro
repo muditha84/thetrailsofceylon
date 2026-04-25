@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Negombo, Sri Lanka: Airport Gateway Town Guide | The Trails of Ceylon"
+  description="Negombo is Sri Lanka's airport gateway — 7km from BIA, with a Dutch canal, fish market, Catholic churches and beaches. The perfect first or last night stop."
+  type="article"
+  publishDate="2025-03-22"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/hero.jpg" alt="Negombo lagoon and fish market, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <span class="text-white">Negombo</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Negombo</h1>
+        <p class="text-white/80 mt-2">Western Province &bull; 7km from Bandaranaike International Airport</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[['Province','Western Province'],['Airport Distance','7km from BIA'],['Best For','First/last night'],['Budget','LKR 3,000–20,000/night'],['Days Needed','1 day'],['Note','Airport transit town']].map(([k,v])=>(<><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>))}
+          </dl>
+        </div>
+        <p>Negombo is the most common first stop in Sri Lanka, and with good reason — it sits just 7km from Bandaranaike International Airport, making it the obvious choice for a first or last night before a long-haul flight. But Negombo is more than just a transit town. The old Dutch canal, one of Sri Lanka's largest fish markets, a fascinating Catholic fishing community, and a string of beach hotels north of town give it a character that rewards a genuine day or two of exploration.</p>
+        <h2>What to See & Do in Negombo</h2>
+        <h3>The Fish Market</h3>
+        <p>Negombo has one of Sri Lanka's largest and most active fish markets — a sprawling covered hall beside the lagoon where boats bring in enormous hauls of reef fish, squid, prawns and crab before dawn. The best time to visit is 6–7am when the catch is being unloaded and the atmosphere is at its most electric. The air is pungent, the colours vivid (red snappers, silver mackerel, black-spotted eels) and the activity relentless. It is one of the most authentic experiences in Sri Lanka and almost entirely un-touristic.</p>
+        <h3>Hamilton Canal & Lagoon</h3>
+        <p>The Dutch built a canal system across the lagoon in the 17th century — the Hamilton Canal stretches 120km south from Negombo towards Colombo. Canoe and boat trips on the lagoon and canal offer a peaceful look at local life: fishing villages, mangroves, water birds, and the occasional crocodile in the shallower sections. Several guesthouses and tour operators in Negombo arrange half-day lagoon trips.</p>
+        <h3>St Mary's Church</h3>
+        <p>Negombo has a large and historically Catholic fishing community — Portuguese missionaries converted the fishing villages here in the 16th century and the faith has remained strong ever since. St Mary's Church (in the town centre) is a beautiful baroque-influenced white church with a richly decorated interior that reflects this deep Catholic heritage. Religious festivals here, particularly Easter, are celebrated with extraordinary devotion.</p>
+        <h3>The Beach</h3>
+        <p>The beach strip north of Negombo town (along Lewis Place and beyond) is the main tourist area — a long stretch of hotels, guesthouses and restaurants facing west across the Indian Ocean. The beach itself is pleasant rather than spectacular — the sand is grey-brown and the sea can be rough — but the sunsets over the water are beautiful, and the beach strip has a relaxed, unpretentious atmosphere. Kitesurfing is popular in the lagoon.</p>
+        <AffiliateBox title="Best Hotels in Negombo" description="Negombo is ideal for a first or last night in Sri Lanka — it has excellent hotels from budget guesthouses to comfortable resorts, all close to the airport." buttonText="Find Hotels on Booking.com" buttonHref="https://www.booking.com/searchresults.html?ss=Negombo+Sri+Lanka" variant="hotel" />
+        <h2>Getting To and From the Airport</h2>
+        <p>Tuk-tuks from Negombo town to the airport cost LKR 500–800 (10 minutes). Taxis and private cars are also available. The airport has no baggage storage — guesthouses in Negombo will often store luggage for day-trippers. The airport has a 24-hour café, foreign exchange and SIM card vendors in the arrivals hall. For onward travel: buses from Negombo town go to Colombo (90 minutes), Kandy (3.5 hours) and the north. Trains run from the nearby Ja-Ela station.</p>
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[['Best Time','Year-round'],['Days to Spend','1 day'],['Top Experience','Fish market at dawn'],["Don't Miss",'Sunset on the beach strip']].map(([k,v])=>(<div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Negombo+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">Book Hotel in Negombo</a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{href:'/places/colombo',label:'Colombo (35km)'},{href:'/places/kandy',label:'Kandy (116km)'},{href:'/places/sigiriya',label:'Sigiriya'}].map(link=>(<a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group"><svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>{link.label}</a>))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

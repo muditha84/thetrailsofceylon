@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Hiking in Sri Lanka: Best Trails & Trekking Guide | The Trails of Ceylon" description="Sri Lanka's best hiking trails — from the sacred climb of Adam's Peak to Ella Rock, Horton Plains and the Knuckles Range. A complete hiking guide." type="article" publishDate="2025-03-08">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/ella.jpg" alt="Hiking through tea estates near Ella, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span><a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span><a href="/things-to-do/adventure" class="hover:text-white">Adventure</a><span>/</span><span class="text-white">Hiking</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Adventure</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Hiking in Sri Lanka</h1>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+      <p>Sri Lanka may be a small island but its hiking opportunities are remarkable — ranging from the sacred overnight climb of Adam's Peak to gentle tea estate walks near Ella, from the dramatic highland plateau of Horton Plains to multi-day treks through the mist-shrouded Knuckles Mountain Range. The Hill Country, in particular, is spectacular hiking territory: the combination of tea estate scenery, cool mountain air and jaw-dropping views makes every walk feel like a reward.</p>
+      <h2>Adam's Peak (Sri Pada) — The Sacred Mountain</h2>
+      <p>Adam's Peak is Sri Lanka's most significant pilgrimage site and one of its greatest hikes. The 2,243-metre summit holds a large "footprint" in the rock — believed to be that of the Buddha by Buddhists, of Adam by Muslims, of Shiva by Hindus, and of St Thomas by some Christians. The climb is done overnight — pilgrims begin around 2am to reach the summit for sunrise, when the conical shadow of the peak stretches dramatically across the cloud below. The route is well-lit with electric lights (on handrails) and well-marked; the 7km ascent involves roughly 5,500 steps. Season: December to May. Off-season the lights are turned off and the path can be slippery. Weekends are packed with Sri Lankan pilgrims; weekday climbs are quieter and more peaceful.</p>
+      <h2>Ella Rock — The Highlight of the Hill Country</h2>
+      <p>The hike to Ella Rock is the most rewarding half-day walk in the Hill Country — a 3-hour return trek from the Ella town centre through tea estates and jungle to a granite summit with panoramic views of the Ella Gap: a dramatic gorge through the mountains towards the southern lowlands. The trail is not well-signed but most guesthouses in Ella provide rough maps. Start early (before 7am) to be on the summit in the cooler morning air and catch the mist rising from the valley below. The route follows the railway line before branching up through tea estates — keep to the main path and follow local markers.</p>
+      <h2>Little Adam's Peak, Ella</h2>
+      <p>The easier, more accessible hike near Ella — a 2-hour return walk through beautiful fragrant tea estates to a small peak with excellent views across the Ella valley. Perfect for sunset. The path is well-marked from the Zion View restaurant at the south end of Ella town. Suitable for all fitness levels; no guide needed.</p>
+      <h2>Horton Plains — World's End Loop</h2>
+      <p>The 9.5km circular trail through Horton Plains National Park is Sri Lanka's most dramatic plateau walk — across open highland grassland to the sheer 870-metre escarpment of World's End. The trail also passes Baker's Falls (a beautiful jungle waterfall). Entry fee required (USD 30). Arrive at opening (6am) to reach World's End before the clouds arrive (usually by 9–10am). See our <a href="/places/horton-plains">Horton Plains guide</a> for full details.</p>
+      <h2>Knuckles Mountain Range</h2>
+      <p>A UNESCO World Heritage buffer zone northeast of Kandy — the Knuckles range offers the most diverse and challenging hiking in Sri Lanka. Multi-day treks through cloud forest, grassland and remote villages are possible with a guide (strongly recommended — paths are unmarked and weather changes rapidly). The biodiversity is exceptional — 34 endemic bird species and many endemic reptiles. Base yourself in Kandy and arrange guided treks through specialist operators.</p>
+      <AffiliateBox title="Book a Guided Hiking Tour" description="Join a guided hiking experience in the Hill Country — expert guides know the trails, the wildlife and the best spots for sunrise views." buttonText="Find Hiking Tours" buttonHref="https://www.getyourguide.com/sri-lanka-l976/" variant="tour" />
+      <h2>What to Bring</h2>
+      <p>Good walking shoes or boots (trail runners are fine for Adam's Peak and Ella Rock; boots recommended for Knuckles). Waterproof layer (mountain weather changes quickly). Plenty of water (no reliable water sources on most trails). Snacks. Insect repellent (particularly important in the Sinharaja and Knuckles jungle areas — leeches are present in wet season; wear long socks and tuck trousers in). Torch/headlamp for Adam's Peak. Start early to avoid afternoon heat and crowds.</p>
+    </article>
+  </div>
+</BaseLayout>

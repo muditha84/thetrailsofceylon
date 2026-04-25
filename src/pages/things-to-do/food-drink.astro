@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Food & Drink in Sri Lanka | The Trails of Ceylon" description="A guide to Sri Lankan food and drink — rice and curry, hoppers, kottu roti, pol sambol, Ceylon tea, coconut arrack, and the best food experiences on the island." type="article" publishDate="2025-03-15">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/hero.jpg" alt="Sri Lankan rice and curry feast" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span><a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span><span class="text-white">Food & Drink</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Food & Drink</h1>
+        <p class="text-white/80 mt-2 text-lg">The flavours of Sri Lanka</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-14">
+    <p class="text-xl text-gray-600 mb-12 max-w-3xl">Sri Lankan food is one of Asia's great undiscovered cuisines — bold, fragrant, deeply spiced, and extraordinarily varied. From the humble rice and curry eaten three times a day to the crispy street-food pleasure of kottu roti at midnight, eating your way across the island is one of its greatest pleasures.</p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      {[
+        {href:'/things-to-do/cooking-classes',img:'/images/hero.jpg',alt:'Sri Lankan cooking class',badge:'Experience',title:'Cooking Classes',desc:'Learn to cook rice and curry, hoppers and pol sambol from scratch — an immersive way to understand the culture through its food.'},
+        {href:'/things-to-do/tea-plantation-tours',img:'/images/tea-plantation.jpg',alt:'Ceylon tea plantation',badge:'Drink',title:'Tea Plantation Tours',desc:'Drink a perfect cup of Ceylon tea at the source — fresh-picked and processed in a highland factory, high above the misty valleys of Nuwara Eliya.'},
+        {href:'/guides/sri-lanka-food-guide',img:'/images/hero.jpg',alt:'Sri Lankan food guide',badge:'Guide',title:'Sri Lanka Food Guide',desc:'A complete guide to what to eat, where to eat, how to order, and the essential dishes you must try before leaving the island.'},
+      ].map(c=>(
+        <a href={c.href} class="group rounded-2xl overflow-hidden bg-white shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src={c.img} alt={c.alt} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" />
+          </div>
+          <div class="p-5">
+            <span class="text-xs font-bold uppercase tracking-wide text-ceylon-green-700">{c.badge}</span>
+            <h2 class="font-serif font-bold text-gray-900 text-xl mt-1 mb-2">{c.title}</h2>
+            <p class="text-gray-600 text-sm leading-relaxed">{c.desc}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="prose prose-lg max-w-none prose-headings:font-serif">
+      <h2>Essential Sri Lankan Dishes</h2>
+      <p><strong>Rice and curry</strong> is the foundation of Sri Lankan eating — a mound of rice surrounded by multiple small curries (dhal, jackfruit, fish or chicken, a green vegetable, papadum) plus sambol (raw coconut and chilli relish). Eaten at every meal, it never gets old. <strong>Hoppers</strong> (appa) are bowl-shaped fermented rice-flour pancakes, crispy at the edges and soft in the centre — the egg hopper, with a whole egg cracked in the middle, is a breakfast classic. <strong>String hoppers</strong> (idiyappam) are steamed rice-flour noodle nests, eaten with coconut milk curry or dhal. <strong>Kottu roti</strong> is the great Sri Lankan street food — shredded roti chopped and stir-fried on a hot griddle with vegetables, egg and meat, the rhythmic metallic clanging of the kottu blades a sound that defines Sri Lankan nights.</p>
+      <h2>Drinking in Sri Lanka</h2>
+      <p><strong>Ceylon tea</strong> is the national drink — drunk sweet and milky in every home and "hotel" (local canteen). The best teas come from the high-grown estates around Nuwara Eliya. <strong>King coconut</strong> (thambili) is the bright orange roadside coconut, hacked open with a machete and drunk through the hole — naturally sweet, isotonic, and one of the island's great roadside pleasures. <strong>Coconut arrack</strong> is Sri Lanka's national spirit — distilled from coconut flower toddy, it has a distinctive dry, slightly funky character. Drink it with ginger beer as a "Lion lager and arrack" or straight over ice. <strong>Lion Lager</strong> is the ubiquitous Sri Lankan beer — a perfectly drinkable lager that goes with everything.</p>
+    </div>
+  </div>
+</BaseLayout>

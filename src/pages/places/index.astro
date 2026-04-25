@@ -4,18 +4,18 @@ import CardDestination from '../../components/CardDestination.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
 
 const destinations = [
-  { href: '/places/sigiriya',     image: '/images/sigiriya.jpg',     title: 'Sigiriya Rock Fortress', subtitle: 'Cultural Triangle', tag: 'Must Visit', description: 'Climb this 5th-century rock citadel rising 200 metres above the jungle. UNESCO World Heritage Site.' },
-  { href: '/places/ella',         image: '/images/ella.jpg',         title: 'Ella', subtitle: 'Hill Country', tag: 'Trending', description: 'A misty mountain village loved by backpackers and luxury travellers alike, surrounded by emerald tea estates.' },
-  { href: '/places/galle',        image: '/images/galle-fort.jpg',   title: 'Galle Fort', subtitle: 'Southern Coast', tag: null, description: 'UNESCO-listed Dutch colonial fort with charming cafes, boutique hotels and sweeping ocean views.' },
-  { href: '/places/kandy',        image: '/images/kandy.jpg',        title: 'Kandy', subtitle: 'Hill Capital', tag: null, description: 'Sri Lanka\'s cultural capital and home to the revered Temple of the Tooth Relic.' },
-  { href: '/places/yala',         image: '/images/yala.jpg',         title: 'Yala National Park', subtitle: 'Wildlife', tag: null, description: 'The world\'s highest leopard density. Also home to elephants, sloth bears and crocodiles.' },
-  { href: '/places/mirissa',      image: '/images/mirissa-beach.jpg', title: 'Mirissa Beach', subtitle: 'Southern Coast', tag: null, description: 'Gorgeous crescent beach — Sri Lanka\'s top whale watching departure point.' },
-  { href: '/places/polonnaruwa',  image: 'https://images.unsplash.com/photo-1590080875515-d3a2e82abb77?w=800&q=80', title: 'Polonnaruwa', subtitle: 'Ancient City', tag: null, description: 'A UNESCO-listed ancient capital with magnificent Buddhist shrines, palaces and moats.' },
-  { href: '/places/nuwara-eliya', image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80', title: 'Nuwara Eliya', subtitle: 'Tea Country', tag: null, description: 'Little England in the clouds — Sri Lanka\'s highest city, ringed by world-famous tea estates.' },
-  { href: '/places/trincomalee',  image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80', title: 'Trincomalee', subtitle: 'East Coast', tag: null, description: 'One of the world\'s finest natural harbours — and home to stunning Nilaveli beach.' },
-  { href: '/places/arugam-bay',   image: 'https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=800&q=80', title: "Arugam Bay", subtitle: 'East Coast', tag: null, description: 'One of Asia\'s top surf spots, with a chilled-out vibe and world-class point breaks.' },
-  { href: '/places/anuradhapura', image: 'https://images.unsplash.com/photo-1541544741938-0af808871cc0?w=800&q=80', title: 'Anuradhapura', subtitle: 'Ancient City', tag: null, description: 'Sri Lanka\'s first ancient capital — a vast UNESCO site with towering dagobas and the sacred Bodhi Tree.' },
-  { href: '/places/bentota',      image: 'https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800&q=80', title: 'Bentota', subtitle: 'West Coast', tag: null, description: 'A relaxed beach resort town famous for water sports and golden sands.' },
+  { href: '/places/sigiriya',     image: '/images/sigiriya.jpg',      title: 'Sigiriya Rock Fortress', subtitle: 'Cultural Triangle', tag: 'Must Visit', description: 'Climb this 5th-century rock citadel rising 200 metres above the jungle. UNESCO World Heritage Site.' },
+  { href: '/places/ella',         image: '/images/ella.jpg',          title: 'Ella', subtitle: 'Hill Country', tag: 'Trending', description: 'A misty mountain village loved by backpackers and luxury travellers alike, surrounded by emerald tea estates.' },
+  { href: '/places/galle',        image: '/images/galle-fort.jpg',    title: 'Galle Fort', subtitle: 'South Coast', tag: null, description: 'UNESCO-listed Dutch colonial fort with charming cafes, boutique hotels and sweeping ocean views.' },
+  { href: '/places/kandy',        image: '/images/kandy.jpg',         title: 'Kandy', subtitle: 'Hill Country', tag: null, description: 'Sri Lanka\'s cultural capital and home to the revered Temple of the Tooth Relic.' },
+  { href: '/places/yala',         image: '/images/yala.jpg',          title: 'Yala National Park', subtitle: 'Wildlife Parks', tag: null, description: 'The world\'s highest leopard density. Also home to elephants, sloth bears and crocodiles.' },
+  { href: '/places/mirissa',      image: '/images/mirissa-beach.jpg', title: 'Mirissa', subtitle: 'South Coast', tag: null, description: 'Gorgeous crescent beach — Sri Lanka\'s top whale watching departure point.' },
+  { href: '/places/polonnaruwa',  image: '/images/hero.jpg',          title: 'Polonnaruwa', subtitle: 'Cultural Triangle', tag: null, description: 'A UNESCO-listed ancient capital with magnificent Buddhist shrines, palaces and moats.' },
+  { href: '/places/nuwara-eliya', image: '/images/tea-plantation.jpg',title: 'Nuwara Eliya', subtitle: 'Hill Country', tag: null, description: 'Little England in the clouds — Sri Lanka\'s highest city, ringed by world-famous tea estates.' },
+  { href: '/places/trincomalee',  image: '/images/hero.jpg',          title: 'Trincomalee', subtitle: 'East Coast', tag: null, description: 'One of the world\'s finest natural harbours — and home to stunning Nilaveli beach.' },
+  { href: '/places/arugam-bay',   image: '/images/hero.jpg',          title: 'Arugam Bay', subtitle: 'East Coast', tag: null, description: 'One of Asia\'s top surf spots, with a chilled-out vibe and world-class point breaks.' },
+  { href: '/places/anuradhapura', image: '/images/hero.jpg',          title: 'Anuradhapura', subtitle: 'Cultural Triangle', tag: null, description: 'Sri Lanka\'s first ancient capital — a vast UNESCO site with towering dagobas and the sacred Bodhi Tree.' },
+  { href: '/places/jaffna',       image: '/images/hero.jpg',          title: 'Jaffna', subtitle: 'North & Jaffna', tag: null, description: 'The Tamil cultural capital of Sri Lanka — ancient kovils, island cycling, and a distinctive cuisine.' },
 ];
 ---
 
@@ -54,8 +54,8 @@ const destinations = [
           { label: 'Hill Country', href: '/places/hill-country' },
           { label: 'South Coast', href: '/places/south-coast' },
           { label: 'East Coast', href: '/places/east-coast' },
-          { label: 'Wildlife', href: '/places/wildlife' },
-          { label: 'Ancient Cities', href: '/places/ancient-cities' },
+          { label: 'Wildlife Parks', href: '/places/wildlife-parks' },
+          { label: 'North & Jaffna', href: '/places/north-jaffna' },
         ].map((tab, i) => (
           <a
             href={tab.href}

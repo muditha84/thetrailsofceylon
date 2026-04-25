@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Tea Plantation Tours in Sri Lanka: A Complete Guide | The Trails of Ceylon"
+  description="Sri Lanka produces some of the world's finest tea. A complete guide to tea plantation tours — the best factories to visit, what happens on a tour, and how to buy Ceylon tea."
+  type="article"
+  publishDate="2025-02-05"
+>
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/tea-plantation.jpg" alt="Tea estate workers picking tea, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span>
+          <a href="/things-to-do/culture-history" class="hover:text-white">Culture & History</a><span>/</span>
+          <span class="text-white">Tea Plantation Tours</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Culture</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Tea Plantation Tours in Sri Lanka</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+      <p>Sri Lanka is one of the world's great tea-producing nations. Ceylon tea — the original island's colonial name lives on in the brand — is drunk by millions of people across the world daily, and visiting a working tea plantation in the misty highlands is one of the most rewarding experiences the island offers. The combination of spectacular scenery (the vivid green tea estates draped across steep hillsides), genuine cultural insight (Tamil estate workers have harvested these leaves for generations), and the simple pleasure of drinking a perfect cup of fresh-picked tea at the source makes a tea tour an essential part of any Sri Lanka itinerary.</p>
+
+      <h2>What Happens on a Tea Tour</h2>
+      <p>A typical tea factory tour lasts 45–90 minutes and covers the complete production process from leaf to cup. You will usually see: the withering rooms (fresh leaves spread on long tables losing moisture), the rolling machines (which break down the leaf cell structure to begin oxidation), the fermentation/oxidation rooms (where the leaves turn from green to copper), the firing kilns (hot air dryers that arrest the oxidation and create the final black tea), and the grading room (where sieves separate leaf grades from dust). Most tours end in a tasting room where you can compare grades — from the golden-tipped whole leaf to broken orange pekoe — over fresh cups of factory tea. It is genuinely fascinating even if you have no particular interest in tea beforehand.</p>
+
+      <h2>Best Tea Factories to Visit</h2>
+      <h3>Pedro Tea Estate, Nuwara Eliya</h3>
+      <p>One of the most visitor-friendly factories in the country — well-organised tours with English-speaking guides, a good tasting room, and set in a classic highland landscape above Nuwara Eliya. The factory processes tea from several surrounding estates and is particularly active in the morning. Open daily; tours typically run on the hour.</p>
+      <h3>Damro Labookellie, Nuwara Eliya</h3>
+      <p>Located right on the Kandy–Nuwara Eliya road, Labookellie is an institution — many Sri Lanka visitors stop here en route to or from Nuwara Eliya. Free factory tours, an excellent tea shop, and a verandah café overlooking the estate where you can drink tea while watching pickers work the hillside below. Comes alive in the early afternoon.</p>
+      <h3>Mackwoods Labookellie</h3>
+      <p>Another roadside tea estate on the Kandy–Nuwara Eliya route — a beautifully situated estate with an attractive colonial bungalow converted to a tea salon. The setting is wonderful; the tea excellent.</p>
+      <h3>Walking Tea Estate Trails</h3>
+      <p>For a more immersive experience, several estate guesthouses in Ella and the Haputale area offer guided walks through the picking fields in the early morning — following the picking trails used by estate workers, learning about the different leaf grades, and watching the pickers at work (they must fill 16kg of leaves per day to meet their quota). These walks are more personal and considerably more atmospheric than the factory visits.</p>
+
+      <h2>Understanding Ceylon Tea Grades</h2>
+      <p>Ceylon tea is graded by leaf size and quality. The highest grade whole-leaf teas include Orange Pekoe (OP) and Flowery Orange Pekoe (FOP). Broken grades (BOP, BOPF) make up the majority of commercial production. Dust grades are used in tea bags. High-grown teas (from Nuwara Eliya and the central highlands above 1,200m) are the most prized — lighter in colour, more delicate in flavour. Low-grown teas (from the Ratnapura area) are darker and stronger. The best time to drink highland tea at source is December to March (the crop is at its finest after the dry season).</p>
+
+      <AffiliateBox
+        title="Book a Tea Estate Tour"
+        description="Book a guided tea plantation experience including factory visit, tasting and a walk through the picking fields."
+        buttonText="Find Tea Tours on GetYourGuide"
+        buttonHref="https://www.getyourguide.com/sri-lanka-l976/"
+        variant="tour"
+      />
+
+      <h2>Buying Tea to Take Home</h2>
+      <p>Most factory shops sell directly — you can buy fresh-picked and processed tea in attractive packaging at prices significantly lower than tourist shops in Colombo. Look for vacuum-sealed bags for freshness and choose whole-leaf grades rather than dust grades for the best experience at home. Mlesna and Dilmah are the most widely exported brands; at factory shops, look for estate-specific teas that are harder to find abroad.</p>
+    </article>
+  </div>
+</BaseLayout>

@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Sri Lanka 1-Month Itinerary: The Complete Journey | The Trails of Ceylon" description="A full 30-day Sri Lanka itinerary covering every region — north, south, east coast, hill country, wildlife parks, and hidden corners. The ultimate slow-travel route." type="article" publishDate="2025-02-15">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/tea-plantation.jpg" alt="Sri Lanka month-long journey through tea estates" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span><a href="/guides" class="hover:text-white">Travel Guides</a><span>/</span><span class="text-white">1-Month Itinerary</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Itinerary</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Sri Lanka: 1-Month Itinerary</h1>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+      <p>A month in Sri Lanka is a genuine privilege — enough time to slow down, go deep, and discover corners of the island that the week-long itineraries never reach. You can cover the full coastal circuit, spend real time in the north (which most visitors skip entirely), include multiple wildlife safaris, do a proper multi-day trek in the Knuckles, and still have days to simply sit in a guesthouse garden in Ella and read. This itinerary is designed for December–April (when both coasts are accessible).</p>
+
+      <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+        <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Route Overview</h2>
+        <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+          {[['Duration','30 days'],['Best Season','Dec–Apr'],['Pace','Slow travel'],['Transport','Train + bus + tuk-tuk'],['Budget/day','USD 40–120']].map(([k,v])=>(<><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>))}
+        </dl>
+      </div>
+
+      <h2>Week 1: Colombo and the Cultural Triangle (Days 1–7)</h2>
+      <p><strong>Days 1–2: Colombo</strong> — Give Sri Lanka's capital the time it deserves. Explore Pettah market at morning rush, the Dutch Hospital shopping precinct, Gangaramaya Temple, the Colombo National Museum, and Galle Face Green at sunset. Eat at the Ministry of Crab. <strong>Days 3–4: Anuradhapura</strong> — The sacred ancient city deserves two full days. Cycle between stupas and the Sri Maha Bodhi; spend an evening at Mihintale (the site where Buddhism first arrived on the island). <strong>Days 5–7: Sigiriya, Polonnaruwa, Dambulla</strong> — The core of the Cultural Triangle. See our <a href="/places/cultural-triangle">Cultural Triangle guide</a>.</p>
+
+      <h2>Week 2: Kandy, Knuckles and the Hill Country (Days 8–14)</h2>
+      <p><strong>Days 8–10: Kandy</strong> — Three full days to do justice to the Kandyan highlands. Temple of the Tooth, Royal Botanical Gardens, a day trip to the Knuckles Range foothills. Cooking class on Day 9. <strong>Days 11–12: Knuckles Mountain Range</strong> — A 2-day guided trek into the Knuckles Range (arranged from Kandy). Cloud forest, endemic birds, waterfalls, and remote villages. Camp overnight. <strong>Days 13–14: Nuwara Eliya</strong> — "Little England" — Pedro Tea Estate tour, Victoria Park, day trip to <a href="/places/horton-plains">Horton Plains</a> for World's End. See our <a href="/places/nuwara-eliya">Nuwara Eliya guide</a>.</p>
+
+      <h2>Week 3: Ella, the Deep South and Yala (Days 15–21)</h2>
+      <p><strong>Days 15–17: Ella</strong> — Take the highland train from Kandy or Nanu Oya. Three days in Ella: Ella Rock, Little Adam's Peak, tea estate walks, the Nine Arch Bridge. <strong>Days 18–19: Yala</strong> — Two morning safaris in <a href="/places/yala">Yala Block 1</a> for the leopard. See our <a href="/things-to-do/wildlife-safaris">safari guide</a>. <strong>Days 20–21: Galle Fort</strong> — Two nights in the UNESCO fort. Walk the ramparts, explore Church Street, stay within the fort walls. See our <a href="/places/galle">Galle guide</a>.</p>
+
+      <h2>Week 4: South Coast, Jaffna and Return (Days 22–30)</h2>
+      <p><strong>Days 22–24: South Coast Beach</strong> — Three beach days split between <a href="/places/mirissa">Mirissa</a> (whale watching dawn on Day 23), <a href="/places/unawatuna">Unawatuna</a>, and <a href="/places/tangalle">Tangalle</a> (Rekawa turtle nesting at night, Maracolliya beach). <strong>Days 25–27: Jaffna</strong> — Fly or take the Yal Devi train (6.5 hours) to Jaffna. Explore the Tamil north: Nallur Kandaswamy Kovil, Jaffna Fort, island cycling, the ferry to Nainativu. See our <a href="/places/jaffna">Jaffna guide</a>. <strong>Days 28–29: Wilpattu National Park</strong> — En route back south, stop at Sri Lanka's largest and most remote national park for sloth bear and solitary wilderness safaris. See our <a href="/places/wilpattu">Wilpattu guide</a>. <strong>Day 30: Return to Colombo</strong> — Final lunch at the Dutch Hospital, depart from BIA.</p>
+
+      <AffiliateBox title="Plan Your Month in Sri Lanka" description="For a 30-day trip, a combination of pre-booked hotels and flexible guesthouses gives the right balance of security and spontaneity." buttonText="Search Hotels" buttonHref="https://www.booking.com/country/lk.html" variant="hotel" />
+
+      <h2>Slow Travel Tips for One Month</h2>
+      <p>A month in Sri Lanka is long enough to move at the island's natural pace — and that means resisting the urge to rush. The most memorable experiences often happen when you stay somewhere an extra day because it felt right: an unexpected conversation with a tea picker, a spontaneous invitation to a village temple festival, finding a perfect empty beach that no guidebook mentioned. Build buffer days into this itinerary (Days 9, 16, 24 can all absorb an extra night). The island rewards those who slow down.</p>
+    </article>
+  </div>
+</BaseLayout>

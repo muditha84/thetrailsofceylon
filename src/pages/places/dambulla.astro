@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Dambulla Cave Temple, Sri Lanka: Complete Visitor Guide | The Trails of Ceylon"
+  description="The Dambulla Cave Temple is Sri Lanka's largest and best-preserved cave temple — 5 ancient caves with 157 Buddha statues and magnificent ceiling paintings dating to the 1st century BC."
+  type="article"
+  publishDate="2025-03-08"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/hero.jpg" alt="Dambulla Golden Temple cave paintings, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/cultural-triangle" class="hover:text-white">Cultural Triangle</a><span>/</span>
+          <span class="text-white">Dambulla</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Dambulla</h1>
+        <p class="text-white/80 mt-2">Central Province &bull; UNESCO World Heritage Site &bull; Golden Cave Temple</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Province', 'Central Province'],
+              ['UNESCO', 'World Heritage Site'],
+              ['Founded', '1st century BC'],
+              ['Caves', '5 temples'],
+              ['Statues', '157 Buddhas'],
+              ['Entry Fee', '~USD 15'],
+            ].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>The Dambulla Cave Temple — officially the Golden Temple of Dambulla — is one of the most spectacular religious sites in Sri Lanka and one of the finest cave temple complexes in Asia. Carved into a massive granite outcrop rising 160 metres above the surrounding plain, the five cave temples contain the largest collection of ancient cave paintings in Sri Lanka and 157 statues of the Buddha spanning 2,000 years of artistic tradition. A giant golden Buddha statue at the base of the rock and a colourful modern Buddhist museum announce your arrival — then the real magic begins as you climb to the ancient caves above.</p>
+
+        <h2>The Five Cave Temples</h2>
+
+        <h3>Cave 1 — The Temple of the Divine King (Devaraja Vihara)</h3>
+        <p>The smallest but most intimate of the caves — dominated by a 15-metre reclining Buddha carved from the living rock. The ceiling is painted with images of the sleeping Buddha and celestial beings. The king Vattagamani Abhaya sheltered here around 89 BC when exiled from Anuradhapura — he founded the cave temple after reclaiming his throne.</p>
+
+        <h3>Cave 2 — The Temple of the Great King (Maharaja Vihara)</h3>
+        <p>The largest and most impressive cave — a cathedral-like space some 52 metres long and 23 metres wide. The ceiling is entirely covered with intricate paintings depicting the life of the Buddha, scenes from the Jataka tales, and episodes from Sri Lankan history. 56 statues of the Buddha in various postures fill the cave, along with figures of Hindu gods Vishnu and Ganesh — reflecting the inclusive religious culture of medieval Sri Lanka.</p>
+
+        <h3>Caves 3, 4 and 5</h3>
+        <p>Three additional caves contain further collections of Buddha statues in varying states of preservation, added and expanded by different kings across the centuries. Cave 3 (the New Temple of the Great King) is particularly rich in gilded statues and has a magnificent dagoba at its centre.</p>
+
+        <h2>Visiting the Cave Temple</h2>
+        <p>The climb to the caves takes 20–30 minutes up a well-paved path. Shoes must be removed at the bottom of the final staircase (shoe storage available, small fee). Cover shoulders and knees — sarongs are available to hire. The caves can be crowded midday; early morning (opening at 7am) or late afternoon gives a more peaceful experience and better light for photography. Monkeys are numerous on the path up — keep food hidden and bags secured.</p>
+
+        <AffiliateBox
+          title="Best Hotels in Dambulla"
+          description="Dambulla is a popular base for the Cultural Triangle — find hotels ranging from budget guesthouses to luxury lodges near Sigiriya."
+          buttonText="Find Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Dambulla+Sri+Lanka"
+          variant="hotel"
+        />
+
+        <h2>Getting to Dambulla</h2>
+        <p>Dambulla is the main transport hub of the Cultural Triangle — on the crossroads between Colombo (148km, 3.5 hours), Kandy (72km, 2 hours) and Sigiriya (18km, 30 minutes). Most travellers combine Dambulla with Sigiriya in a single day — visit Dambulla cave temple in the morning, then drive to Sigiriya for the afternoon/sunset. Buses from Colombo and Kandy stop at Dambulla frequently throughout the day. Tuk-tuks are plentiful for the short run to Sigiriya.</p>
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[
+              ['Best Season', 'Year-round'],
+              ['Time Needed', '2–3 hours'],
+              ['Top Sight', 'Cave 2 ceiling paintings'],
+              ["Don't Miss", 'Visiting at 7am opening'],
+            ].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Dambulla+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">
+            Book Hotel near Dambulla
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/places/sigiriya', label: 'Sigiriya (18km)' },
+              { href: '/places/anuradhapura', label: 'Anuradhapura' },
+              { href: '/places/polonnaruwa', label: 'Polonnaruwa' },
+              { href: '/places/kandy', label: 'Kandy (72km)' },
+            ].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

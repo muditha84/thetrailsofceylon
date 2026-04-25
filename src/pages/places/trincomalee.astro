@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Trincomalee, Sri Lanka: Beaches, Pigeon Island & Travel Guide | The Trails of Ceylon"
+  description="Trincomalee is Sri Lanka's east coast jewel — home to Pigeon Island's pristine snorkelling, Nilaveli beach, the dramatic Koneswaram cliff temple and Kanniya hot springs."
+  type="article"
+  publishDate="2025-04-01"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/hero.jpg" alt="Pigeon Island and Trincomalee coast, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/east-coast" class="hover:text-white">East Coast</a><span>/</span>
+          <span class="text-white">Trincomalee</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Trincomalee</h1>
+        <p class="text-white/80 mt-2">Eastern Province &bull; Natural Deep-Water Harbour &bull; Best May–Sep</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[['Province','Eastern Province'],['Best Season','May–September'],['Best For','Snorkelling, beaches, temples'],['Budget','LKR 3,000–15,000/night'],['Days Needed','2–3 days'],['From Colombo','~7–8 hours']].map(([k,v])=>(<><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>))}
+          </dl>
+        </div>
+        <p>Trincomalee — universally called "Trinco" — is one of the great undiscovered cities of Asia. Its natural harbour, which Lord Nelson called the finest in the world, has drawn traders, naval powers and strategists for two millennia. The British, Dutch and Portuguese all fought over it; today it draws travellers for a different reason: the pristine beaches of Nilaveli and Uppuveli, the extraordinary snorkelling of Pigeon Island, the dramatic cliff-top Hindu temple of Koneswaram, and a relaxed, genuinely friendly east coast atmosphere that feels entirely different from the western tourist trail.</p>
+        <h2>Pigeon Island National Park</h2>
+        <p>The single best reason to visit Trincomalee — a small island just 1km offshore from Nilaveli Beach that contains some of the best snorkelling in Sri Lanka. The coral gardens around the island are home to blacktip reef sharks (harmless, thrilling to see), green sea turtles, large schools of colourful reef fish, nurse sharks resting on the sandy bottom, and diverse hard and soft corals recovering after the 2004 tsunami. Day trips depart from Nilaveli Beach by boat (15 minutes). Best March to September when the sea is calm and visibility is excellent. Snorkelling gear is available to rent on the island.</p>
+        <h2>Nilaveli & Uppuveli Beaches</h2>
+        <p>Nilaveli Beach stretches for 8km north of Trincomalee town — a long, largely empty strip of white sand with calm, turquoise water and a handful of hotels and guesthouses behind the beach. It is one of the finest beaches on the east coast and one of Sri Lanka's most beautiful when the sea is calm (May to September). Uppuveli Beach, closer to Trincomalee town (3km), is slightly more developed with restaurants and beach bars — good for an evening out while staying in Nilaveli.</p>
+        <h2>Koneswaram Temple</h2>
+        <p>Perched 130 metres above the sea on Swami Rock — a dramatic promontory at the southern tip of Trincomalee — the Koneswaram temple is one of Sri Lanka's most dramatically situated Hindu shrines. The original ancient temple was demolished by the Portuguese in the 16th century; it was rebuilt in the 20th century and is now a vibrant centre of Tamil Hindu worship. The views from the cliff edge are extraordinary — straight down to the turquoise harbour far below. Keep a firm hold of belongings; brazen monkeys haunt the temple precinct.</p>
+        <h2>Kanniya Hot Springs</h2>
+        <p>Eight kilometres west of Trincomalee town, seven wells of naturally heated spring water (at different temperatures) have been used for bathing since ancient times — the springs are said to have been created by Ravana, the demon king of Sri Lankan legend. The site is an atmospheric blend of Hindu shrine and public bathing facility — locals bathe here daily. The water temperature varies between wells from pleasantly warm to genuinely hot. Entry is nominal.</p>
+        <AffiliateBox title="Best Hotels in Trincomalee" description="Most visitors base themselves in Nilaveli (near Pigeon Island) or Uppuveli (closer to town) — both have excellent options from eco-guesthouses to comfortable beach resorts." buttonText="Find Hotels on Booking.com" buttonHref="https://www.booking.com/searchresults.html?ss=Trincomalee+Sri+Lanka" variant="hotel" />
+        <h2>Getting to Trincomalee</h2>
+        <p>Trincomalee is about 7–8 hours from Colombo by bus or train (via Habarana). From Sigiriya/Habarana it is 3.5 hours by car — making it an easy extension of a Cultural Triangle visit. An airport (China Bay) operates domestic flights. The best route for most travellers is: Colombo → Cultural Triangle (2–3 nights) → Trincomalee (2–3 nights) → Arugam Bay (8 hours south by bus) → Hill Country. This forms the classic "east coast circuit" of Sri Lanka.</p>
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[['Best Season','May–Sep'],['Days to Spend','2–3 days'],['Top Activity','Pigeon Island snorkelling'],["Don't Miss",'Koneswaram cliff temple']].map(([k,v])=>(<div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Trincomalee+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">Book Hotel in Trincomalee</a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{href:'/places/arugam-bay',label:'Arugam Bay'},{href:'/places/polonnaruwa',label:'Polonnaruwa'},{href:'/places/minneriya',label:'Minneriya'}].map(link=>(<a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group"><svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>{link.label}</a>))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

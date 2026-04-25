@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Jaffna, Sri Lanka: Tamil Culture, Temples & Island Guide | The Trails of Ceylon"
+  description="Jaffna is Sri Lanka's most distinctive destination — Tamil temples, island lagoons, colonial forts, cycling routes and a cuisine unlike anywhere else on the island."
+  type="article"
+  publishDate="2025-04-08"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/hero.jpg" alt="Nallur Kandaswamy Temple, Jaffna, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/north-jaffna" class="hover:text-white">North Sri Lanka</a><span>/</span>
+          <span class="text-white">Jaffna</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Jaffna</h1>
+        <p class="text-white/80 mt-2">Northern Province &bull; Tamil Cultural Capital &bull; Best May–October</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[['Province','Northern Province'],['Best Season','May–October'],['Best For','Culture, temples, cycling'],['Budget','LKR 2,500–12,000/night'],['Days Needed','2–3 days'],['From Colombo','6–7 hrs by train']].map(([k,v])=>(<><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>))}
+          </dl>
+        </div>
+        <p>Jaffna is a revelation. Sri Lanka's northern capital — Tamil-majority, deeply Hindu, still scarred in places by the long civil war, but increasingly open to visitors and unmistakably vibrant — is unlike anywhere else on the island. The food is different, the temples are different, the language is different, the landscape is different. It is Sri Lanka's most distinct cultural experience, and those who make the journey north invariably return raving about it.</p>
+        <h2>Nallur Kandaswamy Kovil</h2>
+        <p>The most important Hindu temple in Sri Lanka — a magnificent structure whose soaring orange-and-white gopuram (gateway tower) dominates the Jaffna skyline. The temple is dedicated to Murugan (Kartikeya), the son of Shiva, and is one of the most active centres of Tamil Hindu worship in the country. The 25-day Nallur Festival in July–August draws hundreds of thousands of pilgrims and is extraordinary to witness — chariot processions, fire-walking, devotees in states of religious ecstasy. Daily puja ceremonies (morning and evening) are open to respectful visitors. Remove shoes and cover up before entering.</p>
+        <h2>Jaffna Fort</h2>
+        <p>Built by the Portuguese in 1618 and subsequently enlarged by the Dutch, Jaffna Fort is one of the best-preserved colonial forts in Sri Lanka. The Dutch-era architecture — brick ramparts, a moat, graceful arched gateways — is distinctive and historically significant. The fort was heavily used by the military during the civil war and was only fully opened to the public after 2009. Walk the ramparts for views across the lagoon. Inside the fort, the Queen's House and several colonial buildings are being gradually restored.</p>
+        <h2>Cycling the Jaffna Islands</h2>
+        <p>The best way to experience Jaffna's unique geography is by bicycle. The peninsula is connected by causeways to a chain of flat, lagoon-fringed islands — Kayts, Karaitivu, Punguduthivu — that are superb cycling territory. The roads are flat, traffic is light, and the scenery (palmyrah palms against blue lagoon water, traditional Tamil villages, fishing boats) is wonderful. From Kurikaduwan jetty, ferries cross to Nainativu Island — home to both the Nagapooshani Amman Hindu temple and a Buddhist dagoba sitting side by side, an extraordinary symbol of shared heritage. The small island of Delft (Nedunthivu) further out has wild ponies, colonial ruins and an otherworldly atmosphere.</p>
+        <h2>Jaffna Food</h2>
+        <p>Jaffna cuisine is a revelation for anyone who has spent time eating their way around southern Sri Lanka. The flavours are bolder, the coconut is used less (tamarind is more dominant), and several dishes are unique to the north. Jaffna crab curry is the signature dish — often cited as one of the best curries in Sri Lanka. Palmyrah toddy (a mildly alcoholic palm juice), kool (a thick seafood broth), and a variety of unique short eats are found in the local markets. The Jaffna market in the morning is a wonderful place to eat and watch the city come to life.</p>
+        <AffiliateBox title="Best Hotels in Jaffna" description="Jaffna's accommodation has expanded significantly since 2009 — from simple guesthouses to comfortable hotels with excellent food and knowledgeable local hosts." buttonText="Find Hotels on Booking.com" buttonHref="https://www.booking.com/searchresults.html?ss=Jaffna+Sri+Lanka" variant="hotel" />
+        <h2>Getting to Jaffna</h2>
+        <p>The train from Colombo Fort to Jaffna (the Yal Devi express) is the most atmospheric way to arrive — the line passes through Anuradhapura and crosses into the north on a historically significant route. Journey time approximately 6.5–7 hours. Book in advance. Flying is faster: FitsAir operates daily flights from Colombo to Jaffna (approximately 1 hour). By road, the A9 highway from Colombo through Vavuniya to Jaffna takes about 7 hours. Combine with Anuradhapura (3 hours south) for an excellent northern loop.</p>
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[['Best Season','May–Oct'],['Days to Spend','2–3 days'],['Top Experience','Nallur Temple puja'],["Don't Miss",'Cycling the islands']].map(([k,v])=>(<div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Jaffna+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">Book Hotel in Jaffna</a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{href:'/places/anuradhapura',label:'Anuradhapura (3hrs)'},{href:'/places/trincomalee',label:'Trincomalee'}].map(link=>(<a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group"><svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>{link.label}</a>))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

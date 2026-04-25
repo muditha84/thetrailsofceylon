@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Minneriya National Park: The Great Elephant Gathering | The Trails of Ceylon"
+  description="Minneriya National Park hosts the Great Elephant Gathering — up to 300 wild elephants converging on an ancient reservoir. Asia's most spectacular wildlife event."
+  type="article"
+  publishDate="2025-03-30"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/hero.jpg" alt="Elephant gathering at Minneriya reservoir, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/wildlife-parks" class="hover:text-white">Wildlife Parks</a><span>/</span>
+          <span class="text-white">Minneriya</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Minneriya</h1>
+        <p class="text-white/80 mt-2">North Central Province &bull; The Great Elephant Gathering</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[['Province','North Central'],['Gathering Season','July–October (peak Aug–Sep)'],['Elephants','Up to 300 at once'],['Best For','The Elephant Gathering'],['From Sigiriya','30km (30 min)'],['Entry Fee','~USD 25']].map(([k,v])=>(<><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>))}
+          </dl>
+        </div>
+        <p>Minneriya National Park is home to one of the greatest wildlife spectacles on Earth — the Gathering. Every year between July and October, as the dry season lowers the water level in the ancient Minneriya Reservoir and exposes fresh green grass on the exposed lake bed, wild elephants from across the surrounding forests converge in extraordinary numbers. At the peak of the Gathering (typically August and September), up to 300 individual elephants can be seen simultaneously at the reservoir's edge — grazing, bathing, playing, sparring. It is the largest known congregation of wild Asian elephants in the world.</p>
+        <h2>The Great Gathering</h2>
+        <p>The Gathering is an ecological event driven by food and water: as rain retreats and grasses elsewhere dry out, the reservoir offers fresh green grass only as the water recedes. Elephant herds from a wide area converge on this reliable food and water source. The social dynamics on display are fascinating — different family groups interact, young males practice sparring, calves play at the water's edge, and matriarchs lead their herds to the best grazing patches. Standing on the lake shore watching hundreds of elephants at dusk is one of those experiences that permanently reorders your sense of what wildlife watching can be.</p>
+        <h2>The Ancient Reservoir</h2>
+        <p>The Minneriya Wewa (tank) was built by the great Sinhalese king Mahasena in the 3rd century AD — a feat of hydraulic engineering that transformed the dry zone plains into productive agricultural land. The reservoir still irrigates thousands of acres of paddy fields today, 1,700 years later. The ancient earthen bund (dam) is visible from the park, and the sight of it — a landscape shaped by human hands nearly two millennia ago, now at the centre of a national park — gives the visit an added historical dimension.</p>
+        <h2>Other Wildlife</h2>
+        <p>Outside the Gathering season, Minneriya is quieter but still rewarding. Toque macaque monkeys are abundant throughout the year. Purple-faced langur monkeys inhabit the forest margins. Large flocks of painted storks, great white pelicans and grey herons work the reservoir shallows. The park has leopards and sloth bears but sightings are rare — the open grassland-reservoir landscape is less suited to big cats than the dense scrub of Yala. Minneriya is best visited in combination with Polonnaruwa (45km east) and Sigiriya (30km west).</p>
+        <h2>Minneriya or Kaudulla?</h2>
+        <p>The Gathering moves between Minneriya and the adjacent Kaudulla National Park (10km north) depending on rainfall and water levels. Local guides track the elephants and can advise on any given day which park has the larger congregation. If visiting in the Gathering season, ask your driver or guesthouse in Habarana (the base town for both parks) which park is better that week. Both charge similar entry fees and operate similarly.</p>
+        <AffiliateBox title="Best Hotels near Minneriya" description="Habarana is the central base for both Minneriya and the wider Cultural Triangle — it has excellent lodges and guesthouses within easy distance of the park." buttonText="Find Hotels on Booking.com" buttonHref="https://www.booking.com/searchresults.html?ss=Habarana+Sri+Lanka" variant="hotel" />
+        <h2>Getting to Minneriya</h2>
+        <p>Minneriya is 30km from Sigiriya and 45km from Polonnaruwa — easily combined as a day trip with either. From Habarana (the nearest town, 24km away and the recommended base), the drive takes about 30 minutes. Most guesthouses in Habarana and Sigiriya arrange Minneriya safaris — book the evening safari (3pm–dusk) for the best Gathering sightings, when the elephants are most active and the light is golden.</p>
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[['Gathering Season','Jul–Oct (peak Aug–Sep)'],['Best Safari Time','Afternoon (3pm–dusk)'],['Base Town','Habarana or Sigiriya'],["Don't Miss",'The reservoir at dusk']].map(([k,v])=>(<div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Habarana+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">Book Hotel in Habarana</a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{href:'/places/sigiriya',label:'Sigiriya (30km)'},{href:'/places/polonnaruwa',label:'Polonnaruwa (45km)'},{href:'/places/anuradhapura',label:'Anuradhapura'}].map(link=>(<a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group"><svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>{link.label}</a>))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

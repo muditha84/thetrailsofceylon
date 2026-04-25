@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Yala National Park, Sri Lanka: Leopard Safari Guide | The Trails of Ceylon"
+  description="Yala National Park has the world's highest leopard density — a complete guide to Sri Lanka's most famous wildlife reserve including safaris, what to see, best time and how to get there."
+  type="article"
+  publishDate="2025-03-25"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/yala.jpg" alt="Leopard in Yala National Park, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/wildlife-parks" class="hover:text-white">Wildlife Parks</a><span>/</span>
+          <span class="text-white">Yala National Park</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Yala National Park</h1>
+        <p class="text-white/80 mt-2">Southern Province &bull; World's Highest Leopard Density</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[['Province','Southern Province'],['Size','979 sq km (Block 1: 141 sq km)'],['Leopard Density','Highest in the world'],['Best Season','Jun–Sep (dry season)'],['Safari Cost','~USD 50–80/person'],['Gateway Town','Tissamaharama']].map(([k,v])=>(<><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>))}
+          </dl>
+        </div>
+        <p>Yala National Park is Sri Lanka's most celebrated wildlife destination — a vast expanse of coastal scrub jungle, grassland, lagoons and rocky outcrops in the island's deep south. What makes Yala world-famous is a single, extraordinary statistic: it has the highest density of leopards of any protected area on Earth. Around 30 leopards live in every 100 square kilometres of Yala Block 1 — roughly four times the density found in leading African reserves. Put simply, Yala gives you a better chance of seeing a wild leopard than anywhere else in the world.</p>
+        <h2>The Leopards of Yala</h2>
+        <p>Sri Lanka's leopards are a distinct subspecies (Panthera pardus kotiya) and are significantly larger than their Indian counterparts. In Yala, these magnificent cats have become habituated to safari jeeps over decades — they often continue hunting or resting while vehicles observe from close range. Morning safaris (6am–10am) are the prime window: the cats are most active before the heat of the day drives them into shade. Patient waiting at known leopard territories or waterholes is the most reliable strategy. A good driver-guide is invaluable — they know the individual animals by sight and track their movements daily.</p>
+        <h2>What Else to See</h2>
+        <p>Yala is much more than leopards. Elephant herds of 20–40 individuals are common sightings; large bull elephants roam the park alone. Sloth bears emerge from the scrub (best in the evening). Mugger crocodiles bask on the banks of lagoons throughout the park. Water buffalo, spotted deer, jackals, grey langur monkeys and the brilliant Sri Lanka junglefowl (national bird) are regular sightings. The coastal section of the park has flamingos, painted storks and pelicans. The ancient Buddhist monastery of Sithulpawwa — 2,000 years old, built into a granite outcrop — is visited on most safaris and provides extraordinary historical context.</p>
+        <h2>Planning Your Yala Safari</h2>
+        <p>Most visitors do a morning safari, an evening safari, or both. A standard half-day safari (3–4 hours) costs approximately USD 50–80 per person including the park entry fee (around USD 25) and jeep hire shared between 4–6 people. Book through your guesthouse in Tissamaharama (Tissa) the night before, or pre-book through a reputable online operator. Morning safaris are superior: cooler temperatures, more active wildlife, better light for photography. Bring a long lens (200–400mm) if you have one. Wear earth tones. The park is busiest on Sri Lankan public holidays and between December and April — weekday mornings between June and September offer the best combination of good sightings and lower crowds.</p>
+        <AffiliateBox title="Book a Yala Safari Tour" description="Book a well-organised Yala safari with an experienced guide — the difference a knowledgeable driver makes to your sightings is enormous." buttonText="Find Yala Safari Tours" buttonHref="https://www.getyourguide.com/sri-lanka-l976/" variant="tour" />
+        <h2>Getting to Yala</h2>
+        <p>The gateway to Yala is Tissamaharama (usually just called "Tissa") — 6 hours from Colombo by bus (via Matara and Hambantota) or about 5 hours by car. From Ella, it is approximately 3 hours by car or tuk-tuk via Wellawaya. From Tangalle, 90km east (1.5 hours). There is no train to Tissa; buses are frequent from Matara. Most travellers combine Yala with the south coast beaches (Mirissa/Galle before, or Tangalle) as the natural end point of a Sri Lanka circuit.</p>
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[['Best Season','Jun–Sep (dry)'],['Days to Spend','1–2 nights'],['Top Experience','Morning leopard safari'],["Don't Miss",'Sithulpawwa monastery']].map(([k,v])=>(<div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Yala+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">Book Hotel near Yala</a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{href:'/places/tangalle',label:'Tangalle'},{href:'/places/mirissa',label:'Mirissa'},{href:'/places/udawalawe',label:'Udawalawe'},{href:'/places/ella',label:'Ella'}].map(link=>(<a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group"><svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>{link.label}</a>))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

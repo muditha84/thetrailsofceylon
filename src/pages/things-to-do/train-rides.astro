@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Sri Lanka Train Rides: The World's Most Scenic Railway | The Trails of Ceylon"
+  description="The Kandy to Ella train is one of the world's great rail journeys. A complete guide to scenic train rides in Sri Lanka — booking, classes, routes and what to expect."
+  type="article"
+  publishDate="2025-02-08"
+>
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/scenic-train.jpg" alt="Train through tea estates, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span>
+          <a href="/things-to-do/culture-history" class="hover:text-white">Culture & History</a><span>/</span>
+          <span class="text-white">Train Rides</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Experience</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Sri Lanka Train Rides</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+      <p>Sri Lanka has one of the world's great railway experiences — and the Kandy to Ella line has been featured in countless lists of the world's most scenic train journeys. The highland railway was built by the British between 1864 and 1894 to connect the tea estates of the central highlands to the ports of Colombo, and the engineering required was extraordinary: the line climbs from sea level to over 1,800 metres, crosses dozens of stone viaducts, tunnels through mountains, and winds around hairpin curves so tight that the train occasionally disappears around bends while its rear carriages are still visible from the front. Riding this railway is one of the quintessential Sri Lanka experiences.</p>
+
+      <h2>The Kandy to Ella Train (The Highland Line)</h2>
+      <p>The most celebrated train journey in Sri Lanka — arguably in Asia. The full route from Kandy to Ella via Nanu Oya (for Nuwara Eliya) takes approximately 7 hours through scenery that changes from rubber plantations to cloud forest to rolling tea estates to the dramatic rock outcrops of the Ella area. The Nine Arch Bridge at Ella (which you pass through on the train) is one of the most photographed railway structures in the world — a colonial-era stone viaduct built without steel, arching through the jungle on nine elegant spans.</p>
+      <p>The observation class carriage (a glass-windowed rear carriage with panoramic views) is the most sought-after on the highland line — book months in advance through 12Go Asia or at Colombo Fort station. Second-class reserved seats are also good and easier to obtain. The doors in all classes remain open throughout the journey — hanging from the open doorway as the train winds through the tea estates is a Sri Lanka rite of passage (take care and hold on firmly).</p>
+
+      <h2>Colombo to Kandy</h2>
+      <p>The 3-hour journey from Colombo Fort to Kandy climbs steadily through rubber plantations and suburban Sri Lanka before entering the lower highlands. Not as dramatic as the highland line but comfortable and scenic. The Intercity Express is the fastest and most comfortable option; book in advance. First and second class air-conditioned carriages are available.</p>
+
+      <h2>The Coastal Line — Colombo to Galle & Matara</h2>
+      <p>Sri Lanka's coastal railway runs right along the shoreline south of Colombo — past beaches, fishing villages and coconut groves — before swinging inland to Galle and continuing to Matara. The stretch between Colombo and Hikkaduwa (passing through Kalutara and Beruwala) is particularly scenic; at some points the train passes so close to the sea that spray hits the windows in rough weather. A beautiful way to reach the south coast.</p>
+
+      <h2>Colombo to Jaffna (The Northern Line)</h2>
+      <p>The train north to Jaffna (the Yal Devi express) crosses through Vavuniya into the historically significant north of the island — the line was rebuilt and reopened after the civil war in 2014. Not as scenically dramatic as the highland line but historically poignant; the journey takes about 6.5–7 hours.</p>
+
+      <AffiliateBox
+        title="Book Sri Lanka Train Tickets"
+        description="Book observation class and reserved second class seats for the Kandy–Ella train in advance — these sell out weeks ahead in peak season."
+        buttonText="Book via 12Go Asia"
+        buttonHref="https://12go.asia/en/travel/kandy/ella"
+        variant="flight"
+      />
+
+      <h2>Booking Tips</h2>
+      <p>Observation class tickets for Kandy–Ella sell out weeks or months in advance during peak season (December–April and July–September) — book as early as possible through 12Go Asia or directly at Colombo Fort station. Second class reserved seats are easier to book but still worth securing in advance. Third class unreserved is always available and is the cheapest option — crowded but an authentic Sri Lankan experience for short sections. Take the morning train (departing Kandy around 8:30am) rather than the afternoon departure for the best light for photography.</p>
+    </article>
+  </div>
+</BaseLayout>

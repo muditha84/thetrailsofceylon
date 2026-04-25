@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Galle, Sri Lanka: Complete Guide to Galle Fort & Beyond | The Trails of Ceylon"
+  description="Galle Fort is Sri Lanka's most atmospheric destination — a UNESCO-listed Dutch colonial fort of ramparts, boutique hotels, galleries and ocean views on the southern coast."
+  type="article"
+  publishDate="2025-02-15"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/galle-fort.jpg" alt="Galle Fort ramparts at sunset, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/south-coast" class="hover:text-white">South Coast</a><span>/</span>
+          <span class="text-white">Galle</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Galle</h1>
+        <p class="text-white/80 mt-2">Southern Province &bull; UNESCO World Heritage Site &bull; Dutch Colonial Fort</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+
+        <div class="not-prose bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-6 mb-8">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Province', 'Southern Province'],
+              ['UNESCO', 'World Heritage Site'],
+              ['Fort Built', '1663 by Dutch'],
+              ['Best For', 'History, food, culture'],
+              ['Days Needed', '1–2 days'],
+              ['From Colombo', '1.5 hrs expressway'],
+            ].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Galle is the most culturally rich destination on Sri Lanka's south coast and one of the finest examples of a European colonial port city in Asia. The Galle Fort — a 36-hectare walled city built by the Dutch in 1663 on an earlier Portuguese fortification — is today a living UNESCO World Heritage Site, its narrow cobbled streets lined with boutique hotels, galleries, jewellers, cafes and restaurants housed in beautifully restored colonial buildings. Walking the ramparts at sunset, with the Indian Ocean crashing below on three sides and the lighthouse standing white against a pink sky, is one of those experiences that makes you understand why Sri Lanka is called the wonder of Asia.</p>
+
+        <h2>What to See & Do in Galle</h2>
+
+        <h3>The Ramparts</h3>
+        <p>The fort's great walls stretch for almost two kilometres around the headland, built of coral stone and brick and up to 9 metres thick in places. Walk the full circuit at dusk — the ramparts are wide enough to stroll comfortably, and the views across the Indian Ocean are spectacular. Flag Rock at the southwestern tip is the classic sunset spot. The perimeter walk takes about an hour at a relaxed pace.</p>
+
+        <h3>The Streets of the Fort</h3>
+        <p>Within the fort walls, the streets are a delight to wander. Church Street and Leyn Baan Street have the highest concentration of boutique shops and cafes. The Dutch Reformed Church (1755) on Church Street is still in use and contains fascinating old gravestones in its floor — Dutch merchants and officials who never made it home. The National Maritime Museum near the main gate tells the story of Galle's trading history. The Old Dutch Hospital (now converted to restaurants and shops) is a beautiful colonial courtyard and a good spot for a sundowner.</p>
+
+        <h3>Galle Fort Lighthouse</h3>
+        <p>The lighthouse at the southern tip of the fort was built in 1939 — the second lighthouse on this site. It makes a striking photograph against the blue of the Indian Ocean, particularly in the golden hour before sunset. The rocky point around the lighthouse is a favourite of local fishermen and a wonderful spot for watching the sea.</p>
+
+        <h3>Cricket at the Galle International Stadium</h3>
+        <p>Galle has one of the world's most atmospheric cricket grounds — located just outside the fort walls, with the ramparts forming a picturesque backdrop. International test matches here are legendary for the combination of competitive cricket and extraordinary setting. If a match coincides with your visit, it is an unmissable experience.</p>
+
+        <AffiliateBox
+          title="Best Hotels in Galle Fort"
+          description="From boutique colonial guesthouses inside the fort walls to luxury hotels overlooking the ramparts — Galle has some of Sri Lanka's finest accommodation."
+          buttonText="Find Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Galle+Sri+Lanka"
+          variant="hotel"
+        />
+
+        <h2>Getting to Galle</h2>
+        <p>From Colombo, Galle is accessible in under 1.5 hours via the Southern Expressway — the fastest connection. The coastal train from Colombo Fort to Galle takes about 2.5 hours and follows the shoreline closely, passing beaches and coconut groves — one of Sri Lanka's most scenic rail journeys. From Mirissa and Unawatuna, Galle is easily reached by tuk-tuk (15–30 minutes). From Ella, hire a private driver or take the train to Matara and then a bus.</p>
+
+        <h2>Food & Drink in Galle</h2>
+        <p>Galle has Sri Lanka's most sophisticated dining scene outside Colombo. Inside the fort: The Fortaleza, Lucky Fort Restaurant, and a string of excellent cafes along Church Street. The Old Dutch Hospital courtyard has several good restaurants. Don't miss a Sri Lankan breakfast of hoppers and pol sambol at a local café before the day heats up. For sundowners, the rampart-side bars with ocean views are perfect.</p>
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[
+              ['Best Season', 'Dec–Apr'],
+              ['Days to Spend', '1–2 days'],
+              ['Top Sight', 'Rampart sunset walk'],
+              ["Don't Miss", 'Church Street at dawn'],
+            ].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-gray-700">{k}</span><span class="text-gray-600 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Galle+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="block mt-5 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white text-center font-semibold py-3 px-4 rounded-xl text-sm transition-colors">
+            Book Hotel in Galle
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-5">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/places/unawatuna', label: 'Unawatuna (3km)' },
+              { href: '/places/mirissa', label: 'Mirissa (35km)' },
+              { href: '/places/weligama', label: 'Weligama' },
+              { href: '/places/tangalle', label: 'Tangalle' },
+            ].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-sm text-gray-700 hover:text-ceylon-green-700 font-medium group">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

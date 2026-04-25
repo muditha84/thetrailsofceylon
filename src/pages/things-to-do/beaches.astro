@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Best Beaches in Sri Lanka | The Trails of Ceylon" description="Sri Lanka's finest beaches — from the sheltered cove of Unawatuna to the whale-watching shores of Mirissa, the surfing beaches of Arugam Bay, and the untouched sands of Tangalle." type="article" publishDate="2025-03-15">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/mirissa-beach.jpg" alt="Mirissa beach, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span><a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span><span class="text-white">Beaches</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Beaches</h1>
+        <p class="text-white/80 mt-2 text-lg">Sri Lanka's finest stretches of sand</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-14">
+    <p class="text-xl text-gray-600 mb-12 max-w-3xl">Sri Lanka has over 1,500km of coastline — and two distinct beach seasons. The south and west coasts are at their best November to April; the east coast shines from May to September. Which means there is always a stunning beach within reach, whatever the time of year.</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {[
+        {href:'/places/mirissa',img:'/images/mirissa-beach.jpg',alt:'Mirissa beach Sri Lanka',badge:'South Coast',title:'Mirissa',desc:'A crescent bay backed by coconut palms — famous for whale watching at dawn and sunset cocktails at Parrot Rock. Best November–April.'},
+        {href:'/places/unawatuna',img:'/images/mirissa-beach.jpg',alt:'Unawatuna beach Sri Lanka',badge:'South Coast',title:'Unawatuna',desc:'A sheltered, reef-protected bay near Galle — calm, swimmable water, snorkelling just offshore, and a lively beach strip.'},
+        {href:'/places/weligama',img:'/images/mirissa-beach.jpg',alt:'Weligama beach Sri Lanka',badge:'South Coast',title:'Weligama',desc:'The beginner surfer\'s paradise — a wide, gently shelved bay with a forgiving beach break and Sri Lanka\'s best surf schools.'},
+        {href:'/places/tangalle',img:'/images/hero.jpg',alt:'Tangalle beach Sri Lanka',badge:'South Coast',title:'Tangalle',desc:'Long, empty beaches and a slower pace — Rekawa Beach sees turtle nesting at night, and Maracolliya is one of the most beautiful stretches of sand on the island.'},
+        {href:'/places/arugam-bay',img:'/images/hero.jpg',alt:'Arugam Bay beach Sri Lanka',badge:'East Coast',title:'Arugam Bay',desc:'A laid-back surf village with a legendary right-hand point break. The best beach on the east coast, firing June–September.'},
+        {href:'/places/trincomalee',img:'/images/hero.jpg',alt:'Nilaveli beach Trincomalee Sri Lanka',badge:'East Coast',title:'Trincomalee',desc:'Nilaveli beach — pristine white sand with Pigeon Island just offshore for world-class snorkelling among blacktip reef sharks.'},
+      ].map(c=>(
+        <a href={c.href} class="group rounded-2xl overflow-hidden bg-white shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src={c.img} alt={c.alt} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" />
+          </div>
+          <div class="p-5">
+            <span class="text-xs font-bold uppercase tracking-wide text-ceylon-green-700">{c.badge}</span>
+            <h2 class="font-serif font-bold text-gray-900 text-xl mt-1 mb-2">{c.title}</h2>
+            <p class="text-gray-600 text-sm leading-relaxed">{c.desc}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+    <div class="mt-12 bg-ceylon-gold-50 border border-ceylon-gold-200 rounded-2xl p-8">
+      <h2 class="font-serif font-bold text-gray-900 text-2xl mb-3">Which Coast When?</h2>
+      <div class="grid sm:grid-cols-2 gap-6 text-sm text-gray-700">
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-2">South & West Coast</h3>
+          <p>Best November to April. This is peak season for Mirissa, Unawatuna, Weligama, Tangalle and Hikkaduwa. Galle Fort makes a perfect base. The southwest monsoon (May–October) brings rough seas to this coast.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-2">East Coast</h3>
+          <p>Best May to September. Arugam Bay, Nilaveli and Passikudah shine in this window. The northeast monsoon (October–January) affects the east coast. When the south is rough, the east is calm — and vice versa.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
