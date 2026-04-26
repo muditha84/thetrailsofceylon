@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import CardDestination from '../components/CardDestination.astro';
 import CardBlog from '../components/CardBlog.astro';
 import SectionHeader from '../components/SectionHeader.astro';
+import ExpediaWidget from '../components/ExpediaWidget.astro';
 
 const destinations = [
   {
@@ -80,6 +81,30 @@ const activities = [
     tag: null,
     description: "Ride one of the world's most beautiful train journeys from Kandy to Ella through cloud-wreathed mountains.",
   },
+  {
+    href: '/things-to-do/wildlife-safaris',
+    image: '/images/yala.jpg',
+    title: 'Wildlife Safaris',
+    subtitle: 'National Parks',
+    tag: null,
+    description: 'Track leopards, elephants and crocodiles in Yala, Udawalawe and Minneriya national parks.',
+  },
+  {
+    href: '/things-to-do/hiking',
+    image: '/images/adams-peak.jpg',
+    title: 'Hiking',
+    subtitle: 'Trails & Trekking',
+    tag: null,
+    description: "Adam's Peak overnight climb, Ella Rock at dawn, Horton Plains plateau — Sri Lanka's trails are extraordinary.",
+  },
+  {
+    href: '/things-to-do/surfing',
+    image: '/images/mirissa-beach.jpg',
+    title: 'Surfing',
+    subtitle: 'East & South Coast',
+    tag: null,
+    description: 'World-class breaks at Arugam Bay, Weligama and Hikkaduwa — waves for every level.',
+  },
 ];
 
 const blogPosts = [
@@ -88,7 +113,7 @@ const blogPosts = [
     image: '/images/scenic-train.jpg',
     title: 'The Perfect 2-Week Sri Lanka Itinerary',
     category: 'Itineraries',
-    date: 'April 10, 2025',
+    date: 'April 10, 2026',
     readTime: '12 min',
     excerpt: 'From ancient ruins to pristine beaches — the ultimate two-week route to see the best of Sri Lanka.',
   },
@@ -97,7 +122,7 @@ const blogPosts = [
     image: '/images/mirissa-beach.jpg',
     title: "Sri Lanka's 10 Best Beaches: A Complete Guide",
     category: 'Beaches',
-    date: 'March 28, 2025',
+    date: 'March 28, 2026',
     readTime: '8 min',
     excerpt: "From surfers' paradise to hidden coves — discover Sri Lanka's most beautiful beaches for every type of traveller.",
   },
@@ -106,9 +131,36 @@ const blogPosts = [
     image: '/images/colombo.jpg',
     title: 'Sri Lanka on a Budget: How to Travel Cheap',
     category: 'Budget Travel',
-    date: 'March 15, 2025',
+    date: 'March 15, 2026',
     readTime: '10 min',
     excerpt: 'Everything you need to know to visit Sri Lanka without breaking the bank — accommodation, food, transport and more.',
+  },
+  {
+    href: '/blog/sigiriya-rock-fortress-guide',
+    image: '/images/sigiriya.jpg',
+    title: 'Sigiriya Rock Fortress: The Complete Visitor Guide',
+    category: 'Cultural Sites',
+    date: 'March 5, 2026',
+    readTime: '9 min',
+    excerpt: 'Everything you need to know before climbing the iconic Lion Rock — tickets, timing, frescoes, and how to avoid the crowds.',
+  },
+  {
+    href: '/blog/ella-travel-guide',
+    image: '/images/ella.jpg',
+    title: 'Ella Travel Guide: The Best of Sri Lanka\'s Hill Country Village',
+    category: 'Destinations',
+    date: 'February 20, 2026',
+    readTime: '10 min',
+    excerpt: 'Ella in a nutshell: Nine Arch Bridge at dawn, Ella Rock hike, Little Adam\'s Peak and the best cafés in the hills.',
+  },
+  {
+    href: '/blog/sri-lanka-food-guide',
+    image: '/images/cooking-classes.jpg',
+    title: 'Sri Lankan Food: What to Eat & Where',
+    category: 'Food & Drink',
+    date: 'February 10, 2026',
+    readTime: '9 min',
+    excerpt: 'A delicious guide to Sri Lankan cuisine — from coconut sambol to hoppers, rice and curry to kottu roti.',
   },
 ];
 ---
@@ -200,11 +252,12 @@ const blogPosts = [
         <!-- Stats bar -->
         <div class="absolute bottom-0 left-0 right-0 z-10 bg-black/30 backdrop-blur-sm border-t border-white/10">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-3 divide-x divide-white/20 py-4">
+            <div class="grid grid-cols-4 divide-x divide-white/20 py-4">
               {[
-                { value: '22+', label: 'Destinations' },
-                { value: '10+', label: 'Travel Guides' },
+                { value: '35+', label: 'Destinations' },
+                { value: '25+', label: 'Guides & Activities' },
                 { value: 'Growing', label: 'Community' },
+                { value: '8', label: 'UNESCO Sites' },
               ].map(stat => (
                 <div class="text-center px-4">
                   <div class="font-serif font-bold text-white text-xl sm:text-2xl">{stat.value}</div>
@@ -284,7 +337,7 @@ const blogPosts = [
           { name: 'South Coast',       icon: '🏖️', href: '/places/south-coast',       color: 'bg-blue-50 border-blue-200 hover:bg-blue-100' },
           { name: 'East Coast',        icon: '🌊', href: '/places/east-coast',        color: 'bg-cyan-50 border-cyan-200 hover:bg-cyan-100' },
           { name: 'North & Jaffna',    icon: '🦚', href: '/places/north-jaffna',      color: 'bg-purple-50 border-purple-200 hover:bg-purple-100' },
-          { name: 'Wildlife Parks',    icon: '🐆', href: '/places/wildlife',          color: 'bg-orange-50 border-orange-200 hover:bg-orange-100' },
+          { name: 'Wildlife Parks',    icon: '🐆', href: '/places/wildlife-parks',    color: 'bg-orange-50 border-orange-200 hover:bg-orange-100' },
         ].map(region => (
           <a href={region.href} class={`flex flex-col items-center text-center p-5 rounded-2xl border-2 transition-all duration-200 hover:-translate-y-1 ${region.color}`}>
             <span class="text-3xl mb-2">{region.icon}</span>
@@ -311,7 +364,7 @@ const blogPosts = [
           </svg>
         </a>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {activities.map(act => (
           <CardDestination {...act} />
         ))}
@@ -404,12 +457,14 @@ const blogPosts = [
           />
           <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-lg">
             <p class="font-serif font-bold text-gray-900 text-lg">✨ Top Rated</p>
-            <p class="text-gray-500 text-sm">World's Best Island 2024</p>
+            <p class="text-gray-500 text-sm">Hidden Gem of Asia</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <ExpediaWidget heading="✈️ Search Hotels & Flights to Sri Lanka" />
 
   <!-- Blog -->
   <section class="py-20 bg-white">
@@ -427,7 +482,7 @@ const blogPosts = [
           </svg>
         </a>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {blogPosts.map(post => (
           <CardBlog {...post} />
         ))}

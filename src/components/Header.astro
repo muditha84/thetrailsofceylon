@@ -1,12 +1,41 @@
 ---
-const navLinks = [
-  { href: '/places', label: 'Places to Visit' },
-  { href: '/things-to-do', label: 'Things to Do' },
-  { href: '/guides', label: 'Travel Guides' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/about', label: 'About' },
-];
 const currentPath = Astro.url.pathname;
+
+const dropdowns = {
+  '/places': [
+    { href: '/places/cultural-triangle', label: 'Cultural Triangle' },
+    { href: '/places/hill-country',      label: 'Hill Country' },
+    { href: '/places/south-coast',       label: 'South Coast' },
+    { href: '/places/east-coast',        label: 'East Coast' },
+    { href: '/places/north-jaffna',      label: 'North & Jaffna' },
+    { href: '/places/wildlife-parks',    label: 'Wildlife Parks' },
+    { href: '/places',                   label: 'All Destinations →' },
+  ],
+  '/things-to-do': [
+    { href: '/things-to-do/whale-watching',      label: 'Whale Watching' },
+    { href: '/things-to-do/wildlife-safaris',    label: 'Wildlife Safaris' },
+    { href: '/things-to-do/hiking',              label: 'Hiking' },
+    { href: '/things-to-do/surfing',             label: 'Surfing' },
+    { href: '/things-to-do/train-rides',         label: 'Scenic Train Rides' },
+    { href: '/things-to-do',                     label: 'All Activities →' },
+  ],
+  '/guides': [
+    { href: '/guides/sri-lanka-itinerary-2-weeks', label: '2-Week Itinerary' },
+    { href: '/guides/sri-lanka-itinerary-1-week',  label: '1-Week Itinerary' },
+    { href: '/guides/best-time-to-visit',          label: 'Best Time to Visit' },
+    { href: '/guides/sri-lanka-visa-guide',        label: 'Visa Guide' },
+    { href: '/guides/getting-around-sri-lanka',    label: 'Getting Around' },
+    { href: '/guides',                             label: 'All Guides →' },
+  ],
+};
+
+const navLinks = [
+  { href: '/places',       label: 'Places to Visit' },
+  { href: '/things-to-do', label: 'Things to Do' },
+  { href: '/guides',       label: 'Travel Guides' },
+  { href: '/blog',         label: 'Blog' },
+  { href: '/about',        label: 'About' },
+];
 ---
 
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-ceylon-green-100 shadow-sm">
@@ -26,18 +55,43 @@ const currentPath = Astro.url.pathname;
 
       <!-- Desktop Nav -->
       <nav class="hidden lg:flex items-center gap-1" aria-label="Main navigation">
-        {navLinks.map(link => (
-          <a
-            href={link.href}
-            class={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-              currentPath.startsWith(link.href)
-                ? 'text-ceylon-green-700 bg-ceylon-green-50'
-                : 'text-gray-700 hover:text-ceylon-green-700 hover:bg-ceylon-green-50'
-            }`}
-          >
-            {link.label}
-          </a>
-        ))}
+        {navLinks.map(link => {
+          const hasDropdown = link.href in dropdowns;
+          const items = hasDropdown ? dropdowns[link.href as keyof typeof dropdowns] : [];
+          return (
+            <div class="relative group">
+              <a
+                href={link.href}
+                class={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  currentPath.startsWith(link.href)
+                    ? 'text-ceylon-green-700 bg-ceylon-green-50'
+                    : 'text-gray-700 hover:text-ceylon-green-700 hover:bg-ceylon-green-50'
+                }`}
+              >
+                {link.label}
+                {hasDropdown && (
+                  <svg class="w-3 h-3 opacity-60 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                )}
+              </a>
+              {hasDropdown && (
+                <div class="absolute top-full left-0 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div class="bg-white rounded-xl shadow-xl border border-gray-100 py-2 min-w-[200px]">
+                    {items.map(item => (
+                      <a
+                        href={item.href}
+                        class="block px-4 py-2.5 text-sm text-gray-700 hover:text-ceylon-green-700 hover:bg-ceylon-green-50 transition-colors font-medium"
+                      >
+                        {item.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </nav>
 
       <!-- CTA + Mobile toggle -->
@@ -60,20 +114,38 @@ const currentPath = Astro.url.pathname;
   </div>
 
   <!-- Mobile Nav -->
-  <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white">
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white max-h-[80vh] overflow-y-auto">
     <nav class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1" aria-label="Mobile navigation">
-      {navLinks.map(link => (
-        <a
-          href={link.href}
-          class={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-            currentPath.startsWith(link.href)
-              ? 'text-ceylon-green-700 bg-ceylon-green-50'
-              : 'text-gray-700 hover:text-ceylon-green-700 hover:bg-ceylon-green-50'
-          }`}
-        >
-          {link.label}
-        </a>
-      ))}
+      {navLinks.map(link => {
+        const hasDropdown = link.href in dropdowns;
+        const items = hasDropdown ? dropdowns[link.href as keyof typeof dropdowns] : [];
+        return (
+          <div>
+            <a
+              href={link.href}
+              class={`flex items-center px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                currentPath.startsWith(link.href)
+                  ? 'text-ceylon-green-700 bg-ceylon-green-50'
+                  : 'text-gray-700 hover:text-ceylon-green-700 hover:bg-ceylon-green-50'
+              }`}
+            >
+              {link.label}
+            </a>
+            {hasDropdown && (
+              <div class="ml-4 flex flex-col gap-0.5 mb-1">
+                {items.slice(0, -1).map(item => (
+                  <a
+                    href={item.href}
+                    class="px-4 py-2 text-sm text-gray-500 hover:text-ceylon-green-700 hover:bg-ceylon-green-50 rounded-lg transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        );
+      })}
       <a href="/guides" class="mt-2 text-center bg-ceylon-green-700 text-white text-sm font-semibold px-4 py-3 rounded-lg">
         Plan Your Trip
       </a>

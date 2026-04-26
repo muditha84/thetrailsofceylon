@@ -85,7 +85,7 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
   <!-- Sitemap -->
   <link rel="sitemap" href="/sitemap-index.xml" />
 
-  <!-- Schema.org JSON-LD -->
+  <!-- Schema.org JSON-LD: page-level -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": type === 'article' ? 'Article' : 'WebSite',
@@ -105,6 +105,27 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
       "datePublished": publishDate,
       "author": { "@type": "Person", "name": author }
     })
+  })} />
+  <!-- Schema.org JSON-LD: TravelAgency -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "The Trails of Ceylon",
+    "description": "Expert travel guides and itineraries for Sri Lanka — destinations, activities, visa info and planning resources.",
+    "url": siteURL,
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteURL}/images/logo.svg`
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Sri Lanka"
+    },
+    "sameAs": [
+      "https://www.instagram.com/thetrailsofceylon",
+      "https://www.pinterest.com/thetrailsofceylon",
+      "https://www.facebook.com/thetrailsofceylon"
+    ]
   })} />
 </head>
 <body class="min-h-screen flex flex-col">
