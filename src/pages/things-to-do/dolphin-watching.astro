@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Dolphin Watching in Sri Lanka: Kalpitiya, Mirissa & Trincomalee | The Trails of Ceylon" description="Sri Lanka has world-class dolphin watching — spinner dolphins in vast pods at Kalpitiya, and common dolphins alongside blue whales at Mirissa and Trincomalee." type="article" publishDate="2025-03-01">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/whale-watching.jpg" alt="Spinner dolphins Kalpitiya Sri Lanka dolphin watching" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span>
+          <span class="text-white">Dolphin Watching in Sri Lanka</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Ocean</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Dolphin Watching in Sri Lanka</h1>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_260px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <p>Sri Lanka is one of the world's finest destinations for dolphin watching — and unlike many whale watching destinations where dolphin sightings are incidental, several locations in Sri Lanka specifically attract enormous pods of spinner and bottlenose dolphins that are reliably encountered year-round. The spinner dolphins at <a href="/places/kalpitiya">Kalpitiya</a> are particularly extraordinary — pods of several hundred animals are regularly seen, bow-riding boats and leaping in their characteristic spinning motion with an exuberance that suggests pure pleasure rather than any practical function.</p>
+        <h2>Kalpitiya — Best for Spinner Dolphins</h2>
+        <p>The waters west of Kalpitiya peninsula are home to permanent resident pods of spinner dolphins — Sri Lanka's most reliable and spectacular dolphin watching location. Boats depart from Kalpitiya in the morning, heading into the open ocean west of the lagoon. The pods encountered are often enormous — 200–500 animals is not uncommon, and on exceptional days the pod extends to the horizon. The interactions are intimate: dolphins bow-ride the boat, swim alongside and leap continuously. Dolphin watching season at Kalpitiya runs November through April (the calm north-east season).</p>
+        <h2>Mirissa — Dolphins with Blue Whales</h2>
+        <p>The whale watching boats from <a href="/places/mirissa">Mirissa</a> regularly encounter common dolphins and spinner dolphins alongside blue whales — the dolphins seem to know when a whale is about to surface and gather around it. A Mirissa whale watching trip (November–April) almost always includes dolphin encounters. Spinner and bottlenose dolphins are resident in these waters year-round; the whale watching boats encounter them most frequently in the early morning runs.</p>
+        <h2>Trincomalee — East Coast Season</h2>
+        <p>The waters around Trincomalee and the east coast harbour populations of bottlenose and spinner dolphins. Boat trips from Uppuveli and Nilaveli sometimes encounter dolphins on the way to or from Pigeon Island. Dedicated dolphin watching trips can be arranged from Trincomalee boat operators during the May–September season. The encounters are less predictable than at Kalpitiya but can be excellent.</p>
+        <h2>Responsible Dolphin Watching</h2>
+        <p>Spinner dolphins need sleep — they rest in sheltered bays in the morning and feed at night. Approaching sleeping pods disrupts their behaviour and has been linked to stress and habitat avoidance at some locations. Choose operators who maintain minimum approach distances (50 metres for dolphins), do not circle pods, and limit engine noise near resting animals. The Kalpitiya operators generally have better dolphin welfare practices than some south coast operators.</p>
+        <h2>Tips</h2>
+        <ul>
+          <li>Book with operators who have a no-approach-to-resting-dolphins policy</li>
+          <li>Morning departures consistently give better encounters than afternoon trips</li>
+          <li>Bring a polarised lens for photography — it cuts through surface glare and makes dolphins visible under the water</li>
+          <li>Combine dolphin watching with whale watching at Mirissa for the maximum ocean wildlife experience</li>
+        </ul>
+        <AffiliateBox title="Book Dolphin Watching Trips" description="Morning dolphin watching boat trips at Kalpitiya and combined whale and dolphin tours from Mirissa — book in advance for peak season." buttonText="Book on GetYourGuide" buttonHref="https://www.getyourguide.com/mirissa-l5/" variant="tour" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Related Activities</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/kalpitiya","label":"Kalpitiya Guide"},{"href":"/things-to-do/whale-watching","label":"Whale Watching"},{"href":"/places/mirissa","label":"Mirissa"},{"href":"/things-to-do","label":"All Activities"}].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

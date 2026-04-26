@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Gangaramaya Temple, Colombo: Sri Lanka's Most Eclectic Buddhist Temple | The Trails of Ceylon" description="Gangaramaya is Colombo's most famous Buddhist temple — a lavishly decorated complex of museum-like halls filled with religious artefacts, gold statues and offerings from around the world." type="article" publishDate="2025-03-01">
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/colombo.jpg" alt="Gangaramaya Temple Colombo Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <span class="text-white">Gangaramaya Temple</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Colombo</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Gangaramaya Temple</h1>
+        <p class="text-white/80 mt-2 text-lg">Colombo • Buddhist Temple • Cultural Experience • City Landmark</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Location","Slave Island, Colombo 2"],["Founded","Late 19th century"],["Famous For","Eclectic collection of religious art"],["Open","Daily 6am–10pm"],["Entry Fee","LKR 500 (foreigners, approx)"],["Nearby","Viharamahadevi Park, Beira Lake"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Gangaramaya is the most visited and most talked-about temple in Colombo — not because it is the holiest or the oldest, but because it is the most extraordinary. Built in the late 19th century on the banks of Beira Lake in the Slave Island neighbourhood, Gangaramaya has accumulated over a century's worth of donations from Buddhist devotees around the world, creating a collection of religious objects that defies easy categorisation: gold Buddha statues from Thailand and Japan; antique cars donated by wealthy patrons; ivory tusks, model ships, ancient manuscripts, crystal figurines, a life-size elephant, religious relics and art objects from a dozen countries — all crammed into a complex of halls that combine Sri Lankan, Thai, Indian and Chinese architectural styles in a synthesis that is either gloriously eclectic or magnificently chaotic, depending on your perspective.</p>
+        <h2>The Temple Complex</h2>
+        <p>Gangaramaya is not a single building but a complex of interconnected halls, shrines, pavilions and open courtyards spread over a considerable area. The main shrine hall contains the principal Buddha image — a large, gold-covered seated figure. The adjacent museum halls are the most remarkable part of the complex — room after room of extraordinary objects: a golden throne gifted by Thailand, a collection of ancient monks' robes, cases of gems and jewellery, a library of palm-leaf manuscripts, and display cases of religious art from across Asia. The lakeside setting adds considerably to the atmosphere, particularly at dawn when monks chant and the light hits the golden spires across the water.</p>
+        <h2>Navam Perahera</h2>
+        <p>Every February on the Navam full moon Poya day, Gangaramaya hosts the Navam Perahera — one of Colombo's largest and most spectacular processions. Decorated elephants, costumed dancers, drummers and torch-bearers parade through the streets around Beira Lake. The Perahera is a deeply traditional spectacle and one of the best cultural events in Sri Lanka for visitors who time their trip correctly.</p>
+        <h2>Getting There</h2>
+        <p>Gangaramaya is located in Slave Island (Colombo 2), walking distance from the Fort and Pettah commercial districts. From Colombo Fort railway station, walk south along Beira Lake (about 15 minutes) or take a tuk-tuk (LKR 150–200). The Slave Island railway station is immediately adjacent to the temple. Most central Colombo hotels are within tuk-tuk distance. The temple is a natural stop on any Colombo city tour.</p>
+        <h2>Best Time to Visit</h2>
+        <p>Gangaramaya is open year-round and is accessible in any weather. The most atmospheric times to visit are early morning (6–8am) when monks perform their morning rituals and the temple is quiet, and at dusk when the buildings are illuminated. Poya (full moon) days see increased devotional activity. February's Navam Perahera is the highlight of the annual calendar.</p>
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Remove shoes and dress respectfully — cover shoulders and knees; sarongs are available for hire at the entrance</li>
+          <li>A guide is worthwhile for understanding the significance of the objects in the museum halls — ask at the entrance</li>
+          <li>Combine with a walk along Beira Lake and a visit to Viharamahadevi Park for a pleasant Colombo afternoon</li>
+          <li>The temple shop sells quality Buddhist artefacts and is a good place to buy religious souvenirs</li>
+        </ul>
+        <AffiliateBox title="Find Hotels in Colombo" description="Colombo has an excellent range of hotels from budget guesthouses in the Fort to luxury properties overlooking the Indian Ocean." buttonText="Search Hotels on Booking.com" buttonHref="https://www.booking.com/searchresults.html?ss=Colombo+Sri+Lanka" variant="hotel" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Open Hours","Daily 6am–10pm"],["Best Time","Early morning or dusk"],["From Fort","15 mins walk / LKR 200 tuk-tuk"],["Navam Perahera","February full moon"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Colombo+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">Find Hotels Nearby</a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/galle-face-green","label":"Galle Face Green (1km)"},{"href":"/things-to-do/temple-hopping","label":"Colombo Temple Guide"},{"href":"/places","label":"All Places"},{"href":"/guides/getting-around-sri-lanka","label":"Getting Around Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

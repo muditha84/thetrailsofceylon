@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Ravana Falls, Ella: Sri Lanka's Most Visited Waterfall | The Trails of Ceylon" description="Ravana Falls near Ella is Sri Lanka's most visited waterfall — a 25-metre cascade on the Ella-Wellawaya road, steeped in the legend of the demon king Ravana." type="article" publishDate="2025-03-01">
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/ella.jpg" alt="Ravana Falls waterfall near Ella Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/hill-country" class="hover:text-white">Hill Country</a><span>/</span>
+          <span class="text-white">Ravana Falls</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Hill Country</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Ravana Falls</h1>
+        <p class="text-white/80 mt-2 text-lg">Hill Country • Waterfall • Ella Day Trip • Legend of Ravana</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Height","25 metres"],["Location","6km from Ella on A23"],["Legend","Cave of demon king Ravana"],["Best Time","After rain (more powerful)"],["Swimming","Possible at the pool below"],["Entry Fee","Free"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Ravana Falls is the waterfall that most visitors to Ella encounter — a 25-metre cascade dropping from a rocky cliff face directly beside the main Ella–Wellawaya road, named after the demon king Ravana of the Hindu epic Ramayana, who is said in local legend to have held Sita captive in the cave behind the falls. The waterfall is most impressive after rain, when it swells to a powerful curtain of white water; in dry conditions the flow is more modest but still picturesque. A natural pool at the base is popular for swimming — refreshingly cold at the highland elevation.</p>
+        <h2>The Legend of Ravana</h2>
+        <p>According to the Ramayana, the demon king Ravana abducted Sita (wife of the god Rama) and held her captive in a cave in the mountains of Lanka. The Ella area has numerous sites associated with this legend — the Ravana Cave behind the falls, the Ravana Ella Wildlife Sanctuary, and the ancient temple at Kandy dedicated to Ravana all form part of a "Ramayana trail" that Hindu pilgrims from India follow across Sri Lanka. Whether you engage with the legend spiritually or historically, it adds a dimension to what might otherwise be a standard waterfall stop.</p>
+        <h2>Swimming & Photography</h2>
+        <p>The pool at the base of the falls is accessible from the road and is a popular swimming spot — the water is cool and clean, and on hot afternoons a dip here is genuinely refreshing. The waterfall is most photogenic in the late afternoon when the light catches it from the west. The road-side viewing platform gives the best perspective of the full height of the falls. For closer access, walk down to the pool level.</p>
+        <h2>Getting There</h2>
+        <p>Ravana Falls is located 6km from Ella town on the A23 road towards Wellawaya. A tuk-tuk from Ella costs LKR 200–300 return with waiting time. The waterfall is also visible from the road between Ella and Wellawaya, making it an easy stop on a day trip from Ella towards <a href="/places/yala">Yala National Park</a> or <a href="/places/tangalle">Tangalle</a>.</p>
+        <h2>Best Time to Visit</h2>
+        <p>The falls are most powerful immediately after rain — the months of May through July (inter-monsoon to early southwest monsoon) typically give the highest water volume. December through April, the driest season for the Hill Country, can see reduced flow. Early morning and late afternoon are best for photography; midday light is flat and harsh.</p>
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Combine with Nine Arch Bridge and Little Adam's Peak for a full day of Ella sightseeing</li>
+          <li>Bring a change of clothes if you plan to swim — the pool is deeper than it looks and you will get wet</li>
+          <li>The road is busy — take care crossing to the waterfall side</li>
+          <li>The cave behind the falls can be explored in low water conditions — ask locally about access</li>
+        </ul>
+        <AffiliateBox title="Find Hotels in Ella" description="Ella's guesthouses offer outstanding value — from budget rooms to stunning hillside properties with valley views." buttonText="Search Hotels in Ella" buttonHref="https://www.booking.com/searchresults.html?ss=Ella+Sri+Lanka" variant="hotel" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Flow","After rain"],["From Ella","6km, LKR 200 tuk-tuk"],["Entry Fee","Free"],["Swimming","Yes, pool at base"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Ella+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">Find Hotels Nearby</a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/ella","label":"Ella (6km)"},{"href":"/places/nine-arch-bridge","label":"Nine Arch Bridge"},{"href":"/places/diyaluma-falls","label":"Diyaluma Falls"},{"href":"/blog/sri-lanka-waterfalls","label":"Waterfalls Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

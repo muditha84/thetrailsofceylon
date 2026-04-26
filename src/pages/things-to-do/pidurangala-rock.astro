@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Pidurangala Rock: Sigiriya's Free Alternative with Better Views | The Trails of Ceylon" description="Pidurangala Rock is the free, less crowded alternative to Sigiriya — a 45-minute scramble to a summit with arguably the best view of Sigiriya Rock Fortress in existence." type="article" publishDate="2025-03-01">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/sigiriya.jpg" alt="Pidurangala Rock view of Sigiriya Sri Lanka sunrise" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span>
+          <span class="text-white">Pidurangala Rock</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Hiking</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Pidurangala Rock</h1>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_260px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <p>Pidurangala Rock is the open secret of the Sigiriya area — a forested hill rising 667 metres above sea level immediately north of Sigiriya, requiring a 45-minute scramble to reach a summit that gives arguably the finest view of Sigiriya Rock Fortress available anywhere. While thousands of tourists pay USD 30 to climb Sigiriya, a much smaller number pay LKR 500 to climb Pidurangala and look across at Sigiriya from above — seeing the entire rock and its surrounding moat, gardens and jungle in a single breathtaking frame. It is, by most accounts, the better viewpoint. And the climb, while requiring some scrambling, is significantly less vertiginous than Sigiriya's final iron staircase.</p>
+        <h2>The Climb</h2>
+        <p>The trail begins at the Pidurangala Royal Cave Temple — itself worth visiting for the ancient reclining Buddha cut from the rock face. The path ascends steeply through forest and boulders, becoming progressively more scramble-like as it approaches the summit. The final section requires using iron handholds on a smooth granite face — manageable for most people with a reasonable head for heights, but genuinely challenging if you suffer from vertigo. The summit is a large, flat granite plate with the forest falling away on all sides and Sigiriya rising from the jungle directly to the south. Total climbing time: 45 minutes to 1 hour.</p>
+        <h2>Sunrise at Pidurangala</h2>
+        <p>Pidurangala at sunrise is one of Sri Lanka's greatest photography experiences. As the light arrives from the east, it illuminates the eastern face of Sigiriya Rock in warm gold while the surrounding jungle is still in shadow. The ancient moat system glitters below, and on clear mornings the outline of the Highland mountains is visible on the horizon. Sunrise visits require departing in darkness — the trail is manageable with head torches and the predawn ascent is cool and pleasurable. Arrive at the summit 20 minutes before sunrise.</p>
+        <h2>The Cave Temple</h2>
+        <p>At the base of the Pidurangala trail, the Royal Cave Temple contains a large reclining Buddha carved from the rock — a late-era addition to what was originally a 5th-century cave monastery associated with the reign of King Kassapa (who built Sigiriya). The cave has frescoes, ancient inscriptions and is still used as a working temple. Monks chant here in the early morning; the atmosphere is entirely genuine and undisturbed by tourism.</p>
+        <h2>Getting There</h2>
+        <p>Pidurangala is 1km north of Sigiriya — hire a tuk-tuk from the Sigiriya village or walk the road north from the main Sigiriya entrance. Most visitors combine Sigiriya (usually morning, for the shadow play) with Pidurangala the same day (sunrise or late afternoon). The entry fee at the base (LKR 500 for foreigners) is a fraction of the Sigiriya entry. Open from early morning; no closing time for the rock itself.</p>
+        <h2>Best Time to Visit</h2>
+        <p>Sunrise (typically 6am) is the most popular time — arrive at the trailhead by 5:15am to reach the summit before the light arrives. Late afternoon (4–5pm) gives golden light on Sigiriya's western face from the Pidurangala summit. Avoid midday — the exposed granite summit becomes very hot.</p>
+        <h2>Tips</h2>
+        <ul>
+          <li>Wear shoes with good grip — the smooth granite near the summit is slippery, especially if wet</li>
+          <li>For sunrise, bring a head torch and allow 45–60 minutes for the ascent in the dark</li>
+          <li>The summit is exposed — bring water and sun protection</li>
+          <li>Visit the cave temple at the base both going up and coming down — the monks chant in the early morning</li>
+        </ul>
+        <AffiliateBox title="Find Hotels Near Sigiriya" description="Several excellent guesthouses within 2km of the Sigiriya and Pidurangala trailheads — ideal for early sunrise visits." buttonText="Search Hotels Near Sigiriya" buttonHref="https://www.booking.com/searchresults.html?ss=Sigiriya+Sri+Lanka" variant="hotel" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Related Activities</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/sigiriya","label":"Sigiriya Rock Fortress"},{"href":"/places/dambulla","label":"Dambulla Cave Temples"},{"href":"/things-to-do/rock-climbing","label":"Rock Climbing Guide"},{"href":"/things-to-do/hiking","label":"Hiking Guide"}].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Bentota, Sri Lanka: Lagoon, Water Sports & Brief Garden | The Trails of Ceylon"
+  description="Bentota is Sri Lanka's premier resort beach — a beautiful sandy spit between the Indian Ocean and a tranquil lagoon, famous for water sports, luxury hotels and the extraordinary Brief Garden."
+  type="article"
+  publishDate="2025-03-01"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/mirissa-beach.jpg" alt="Bentota beach and lagoon, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/south-coast" class="hover:text-white">South Coast</a><span>/</span>
+          <span class="text-white">Bentota</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">South Coast</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Bentota</h1>
+        <p class="text-white/80 mt-2 text-lg">South Coast • Resort Beach • Water Sports • Lagoon</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","Southern Province"],["Distance from Colombo","65km (1.5 hrs)"],["Best For","Water sports, couples, families"],["Best Season","Nov–April"],["Days Needed","2–4 days"],["Beach Type","Sandy spit with lagoon"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Bentota occupies a narrow sandy spit where the Bentota River meets the Indian Ocean, creating one of the most naturally beautiful beach settings in Sri Lanka. On one side, the open sea — on the other, a wide, tranquil lagoon fringed with mangroves. Between them, a long arc of golden sand that has drawn honeymooning couples and families for decades. Bentota is more upmarket than Hikkaduwa and more resort-oriented than Mirissa, with Sri Lanka's largest concentration of four and five-star beach hotels. But it also has a distinct local character — the lagoon, in particular, is alive with birdlife, boat trips and a sense of tropical escape that the more commercialised beach towns cannot match.</p>
+
+        <h2>Water Sports on the Lagoon</h2>
+        <p>The Bentota River lagoon is Sri Lanka's water sports capital. The calm, sheltered water is ideal for everything from windsurfing and kitesurfing to jet-skiing, wakeboarding, banana boat rides, and water-skiing. The lagoon also offers excellent kayaking — paddle upstream through the mangroves, which shelter herons, kingfishers, water monitors and — with luck — small crocodiles. Most large hotels offer water sports packages; independent operators on the beach typically charge LKR 2,000–5,000 per activity. Renting a motor boat to explore the lagoon and its mangrove channels is one of the best ways to spend a morning.</p>
+
+        <h2>Brief Garden</h2>
+        <p>One of Sri Lanka's most extraordinary gardens, Brief Garden was created by artist and landscape gardener Bevis Bawa (brother of architect Geoffrey Bawa) over 40 years from 1929. The four-acre garden is an exuberant, eccentric masterpiece — terraced lawns, tropical planting, pools, sculptures and a pavilion decorated with murals by artist Donald Friend. Bawa entertained artists, writers and celebrities here, and the house retains its bohemian, personal atmosphere. Brief Garden is located inland near Aluthgama, about 5km from Bentota — hire a tuk-tuk. Open daily 8am–5pm; entry fee applies.</p>
+
+        <h2>Kosgoda Turtle Hatchery</h2>
+        <p>Just 8km north of Bentota, the Kosgoda Sea Turtle Conservation Project is one of Sri Lanka's longest-running turtle conservation programmes. Five species of sea turtle — green, leatherback, loggerhead, olive ridley and hawksbill — nest on the beach here. The hatchery collects eggs from at-risk nests, incubates them safely, and releases hatchlings. Visitors can watch the hatchery operation, learn about turtle biology, and if timing allows, witness a release. Most visits are early morning or evening. A small admission fee supports the conservation work.</p>
+
+        <h2>The Beach</h2>
+        <p>Bentota Beach itself is wide, long and relatively uncrowded — the presence of large hotel estates along the shoreline means fewer beach hawkers than at Hikkaduwa. Swimming conditions are good November through April, though a degree of caution is needed near the river mouth where currents can be unpredictable. The southern part of the beach (beyond the railway bridge) is quieter and popular with families.</p>
+
+        <h2>Getting to Bentota</h2>
+        <p>Bentota is on the coastal railway line between Colombo and Galle — trains from Colombo Fort take about 1.5–2 hours and run throughout the day. The beach is a short tuk-tuk ride from Bentota station. By car via the Southern Expressway, Bentota is about 1 hour from Colombo. From Galle, it is about 40 minutes north by train or road. From Colombo airport (Negombo), allow 2.5–3 hours.</p>
+
+        <h2>Best Time to Visit</h2>
+        <p>The south coast season (November to April) is when Bentota is at its best. The calmer sea conditions make water sports safer and more enjoyable. February and March offer the most settled weather. The southwest monsoon (May–September) can make the sea too rough for most water activities, though the lagoon remains relatively sheltered.</p>
+
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Book a river lagoon boat tour through your hotel or a local operator for a genuine wildlife experience — early morning is best for birds</li>
+          <li>Brief Garden is worth the tuk-tuk trip even if you're not a garden enthusiast — the atmosphere is unlike anywhere else in Sri Lanka</li>
+          <li>For the best value accommodation, stay in Aluthgama (the town across the river from Bentota) and tuk-tuk to the beach</li>
+          <li>Combine Bentota with a day trip to Galle Fort (40 minutes south) to balance beach and culture</li>
+        </ul>
+
+        <AffiliateBox
+          title="Find Hotels in Bentota"
+          description="Bentota has some of Sri Lanka's finest beach resorts — from boutique guesthouses on the lagoon to five-star oceanfront hotels."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Bentota+Sri+Lanka"
+          variant="hotel"
+        />
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","November–April"],["Ideal Stay","2–4 days"],["Top Activity","Lagoon water sports"],["From Colombo","1.5 hrs by train"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Bentota+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">
+            Find Hotels Nearby
+          </a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/hikkaduwa","label":"Hikkaduwa (30km)"},{"href":"/places/galle","label":"Galle Fort (40km)"},{"href":"/things-to-do/turtle-watching","label":"Turtle Watching"},{"href":"/places/south-coast","label":"South Coast Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

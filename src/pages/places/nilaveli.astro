@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Nilaveli Beach, Sri Lanka: East Coast Paradise Near Trincomalee | The Trails of Ceylon"
+  description="Nilaveli is one of Sri Lanka's finest beaches — a long stretch of pristine white sand north of Trincomalee, with Pigeon Island's coral reef just offshore."
+  type="article"
+  publishDate="2025-03-01"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/trincomalee.jpg" alt="Nilaveli beach pristine white sand east coast Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/east-coast" class="hover:text-white">East Coast</a><span>/</span>
+          <span class="text-white">Nilaveli</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">East Coast</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Nilaveli</h1>
+        <p class="text-white/80 mt-2 text-lg">East Coast • Pristine Beach • Pigeon Island Snorkelling</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","Eastern Province"],["Distance from Trincomalee","16km north"],["Best For","Beach, snorkelling, solitude"],["Best Season","May–September"],["Days Needed","2–3 days"],["Beach Type","Wide, white sand, calm sea"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Nilaveli is the east coast's finest beach — a sweeping arc of white sand running north of Trincomalee, with water so clear you can see the sandy bottom in chest-deep water. It is one of the least-visited beautiful beaches in Sri Lanka, partly because it is on the east coast (best May–September, opposite to the busy winter season on the south coast), and partly because the journey to get here requires some effort. Those who make the trip are rewarded with uncrowded shorelines, exceptional snorkelling at nearby <a href="/places/pigeon-island">Pigeon Island</a>, and a tranquillity that is becoming increasingly rare in the more famous beach destinations.</p>
+
+        <h2>Pigeon Island National Marine Park</h2>
+        <p>Just 1km offshore from Nilaveli beach, Pigeon Island is Sri Lanka's most celebrated snorkelling and diving destination. The island has two sections: one protected as a national park with pristine coral gardens, blacktip reef sharks and sea turtles; and a smaller island used as a picnic spot. Boat transfers from Nilaveli beach take about 10–15 minutes. The marine park charges an entry fee, and reputable operators emphasise no-touch, no-feed snorkelling to protect the reef. Best visibility is from May through September.</p>
+
+        <h2>The Beach</h2>
+        <p>Nilaveli beach stretches for about 5km, with the clearest sand and calmest conditions in the middle section in front of the main guesthouses. Unlike south coast beaches, there is almost no seaweed, minimal fishing boat traffic, and the sea gradient is gentle — ideal for swimming with children. The beach is wide enough that even during the July–August peak (when Sri Lankan families from Colombo come for the holidays), there is plenty of space. Early morning and evening are magical — the light is soft, the beach is empty, and the sea has a luminous quality.</p>
+
+        <h2>Whale Shark Encounters</h2>
+        <p>Between January and April (outside the main Nilaveli season but coinciding with the southwest coast season), whale sharks visit the waters around Trincomalee and Nilaveli. Dive operators in Trincomalee organise specific whale shark dive trips during this period. These enormous, gentle fish — the world's largest — are a bucket-list encounter. Trips must be booked in advance and encounters cannot be guaranteed.</p>
+
+        <h2>Getting to Nilaveli</h2>
+        <p>Nilaveli is reached via Trincomalee, which is about 7–8 hours from Colombo by bus or train (via Habarana junction). From Trincomalee town, take a tuk-tuk north along the A12 to Nilaveli — 30 minutes, roughly LKR 600. Alternatively, some guesthouses offer pickup from Trincomalee. By car from Colombo, allow 6–7 hours depending on traffic. FitsAir operates occasional flights from Colombo to Trincomalee, cutting travel time to about 1 hour.</p>
+
+        <h2>Best Time to Visit</h2>
+        <p>May through September is the prime window, with June, July and August offering the calmest sea and best snorkelling visibility. The northeast monsoon arrives in October, bringing rough seas. During the south coast off-season (May–September), Nilaveli is at its best — a welcome alternative for travellers who find the south coast too crowded or too expensive in high season.</p>
+
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Book Pigeon Island snorkelling trips through your guesthouse — they know the reliable operators</li>
+          <li>Bring your own snorkel gear if possible — quality varies between rental operators</li>
+          <li>The sea at Nilaveli is perfectly calm for swimming most of May–September but check with locals daily as conditions can change</li>
+          <li>Combine with a visit to Trincomalee town (the Koneswaram temple and natural harbour are worth a half day)</li>
+        </ul>
+
+        <AffiliateBox
+          title="Find Hotels in Nilaveli"
+          description="Beachfront guesthouses and comfortable hotels right on Nilaveli beach — most within walking distance of the Pigeon Island boat launch."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Nilaveli+Sri+Lanka"
+          variant="hotel"
+        />
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","May–September"],["Ideal Stay","2–3 days"],["Top Activity","Pigeon Island snorkelling"],["From Trincomalee","30 mins by tuk-tuk"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Nilaveli+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">
+            Find Hotels Nearby
+          </a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/trincomalee","label":"Trincomalee (16km)"},{"href":"/places/pigeon-island","label":"Pigeon Island"},{"href":"/places/uppuveli","label":"Uppuveli (8km)"},{"href":"/things-to-do/snorkelling","label":"Snorkelling Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Kitesurfing in Sri Lanka: Kalpitiya — Asia's Best Kite Destination | The Trails of Ceylon" description="Kalpitiya on Sri Lanka's northwest coast is one of Asia's finest kitesurfing destinations — flat lagoon water, consistent trade winds and world-class instruction for beginners and experts." type="article" publishDate="2025-03-01">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/whale-watching.jpg" alt="Kitesurfing Kalpitiya lagoon Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span>
+          <span class="text-white">Kitesurfing in Sri Lanka</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Water Sports</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Kitesurfing in Sri Lanka</h1>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_260px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <p>Sri Lanka has quietly established itself as one of Asia's premier kitesurfing destinations — and <a href="/places/kalpitiya">Kalpitiya</a> on the northwest coast is the reason why. The 40-kilometre lagoon enclosed between Kalpitiya peninsula and the offshore barrier islands creates conditions that are close to ideal for kite learning and progression: flat, shallow (waist-to-chest deep), consistent south-west trade winds at 15–25 knots, and warm water year-round. On the ocean side of the peninsula, more experienced kiters can access choppy water and small waves. It is the combination of a dedicated learner area and ocean access that makes Kalpitiya genuinely excellent rather than merely good.</p>
+        <h2>The Wind Window</h2>
+        <p>The south-west monsoon drives Kalpitiya's kite season — from May through October, the wind blows consistently enough for reliable daily sessions. June through September is peak kite season with the most consistent wind. May and October are good but more variable. The wind at Kalpitiya is typically cross-onshore from the south-west, which makes it safe for learners (blown towards the beach rather than out to sea). Typical wind speeds of 15–22 knots are ideal for most kiters.</p>
+        <h2>Learning to Kite</h2>
+        <p>Kalpitiya is an excellent place to learn kitesurfing. The shallow lagoon means that even when you fall, the consequences are gentle — waist-deep water over a sandy bottom. IKO-certified instruction is available at several kite camps. A standard beginners course — 9 hours of instruction spread over 3 days — costs USD 200–270 depending on the camp, and includes kite, board and safety equipment. Most beginners achieve basic independent riding (water starts and riding downwind) by the end of the course. Advanced lessons in jumping, transitions and wave riding are available for experienced kiters.</p>
+        <h2>Kite Camps</h2>
+        <p>Several kite camps operate at Kalpitiya, offering all-inclusive packages (accommodation, instruction, equipment, meals) that simplify the logistics of visiting this remote destination. Camps vary in style from rustic beach camps to more comfortable lodge-style operations. Most offer multi-day packages combining lessons with free sessions. Booking directly with the camps is usually the best approach — Colombo-based agencies add a significant margin.</p>
+        <h2>Combining with Dolphin Watching</h2>
+        <p>The dolphins at Kalpitiya (spinner and bottlenose) are resident year-round but best encountered November–April — which is opposite to the kite season. If combining dolphins and kitesurfing, visit in November (beginning of the dolphin season, end of the kite season) or April (end of dolphin season, beginning of kite season) for the best chance of both.</p>
+        <h2>Tips</h2>
+        <ul>
+          <li>Book kite camp packages rather than accommodation and lessons separately — it is significantly cheaper and more convenient</li>
+          <li>Bring sufficient sun protection — the combination of lagoon reflection, wind and tropical sun burns extremely fast</li>
+          <li>Equipment hire is available at the camps — advanced kiters may want to bring their own bar and lines</li>
+          <li>ATMs are unreliable near Kalpitiya — bring sufficient cash from Colombo</li>
+        </ul>
+        <AffiliateBox title="Book Kitesurfing at Kalpitiya" description="All-inclusive kite camp packages at Kalpitiya — instruction, equipment, accommodation and meals in one booking." buttonText="Find Kite Camp Packages" buttonHref="https://www.booking.com/searchresults.html?ss=Kalpitiya+Sri+Lanka" variant="tour" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Related Activities</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/kalpitiya","label":"Kalpitiya Guide"},{"href":"/things-to-do/dolphin-watching","label":"Dolphin Watching"},{"href":"/things-to-do/surfing","label":"Surfing Guide"},{"href":"/things-to-do","label":"All Activities"}].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

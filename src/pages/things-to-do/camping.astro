@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Camping in Sri Lanka: Best Spots for an Outdoor Night Under the Stars | The Trails of Ceylon" description="Sri Lanka has excellent camping spots — from the beach dunes of Yala to the highland meadows of Knuckles Range and lake-edge campsites in the Cultural Triangle." type="article" publishDate="2025-03-01">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/horton-plains.jpg" alt="Camping Sri Lanka highland landscape stars" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span>
+          <span class="text-white">Camping in Sri Lanka</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Adventure</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Camping in Sri Lanka</h1>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_260px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <p>Camping in Sri Lanka is an underutilised way to experience the island's extraordinary landscapes and wildlife at their most intimate — without the buffer of guesthouse walls between you and the natural world. The island has several genuine camping destinations ranging from national park wilderness camps (with advance permits) to beach camping on remote coastlines. This is not a well-developed camping tourism industry — you will need to organise your own equipment and logistics — but for self-sufficient travellers, the rewards are significant: waking to herds of elephants at a forest camp, seeing the Milky Way above the Knuckles Range, or watching the sunrise from a highland meadow campsite are experiences that justify considerable preparation.</p>
+        <h2>Knuckles Mountain Range</h2>
+        <p>The Knuckles Conservation Forest, east of Kandy, is the finest camping destination in Sri Lanka for wilderness enthusiasts. Multi-day trekking routes through cloud forest, montane jungle and grassland (patana) allow overnight camping in mountain meadows with genuinely dramatic scenery. The range is named for its knuckle-like peaks, which rise to 1,863 metres. Wildlife includes leopards, giant squirrels, endemic lizards and over 130 bird species. Camping is permitted with a Forest Department permit. Hire a local guide — the trails are unmapped and weather can change rapidly.</p>
+        <h2>Yala National Park — Buffer Zone</h2>
+        <p>Camping inside Yala National Park itself is not generally available to tourists, but several eco-camps operate in the buffer zone adjacent to the park — allowing you to be woken by the calls of jungle birds and (if you are lucky) the distant roar of leopards. These are not primitive camps — they typically offer furnished tents with beds and attached bathrooms, but the experience of sleeping at the edge of Yala's wilderness is genuinely special.</p>
+        <h2>Kumana National Park</h2>
+        <p>Overnight camping inside <a href="/places/kumana">Kumana National Park</a> is possible with advance permits from the Department of Wildlife Conservation. This is primitive camping — no facilities — in one of Sri Lanka's most remote wildernesses. The reward is the extraordinary bird colony and the sense of being entirely alone in a vast, ancient landscape.</p>
+        <h2>Highland Lake Camping</h2>
+        <p>Several operators around Kandy and the Hill Country offer lakeside camping experiences at reservoirs in the highlands — forest-edge campsites with basic facilities, campfire cooking and mountain views. These are more accessible than the wilderness options and suitable for families and less experienced campers.</p>
+        <h2>Essential Gear</h2>
+        <p>Bring a good quality tent (wind and rain resistant — Sri Lankan weather can surprise even in the dry season), a sleeping bag rated to 10°C for highland camping, a head torch, water purification tablets or a filter, and insect repellent. Bear in mind that camping near wildlife areas carries genuine risk — follow all guidelines from your guide or park authority.</p>
+        <h2>Tips</h2>
+        <ul>
+          <li>All national park camping requires advance permits from the Department of Wildlife Conservation in Colombo — apply weeks in advance</li>
+          <li>Hire an experienced local guide for any highland or wilderness camping</li>
+          <li>Never camp without proper bear/wildlife precautions in areas with elephants or leopards</li>
+          <li>The Knuckles Range requires Forest Department permits available from the divisional office in Kandy</li>
+        </ul>
+        <AffiliateBox title="Find Eco-Camp Accommodation" description="Luxury tented eco-camps and glamping options near Yala, Knuckles and the Cultural Triangle — the best of the camping experience with creature comforts." buttonText="Find Eco Camps" buttonHref="https://www.booking.com/searchresults.html?ss=Yala+Sri+Lanka" variant="hotel" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Related Activities</h3>
+          <div class="space-y-3">
+            {[{"href":"/things-to-do/hiking","label":"Hiking Guide"},{"href":"/places/yala","label":"Yala National Park"},{"href":"/places/kumana","label":"Kumana National Park"},{"href":"/things-to-do","label":"All Activities"}].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

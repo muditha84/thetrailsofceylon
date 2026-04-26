@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Matara, Sri Lanka: Star Fort, Dondra Lighthouse & Southern City | The Trails of Ceylon"
+  description="Matara is the southernmost city in Sri Lanka — an underrated destination with a Dutch Star Fort, the island's southernmost lighthouse at Dondra, and excellent local food."
+  type="article"
+  publishDate="2025-03-01"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/galle-fort.jpg" alt="Matara Star Fort southern Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/south-coast" class="hover:text-white">South Coast</a><span>/</span>
+          <span class="text-white">Matara</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">South Coast</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Matara</h1>
+        <p class="text-white/80 mt-2 text-lg">South Coast • Star Fort • Dondra Head • Southern Gateway</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","Southern Province"],["Distance from Colombo","160km (2.5 hrs)"],["Best For","History, day trips, local culture"],["UNESCO Site","Nearby Galle Fort (45km)"],["Days Needed","1 day"],["Railway","Southern terminal station"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Matara is the largest city on the south coast and the end of the line for both the coastal railway and the Southern Expressway, which has historically made it a through-stop rather than a destination. But Matara deserves more attention than that. It has a Dutch-built Star Fort that is one of the best-preserved examples of its type in Asia, a thriving local market scene, excellent street food, and access to Dondra Head — the southernmost point of Sri Lanka, topped by the tallest lighthouse on the island. For travellers wanting a more genuinely Sri Lankan experience after the polished tourism of Galle and the beach towns, Matara delivers.</p>
+
+        <h2>The Star Fort</h2>
+        <p>Matara's Star Fort is a small but remarkably complete Dutch fortification built in 1763 — a star-shaped defensive work with five bastions that controlled the entrance to the town from the Nilwala River. Today it contains a small museum with colonial-era artefacts and maps, and the ramparts are freely walkable. The fort is much less visited than Galle Fort and has an authentic, un-touristed quality that makes it feel genuinely discovered rather than curated. Entry is inexpensive. The surrounding town is a pleasant place to wander, with the old ramparts of the earlier Dutch outer fort visible in places.</p>
+
+        <h2>Dondra Head Lighthouse</h2>
+        <p>Ten kilometres east of Matara, Dondra Head is the southernmost point of Sri Lanka — and it is marked by the island's tallest lighthouse, a 49-metre white column built by the British in 1889 that is visible 26 nautical miles out to sea. The lighthouse is set in a small compound that is open to visitors on certain days (check locally). The headland itself is dramatic — the Indian Ocean visible in every direction, the sense of being at the edge of something genuine. The Dondra Vishnu Temple nearby is one of the oldest Hindu temples on the island.</p>
+
+        <h2>Local Food Scene</h2>
+        <p>Matara's market area near the bus stand is one of the best places on the south coast to eat like a local. Rice and curry served on banana leaf for LKR 150–250; string hoppers with coconut milk curry; fresh tropical fruit; and the most authentic kottu roti you will find between Colombo and the far south. The absence of tourist menus means prices are honest and the food is aimed at a local palate — which makes it excellent.</p>
+
+        <h2>Getting to Matara</h2>
+        <p>Matara is the southern terminus of both the coastal railway from Colombo (3 hours) and the Southern Expressway (2.5 hours by car). Trains run throughout the day from Colombo Fort. From Galle, the train takes about 1 hour. From Tangalle, buses and tuk-tuks connect in 45 minutes. Many travellers stop in Matara briefly en route between Galle and the far south.</p>
+
+        <h2>Best Time to Visit</h2>
+        <p>Matara and the south coast are best November through April. However, as a city rather than a beach destination, Matara is visitable year-round — the Star Fort and local markets are unaffected by the monsoon.</p>
+
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Take the train from Galle to Matara — the coastal section is beautiful and takes about an hour</li>
+          <li>Hire a tuk-tuk in Matara for a half-day tour covering the Star Fort, Dondra lighthouse and surrounding sights</li>
+          <li>Eat at a local "hotel" (canteen) near the bus stand for the cheapest, most authentic south coast rice and curry</li>
+          <li>Matara makes an excellent base for day trips to Hiriketiya, Tangalle and even Yala National Park</li>
+        </ul>
+        <AffiliateBox
+          title="Find Hotels in Matara"
+          description="Good-value guesthouses and hotels in Matara — well-placed for exploring the south coast on a budget."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Matara+Sri+Lanka"
+          variant="hotel"
+        />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","Nov–April"],["Ideal Stay","1 day"],["Top Sight","Star Fort & Dondra lighthouse"],["From Colombo","2.5 hrs by expressway"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Matara+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">Find Hotels Nearby</a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/galle","label":"Galle Fort (45km)"},{"href":"/places/tangalle","label":"Tangalle (35km)"},{"href":"/places/hiriketiya","label":"Hiriketiya (20km)"},{"href":"/places/south-coast","label":"South Coast Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

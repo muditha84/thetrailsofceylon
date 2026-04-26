@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Delft Island, Jaffna: Wild Horses, Ruins & Remote Island Sri Lanka | The Trails of Ceylon" description="Delft Island (Neduntheevu) is Jaffna's most remote and atmospheric island — wild horses, ancient ruins, a Dutch fort and a sense of genuine isolation at the edge of the Palk Strait." type="article" publishDate="2025-03-01">
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/jaffna.jpg" alt="Delft island wild horses ruins Jaffna Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/north-jaffna" class="hover:text-white">North & Jaffna</a><span>/</span>
+          <span class="text-white">Delft Island</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">North Sri Lanka</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Delft Island</h1>
+        <p class="text-white/80 mt-2 text-lg">Jaffna Islands • Wild Horses • Ancient Ruins • Remote</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Also Known As","Neduntheevu"],["Distance from Jaffna","35km by ferry"],["Ferry From","Kurikaduwan pier"],["Best For","Off-beat, ruins, wild horses"],["Days Needed","Full day"],["Population","~5,000 (Tamil fishing community)"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Delft Island — known in Tamil as Neduntheevu — is the most remote and otherworldly of Jaffna's inhabited islands, lying at the far northwestern edge of the archipelago where the Palk Strait begins to widen. The island is flat, windswept and treeless, with a landscape that feels more like the Scottish islands than tropical South Asia. Ancient coral-stone walls built by Dutch colonists demarcate fields where herds of feral horses — descendants of animals brought by the Portuguese centuries ago — roam freely between the ruins of colonial buildings and the remnants of a Portuguese fort. It is one of the strangest and most memorable places in Sri Lanka.</p>
+        <h2>The Wild Horses</h2>
+        <p>Delft's feral horse population — numbering around 50–60 animals — is one of the most photographed sights in northern Sri Lanka. These are small, sturdy horses descended from those introduced by Portuguese traders in the 16th century, left to run wild after the colonial period ended. They graze freely across the island, often close to the ruins and the Dutch Fort, and have become accustomed enough to humans that photography is straightforward. The horses are officially protected; do not approach aggressively or attempt to feed them.</p>
+        <h2>The Dutch Fort & Colonial Ruins</h2>
+        <p>A Portuguese fort was built on Delft in the early 17th century; the Dutch subsequently modified and extended it. What remains is a substantial ruin — walls, bastions and the outline of the original structure — set among the scrubby vegetation near the ferry landing. Nearby, the remains of a Dutch-era dovecote (pigeon loft) and a giant ancient tree growing from within the ruins of a colonial building add to the archaeology of the place. The entire island can be explored by bicycle, hired from the pier.</p>
+        <h2>Getting to Delft Island</h2>
+        <p>Reach Delft by government ferry from Kurikaduwan pier, itself accessible from Jaffna via the causeway road to Punkudutivu island (about 40km and 1.5 hours by bus or tuk-tuk from Jaffna). The ferry crossing takes about 1 hour. Ferries run twice daily (morning and afternoon) but schedules change seasonally — check at the Jaffna bus station or with your guesthouse before departing. The island is easily explored in a full day; staying overnight is possible at basic guesthouses.</p>
+        <h2>Best Time to Visit</h2>
+        <p>May through October — the dry season for the north — is most comfortable. November through January brings the northeast monsoon with heavy rain and rough seas that can disrupt ferries. The island is most atmospheric in the early morning light when the horses are most active and the ruins are quiet.</p>
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Hire a bicycle at the pier to explore the island — it is too large to walk comfortably in a day</li>
+          <li>Bring food and water — facilities on the island are extremely limited</li>
+          <li>Check ferry times carefully — missing the last ferry means an unplanned overnight stay</li>
+          <li>Combine with a visit to Nainativu Island (also via Kurikaduwan) for a full day of island-hopping</li>
+        </ul>
+        <AffiliateBox title="Find Hotels in Jaffna" description="Stay in Jaffna as your base for Delft Island and the northern islands — book ahead as Jaffna accommodation is limited." buttonText="Search Hotels on Booking.com" buttonHref="https://www.booking.com/searchresults.html?ss=Jaffna+Sri+Lanka" variant="hotel" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Ferry From","Kurikaduwan pier"],["Ferry Duration","1 hour"],["Best Season","May–October"],["From Jaffna","1.5 hrs to ferry pier"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Jaffna+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">Find Hotels Nearby</a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/jaffna","label":"Jaffna City"},{"href":"/places/mannar","label":"Mannar Island"},{"href":"/places/north-jaffna","label":"North Sri Lanka Guide"},{"href":"/places","label":"All Places"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

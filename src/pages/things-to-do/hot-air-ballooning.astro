@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Hot Air Ballooning in Sri Lanka: Sunrise Flights over Dambulla | The Trails of Ceylon" description="Hot air ballooning over the Cultural Triangle near Dambulla offers spectacular sunrise views of Sigiriya, ancient reservoirs and the Sri Lankan jungle — a truly unforgettable experience." type="article" publishDate="2025-03-01">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/sigiriya.jpg" alt="Hot air balloon sunrise Dambulla Sigiriya Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span>
+          <span class="text-white">Hot Air Ballooning in Sri Lanka</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Adventure</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Hot Air Ballooning in Sri Lanka</h1>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_260px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <p>Hot air ballooning over Sri Lanka's Cultural Triangle is one of the island's most extraordinary experiences — a silent, serene drift above a landscape of ancient reservoirs, jungle canopy and the extraordinary rock formations of Dambulla and Sigiriya at the best possible time of day: sunrise. From the gondola, the famous Sigiriya rock fortress rises from the forest below like a vision, the ancient tanks glitter in the dawn light, and the silence is broken only by the periodic roar of the burner above. It is expensive by Sri Lankan standards but justifiably ranks among the island's finest experiences.</p>
+        <h2>How it Works</h2>
+        <p>Flights depart at dawn from the Cultural Triangle area, typically near Dambulla or Habarana. The pre-flight briefing and inflation takes about 30 minutes; the flight itself lasts approximately 1 hour. Flights depend entirely on weather conditions — particularly wind speed and direction. Skilled pilots read the morning air currents to navigate over the best viewpoints. Landing locations vary with the wind. After landing, a traditional champagne (or local arrack) celebration is held. The entire morning experience takes about 3–4 hours from hotel pickup.</p>
+        <h2>What You'll See</h2>
+        <p>The views vary with wind direction but typically include Sigiriya Rock Fortress and its surrounding moat system, the ancient Parakrama Samudra reservoir at Polonnaruwa (one of the largest ancient man-made lakes in the world), the jungle canopy of the Cultural Triangle dry zone, and the distant outline of the Hill Country on clear mornings. Sunrise light across this landscape is spectacular — the ancient reservoirs turn gold, the morning mist burns from the valleys, and the silence of the balloon creates a sense of complete peace.</p>
+        <h2>Practical Information</h2>
+        <p>Sri Lanka has one main hot air balloon operator — Adventure Asia, based in Dambulla. Flights must be booked in advance and are subject to weather cancellations. Cost is approximately USD 200–260 per person. A minimum number of passengers is required for each flight. Early morning hotel pickup (around 5am) is standard. Wear comfortable clothes; light layers for the early morning cool are advisable. Photography is unrestricted from the gondola.</p>
+        <h2>Best Time for Ballooning</h2>
+        <p>The Cultural Triangle's dry season (December–April) offers the most stable flying conditions. Mornings are calm and clear, and the low morning light is spectacular for photography. The southwest monsoon (May–September) brings less stable conditions; flights still operate but cancellation rates are higher.</p>
+        <h2>Tips</h2>
+        <ul>
+          <li>Book as far in advance as possible — particularly December through March when flights fill quickly</li>
+          <li>Flexible dates significantly increase your chances of a successful flight — weather cancellations are common</li>
+          <li>Bring a fully charged camera with a wide-angle lens for the best aerial shots</li>
+          <li>The champagne landing celebration is a tradition worth embracing</li>
+        </ul>
+        <AffiliateBox title="Book a Hot Air Balloon Flight" description="Sunrise balloon flights over the Cultural Triangle — book early as places are limited and weather cancellations mean flexible dates are essential." buttonText="Book on GetYourGuide" buttonHref="https://www.getyourguide.com/dambulla-l5/" variant="tour" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Related Activities</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/sigiriya","label":"Sigiriya Rock Fortress"},{"href":"/places/dambulla","label":"Dambulla Cave Temples"},{"href":"/places/cultural-triangle","label":"Cultural Triangle Guide"},{"href":"/things-to-do","label":"All Activities"}].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

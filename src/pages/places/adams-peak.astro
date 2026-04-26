@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Adam's Peak (Sri Pada): The Sacred Mountain Climb & Sunrise Guide | The Trails of Ceylon"
+  description="Adam's Peak is Sri Lanka's most sacred mountain — a demanding overnight climb to a sacred footprint at the summit, rewarded by one of the most extraordinary sunrises in Asia."
+  type="article"
+  publishDate="2025-03-01"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/horton-plains.jpg" alt="Adam's Peak sacred mountain climb Sri Lanka sunrise" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/hill-country" class="hover:text-white">Hill Country</a><span>/</span>
+          <span class="text-white">Adam's Peak (Sri Pada)</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Hill Country</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Adam's Peak (Sri Pada)</h1>
+        <p class="text-white/80 mt-2 text-lg">Hill Country • Sacred Mountain • Pilgrim Trek • Sunrise</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Height","2,243 metres"],["Climb Distance","7km (Dalhousie route)"],["Steps","5,500 steps"],["Best Season","Dec–May (pilgrimage season)"],["Summit Time","Allow 3–4 hrs up"],["Sacred Footprint","Venerated by 4 religions"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Adam's Peak — known in Sinhala as Sri Pada, the "Sacred Footprint" — is Sri Lanka's most revered mountain and one of the most remarkable pilgrim climbs in Asia. At the summit, 2,243 metres above sea level, lies a rock indentation that Buddhists believe is the footprint of the Buddha, Hindus attribute to Shiva, Muslims to Adam (hence the English name), and early Christians to St Thomas. For over 1,000 years, pilgrims from all four faiths have climbed the mountain between December and May, making the steep stone staircase one of the world's most ancient and multi-faith routes to a sacred summit. For the traveller, the experience is unforgettable: a nighttime climb through illuminated stairways, a dawn arrival at a summit filled with chanting pilgrims, and a sunrise that casts the mountain's perfectly triangular shadow across the clouds below.</p>
+
+        <h2>The Climb</h2>
+        <p>The standard route departs from Dalhousie (also called Nallathanniya), a small town in the hills where buses from Colombo, Kandy and Hatton arrive. The trail is 7km each way and consists almost entirely of stone steps — about 5,500 in total. The path is well lit throughout the pilgrimage season (December–May) with electric lighting all the way to the summit. Tea stalls and rest shelters are spaced along the route. The ascent takes 3–4 hours at a moderate pace; the descent 2–2.5 hours. Most people begin the climb at midnight or 1am to reach the summit by sunrise (around 6am). The trail is heavily used during January and February — expect to share the steps with thousands of fellow pilgrims.</p>
+
+        <h2>The Summit Sunrise</h2>
+        <p>The summit at dawn is one of the most extraordinary experiences Sri Lanka offers. As the sun rises in the east, it casts the mountain's conical shadow across the sea of clouds to the west — a perfectly triangular shadow that shrinks as the sun rises until it disappears into the cloud layer below. The crowd of pilgrims on the small summit erupts into prayers and celebration as the light arrives. It is deeply moving regardless of your faith. The Buddha's footprint (covered by a canopy) is the spiritual focal point; monks lead prayers at sunrise.</p>
+
+        <h2>What to Bring</h2>
+        <p>The summit is cold — temperatures can drop to 5–10°C before dawn, with wind chill making it feel colder. Bring a windproof jacket, gloves, and layers that can be removed on the descent. Good shoes with grip are essential — the steps can be slippery with moisture. Bring a head torch for the pre-lit lower sections and emergency light. Water and snacks are available from stalls along the route but bring sufficient supplies. Trekking poles help significantly on the descent when knees begin to tire.</p>
+
+        <h2>Getting to Dalhousie</h2>
+        <p>From Colombo, overnight buses to Dalhousie depart in the evening from the Bastian Mawatha bus terminal (journey: 5–6 hours). From Kandy, buses to Hatton (2.5 hours) connect with buses or taxis to Dalhousie (1 hour). From Nuwara Eliya, hire a car to Dalhousie (1.5 hours). There is no railway station at Dalhousie; the nearest station is Hatton (on the Colombo–Badulla line).</p>
+
+        <h2>Best Time to Visit</h2>
+        <p>The pilgrimage season runs December through May — this is when the path is lit and tea stalls are open. Outside this season (June–November), the path is unlit, facilities are closed, and conditions can be dangerous. The clearest skies and best sunrise conditions are typically January through March. The mountain is most crowded on Poya (full moon) days and during February school holidays.</p>
+
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Begin the climb at midnight for sunrise — earlier starts mean a very cold summit wait; later starts risk missing the sunrise</li>
+          <li>Non-Buddhists are respectfully welcome — this is a genuinely multi-faith pilgrimage</li>
+          <li>The descent is harder on the knees than the ascent — take it slowly and use the handrails</li>
+          <li>Book accommodation in Dalhousie or Hatton the night before — do not attempt to arrive and climb on the same night from Colombo</li>
+          <li>The mountain is closed June–November; do not attempt to climb out of season</li>
+        </ul>
+        <AffiliateBox
+          title="Find Hotels Near Adam's Peak"
+          description="Guesthouses in Dalhousie (base of the climb), Hatton and Maskeliya — book the night before your climb to rest and begin fresh at midnight."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Dalhousie+Sri+Lanka"
+          variant="hotel"
+        />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Pilgrimage Season","December–May"],["Start Time","Midnight for sunrise"],["Summit","2,243 metres"],["From Kandy","3.5 hrs by bus & taxi"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Dalhousie+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">Find Hotels Nearby</a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/ella","label":"Ella (65km)"},{"href":"/places/horton-plains","label":"Horton Plains"},{"href":"/places/nuwara-eliya","label":"Nuwara Eliya"},{"href":"/blog/adams-peak-hiking-guide","label":"Hiking Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

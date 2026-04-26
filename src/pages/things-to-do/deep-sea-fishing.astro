@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Deep Sea Fishing in Sri Lanka: Trincomalee, Mirissa & Blue Water Charters | The Trails of Ceylon" description="Sri Lanka's deep ocean waters offer world-class sport fishing — blue marlin, dorado, yellowfin tuna and wahoo from charters out of Trincomalee and Mirissa." type="article" publishDate="2025-03-01">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/whale-watching.jpg" alt="Deep sea fishing charter Sri Lanka ocean" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span>
+          <span class="text-white">Deep Sea Fishing in Sri Lanka</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Fishing</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Deep Sea Fishing in Sri Lanka</h1>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_260px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <p>Sri Lanka's position in the Indian Ocean — at the edge of some of the deepest ocean in the world — makes it an underrated sport fishing destination. The Indian Ocean's warm waters support large populations of blue and black marlin, dorado (mahi-mahi), yellowfin tuna, wahoo, sailfish and barracuda within a short distance of the coast. Two main fishing destinations offer charter operations: Trincomalee on the east coast, where the ocean drops steeply to great depth within 10–15km of shore, and Mirissa on the south coast, where the same deep-ocean access is combined with a vibrant tourism infrastructure.</p>
+        <h2>Trincomalee — East Coast Fishing</h2>
+        <p>Trincomalee's deep natural harbour opens directly to the Indian Ocean, and the offshore waters drop rapidly to depths of 2,000+ metres. Several charter operators run full-day fishing trips targeting blue marlin, dorado and yellowfin tuna. The best season is May through September (the east coast dry season) when sea conditions are stable. Trincomalee has a smaller number of charter operators than Mirissa — book in advance through your guesthouse in Uppuveli or Nilaveli.</p>
+        <h2>Mirissa — South Coast Fishing</h2>
+        <p>Mirissa is the most developed fishing charter destination on the south coast, operating primarily during the whale watching season (November–April) when the offshore waters are calm. The same boats that run whale watching tours often offer sport fishing charters on days when whale watching is not running. Target species include dorado, wahoo, barracuda and small tuna. Larger marlin are occasionally caught on the south coast but the east coast generally has more reliable big-game fishing.</p>
+        <h2>What to Expect on a Charter</h2>
+        <p>Most Sri Lankan sport fishing charters operate on a half-day (5–6 hours) or full-day (8–10 hours) basis. Boats range from local wooden craft adapted for fishing to purpose-built sportfishing vessels. The best operators use trolling and jigging techniques. Some practice catch-and-release for billfish — choose operators who support sustainable practices. Costs range from USD 150–400 depending on boat size, duration and season.</p>
+        <h2>Fishing Seasons</h2>
+        <p>East coast (Trincomalee, Batticaloa): May–September. South coast (Mirissa, Galle): November–April. The best deep-sea conditions mirror the diving seasons — each coast has its optimal calm-water window.</p>
+        <h2>Tips</h2>
+        <ul>
+          <li>Book through reputable guesthouses rather than beach touts — quality and safety of boats varies significantly</li>
+          <li>Bring seasickness medication if you are prone — the open ocean swells can be significant</li>
+          <li>A full-day charter gives better chances of encountering the larger pelagic species</li>
+          <li>Ask about catch-and-release policies before booking if sustainable fishing is important to you</li>
+        </ul>
+        <AffiliateBox title="Book Deep Sea Fishing Charters" description="Full and half-day sport fishing charters from Trincomalee and Mirissa — targeting marlin, dorado, tuna and wahoo in the Indian Ocean." buttonText="Find Fishing Charters" buttonHref="https://www.getyourguide.com/mirissa-l5/" variant="tour" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Related Activities</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/trincomalee","label":"Trincomalee Guide"},{"href":"/places/mirissa","label":"Mirissa"},{"href":"/things-to-do/whale-watching","label":"Whale Watching"},{"href":"/things-to-do","label":"All Activities"}].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

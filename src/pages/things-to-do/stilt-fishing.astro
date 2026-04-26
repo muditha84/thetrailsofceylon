@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Stilt Fishing in Sri Lanka: Weligama's Iconic Ocean Fishermen | The Trails of Ceylon" description="The stilt fishermen of Sri Lanka's south coast are one of the country's most iconic images — men perched on poles in the Indian Ocean, fishing in the traditional manner." type="article" publishDate="2025-03-01">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/weligama.jpg" alt="Stilt fishermen Weligama south coast Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span>
+          <span class="text-white">Stilt Fishing in Sri Lanka</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Culture</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Stilt Fishing in Sri Lanka</h1>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_260px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <p>Sri Lanka's stilt fishermen are one of the most iconic images of the island — men seated on a thin horizontal pole (called a "stilt" or petta) fixed to a vertical pole driven into the seabed, fishing with a simple rod and line in the shallows of the Indian Ocean as the waves break around them. The practice is believed to have originated after World War II when a shortage of fishing spots near the shore forced fishermen to find new positions. Today the stilts are a cherished cultural tradition, a tourist attraction, and an enduring symbol of Sri Lanka's relationship with the sea.</p>
+        <h2>Where to See Stilt Fishing</h2>
+        <p>The most famous stilt fishing locations are along the south coast between Galle and Weligama. The stilts at Koggala, Ahangama and <a href="/places/weligama">Weligama</a> are the most photographed. The fishermen typically fish at dawn and dusk when the tide is right — these are also the best times for photography, when the golden light catches the silhouettes against the sea. During the south coast tourist season (December–April), the fishermen are a regular sight along the coastal road.</p>
+        <h2>Photography & Etiquette</h2>
+        <p>The stilt fishermen have become accustomed to tourist photography — this is partly because many now charge a fee for photographs. This is entirely legitimate: you are photographing their place of work and they deserve compensation. Agree a fee (LKR 200–500 is typical) before photographing. The best shots are taken from a distance with a long lens — you capture the scene naturally rather than a posed situation. The golden hour before sunset gives the most dramatic silhouette photographs.</p>
+        <h2>Learning to Fish from Stilts</h2>
+        <p>Several operators along the south coast offer tourist experiences of actually using the stilts — climbing onto the pole and fishing briefly in the traditional manner. This is a genuine, if theatrical, cultural experience. The fishermen are patient teachers and the experience of balancing on a stilt above the Indian Ocean (even in calm, shallow water) gives a new appreciation for the skill involved. Ask at your guesthouse in Weligama or Ahangama for current operators.</p>
+        <h2>Getting to the Stilt Fishing Areas</h2>
+        <p>From Galle, take the A2 coastal road east towards Weligama — the stilt fishing spots are visible from the road between Koggala (10km east of Galle) and Weligama (27km east of Galle). Tuk-tuks from Galle cost LKR 500–700 to Koggala. The spots are also visible from the coastal train — passengers on the left side (heading east) get the best views.</p>
+        <h2>Best Time to Visit</h2>
+        <p>Dawn and dusk during the south coast season (November–April). The fishermen fish when conditions suit them — ask locally the evening before which spots will have fishermen at dawn. The stilts are most atmospheric on calm days when the sea is flat.</p>
+        <h2>Tips</h2>
+        <ul>
+          <li>Bring a long lens (200mm minimum) for the best photographs from a respectful distance</li>
+          <li>Visit at sunrise for the golden light and the most active fishing</li>
+          <li>Agree the photography fee before shooting — it avoids uncomfortable negotiations afterwards</li>
+          <li>Combine with a morning at Galle Fort (15–20 minutes west) for a great south coast half-day</li>
+        </ul>
+        <AffiliateBox title="Find Hotels Near Weligama" description="Weligama has excellent guesthouses along the beach — a perfect base for south coast exploration including stilt fishing villages." buttonText="Search Hotels on Booking.com" buttonHref="https://www.booking.com/searchresults.html?ss=Weligama+Sri+Lanka" variant="hotel" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Related Activities</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/weligama","label":"Weligama Guide"},{"href":"/places/galle","label":"Galle Fort"},{"href":"/things-to-do/surfing","label":"Surfing at Weligama"},{"href":"/things-to-do","label":"All Activities"}].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

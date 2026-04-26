@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Dalawella Beach Rope Swing, Sri Lanka: The Instagram-Famous Experience | The Trails of Ceylon" description="The rope swing at Dalawella beach near Unawatuna is Sri Lanka's most photographed beach experience — a wooden swing hanging from a palm tree over the Indian Ocean." type="article" publishDate="2025-03-01">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/mirissa-beach.jpg" alt="Rope swing Dalawella beach Unawatuna Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span>
+          <span class="text-white">Dalawella Rope Swing</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Experience</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Dalawella Rope Swing</h1>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_260px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <p>The rope swing at Dalawella beach has become one of the most photographed images from Sri Lanka — a simple wooden swing hanging from a leaning palm tree over the turquoise Indian Ocean, swinging out above the waves with the green headland behind it. It is, by any measure, an extraordinarily photogenic setup, and it has generated millions of social media posts. In person, it is exactly as good as advertised: a beautiful palm-fringed cove just east of Unawatuna, a warm, clear sea, and a simple rope swing that anyone can use. Sometimes the most Instagrammed things are popular for genuine reasons.</p>
+        <h2>Dalawella Beach</h2>
+        <p>Dalawella is a small, quiet beach immediately east of Unawatuna — about 1km along the coast. It is sheltered by a rocky headland and has calmer, clearer water than the main Unawatuna beach. The beach has a handful of small guesthouses and restaurants but is far less developed than its neighbour. The rope swing is on the eastern end of the beach, hanging from a large palm tree that leans at a photogenic angle over the water. Access is free; a small fee is charged if you want to use the facilities of the adjacent beachside restaurant.</p>
+        <h2>Getting the Perfect Photo</h2>
+        <p>The classic shot is taken from the water or from a low angle on the beach, with the person on the swing silhouetted against the sky and sea. Early morning and late afternoon give the best light — harsh midday sun creates unflattering shadows. The swing is most photogenic when the person is at the end of the forward arc, highest above the water. Bring a waterproof camera or phone case — the water is immediately below the swing at high tide.</p>
+        <h2>Getting There</h2>
+        <p>Dalawella is 1km east of Unawatuna and 3km east of Galle Fort. From Galle, take a tuk-tuk east along the coastal road — LKR 200–300. From Unawatuna, walk east along the beach or take a short tuk-tuk ride. The beach is signposted along the main coastal road (A2). From Colombo, Galle is 2.5 hours by express train; Dalawella is a further 10-minute tuk-tuk ride.</p>
+        <h2>Best Time to Visit</h2>
+        <p>The south coast season (November–April) gives the best conditions — calm sea, minimal wind, good visibility. Visit in the morning (8–11am) for the best light and before the beach becomes crowded in high season. The swing is available year-round but the sea can be rough during the southwest monsoon (May–September).</p>
+        <h2>Tips</h2>
+        <ul>
+          <li>Visit on a weekday morning for fewer people and better photo opportunities</li>
+          <li>A friend in the water with a waterproof camera gives the most dramatic shots from below</li>
+          <li>The restaurant at the swing rents out the swing — order something and they are very accommodating about photography time</li>
+          <li>Combine with Unawatuna beach and Galle Fort for a complete south coast day</li>
+        </ul>
+        <AffiliateBox title="Find Hotels Near Unawatuna" description="Dalawella and Unawatuna have excellent beachside guesthouses — the best base for this part of the south coast." buttonText="Search Hotels on Booking.com" buttonHref="https://www.booking.com/searchresults.html?ss=Unawatuna+Sri+Lanka" variant="hotel" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Related Activities</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/unawatuna","label":"Unawatuna Beach"},{"href":"/places/galle","label":"Galle Fort"},{"href":"/places/south-coast","label":"South Coast Guide"},{"href":"/things-to-do","label":"All Activities"}].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

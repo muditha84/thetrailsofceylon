@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Colombo Temple Guide: The City's Best Buddhist & Hindu Temples | The Trails of Ceylon" description="Colombo has a surprisingly rich collection of Buddhist, Hindu and multi-faith temples — a guide to the best temples in the capital for cultural sightseeing." type="article" publishDate="2025-03-01">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/kandy.jpg" alt="Colombo Buddhist temple Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span>
+          <span class="text-white">Temple Hopping in Colombo</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Culture</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Temple Hopping in Colombo</h1>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_260px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <p>Colombo is not typically the first destination that comes to mind for temple enthusiasts — that honour goes to Kandy, Dambulla and Anuradhapura. But Sri Lanka's capital has a surprisingly rich religious landscape: Buddhist temples, Hindu kovils (temples), mosques and churches coexist within walking distance of each other in the old city, reflecting Colombo's history as a multi-ethnic trading port. A half-day temple-hopping circuit through the Fort, Pettah and Slave Island neighbourhoods gives a genuine insight into the city's religious diversity and is one of the most rewarding ways to spend a morning in Colombo.</p>
+        <h2>Gangaramaya Temple</h2>
+        <p><a href="/places/gangaramaya-temple">Gangaramaya</a> in Slave Island is the city's most famous and most extraordinary temple — a vast complex of halls stuffed with religious art, gold Buddhas and donated objects from across Asia. Open daily; entry fee applies. Best visited in the early morning. Not to be missed.</p>
+        <h2>Kelaniya Raja Maha Vihara</h2>
+        <p>Located 11km northeast of central Colombo, Kelaniya is one of the most sacred Buddhist temples in Sri Lanka — the Buddha is believed to have visited and preached here on his third and final visit to the island. The main shrine hall contains beautifully restored murals depicting the life of the Buddha and scenes from Sri Lankan history. Free entry; respectful dress required. A tuk-tuk from the city centre takes about 30 minutes.</p>
+        <h2>Sri Kathiresan Kovil — Pettah</h2>
+        <p>The Sri Kathiresan Kovil in Pettah is one of Colombo's principal Hindu temples, dedicated to Lord Murugan (Kathiresan). The colourful gopuram (tower gate) rises above the crowded market street. The temple is active and vibrant — worshippers come throughout the day, and the fragrance of incense and marigold offerings fills the air. Dress respectfully; remove shoes at the gate.</p>
+        <h2>Wolfendahl Church</h2>
+        <p>Not a temple in the Eastern sense, but Wolfendahl Church in the old Dutch quarter of Pettah is one of the finest examples of Dutch colonial religious architecture in Asia — a cruciform church built in 1749 with original gravestones, marble tablets and a wooden interior that has survived remarkably intact. A fascinating stop on any colonial Colombo tour.</p>
+        <h2>Seema Malaka — Beira Lake</h2>
+        <p>Designed by Geoffrey Bawa (Sri Lanka's greatest architect) and connected to Gangaramaya Temple, Seema Malaka is a floating Buddhist platform in the middle of Beira Lake — a meditation pavilion on pontoons, with Buddha statues reflected in the surrounding water. Particularly atmospheric at dusk when the lights come on. Access is through Gangaramaya; entry fee applies.</p>
+        <h2>Tips</h2>
+        <ul>
+          <li>Cover shoulders and knees at all religious sites — sarongs and shawls are available at most temples for hire</li>
+          <li>Remove shoes at the entrance to all temples and most kovils</li>
+          <li>Poya (full moon) days are the most active at Buddhist temples — and also the busiest</li>
+          <li>A tuk-tuk for a half-day temple circuit costs LKR 1,500–2,500 — agree the itinerary and price in advance</li>
+        </ul>
+        <AffiliateBox title="Find Hotels in Colombo" description="Colombo has excellent hotels across all price ranges — from budget guesthouses in the Fort to five-star properties on Galle Road." buttonText="Search Hotels on Booking.com" buttonHref="https://www.booking.com/searchresults.html?ss=Colombo+Sri+Lanka" variant="hotel" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Related Activities</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/gangaramaya-temple","label":"Gangaramaya Temple"},{"href":"/places/galle-face-green","label":"Galle Face Green"},{"href":"/blog/colombo-city-guide","label":"Colombo City Guide"},{"href":"/things-to-do","label":"All Activities"}].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

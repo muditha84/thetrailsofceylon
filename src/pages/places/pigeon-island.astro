@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Pigeon Island National Marine Park: Sri Lanka's Best Snorkelling | The Trails of Ceylon"
+  description="Pigeon Island off Trincomalee is Sri Lanka's premier snorkelling destination — pristine coral reefs, blacktip reef sharks, sea turtles and exceptional underwater clarity."
+  type="article"
+  publishDate="2025-03-01"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/snorkelling.jpg" alt="Pigeon Island coral reef snorkelling Sri Lanka blacktip sharks" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/east-coast" class="hover:text-white">East Coast</a><span>/</span>
+          <span class="text-white">Pigeon Island</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">East Coast</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Pigeon Island</h1>
+        <p class="text-white/80 mt-2 text-lg">East Coast • Marine Park • Snorkelling • Reef Sharks</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Distance from Shore","1km from Nilaveli beach"],["Marine Park","National Park status since 2003"],["Best For","Snorkelling, reef sharks, turtles"],["Best Season","May–September"],["Boat Transfer","10–15 minutes"],["Entry Fee","USD 15 per person (approx)"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Pigeon Island National Marine Park is Sri Lanka's most celebrated snorkelling destination — a small rocky island rising 1km offshore from Nilaveli beach, Trincomalee, surrounded by some of the healthiest and most biodiverse coral reefs in the country. The island takes its name from the rock pigeons that historically nested on it. Today it is protected as a national marine park, and the reef around it is home to blacktip reef sharks, sea turtles, parrotfish, triggerfish, moray eels and over 300 species of reef fish. The water clarity during the east coast season (May–September) is exceptional — visibility of 15–25 metres is common — making Pigeon Island one of the finest shallow-water snorkelling experiences in South Asia.</p>
+
+        <h2>The Snorkelling</h2>
+        <p>The reef begins just a few metres from the island's rocky shore and extends to a depth of about 15 metres. The most celebrated sighting is the blacktip reef sharks — small (1–1.5 metre), completely harmless to snorkellers, and remarkably common. It is not unusual to see 10–15 sharks in a single session. Green sea turtles rest on the reef and on the sandy patches between coral heads. The coral itself, while affected by bleaching events, still has significant live cover — brain coral, staghorn coral and plate coral formations are extensive. The more protected northern side of the island generally has the best coral condition.</p>
+
+        <h2>Visiting the Island</h2>
+        <p>Access to Pigeon Island is via boat from Nilaveli beach — a 10–15 minute crossing. Boat trips are arranged through guesthouses in Nilaveli and Uppuveli or directly from operators at the beach. Most trips are half-day (3–4 hours) and include snorkel equipment rental. A national marine park entry fee (approximately USD 15 per person) is payable on arrival, in addition to the boat hire cost. The island has a small beach for resting between snorkels. Food and drink are not available on the island; bring water and snacks.</p>
+
+        <h2>Marine Conservation</h2>
+        <p>Pigeon Island has faced significant pressure from overtourism — at peak season, dozens of boats can visit simultaneously. Choose operators who follow the marine park rules: maintain a minimum distance from turtles and sharks, do not touch or feed marine life, do not stand on coral, and use biodegradable sunscreen (conventional sunscreen chemicals damage coral). The long-term health of the reef depends on responsible visiting behaviour.</p>
+
+        <h2>Getting to Pigeon Island</h2>
+        <p>Base yourself at <a href="/places/nilaveli">Nilaveli</a> or <a href="/places/uppuveli">Uppuveli</a> beach — boat transfers to Pigeon Island depart from both. Nilaveli is the closer departure point. Trincomalee itself is 7–8 hours from Colombo by bus or train, or about 1 hour by FitsAir flight. Most travellers combine Pigeon Island snorkelling with 2–3 nights on the Nilaveli beach strip.</p>
+
+        <h2>Best Time to Visit</h2>
+        <p>May through September is the east coast season — calm seas and excellent underwater visibility. July and August have the most settled conditions. Outside this window (October–April), the northeast monsoon makes the crossing rough and visibility poor. April can be transitional with variable conditions.</p>
+
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Bring your own mask and snorkel — the quality of rental equipment varies significantly between operators</li>
+          <li>Go in the morning — afternoon winds can make the sea choppier and cloud the water with suspended particles</li>
+          <li>Apply reef-safe sunscreen only — conventional sunscreen damages coral and is harmful to marine life</li>
+          <li>The blacktip sharks are harmless — maintain calm, do not chase them, and simply observe</li>
+          <li>Book trips through your guesthouse for vetted operators who follow marine park guidelines</li>
+        </ul>
+        <AffiliateBox
+          title="Find Tours to Pigeon Island"
+          description="Half-day snorkelling trips to Pigeon Island including boat transfer and equipment — book through trusted operators for the best experience."
+          buttonText="Book Pigeon Island Snorkelling"
+          buttonHref="https://www.getyourguide.com/trincomalee-l105/"
+          variant="tour"
+        />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","May–September"],["Trip Duration","Half day (3–4 hours)"],["Departure","Nilaveli or Uppuveli beach"],["Entry Fee","~USD 15 + boat hire"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.getyourguide.com/trincomalee-l105/" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">Find Hotels Nearby</a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/nilaveli","label":"Nilaveli Beach (1km)"},{"href":"/places/uppuveli","label":"Uppuveli Beach (8km)"},{"href":"/places/trincomalee","label":"Trincomalee"},{"href":"/things-to-do/snorkelling","label":"Snorkelling Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

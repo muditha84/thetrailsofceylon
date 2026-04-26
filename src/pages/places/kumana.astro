@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Kumana National Park: Birds, Wildlife & Remote East Coast Safari | The Trails of Ceylon" description="Kumana is Sri Lanka's most remote major national park — an exceptional birdwatching destination on the far east coast with leopards, elephants and one of Asia's most important waterbird colonies." type="article" publishDate="2025-03-01">
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/yala.jpg" alt="Kumana National Park birds wildlife east coast Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/wildlife-parks" class="hover:text-white">Wildlife Parks</a><span>/</span>
+          <span class="text-white">Kumana National Park</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Wildlife</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Kumana National Park</h1>
+        <p class="text-white/80 mt-2 text-lg">East Coast • Remote Safari • Birdwatching • Wilderness</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","Eastern Province"],["Size","35,665 hectares"],["Famous For","Waterbird colony, leopards, elephants"],["Best Season","May–September (east coast dry)"],["From Arugam Bay","45km north"],["Crowds","Extremely low"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Kumana National Park is Sri Lanka's most remote major wildlife sanctuary — a vast tract of scrub forest, coastal lagoons and mangrove swamps on the southeastern coast, bordering the Indian Ocean to the south and Yala National Park to the west. It is contiguous with Yala but far less visited — receiving perhaps 5% of Yala's annual tourist traffic — which makes it one of the genuinely wild safari experiences remaining in Sri Lanka. Kumana is most famous for its bird colonies: the Kumana Villu (a shallow tank deep in the park) hosts one of Asia's largest and most important waterbird breeding colonies, with painted storks, open-billed storks, night herons and little cormorants nesting in the trees above the water in a spectacle of sound, colour and movement.</p>
+        <h2>The Kumana Villu Bird Colony</h2>
+        <p>The Kumana Villu is the centrepiece of the park — a seasonally flooded tank that becomes a concentrated breeding site for waterbirds between April and July. At peak breeding season, thousands of birds nest simultaneously in the surrounding trees. Painted storks build their large stick nests in the tree canopy; below, open-billed storks, grey herons, night herons and cormorants jostle for nesting space. The noise and activity is extraordinary — one of Asia's finest wildlife spectacles and almost completely unknown outside birding circles. The tank also attracts crocodiles, elephants and, occasionally, leopards that come to drink.</p>
+        <h2>Mammals</h2>
+        <p>Kumana's leopard population is significant — the park forms part of the same leopard territory as Yala, and sightings are reported regularly. Elephants move through the park seasonally. Sloth bears, spotted deer, sambar deer, jackals and grey langur monkeys are resident. The absence of tourist pressure means animals behave more naturally and sightings can be more intimate than at busier parks.</p>
+        <h2>Getting to Kumana</h2>
+        <p>Kumana is most easily accessed from <a href="/places/arugam-bay">Arugam Bay</a> (45km north) during the east coast season (May–September). The road from Arugam Bay is rough and requires a 4WD or high-clearance vehicle. From Colombo, the journey takes about 8–10 hours by car via Monaragala. Most travellers combine Kumana with an Arugam Bay surf trip, taking a single safari day from there. Overnight camping inside the park is possible with advance permits from the Department of Wildlife Conservation.</p>
+        <h2>Best Time to Visit</h2>
+        <p>May through September — the east coast dry season — is when Kumana is most accessible and the bird colony is at its most spectacular (peak activity April–July). Outside this season, the roads can become impassable with rain and the park is effectively inaccessible.</p>
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>A 4WD vehicle is essential — the tracks inside the park are rough and can be flooded even in the dry season</li>
+          <li>Kumana requires a permit in advance from the Department of Wildlife Conservation in Colombo — arrange this before travelling</li>
+          <li>Bring a birding field guide — the variety of species here rewards careful observation</li>
+          <li>The park has no facilities whatsoever — bring everything you need including food, water and camping equipment if staying overnight</li>
+        </ul>
+        <AffiliateBox title="Find Safari Tours Near Kumana" description="Remote safari day trips from Arugam Bay to Kumana — local operators know the park and the roads. Book in advance." buttonText="Find Safari Tours" buttonHref="https://www.getyourguide.com/arugam-bay-l5/" variant="tour" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","May–September"],["Bird Colony Peak","April–July"],["From Arugam Bay","45km, ~1.5 hrs"],["Crowds","Extremely low"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.getyourguide.com/arugam-bay-l5/" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">Find Hotels Nearby</a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/arugam-bay","label":"Arugam Bay (45km)"},{"href":"/places/yala","label":"Yala National Park"},{"href":"/places/wildlife-parks","label":"Wildlife Parks Guide"},{"href":"/things-to-do/bird-watching","label":"Birdwatching Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

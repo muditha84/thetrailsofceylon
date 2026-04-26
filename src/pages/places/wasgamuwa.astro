@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Wasgamuwa National Park: Remote Elephants & Ancient Ruins Safari | The Trails of Ceylon" description="Wasgamuwa National Park is one of Sri Lanka's least-visited elephant sanctuaries — a remote, unspoilt park on the edge of the Cultural Triangle with large herds and ancient ruins." type="article" publishDate="2025-03-01">
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/minneriya.jpg" alt="Wasgamuwa National Park elephants Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/wildlife-parks" class="hover:text-white">Wildlife Parks</a><span>/</span>
+          <span class="text-white">Wasgamuwa National Park</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Wildlife</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Wasgamuwa National Park</h1>
+        <p class="text-white/80 mt-2 text-lg">Cultural Triangle • Remote Elephant Park • Ancient Ruins • Solitude</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","North Central Province"],["Size","39,322 hectares"],["Famous For","Large elephant herds, remote setting"],["Best Season","May–September (dry)"],["Crowds","Very low — genuinely remote"],["From Kandy","3 hrs by car"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Wasgamuwa is one of Sri Lanka's best-kept wildlife secrets — a large national park on the eastern edge of the Cultural Triangle, bordering the Mahaweli River, where herds of up to 150 elephants gather during the dry season. It is one of the least-visited parks in the country: no tourist buses, no crowded jeep convoys around a leopard sighting, no infrastructure catering to mass tourism. What it offers instead is a genuinely wild safari experience in a landscape of dense scrub forest, ancient tanks (reservoirs) built by medieval kings, and river flats where elephants wade in the shallows at dusk. Combined with the ancient ruins within and around the park boundaries, Wasgamuwa rewards the traveller willing to make the effort to get here.</p>
+        <h2>Elephant Herds</h2>
+        <p>Wasgamuwa has one of Sri Lanka's largest elephant populations — an estimated 150–200 animals living within and around the park. During the dry season (May–September), when the Mahaweli River drops and the smaller water sources dry up, elephants concentrate around the remaining tanks and river areas, making large-herd sightings almost guaranteed on morning and evening safaris. Mothers with young calves are commonly seen, and the relative absence of tourist pressure means the animals behave more naturally than in heavily visited parks like Yala.</p>
+        <h2>Ancient Ruins</h2>
+        <p>The landscape around Wasgamuwa is littered with ancient irrigation works built by the medieval Sinhalese kingdoms — great stone-faced earthen dams, sluice gates, and channels now partially reclaimed by forest. Several ruins within the park itself are accessible by jeep. The nearby Dimbulagala rock temple, visible from the park boundary, is an ancient cave monastery site with paintings and inscriptions dating back over 2,000 years.</p>
+        <h2>Getting to Wasgamuwa</h2>
+        <p>Wasgamuwa is genuinely remote — this is part of its appeal and its challenge. The main entrance is near Giritale, accessible from Polonnaruwa (40km, 1 hour) or Kandy (90km, 3 hours). There is no direct public transport to the park gate; a car or arranged safari jeep is necessary. Most travellers combine Wasgamuwa with a Cultural Triangle visit, staying in Giritale or Polonnaruwa and taking an early morning safari.</p>
+        <h2>Best Time to Visit</h2>
+        <p>May through September is the dry season and the best time for elephant viewing — water sources concentrate the herds. October through April brings more rain, making the roads challenging and elephants more dispersed, but the vegetation is lush and the park is beautiful.</p>
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Arrange your safari jeep through your Polonnaruwa or Giritale guesthouse — local operators are far cheaper than Colombo-based agencies</li>
+          <li>The remote location means facilities are minimal — bring water, food and insect repellent</li>
+          <li>Morning safaris (6–10am) are consistently better than afternoon — elephants are most active in cooler hours</li>
+          <li>Combine with Minneriya or Kaudulla if you are elephant-focused — the "Gathering" at Minneriya (Jul–Oct) is a larger spectacle</li>
+        </ul>
+        <AffiliateBox title="Book a Wasgamuwa Safari" description="Remote elephant safaris with local expert guides — arrange through your guesthouse in Polonnaruwa or Giritale for the best rates." buttonText="Find Safari Tours" buttonHref="https://www.getyourguide.com/polonnaruwa-l5/" variant="tour" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","May–September"],["Elephant Herds","Up to 150+ animals"],["From Polonnaruwa","1 hr by car"],["Crowds","Very low — genuine wilderness"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.getyourguide.com/polonnaruwa-l5/" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">Find Hotels Nearby</a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/minneriya","label":"Minneriya (60km)"},{"href":"/places/polonnaruwa","label":"Polonnaruwa (40km)"},{"href":"/places/wildlife-parks","label":"Wildlife Parks Guide"},{"href":"/things-to-do/wildlife-safaris","label":"Safari Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

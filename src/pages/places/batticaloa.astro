@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Batticaloa, Sri Lanka: Lagoon City, Singing Fish & East Coast Culture | The Trails of Ceylon"
+  description="Batticaloa is the east coast's most atmospheric city — a labyrinth of lagoon islands, colonial forts, Tamil culture and the mysterious singing fish phenomenon."
+  type="article"
+  publishDate="2025-03-01"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/arugam-bay.jpg" alt="Batticaloa lagoon east coast Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/east-coast" class="hover:text-white">East Coast</a><span>/</span>
+          <span class="text-white">Batticaloa</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">East Coast</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Batticaloa</h1>
+        <p class="text-white/80 mt-2 text-lg">East Coast • Lagoon City • Tamil Culture • Singing Fish</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","Eastern Province"],["Distance from Colombo","320km (6 hrs)"],["Best For","Culture, history, local experience"],["Best Season","May–September"],["Days Needed","1–2 days"],["Famous For","Singing fish phenomenon"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Batticaloa — universally known as "Batti" to Sri Lankans — is a city built on islands in the middle of a vast coastal lagoon, connected by causeways and bridges, with a colonial Dutch fort at its heart and a predominantly Tamil population that gives it a cultural character unlike anywhere else in Sri Lanka. It is not a tourist destination in any conventional sense — there is no beach strip, no backpacker scene, no international restaurant row. What Batticaloa offers instead is something rarer: a functioning Sri Lankan city recovering from conflict, with genuine history, extraordinary food, and an atmosphere of resilience that makes a visit here feel meaningful as well as interesting.</p>
+
+        <h2>The Singing Fish</h2>
+        <p>Batticaloa's most celebrated phenomenon is its "singing fish" — a mysterious musical humming that rises from the depths of the lagoon on clear, still nights, particularly in the weeks around the full moon from April to September. The sound has been documented since at least the 19th century. The most likely explanation involves the combined sound produced by millions of freshwater mussels attached to the lagoon floor, though no definitive scientific explanation has been universally accepted. A boat trip on the lagoon on a full moon night in May or June, listening for the singing, is an experience unique to Batticaloa in all the world.</p>
+
+        <h2>Batticaloa Fort</h2>
+        <p>Built by the Portuguese in 1628 and subsequently occupied and extended by the Dutch and British, Batticaloa Fort sits on a small island in the lagoon connected to the main town by a drawbridge. The fort has been converted into government offices and a police station, but the outer walls, the original gateway and the interior courtyard can be visited. A small museum inside contains artefacts from the colonial period. The fort is most atmospheric at dusk when the lagoon turns gold around it.</p>
+
+        <h2>The Lagoon & Birdlife</h2>
+        <p>Batticaloa's vast lagoon system is exceptional for birdwatching — herons, egrets, kingfishers, cormorants and the occasional painted stork populate the mangrove fringes. Boat hire for lagoon exploration is available near the town centre. The lagoon is also important for traditional fishing communities who use outrigger canoes and traditional nets — you will see them working at dawn and dusk in the channels between the islands.</p>
+
+        <h2>Getting to Batticaloa</h2>
+        <p>Batticaloa is connected to Colombo by train (the Batticaloa Intercity Express takes about 7 hours from Colombo Fort) and by bus (6 hours). FitsAir operates occasional flights from Colombo to Batticaloa, reducing travel time to about 1 hour. By road, allow 6 hours from Colombo via Habarana. From Arugam Bay, Batticaloa is 100km north along the coast road — allow 2.5 hours by bus or car.</p>
+
+        <h2>Best Time to Visit</h2>
+        <p>May through September — the east coast dry season — is the most comfortable time to visit. The singing fish phenomenon is best heard June and July. October brings the northeast monsoon. As a lagoon city rather than a beach destination, Batticaloa is more weather-resistant than purely coastal places.</p>
+
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Arrange a moonlit lagoon boat trip through your guesthouse for the best chance of hearing the singing fish</li>
+          <li>Batticaloa has excellent Tamil and Muslim food — try string hoppers with crab curry at local restaurants near the market</li>
+          <li>The cycling routes around the lagoon islands are flat, scenic and a wonderful way to explore beyond the town centre</li>
+          <li>Ask locally about current security and road conditions before travelling — the area is peaceful but has seen rapid change since 2009</li>
+        </ul>
+        <AffiliateBox
+          title="Find Hotels in Batticaloa"
+          description="Comfortable guesthouses and hotels in and around Batticaloa — a genuine off-the-beaten-track east coast base."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Batticaloa+Sri+Lanka"
+          variant="hotel"
+        />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","May–September"],["Ideal Stay","1–2 days"],["Top Experience","Singing fish lagoon trip"],["From Colombo","6 hrs by train"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Batticaloa+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">Find Hotels Nearby</a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/arugam-bay","label":"Arugam Bay (100km)"},{"href":"/places/trincomalee","label":"Trincomalee (170km)"},{"href":"/places/east-coast","label":"East Coast Guide"},{"href":"/places","label":"All Places"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

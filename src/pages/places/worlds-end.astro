@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="World's End, Horton Plains: Sri Lanka's Most Dramatic Cliff Edge | The Trails of Ceylon" description="World's End is a sheer 870-metre cliff at the southern edge of Horton Plains National Park — one of Sri Lanka's most dramatic natural viewpoints, best visited at dawn before the mist arrives." type="article" publishDate="2025-03-01">
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/horton-plains.jpg" alt="World's End cliff Horton Plains Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/hill-country" class="hover:text-white">Hill Country</a><span>/</span>
+          <span class="text-white">World's End</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Hill Country</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">World's End</h1>
+        <p class="text-white/80 mt-2 text-lg">Hill Country • Horton Plains • Sheer Cliff • Dramatic Views</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Location","Horton Plains National Park"],["Drop","870 metres sheer cliff"],["Walk from Gate","9km circular trail"],["Best Time","Before 9am (before mist)"],["Altitude","2,100 metres"],["Entry Fee","USD 25–30 per person"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>World's End is Sri Lanka's most dramatic natural viewpoint — a sheer precipice at the southern escarpment of Horton Plains National Park where the high-altitude plateau drops 870 metres in a near-vertical wall of rock and forest to the lowlands below. On a clear morning, the view extends across the southern lowlands to the coast, 50 kilometres away. By mid-morning, cloud typically rolls up from below and obscures everything — which means the entire experience of visiting World's End is defined by timing. Those who arrive early are rewarded with views that rank among the finest in Asia; those who arrive late find themselves at the edge of a grey void. The cliff itself is genuinely vertiginous — stand at the safety barrier and look straight down at the forest canopy 870 metres below, and you understand instantly why this is called World's End.</p>
+        <h2>The Horton Plains Walk</h2>
+        <p>World's End is reached via a 9.5km circular trail through Horton Plains National Park — a unique high-altitude ecosystem of grassland (patana), cloud forest, montane jungle and flowing streams. The walk typically takes 3–4 hours at a comfortable pace. Along the route, Baker's Falls — a 20-metre waterfall tumbling into a forested gorge — is the other highlight. The park is home to endemic species including the sambar deer, purple-faced langur and an extraordinary variety of endemic birds. The landscape is unlike anywhere else in Sri Lanka: cool, misty, with a haunting quality on overcast days and a luminous beauty on clear ones.</p>
+        <h2>Early Start Is Essential</h2>
+        <p>The national park gates open at 6am. Enter as early as possible and walk directly to World's End (approximately 4km) before the cloud arrives. By 9–10am on most days, visibility drops to near zero. The walk back from World's End continues via Baker's Falls and completes the circuit. The entire loop is feasible in 3–3.5 hours if you move at a reasonable pace. The park is cool at dawn — temperatures can be 8–12°C before sunrise — so bring warm layers.</p>
+        <h2>Getting to Horton Plains</h2>
+        <p>The most common approach is from Nuwara Eliya (32km, 1 hour by car) or Haputale (18km, 45 minutes). There is no direct public bus to the park entrance; hire a taxi or tuk-tuk from Nuwara Eliya, Ohiya or Haputale. From Ella, the drive takes about 1.5 hours via Haputale. Most travellers either stay in Nuwara Eliya and take an early morning taxi, or stay in the park area at Ohiya. The taxi from Nuwara Eliya for a return trip costs approximately LKR 3,000–4,000.</p>
+        <h2>Best Time to Visit</h2>
+        <p>Year-round, but the clearest mornings are December through April and July through September. The southwest monsoon (May–June) brings cloud and rain to the highlands. The inter-monsoon (October–November) can also be overcast. Regardless of season, early morning is always the best time — cloud arrives from the south regardless of the overall weather pattern.</p>
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Be at the park gate when it opens at 6am — this is non-negotiable for clear views</li>
+          <li>Bring warm clothing — 8–12°C at dawn at 2,100 metres feels very cold after the lowland heat</li>
+          <li>No food or drink is available inside the park — bring sufficient water and snacks</li>
+          <li>The entry fee is payable in USD at the gate; have notes ready</li>
+          <li>Keep to the marked trail — the park has fragile endemic ecosystems sensitive to off-path walking</li>
+        </ul>
+        <AffiliateBox title="Find Hotels Near Horton Plains" description="Base yourself in Nuwara Eliya or Haputale for an early morning World's End visit — a wide range of options for every budget." buttonText="Search Hotels on Booking.com" buttonHref="https://www.booking.com/searchresults.html?ss=Nuwara+Eliya+Sri+Lanka" variant="hotel" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Gate Opens","6am — arrive immediately"],["Cloud Arrives","By 9–10am — go early"],["Walk Distance","9.5km circular"],["From Nuwara Eliya","1 hr by taxi"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Nuwara+Eliya+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">Find Hotels Nearby</a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/horton-plains","label":"Horton Plains NP"},{"href":"/places/nuwara-eliya","label":"Nuwara Eliya"},{"href":"/places/ella","label":"Ella"},{"href":"/places/adams-peak","label":"Adam's Peak"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Kalpitiya, Sri Lanka: Kitesurfing Capital & Dolphin Watching | The Trails of Ceylon"
+  description="Kalpitiya is Sri Lanka's kitesurfing capital — a remote peninsula on the northwest coast with world-class kite conditions, spinner dolphin pods and a completely undeveloped coastline."
+  type="article"
+  publishDate="2025-03-01"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/whale-watching.jpg" alt="Kitesurfing and dolphins at Kalpitiya lagoon Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <span class="text-white">Kalpitiya</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Northwest Coast</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Kalpitiya</h1>
+        <p class="text-white/80 mt-2 text-lg">Northwest Coast • Kitesurfing • Dolphins • Remote Peninsula</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","North Western Province"],["Distance from Colombo","155km (3.5 hrs)"],["Best For","Kitesurfing, dolphins, solitude"],["Kite Season","May–October (SW wind)"],["Days Needed","2–5 days"],["Lagoon Size","40km sheltered strip"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Kalpitiya is the kind of destination that makes dedicated adventure travellers feel they have discovered something genuinely undiscovered. This narrow peninsula on Sri Lanka's northwest coast encloses a 40-kilometre lagoon that produces some of the most consistent and powerful kite conditions in Asia — flat water on one side, ocean swell on the other, and a steady south-west wind from May to October that has made Kalpitiya one of the continent's premier kitesurfing destinations. Beyond the kite scene, Kalpitiya is also home to some of the world's most accessible spinner dolphin pods — hundreds of dolphins regularly encountered on morning boat trips out of the peninsula's small harbours.</p>
+
+        <h2>Kitesurfing in Kalpitiya</h2>
+        <p>The lagoon between Kalpitiya peninsula and the chain of barrier islands offshore creates ideal kitesurfing conditions: flat, waist-deep water over a sandy bottom, with the south-west trade wind blowing consistently at 15–25 knots from May through October. The setup is beginner-friendly on the lagoon side — the shallow water and consistent wind direction make learning to kite far easier than at many other destinations. Experienced kiters can head to the ocean side for wave riding. Several kite schools operate from the peninsula offering IKO-certified instruction. A basic kite course (3–4 hours of instruction) costs approximately USD 200–250 and gets most beginners flying independently. Advanced kiters can hire equipment and guides for downwind trips along the coast.</p>
+
+        <h2>Spinner Dolphin Watching</h2>
+        <p>The waters around Kalpitiya are home to resident pods of spinner dolphins — sometimes hundreds at a time. Morning boat trips (departing 6–7am) offer encounters with these acrobatic dolphins, often bow-riding the boat and leaping in their characteristic spinning motion. The encounters are usually in the open ocean west of the peninsula. On good days, other species including bottlenose dolphins and pilot whales are also seen. The trips are genuinely spectacular — far less commercialised than the dolphin watching at Mirissa and with a much higher probability of large pod encounters. Whale sharks are occasionally spotted in the area between January and April.</p>
+
+        <h2>The Islands</h2>
+        <p>The chain of small barrier islands off the Kalpitiya coast — Bar Reef is the most celebrated — form one of Sri Lanka's largest coral reef systems. Snorkelling trips to the reef can be arranged from Kalpitiya and offer a glimpse of reef life that is far less disturbed than the heavily visited south coast reefs. Bar Reef is a marine sanctuary; access is regulated and entry fees apply.</p>
+
+        <h2>Getting to Kalpitiya</h2>
+        <p>Kalpitiya is 155km north of Colombo via Negombo and Puttalam on the A003 highway. By car or taxi, allow 3.5–4 hours from Colombo (traffic in Negombo can add significant time). There is no train line directly to Kalpitiya; the nearest station is Puttalam, from where a tuk-tuk to the peninsula costs LKR 1,500–2,000. Most travellers hire a car from Colombo. Some kite camps arrange transfers.</p>
+
+        <h2>Best Time to Visit</h2>
+        <p>The kite season runs from May to October — the southwest monsoon that makes life difficult on the south coast generates the reliable wind that Kalpitiya's kiters prize. The wind is most consistent June through September. Outside this window (November–April), conditions are light and variable and most kite operations close. The dolphin watching is best from November to April, which means combining both activities requires picking one season.</p>
+
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Book kite lessons and accommodation together — the main kite camps offer all-inclusive packages that are better value than booking separately</li>
+          <li>Kalpitiya has almost no tourist infrastructure outside the kite camps — bring cash as ATMs are unreliable</li>
+          <li>The peninsula is flat and sandy — bring sun protection and quality sunglasses</li>
+          <li>Early morning dolphin trips are worth setting an alarm for — the encounters can be extraordinary</li>
+          <li>Bring a high SPF sunscreen — the combination of sun, wind and water reflection burns quickly</li>
+        </ul>
+
+        <AffiliateBox
+          title="Book Kite Camps in Kalpitiya"
+          description="All-inclusive kite camps with accommodation, instruction and equipment — Kalpitiya's camps are the best way to experience this remote destination."
+          buttonText="Find Kalpitiya Kite Camps"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Kalpitiya+Sri+Lanka"
+          variant="tour"
+        />
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Kite Season","May–October"],["Dolphin Season","November–April"],["Ideal Stay","3–5 days"],["From Colombo","3.5 hrs by car"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Kalpitiya+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">
+            Find Hotels Nearby
+          </a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/things-to-do/kitesurfing","label":"Kitesurfing Guide"},{"href":"/things-to-do/dolphin-watching","label":"Dolphin Watching"},{"href":"/places/north-jaffna","label":"North Sri Lanka"},{"href":"/places","label":"All Places"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

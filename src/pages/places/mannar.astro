@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Mannar Island, Sri Lanka: Baobab Trees, Flamingos & Ancient History | The Trails of Ceylon"
+  description="Mannar is Sri Lanka's most otherworldly destination — a flat, windswept island connected to the mainland by causeway, with ancient baobab trees, flamingo lagoons and the ruins of a Portuguese fort."
+  type="article"
+  publishDate="2025-03-01"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/jaffna.jpg" alt="Mannar island baobab trees flamingos Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/north-jaffna" class="hover:text-white">North & Jaffna</a><span>/</span>
+          <span class="text-white">Mannar</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">North Sri Lanka</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Mannar</h1>
+        <p class="text-white/80 mt-2 text-lg">North Sri Lanka • Baobab Trees • Flamingos • Ancient Island</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","Northern Province"],["Distance from Colombo","330km (5.5 hrs)"],["Best For","Birdwatching, history, off-beat travel"],["Best Season","May–October"],["Days Needed","1–2 days"],["Famous For","Africa's baobab trees in Asia"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Mannar is one of Sri Lanka's most surreal and undervisited destinations — a long, flat island connected to the Northern Province mainland by a causeway, jutting into the Palk Strait towards India in a landscape of scrub forest, salt flats, ancient ruins and enormous windswept skies. It does not look like the rest of Sri Lanka. The vegetation is sparse and thorny, the light has a particular bleached quality, and the iconic baobab trees — unmistakably African in appearance, believed to have been brought by Arab traders centuries ago — give the island the air of a different continent entirely. Birders know Mannar as one of the best flamingo-watching sites in South Asia. History buffs know it as the site of Sri Lanka's oldest Portuguese fort. Everyone else has barely heard of it — which is precisely its appeal.</p>
+
+        <h2>The Baobab Trees</h2>
+        <p>Mannar's most famous sight is its colony of baobab trees — enormous, bottle-trunked trees that are native to Africa and Madagascar but have no business being in Sri Lanka at all. The largest specimen, known as the Great Baobab, is estimated to be over 700 years old and has a trunk circumference of about 19 metres. Arab traders plying the route between Africa and South and Southeast Asia are believed to have introduced baobab seeds to Mannar, where the semi-arid conditions proved suitable for growth. The trees are found scattered across the northern part of the island, with the Great Baobab located near the Dutch Fort.</p>
+
+        <h2>Flamingos at Vankalai</h2>
+        <p>The Vankalai Sanctuary, on the southwestern tip of Mannar Island, is one of Sri Lanka's best-kept birding secrets. Greater and lesser flamingos gather here in significant numbers, particularly from December through March. The shallow, saline lagoon also attracts painted storks, spoonbills, pelicans and an extraordinary variety of shorebirds. Birding in Mannar generally is exceptional — the island sits on a major migratory route between South Asia and Africa/Europe, and over 150 species have been recorded. Early morning is best; bring binoculars and a long lens.</p>
+
+        <h2>Mannar Fort</h2>
+        <p>Built by the Portuguese in 1560 and subsequently modified by the Dutch, Mannar Fort is one of Sri Lanka's oldest colonial fortifications. The fort sits at the northern tip of the island overlooking the sea towards India (just 30km away at the narrowest point). The walls are partly ruined but the structure of the fort is clear, and the views from the ramparts across the Palk Strait on a clear day are extraordinary. A small community lives within the fort compound. Entry is free.</p>
+
+        <h2>Getting to Mannar</h2>
+        <p>Mannar is connected to Colombo by train — the Mannar line branches from the main northern railway at Medawachchiya. The journey from Colombo takes about 6–7 hours. By road, Mannar is approximately 5.5 hours from Colombo via the A9 north road through Vavuniya. From Jaffna, it is about 3 hours south. A tuk-tuk is the best way to explore the island once you arrive; the distances are manageable.</p>
+
+        <h2>Best Time to Visit</h2>
+        <p>The flamingos are best December through March. Birdwatching is good year-round but peaking November through April during the migration season. May through September can be very hot and windy. The fort and baobab trees are accessible year-round.</p>
+
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Hire a tuk-tuk for a full-day island circuit — the driver can navigate to the baobab trees, fort and Vankalai sanctuary</li>
+          <li>Bring food and water — restaurant options on the island are extremely limited</li>
+          <li>The area was heavily affected by the civil war; treat the local community with sensitivity</li>
+          <li>Combine with a visit to Jaffna to make the most of the journey north</li>
+        </ul>
+        <AffiliateBox
+          title="Find Hotels in Mannar"
+          description="Basic guesthouses in Mannar town — this is truly off-the-beaten-track Sri Lanka. Accommodation options are limited so book ahead."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Mannar+Sri+Lanka"
+          variant="hotel"
+        />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Flamingo Season","December–March"],["Ideal Stay","1–2 days"],["Top Sight","Baobab trees & flamingos"],["From Colombo","6 hrs by train"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Mannar+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">Find Hotels Nearby</a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/jaffna","label":"Jaffna (170km)"},{"href":"/places/anuradhapura","label":"Anuradhapura (100km)"},{"href":"/places/north-jaffna","label":"North Sri Lanka Guide"},{"href":"/places","label":"All Places"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

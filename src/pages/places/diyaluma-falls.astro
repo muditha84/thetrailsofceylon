@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Diyaluma Falls: Sri Lanka's Second Highest Waterfall & Natural Pools | The Trails of Ceylon" description="Diyaluma Falls is Sri Lanka's second highest waterfall at 171 metres, with natural infinity pools at the top that are among the most beautiful swimming spots on the island." type="article" publishDate="2025-03-01">
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/ella.jpg" alt="Diyaluma Falls natural pools Sri Lanka highest waterfall" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/hill-country" class="hover:text-white">Hill Country</a><span>/</span>
+          <span class="text-white">Diyaluma Falls</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Hill Country</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Diyaluma Falls</h1>
+        <p class="text-white/80 mt-2 text-lg">Hill Country • 171m Waterfall • Natural Pools • Swimming</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Height","171 metres (2nd highest in Sri Lanka)"],["Location","Near Koslanda, Badulla District"],["Top Pools","Natural infinity pools"],["Hike to Top","1.5–2 hrs return"],["Best Flow","Rainy season & inter-monsoon"],["Entry Fee","Small local fee at base"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Diyaluma Falls is Sri Lanka's second highest waterfall — a 171-metre single-drop cascade on the Punagala Oya river near the town of Koslanda in Badulla District. The falls drop from the edge of the highland plateau in a single unbroken curtain of white water that is visible from the main road between Haputale and Wellawaya. But Diyaluma's real secret is at the top: a series of natural pools formed where the river smooths across flat rock shelves before plunging over the edge — pools that effectively function as natural infinity pools, their edges apparently dropping into nothing above the valley far below. Swimming in these pools, with the sound of the falls below and the highland views all around, is one of the most extraordinary experiences in Sri Lanka.</p>
+        <h2>The Natural Pools</h2>
+        <p>The pools at the top of Diyaluma are reached by a 1.5–2 hour hike from the base. The trail begins near the base of the falls and ascends steeply through forest and tea estates. The effort is well worth it: the pools at the top are clean, cold and utterly beautiful, with the falls edge nearby giving the impression of swimming at the edge of the world. Locals swim here and the atmosphere is relaxed and communal. Go in the morning when the light is better and before afternoon clouds build. Wet-season months (May–September) offer the fullest pools and most powerful falls.</p>
+        <h2>Viewing the Falls</h2>
+        <p>The base of the falls is visible from the main road between Haputale and Wellawaya. The viewing area at the base gives the full impression of the waterfall's height — 171 metres is genuinely enormous, and on high-flow days the spray is felt from 50 metres away. The pool at the base is too turbulent for safe swimming but the viewing area is easily accessible. Early morning is best for photography — the falls face east and morning light illuminates the cascade directly.</p>
+        <h2>Getting There</h2>
+        <p>Diyaluma Falls is on the A4 road between Haputale and Wellawaya — about 15km from Haputale and 25km from Wellawaya. From Ella, the drive takes about 30–40 minutes via Haputale. From Colombo by bus to Wellawaya and then tuk-tuk. A tuk-tuk from Haputale to the falls costs LKR 500–700; from Ella, expect LKR 800–1,200 return with waiting time. The trailhead for the pool hike is signposted near the falls.</p>
+        <h2>Best Time to Visit</h2>
+        <p>The falls are most powerful from May through September when the southwest monsoon feeds the rivers. The pools at the top are accessible year-round but fullest and most swimmable in the inter-monsoon months of May–June and October–November. December through March (dry season) can see reduced flow.</p>
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>The hike to the pools is steep — wear shoes with grip and start early to avoid midday heat</li>
+          <li>Bring a change of clothes — the pools are irresistible and you will swim</li>
+          <li>Exercise extreme caution at the pool edges near the falls drop — the rocks are slippery and the edge is unfenced</li>
+          <li>The hike guide service from local boys at the base is worth taking for the first visit — the trail has confusing branches</li>
+        </ul>
+        <AffiliateBox title="Find Hotels Near Diyaluma Falls" description="Stay in Haputale or Ella for easy access to Diyaluma Falls — excellent guesthouses at both bases." buttonText="Search Hotels on Booking.com" buttonHref="https://www.booking.com/searchresults.html?ss=Haputale+Sri+Lanka" variant="hotel" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Height","171 metres"],["Hike to Pools","1.5–2 hrs return"],["Best Flow","May–September"],["From Ella","30–40 mins by tuk-tuk"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Haputale+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">Find Hotels Nearby</a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/ella","label":"Ella (30km)"},{"href":"/places/ravana-falls","label":"Ravana Falls"},{"href":"/places/horton-plains","label":"Horton Plains"},{"href":"/blog/sri-lanka-waterfalls","label":"Waterfalls Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

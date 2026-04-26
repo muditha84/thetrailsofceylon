@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Hikkaduwa, Sri Lanka: Beaches, Coral Reefs & Nightlife Guide | The Trails of Ceylon"
+  description="Hikkaduwa is Sri Lanka's most vibrant beach town — coral reefs teeming with turtles, consistent surf, and the best nightlife on the south coast."
+  type="article"
+  publishDate="2025-03-01"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/snorkelling.jpg" alt="Coral reef snorkelling at Hikkaduwa, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/south-coast" class="hover:text-white">South Coast</a><span>/</span>
+          <span class="text-white">Hikkaduwa</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">South Coast</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Hikkaduwa</h1>
+        <p class="text-white/80 mt-2 text-lg">South Coast • Coral Reefs • Surf • Nightlife</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","Southern Province"],["Distance from Colombo","98km (1.5 hrs)"],["Best For","Snorkelling, surf, nightlife"],["Best Season","Nov–April"],["Days Needed","2–3 days"],["Beach Length","3km coral reef coast"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Hikkaduwa is Sri Lanka's original beach resort, and four decades after the first travellers discovered it, it remains one of the island's most energetic and fun destinations. Strung along 3 kilometres of coast with a coral reef running parallel to the shoreline, Hikkaduwa offers some of the most accessible reef snorkelling in Sri Lanka, consistent surf breaks, a vibrant restaurant and bar scene, and the only real beachside nightlife outside Colombo. It is busier and more developed than the quieter beaches to the south, but that is precisely the point — Hikkaduwa has an energy all its own.</p>
+
+        <h2>Snorkelling & Marine Life</h2>
+        <p>The Hikkaduwa Coral Sanctuary is a protected marine park running along most of the beach. You can snorkel straight from the beach — the reef begins just 30–50 metres offshore and reaches a maximum depth of about 6 metres, making it ideal for beginners. The coral itself has suffered bleaching events in recent decades but remains home to an impressive variety of reef fish — parrotfish, butterflyfish, surgeonfish and the occasional moray eel. Most remarkably, Hikkaduwa has a resident population of sea turtles — green turtles and hawksbill turtles that have become extraordinarily comfortable around snorkellers. Ethical interaction is important: do not touch or chase the turtles, and choose operators who enforce minimum approach distances.</p>
+        <p>Glass-bottom boat tours operate from the beach and give non-swimmers a view of the reef. Snorkel gear rental is available from most beach shacks for LKR 300–500 per hour. Mask quality varies — bring your own if snorkelling is a priority.</p>
+
+        <h2>Surfing at Hikkaduwa</h2>
+        <p>Hikkaduwa has been a surf destination since the 1970s. The main break — a reef break known as "Hikka" — produces consistent right-handers best suited to intermediate surfers. The wave breaks over a shallow reef and can be punchy when the swell is running. More forgiving breaks suitable for beginners can be found at the northern end of the beach near Narigama. Surf season runs November to April, with the most consistent swell January through March. Board rental is ubiquitous (LKR 800–1,200/day); lessons are available from certified instructors at most surf schools.</p>
+
+        <h2>Nightlife & Eating</h2>
+        <p>Hikkaduwa comes alive after dark in a way that few Sri Lankan beach towns do. The main strip of restaurants and bars along Galle Road runs south from the bus stand — look for Rotty, Spaghetti and Coco's for reliable food; the beachside bar at Vibration is the most established nightlife venue. The Tuesday full-moon parties at Drunken Monkey and similar venues draw a cosmopolitan mix of travellers. The food scene is better than you might expect — beyond the tourist staples, small local restaurants serve excellent rice and curry and fresh seafood.</p>
+
+        <h2>Getting to Hikkaduwa</h2>
+        <p>Hikkaduwa lies 98km south of Colombo on the coastal railway line. The train from Colombo Fort takes about 2.5 hours and is one of Sri Lanka's most scenic journeys — the line runs right along the shoreline for much of the way. Trains run frequently throughout the day; the express takes around 2 hours. By car via the Southern Expressway, Hikkaduwa is about 1.5 hours from Colombo (exit at Pinnaduwa and continue south on the A2). From Galle, it is just 20 minutes by tuk-tuk or bus.</p>
+
+        <h2>Best Time to Visit</h2>
+        <p>The south coast season runs November through April. December to February is peak season with the most settled weather — blue skies, calm seas and good visibility for snorkelling and diving. The water is clearest January through March. The surf is most consistent January through March. Avoid May through October when the southwest monsoon brings rough seas and strong currents that make water activities dangerous and most tourist businesses close or reduce hours.</p>
+
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Book accommodation directly with guesthouses for the best rates — Hikkaduwa has dozens of excellent small guesthouses that are much better value than the big hotels</li>
+          <li>Snorkel in the morning when the water is calmer and visibility is better</li>
+          <li>The beach at the southern end (Narigama and Thiranagama) is quieter and less touristy than the main strip</li>
+          <li>Hire a bicycle for a day to explore the coast — the flat terrain makes cycling ideal</li>
+          <li>The Turtle Watch programme at the south end of the beach operates an ethical hatchery — worth visiting to understand turtle conservation</li>
+        </ul>
+
+        <AffiliateBox
+          title="Find Hotels in Hikkaduwa"
+          description="From budget guesthouses on the beach to comfortable hotels along the coral reef strip — find your perfect base in Hikkaduwa."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Hikkaduwa+Sri+Lanka"
+          variant="hotel"
+        />
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","November–April"],["Ideal Stay","2–3 days"],["Top Activity","Coral reef snorkelling"],["From Colombo","2.5 hrs by train"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Hikkaduwa+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">
+            Find Hotels Nearby
+          </a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/galle","label":"Galle Fort (20km)"},{"href":"/places/unawatuna","label":"Unawatuna (25km)"},{"href":"/places/weligama","label":"Weligama (40km)"},{"href":"/things-to-do/snorkelling","label":"Snorkelling Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Pinnawala Elephant Orphanage: Sri Lanka's Famous Elephant Centre | The Trails of Ceylon" description="Pinnawala Elephant Orphanage near Kandy is Sri Lanka's most visited attraction — a sanctuary caring for orphaned elephants with a daily bathing ritual in the Maha Oya river." type="article" publishDate="2025-03-01">
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/udawalawe.jpg" alt="Pinnawala Elephant Orphanage Sri Lanka baby elephants" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/hill-country" class="hover:text-white">Hill Country</a><span>/</span>
+          <span class="text-white">Pinnawala Elephant Orphanage</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Hill Country</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Pinnawala Elephant Orphanage</h1>
+        <p class="text-white/80 mt-2 text-lg">Hill Country • Elephant Sanctuary • Kandy Day Trip • River Bathing</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Founded","1975 by Sri Lanka Govt"],["Location","Kegalle, 85km from Colombo"],["Elephants","80+ residents"],["Best Time","River bathing at 10am, 2pm & 6pm"],["From Kandy","45 mins by bus/car"],["Entry Fee","USD 15 per person (foreigners)"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Pinnawala Elephant Orphanage is Sri Lanka's most visited single attraction — a government-run sanctuary established in 1975 that cares for elephants orphaned by natural causes, human-wildlife conflict or injury. Home to over 80 elephants spanning multiple generations (Pinnawala has the world's largest captive elephant breeding programme), the orphanage is best known for its twice-daily bathing ritual in the Maha Oya river, when the entire herd is led down from the sanctuary to the river below the village — a spectacular procession of giants wading and splashing in the shallows while visitors watch from the riverbank. It is genuinely moving and remarkable, whatever your views on captive elephant welfare.</p>
+        <h2>The River Bathing</h2>
+        <p>The river bathing sessions — at 10am and 2pm daily (an additional session at 6pm) — are the centrepiece of any Pinnawala visit. The elephants are led from the orphanage down to the Maha Oya river, where they bathe and play in the water for about an hour under the supervision of their mahouts. Baby elephants are especially entertaining — rolling in the shallows, squirting water, and being generally exuberant. The viewing area along the riverbank gets crowded at peak times; arrive 20 minutes before the session starts to secure a good position. The restaurants overlooking the river are the best elevated viewing spot.</p>
+        <h2>Bottle Feeding the Calves</h2>
+        <p>Young calves at Pinnawala are fed by bottle — a job that requires several feeds per day and which visitors can observe (and occasionally assist with, depending on current policy). The calf feeding area within the sanctuary is accessible during normal opening hours. The sight of a young elephant enthusiastically demolishing a large bottle of milk is unreservedly delightful and a highlight for children and adults alike.</p>
+        <h2>Responsible Tourism Note</h2>
+        <p>Pinnawala's welfare standards have improved significantly in recent years but remain a subject of debate among elephant welfare organisations. The elephants are chained during certain periods and the commercial pressure of tourist visits creates challenges. We recommend visiting with eyes open — observe the conditions, support responsible tourism advocacy, and avoid elephant rides (not offered at Pinnawala itself but available at some nearby operations).</p>
+        <h2>Getting to Pinnawala</h2>
+        <p>Pinnawala is 85km from Colombo and 45km from Kandy, making it a natural stop on the Colombo–Kandy route. From Colombo, take a bus to Kegalle (2 hours) and then a tuk-tuk to Pinnawala (10 minutes). From Kandy, buses to Colombo stop at the Pinnawala junction (45 minutes); tuk-tuks from there cost LKR 200. Many travellers visit en route between Colombo and Kandy.</p>
+        <h2>Best Time to Visit</h2>
+        <p>Pinnawala is open year-round. Time your visit to coincide with the 10am river bathing session — arrive by 9:30am. Weekdays are significantly less crowded than weekends. Rainy season visits are fine — the elephants bathe regardless of rain, and the orphanage is covered in some areas.</p>
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Arrive 20 minutes before the 10am bathing session to secure a good riverbank position</li>
+          <li>The restaurants overlooking the river offer the best elevated view — booking a meal gives a legitimate reason to use the best tables</li>
+          <li>Do not use the elephant riding operations near the orphanage — these are separate commercial ventures with poor welfare standards</li>
+          <li>Combine with the Millennium Elephant Foundation (12km away) for a more welfare-focused elephant interaction experience</li>
+        </ul>
+        <AffiliateBox title="Find Hotels Near Pinnawala" description="Stay in Kandy (45 mins) or Kegalle for easy access to Pinnawala — wide range of options for every budget." buttonText="Search Hotels on Booking.com" buttonHref="https://www.booking.com/searchresults.html?ss=Kandy+Sri+Lanka" variant="hotel" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["River Bathing","10am & 2pm daily"],["From Kandy","45 mins by bus"],["Entry Fee","USD 15 (foreigners)"],["Best Day","Weekday (fewer crowds)"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Kandy+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">Find Hotels Nearby</a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/kandy","label":"Kandy (45km)"},{"href":"/places/udawalawe","label":"Udawalawe Elephants"},{"href":"/places/sigiriya","label":"Sigiriya"},{"href":"/places/cultural-triangle","label":"Cultural Triangle"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

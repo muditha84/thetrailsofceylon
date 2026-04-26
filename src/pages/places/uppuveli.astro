@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Uppuveli Beach, Sri Lanka: Trincomalee's Best Beach Strip | The Trails of Ceylon"
+  description="Uppuveli is the beach directly north of Trincomalee — calmer and more accessible than Nilaveli, with a CWGC war cemetery and excellent seafood on the shore."
+  type="article"
+  publishDate="2025-03-01"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/trincomalee.jpg" alt="Uppuveli beach Trincomalee east coast Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/east-coast" class="hover:text-white">East Coast</a><span>/</span>
+          <span class="text-white">Uppuveli</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">East Coast</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Uppuveli</h1>
+        <p class="text-white/80 mt-2 text-lg">East Coast • Beach • Trincomalee Strip • WWII Cemetery</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","Eastern Province"],["Distance from Trincomalee","6km north"],["Best For","Beach, history, seafood"],["Best Season","May–September"],["Days Needed","1–2 days"],["Nearest Snorkelling","Pigeon Island (8km)"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Uppuveli is the first beach you reach heading north from Trincomalee — closer to town than Nilaveli, more convenient, and with a strip of guesthouses and beach restaurants that makes it a natural base for exploring the broader Trincomalee area. The beach is beautiful — a long, wide stretch of white sand with the same calm east coast sea that makes this region so special — and the community of fishing villages behind it gives the place a genuinely local character. Uppuveli is slightly busier than Nilaveli, but still tranquil by south coast standards, and its proximity to Trincomalee town makes it easier to combine beach time with cultural sightseeing.</p>
+
+        <h2>Trincomalee War Cemetery</h2>
+        <p>One of Uppuveli's most significant landmarks is the Commonwealth War Graves Commission cemetery on the beach road — the final resting place of 361 Commonwealth servicemen who died in Ceylon during the Second World War. Trincomalee was a critical Allied naval base and suffered Japanese air raids in April 1942 (the same week as the attack on Colombo). The cemetery is beautifully maintained, its white headstones arranged under shade trees near the sea, and is open to visitors throughout the day. It is a moving and often overlooked piece of Second World War history.</p>
+
+        <h2>The Beach</h2>
+        <p>Uppuveli beach runs for about 3km, with the main accommodation strip concentrated in the middle section. The sand is wide, clean and golden-white. The sea is calm from May through September — perfect for swimming, kayaking and stand-up paddleboarding. Several guesthouses have sun loungers on the beach available to guests. Boat trips to Pigeon Island for snorkelling can be arranged from Uppuveli — a 20-minute journey — and are slightly cheaper than from Nilaveli.</p>
+
+        <h2>Food & Seafood</h2>
+        <p>Uppuveli is known for excellent fresh seafood. The guesthouses along the beach strip serve grilled fish, crab curry, prawn kottu and fresh-caught barracuda — the quality of seafood in Trincomalee is among the best in Sri Lanka. The local Muslim fishing community ensures a constant supply of the freshest catch. Rice and curry from the small town eateries just behind the beach costs LKR 200–400 and is consistently excellent.</p>
+
+        <h2>Getting to Uppuveli</h2>
+        <p>From Trincomalee town, take a tuk-tuk north on the Nilaveli road — Uppuveli is 6km and costs about LKR 200–300. The bus from Trincomalee bus station to Nilaveli also stops at Uppuveli. By train or bus from Colombo, arrive at Trincomalee and take a tuk-tuk north. The railway station in Trincomalee is about 7–8 hours from Colombo Fort via Habarana. Driving from Colombo takes 6–7 hours.</p>
+
+        <h2>Best Time to Visit</h2>
+        <p>May through September is peak season for the east coast. July and August bring the most visitors — Sri Lankan families from Colombo and Kandy often holiday here in August. For fewer crowds, May, June and September are excellent months with good weather but far fewer tourists. October signals the arrival of the northeast monsoon and the beach season winds down.</p>
+
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Stay at one of the beach-strip guesthouses rather than in Trincomalee town — the beach is much more pleasant and tuk-tuks make town visits easy</li>
+          <li>Visit the CWGC cemetery in the early morning when the light is soft and the grounds are quiet</li>
+          <li>Negotiate tuk-tuk prices to Pigeon Island boat launch in advance</li>
+          <li>Trincomalee town is worth a half-day: the Koneswaram temple cliff and the natural harbour viewpoints are spectacular</li>
+        </ul>
+
+        <AffiliateBox
+          title="Find Hotels in Uppuveli"
+          description="Beachside guesthouses and midrange hotels along the Uppuveli beach strip — book ahead for July and August when east coast demand peaks."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Uppuveli+Sri+Lanka"
+          variant="hotel"
+        />
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","May–September"],["Ideal Stay","1–2 days"],["Top Sight","War Cemetery & beach"],["From Trincomalee","6km, LKR 200 tuk-tuk"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Uppuveli+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">
+            Find Hotels Nearby
+          </a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/trincomalee","label":"Trincomalee (6km)"},{"href":"/places/nilaveli","label":"Nilaveli (8km)"},{"href":"/places/pigeon-island","label":"Pigeon Island"},{"href":"/places/east-coast","label":"East Coast Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

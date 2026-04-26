@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Bundala National Park: Flamingos, Crocodiles & Coastal Wetlands | The Trails of Ceylon" description="Bundala National Park is Sri Lanka's premier wetland sanctuary — a Ramsar-listed coastal lagoon system with flamingos, crocodiles, elephants and exceptional birdwatching." type="article" publishDate="2025-03-01">
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/yala.jpg" alt="Bundala National Park flamingos wetlands Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/wildlife-parks" class="hover:text-white">Wildlife Parks</a><span>/</span>
+          <span class="text-white">Bundala National Park</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Wildlife</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Bundala National Park</h1>
+        <p class="text-white/80 mt-2 text-lg">South Coast • Wetland Sanctuary • Flamingos • Birdwatching</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","Southern Province"],["Size","6,216 hectares"],["UNESCO","Ramsar Wetland + Biosphere Reserve"],["Best For","Birdwatching, flamingos, crocodiles"],["Season","Year-round; Oct–Mar best for birds"],["From Yala","25km west"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Bundala National Park is one of Sri Lanka's most important wildlife sanctuaries and one of its least crowded — a Ramsar-listed wetland of international importance and UNESCO Biosphere Reserve lying on the south coast between Hambantota and Yala. The park protects a chain of five coastal lagoons (brackish and freshwater) separated by dunes and scrub forest, creating a mosaic of habitats that supports an astonishing diversity of birdlife. Bundala is famous above all for its flamingos — both greater and lesser flamingos gather here in significant numbers between September and March, creating the kind of pink-tinged spectacle usually associated with East Africa rather than South Asia. It is quieter, cheaper and in many ways more rewarding than the more famous Yala National Park just 25km to the east.</p>
+        <h2>Birdwatching</h2>
+        <p>Bundala has recorded over 200 bird species, of which 62 are migratory visitors from Europe and Central Asia. The lagoons attract enormous flocks of painted storks, spoonbills, great white pelicans, cormorants and herons. The shore is alive with godwits, sandpipers, plovers and other waders during migration season. The flamingos are the headline attraction — flocks of several hundred birds are common October through March, wading in the brackish shallows of the main lagoon. Early morning safaris give the best viewing conditions and the most active birds.</p>
+        <h2>Other Wildlife</h2>
+        <p>Beyond birds, Bundala supports a healthy population of saltwater crocodiles in its lagoons — up to 4.5 metres long and very much a presence in the shallow waters. Elephants pass through the park seasonally, and the scrub forest has resident populations of Sri Lankan leopard, sloth bear, jackal and spotted deer. The sea turtles — five species — nest on the beach strip within the park between October and May. A jeep safari covering the main lagoon circuit takes about 2.5–3 hours.</p>
+        <h2>Getting to Bundala</h2>
+        <p>Bundala is on the southern coastal road between Hambantota (15km east) and Tissamaharama (15km west, near Yala). From Colombo, drive south via the Southern Expressway to Matara, then east along the coast — about 3.5–4 hours. From Galle, allow 2.5 hours east. Most visitors combine Bundala with a Yala safari — the parks are close enough to visit on consecutive days from a base in Tissamaharama.</p>
+        <h2>Best Time to Visit</h2>
+        <p>October through March is the prime period for migratory birds and flamingos. Yala's dry season (February–July) also makes wildlife viewing easier in Bundala as animals concentrate around water sources. The park is open year-round but can flood partially during heavy monsoon rains.</p>
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Bundala is far less crowded than Yala — if you have birding interests, prioritise Bundala for a more peaceful experience</li>
+          <li>Hire binoculars — the lagoon birds can be distant and a good pair makes the difference</li>
+          <li>Arrange a safari jeep through your guesthouse in Tissamaharama the evening before</li>
+          <li>Combine with a Yala safari for a comprehensive south coast wildlife experience</li>
+        </ul>
+        <AffiliateBox title="Book a Bundala Safari" description="Half-day and full-day Bundala jeep safaris with experienced naturalist guides — combine with Yala for the ultimate south coast wildlife experience." buttonText="Find Safari Tours" buttonHref="https://www.getyourguide.com/bundala-l5/" variant="tour" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Birds","October–March"],["Safari Duration","2.5–3 hrs"],["From Yala","25km, 30 mins"],["From Colombo","3.5–4 hrs by car"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.getyourguide.com/bundala-l5/" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">Find Hotels Nearby</a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/yala","label":"Yala National Park (25km)"},{"href":"/places/wildlife-parks","label":"Wildlife Parks Guide"},{"href":"/things-to-do/wildlife-safaris","label":"Safari Guide"},{"href":"/things-to-do/bird-watching","label":"Birdwatching Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

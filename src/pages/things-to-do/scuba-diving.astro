@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Scuba Diving in Sri Lanka: Best Sites, Seasons & Dive Operators | The Trails of Ceylon" description="Sri Lanka has excellent scuba diving year-round — from the coral reefs of Hikkaduwa and Pigeon Island to wreck diving off the south coast and reef sharks at Trincomalee." type="article" publishDate="2025-03-01">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/snorkelling.jpg" alt="Scuba diving coral reef Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span>
+          <span class="text-white">Scuba Diving in Sri Lanka</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Water Sports</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Scuba Diving in Sri Lanka</h1>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_260px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <p>Sri Lanka is a genuinely excellent scuba diving destination, offering a range of sites from beginner-friendly coral reefs to advanced wreck dives — and with two distinct dive seasons on opposite coasts, it is possible to dive year-round. The island's relative underdevelopment as a dive destination (compared to Thailand or the Maldives) means the reefs are less damaged and the sites less crowded. Water temperature is a constant 27–30°C year-round; visibility ranges from 10 to 30 metres depending on season and location.</p>
+        <h2>Best Dive Sites</h2>
+        <h3>Hikkaduwa — South Coast</h3>
+        <p>Hikkaduwa has the most developed dive infrastructure on the south coast — multiple PADI-certified dive centres offering everything from beginner discover dives to advanced certification courses. The reef is at 3–12 metres depth and suitable for all levels. Resident sea turtles, reef fish and occasional moray eels. Best November–April.</p>
+        <h3>Pigeon Island — East Coast</h3>
+        <p>The reef around <a href="/places/pigeon-island">Pigeon Island</a> near Trincomalee is Sri Lanka's finest diving site — pristine coral at 5–20 metres with blacktip reef sharks, sea turtles, barracuda and exceptional fish diversity. Best May–September.</p>
+        <h3>Unawatuna — South Coast</h3>
+        <p>Several wreck dives are accessible from Unawatuna, including the Rangoon Wreck (a British steamship at 26 metres) and the Lord Nelson wreck. Coral diving at 5–15 metres. Best November–April.</p>
+        <h3>Trincomalee — East Coast</h3>
+        <p>Trincomalee bay has multiple dive sites including the Swami Rock drop-off, coral gardens and several WWII wrecks. Whale shark encounters between January and April. Best May–September for regular diving; January–April for whale sharks.</p>
+        <h2>Getting Certified</h2>
+        <p>PADI Open Water certification courses are available at Hikkaduwa, Unawatuna and Trincomalee. A standard Open Water course takes 3–4 days and costs USD 300–400 at reputable dive centres. Ensure your chosen dive centre is PADI-certified and has current equipment. The Hikkaduwa centres have the most experience with beginner certification courses.</p>
+        <h2>Best Time to Dive</h2>
+        <p>South coast sites (Hikkaduwa, Unawatuna): November–April. East coast sites (Pigeon Island, Trincomalee): May–September. Whale sharks at Trincomalee: January–April. Year-round is possible by switching between coasts.</p>
+        <h2>Tips</h2>
+        <ul>
+          <li>Book dive trips through your accommodation for vetted operators with good safety records</li>
+          <li>Bring your own mask if you dive regularly — rental mask quality varies</li>
+          <li>Use reef-safe sunscreen only — conventional sunscreen chemicals damage coral ecosystems</li>
+          <li>Dive in the morning when water clarity is typically best</li>
+        </ul>
+        <AffiliateBox title="Book Scuba Diving in Sri Lanka" description="PADI-certified dive courses and guided reef dives at Hikkaduwa, Unawatuna and Pigeon Island — book with certified operators." buttonText="Find Dive Tours" buttonHref="https://www.getyourguide.com/sri-lanka-l976/" variant="tour" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Related Activities</h3>
+          <div class="space-y-3">
+            {[{"href":"/things-to-do/snorkelling","label":"Snorkelling Guide"},{"href":"/places/pigeon-island","label":"Pigeon Island"},{"href":"/places/hikkaduwa","label":"Hikkaduwa"},{"href":"/things-to-do","label":"All Activities"}].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

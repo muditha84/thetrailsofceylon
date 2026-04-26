@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Dikwella, Sri Lanka: Off the Beaten Path on the South Coast | The Trails of Ceylon"
+  description="Dikwella is a working fishing town on the south coast with a spectacular Buddha statue, blowholes and access to Hiriketiya bay — refreshingly free of tourist crowds."
+  type="article"
+  publishDate="2025-03-01"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/tangalle.jpg" alt="Dikwella south coast Sri Lanka fishing town" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/south-coast" class="hover:text-white">South Coast</a><span>/</span>
+          <span class="text-white">Dikwella</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">South Coast</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Dikwella</h1>
+        <p class="text-white/80 mt-2 text-lg">South Coast • Off the Beaten Path • Wewurukannala Buddha</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","Southern Province"],["Distance from Galle","52km"],["Best For","Local life, Buddha statue, blowholes"],["Best Season","Nov–April"],["Days Needed","1–2 days"],["Nearest Beach","Hiriketiya (3km)"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Dikwella sits in the section of the south coast that most travellers speed through on their way between Mirissa and Tangalle — and this is precisely what makes it interesting. It is a working fishing town without the tourist infrastructure of Hikkaduwa or Unawatuna, which means cheaper food, more genuine interactions, and a sense of what Sri Lankan coastal life actually looks like beyond the beach bars and boutique hotels. But Dikwella has two attractions that are genuinely worth a detour: one of the most extraordinary religious monuments in Sri Lanka, and the best surf beach on the southeastern coast just three kilometres away.</p>
+
+        <h2>Wewurukannala Vihara — The Giant Buddha</h2>
+        <p>The Wewurukannala Vihara temple complex on the outskirts of Dikwella is dominated by a colossal seated Buddha statue that rises 39 metres above the surrounding landscape — one of the largest Buddha statues in Sri Lanka. The statue, built in the 1960s and 1970s, is painted in vivid colours and is visible from several kilometres away. More striking than the exterior is the interior of the multi-storey building at the base of the statue: a sequence of rooms containing elaborate dioramas depicting the Buddhist hell realms and the punishments that await wrongdoers in the next life. The imagery is graphic, vivid, and utterly unlike anything you will see elsewhere in Sri Lanka — and the experience of climbing through these painted rooms to emerge at the top beside the giant Buddha is genuinely extraordinary.</p>
+
+        <h2>Dickwella Beach & The Blowholes</h2>
+        <p>About 2km from town, the coast is punctuated by a series of natural blowholes known as Hummanaya — said to be the largest blowholes in Asia. During high tide and when the swell is running, jets of seawater are forced up through crevices in the coastal rocks to heights of 20 metres or more, accompanied by a thunderous roar. The blowholes are best visited on a day with some swell and at high tide — check conditions locally before making the trip. A small fee is charged to access the viewpoint.</p>
+
+        <h2>Hiriketiya Bay</h2>
+        <p>Dikwella is the jumping-off point for <a href="/places/hiriketiya">Hiriketiya</a>, one of Sri Lanka's most photographed beaches. The perfect horseshoe bay is 3km from town and accessible by tuk-tuk in 10 minutes. It has become Sri Lanka's most fashionable small beach in recent years, with a thriving surf and café scene.</p>
+
+        <h2>Getting to Dikwella</h2>
+        <p>Dikwella has a railway station on the Colombo–Matara coastal line — trains from Colombo take about 3 hours; from Galle about 1.5 hours. By road from Galle, follow the A2 east through Matara (about 50km). Tuk-tuks are plentiful for local exploration once you arrive. From Tangalle, Dikwella is 20km west along the coast road.</p>
+
+        <h2>Best Time to Visit</h2>
+        <p>The south coast season (November–April) applies here — best beach and sea conditions, driest weather. The Wewurukannala Vihara is open year-round and unaffected by the monsoon. The blowholes are actually more spectacular during the monsoon season when the swell is strongest — though road access can occasionally be disrupted by heavy rain.</p>
+
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>The Wewurukannala Vihara is open daily from early morning — visit first thing before the heat builds and before tour groups arrive</li>
+          <li>Dress respectfully at the temple: cover shoulders and knees, remove shoes at the entrance</li>
+          <li>Ask your guesthouse about current blowhole conditions before making the trip</li>
+          <li>Dikwella's local restaurants serve some of the best-value rice and curry on the south coast — eat where the fishermen eat</li>
+        </ul>
+
+        <AffiliateBox
+          title="Find Hotels Near Dikwella"
+          description="Stay in Dikwella town or the nearby boutique options at Hiriketiya bay — book ahead for the peak December–February period."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Dikwella+Sri+Lanka"
+          variant="hotel"
+        />
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","November–April"],["Ideal Stay","1–2 days"],["Top Sight","Wewurukannala Buddha"],["Nearest Beach","Hiriketiya (3km)"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Dikwella+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">
+            Find Hotels Nearby
+          </a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/hiriketiya","label":"Hiriketiya Bay (3km)"},{"href":"/places/tangalle","label":"Tangalle (20km)"},{"href":"/places/weligama","label":"Weligama (25km)"},{"href":"/places/mirissa","label":"Mirissa (35km)"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

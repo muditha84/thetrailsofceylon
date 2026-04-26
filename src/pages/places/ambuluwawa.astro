@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Ambuluwawa Tower, Sri Lanka: Spiral Tower & Panoramic Views Near Kandy | The Trails of Ceylon" description="Ambuluwawa is a biodiversity complex near Gampola with a unique spiral tower offering 360-degree views of the central highlands — one of Sri Lanka's most unusual attractions." type="article" publishDate="2025-03-01">
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/kandy.jpg" alt="Ambuluwawa spiral tower panoramic views Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/hill-country" class="hover:text-white">Hill Country</a><span>/</span>
+          <span class="text-white">Ambuluwawa</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Hill Country</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Ambuluwawa</h1>
+        <p class="text-white/80 mt-2 text-lg">Hill Country • Spiral Tower • Biodiversity Complex • Kandy Day Trip</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Location","Near Gampola, 20km from Kandy"],["Tower Height","48 metres"],["View","360° panorama of central highlands"],["Best For","Views, day trip from Kandy"],["Open","Daily, 7am–6pm"],["Entry Fee","LKR 600 approx (foreigners)"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Ambuluwawa is one of Sri Lanka's most unexpected attractions — a multi-religious biodiversity complex set on a forested hill 1,965 metres above sea level near the town of Gampola, about 20 kilometres south of Kandy. The complex was developed by a former President of Sri Lanka and contains shrines from four of the island's major religions (Buddhist, Hindu, Christian and Muslim) arranged on a hilltop, a botanical garden, a small lake, and — most distinctively — a 48-metre spiral tower that winds around the outside of a central column in a series of increasingly vertiginous spirals. The views from the top of the tower on a clear day are extraordinary: a 360-degree panorama of the central highlands, with the Knuckles Range to the east and the mountains stretching south towards Adam's Peak.</p>
+        <h2>The Spiral Tower</h2>
+        <p>The tower is what brings most visitors to Ambuluwawa. The climb to the top is not for the faint-hearted or acrophobic — the exposed spiral path winds around the outside of the structure with minimal guardrails, and the final section involves climbing a narrow, near-vertical stair to a small viewing platform at the summit. The views justify every vertigo-inducing step: on a clear morning you can see vast distances in every direction, with the mist burning off the valleys below and the peaks of the central highlands stretching to the horizon. The tower is best visited in the morning before cloud builds (usually after 11am).</p>
+        <h2>The Biodiversity Complex</h2>
+        <p>Beyond the tower, the Ambuluwawa complex has well-maintained walking paths through secondary forest, a small botanical section, and the four religious shrines. The forest is home to several endemic bird species and butterflies — a leisurely walk of 1–2 hours through the grounds before or after climbing the tower makes for a complete half-day excursion. The views from the various viewpoints around the hill are excellent even without climbing the tower.</p>
+        <h2>Getting There</h2>
+        <p>Ambuluwawa is 20km south of Kandy near Gampola. From Kandy, take a bus to Gampola (30 minutes) and then a tuk-tuk to the Ambuluwawa entrance (15 minutes, LKR 300–400). Alternatively, hire a tuk-tuk from Kandy for the round trip — expect to pay LKR 1,500–2,000 including waiting time. By car or taxi from Kandy, allow 45 minutes including the final uphill section.</p>
+        <h2>Best Time to Visit</h2>
+        <p>Early morning (7–10am) gives the clearest views and the least cloud cover. December through April and July through September tend to be drier. Avoid visiting on weekends when the complex is busiest with Sri Lankan day-trippers from Kandy and Colombo.</p>
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>The tower is genuinely scary if you have a fear of heights — assess your comfort level before committing to the top</li>
+          <li>Wear shoes with good grip on the smooth concrete spiral</li>
+          <li>Bring a jacket — at nearly 2,000 metres, the hilltop is significantly cooler than Kandy</li>
+          <li>Visit early in the morning for the best chance of clear views before cloud rolls in</li>
+        </ul>
+        <AffiliateBox title="Find Hotels in Kandy" description="Stay in Kandy as your base for Ambuluwawa and the Hill Country — a wide range of hotels from budget to boutique." buttonText="Search Hotels on Booking.com" buttonHref="https://www.booking.com/searchresults.html?ss=Kandy+Sri+Lanka" variant="hotel" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Time","Early morning, clear days"],["From Kandy","45 mins by tuk-tuk"],["Entry Fee","~LKR 600"],["Ideal Visit","Half day from Kandy"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Kandy+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">Find Hotels Nearby</a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/kandy","label":"Kandy (20km)"},{"href":"/places/ella","label":"Ella"},{"href":"/places/horton-plains","label":"Horton Plains"},{"href":"/places/hill-country","label":"Hill Country Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

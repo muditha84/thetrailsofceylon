@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Waterfall Hiking in Sri Lanka: Ravana, Diyaluma, Baker's Falls & More | The Trails of Ceylon" description="Sri Lanka has over 100 named waterfalls — a guide to the best waterfall hikes including Diyaluma's natural pools, Baker's Falls in Horton Plains and the legendary Ravana Falls near Ella." type="article" publishDate="2025-03-01">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/ella.jpg" alt="Waterfall hiking Sri Lanka hills" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span>
+          <span class="text-white">Waterfall Hiking in Sri Lanka</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Hiking</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Waterfall Hiking in Sri Lanka</h1>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_260px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <p>Sri Lanka's Hill Country is a land of waterfalls — the high rainfall of the central mountains, combined with the dramatic escarpments where the highland plateau drops to the lowlands, creates over 100 named waterfalls of varying size and accessibility. The best of them are genuinely spectacular: <a href="/places/diyaluma-falls">Diyaluma Falls</a> drops 171 metres in a single unbroken cascade; <a href="/places/ravana-falls">Ravana Falls</a> swells to an extraordinary volume after rain; Baker's Falls in Horton Plains is a perfectly formed 20-metre drop into a forested gorge. And several of the finest waterfalls have natural pools at their base or top, making them destinations for swimming as much as hiking.</p>
+        <h2>Diyaluma Falls</h2>
+        <p>Sri Lanka's second highest waterfall (171 metres) near Koslanda, with natural infinity pools at the top accessible via a 1.5-hour hike from the base. The pools overlook a dizzying drop and are perfect for swimming. Most powerful May–September. The hike to the top requires some scrambling but is well worth the effort.</p>
+        <h2>Ravana Falls</h2>
+        <p>The most visited waterfall in Sri Lanka, located 6km from <a href="/places/ella">Ella</a> on the Wellawaya road. A 25-metre cascade with a swimmable pool at the base. Named after the demon king of the Ramayana. Steeped in legend and easily accessible by tuk-tuk from Ella.</p>
+        <h2>Baker's Falls, Horton Plains</h2>
+        <p>A 20-metre waterfall on the trail between the park entrance and World's End in Horton Plains National Park. The falls drop into a beautiful forested gorge with good birding. Swimming is not permitted (national park rules). Best visited as part of the World's End hike.</p>
+        <h2>Bambarakanda Falls</h2>
+        <p>Sri Lanka's highest waterfall at 263 metres — a single-thread cascade visible from a viewpoint near the Haputale–Belihul Oya road. Less visited than Diyaluma, genuinely impressive in high flow. The hiking trail to the base takes about 2 hours return.</p>
+        <h2>Devon Falls & St Claire's Falls</h2>
+        <p>Two of the most photogenic waterfalls on the Hatton–Nuwara Eliya road — wide, powerful cascades through the tea estates that are visible from the road and easily accessed on the drive between Kandy and Nuwara Eliya.</p>
+        <h2>Best Time for Waterfall Hiking</h2>
+        <p>The southwest monsoon (May–September) brings the highest water volume — waterfalls are most powerful in June and July. The dry season (December–April) gives lower flow but clearer access and more stable weather for hiking. The inter-monsoon months (October–November) can offer the best combination of high flow and manageable rain.</p>
+        <h2>Tips</h2>
+        <ul>
+          <li>Visit waterfalls in the morning before afternoon cloud builds and rain arrives</li>
+          <li>Wear shoes with grip — wet rocks near waterfalls are extremely slippery</li>
+          <li>For Diyaluma, take a local guide for the pool hike on your first visit</li>
+          <li>Bring a waterproof bag for cameras and phones near powerful falls</li>
+        </ul>
+        <AffiliateBox title="Explore Sri Lanka's Hill Country" description="Base yourself in Ella or Haputale for the best access to Sri Lanka's finest waterfalls — excellent guesthouses in both towns." buttonText="Find Hotels in Ella" buttonHref="https://www.booking.com/searchresults.html?ss=Ella+Sri+Lanka" variant="hotel" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Related Activities</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/ravana-falls","label":"Ravana Falls"},{"href":"/places/diyaluma-falls","label":"Diyaluma Falls"},{"href":"/places/worlds-end","label":"World's End"},{"href":"/blog/sri-lanka-waterfalls","label":"Waterfalls Blog"}].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

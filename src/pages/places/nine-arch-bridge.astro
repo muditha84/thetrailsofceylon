@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Nine Arch Bridge Ella: Sri Lanka's Most Photographed Viaduct | The Trails of Ceylon"
+  description="The Nine Arch Bridge in Ella is Sri Lanka's most iconic railway viaduct — a stunning colonial-era stone bridge through the jungle, best photographed when a train passes."
+  type="article"
+  publishDate="2025-03-01"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/ella.jpg" alt="Nine Arch Bridge Ella viaduct train Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/hill-country" class="hover:text-white">Hill Country</a><span>/</span>
+          <span class="text-white">Nine Arch Bridge, Ella</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Hill Country</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Nine Arch Bridge, Ella</h1>
+        <p class="text-white/80 mt-2 text-lg">Hill Country • Iconic Viaduct • Train Photography • Ella's Landmark</p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Built","1921"],["Construction","Stone & brick (no steel)"],["Height","24 metres"],["Arches","9 arches, 91m span"],["Best Photo Time","Train passing (check schedule)"],["From Ella Town","20 min walk"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>The Nine Arch Bridge is arguably the single most photographed image in Sri Lanka — a graceful nine-arched stone viaduct curving through the jungle above Ella, with the emerald tea-covered hillsides behind it and, if your timing is right, a blue train slowly crossing from arch to arch. Built in 1921 during the British colonial period using only brick, stone and cement (local legend holds that no steel was used because wartime conditions had depleted supplies), the bridge spans 91 metres at a height of 24 metres above a rocky gorge in the valley below Ella town. It is both a feat of colonial engineering and one of the most naturally beautiful scenes in the country.</p>
+
+        <h2>The Best Viewpoint</h2>
+        <p>The standard viewpoint is from a path that leads off the Ella–Demodara road, cutting down through tea bushes to a clearing from which the full span of the bridge is visible. This is where the classic photographs are taken — the nine arches framed by jungle and tea with the hills behind. The walk from Ella town takes about 20 minutes. A second, slightly higher viewpoint gives a different angle and more of the bridge in frame. A third option is to stand on the bridge itself or on the track above — but note that this is an active railway line and standing on the track is dangerous and technically illegal.</p>
+
+        <h2>Timing for the Train</h2>
+        <p>The photographs with a train on the bridge are the most sought-after. The Kandy–Ella and Ella–Badulla trains cross the bridge several times a day. Check the current timetable at Ella station (a 5-minute walk from the main road) the evening before to identify the best crossing times. The most photographed train is typically a morning crossing when the light hits the bridge from the east. Arrive at the viewpoint 20 minutes before the expected train time and position yourself early — the viewpoint gets crowded in high season.</p>
+
+        <h2>Combining with Other Ella Sights</h2>
+        <p>The Nine Arch Bridge is most commonly visited as part of a wider exploration of Ella, which is 20 minutes away. <a href="/places/ella">Ella</a> also offers the Ella Rock hike (3–4 hours return), Little Adam's Peak (1.5 hours), Ravana Falls (10 minutes by tuk-tuk) and the Nine Arch Bridge viewpoint can be combined into a single full day of exploration on foot. The tea estate paths around the bridge are also pleasant for gentle walks.</p>
+
+        <h2>Getting There</h2>
+        <p>The Nine Arch Bridge is 1.5km from Ella town — a 20-minute walk along the Ella–Demodara road, turning off at the signposted path. Tuk-tuks from Ella cost LKR 200–300. The bridge is visible from the train between Ella and Demodara — passengers on the right side of the train (travelling towards Badulla) get the best view. Ella is reached from Kandy by the famous scenic train (7 hours) or from Colombo via Ohiya (6 hours).</p>
+
+        <h2>Best Time to Visit</h2>
+        <p>The bridge is accessible year-round but the clearest views are during the dry season months of December through April and July through September. Morning light (8–10am) is best for photography — the bridge faces east and the tea estates are at their most vivid in morning light. Mist is common in the early morning, which can add atmosphere but also obscure the view — wait it out if you can.</p>
+
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Check train times at Ella station the day before — schedules can run late, so build in extra time at the viewpoint</li>
+          <li>Bring a zoom lens (200mm+) for frame-filling shots of the train on the bridge</li>
+          <li>Arrive early on weekends — the viewpoint is one of the most crowded spots in Sri Lanka during peak season</li>
+          <li>The path down to the viewpoint can be muddy after rain — wear shoes with grip</li>
+          <li>Do not stand on the railway tracks — trains approach quietly and faster than they appear</li>
+        </ul>
+        <AffiliateBox
+          title="Find Hotels in Ella"
+          description="Ella has some of Sri Lanka's best-value mountain guesthouses — from budget rooms to stunning hilltop properties overlooking the valley."
+          buttonText="Search Hotels in Ella"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Ella+Sri+Lanka"
+          variant="hotel"
+        />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Light","8–10am, morning"],["Train Times","Check Ella station"],["Walk from Ella","20 minutes"],["Best Season","Dec–Apr, Jul–Sep"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Ella+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">Find Hotels Nearby</a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/ella","label":"Ella Town"},{"href":"/places/ravana-falls","label":"Ravana Falls (3km)"},{"href":"/places/horton-plains","label":"Horton Plains"},{"href":"/things-to-do/train-rides","label":"Scenic Train Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

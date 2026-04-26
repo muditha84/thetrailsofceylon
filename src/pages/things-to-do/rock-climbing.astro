@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout title="Rock Climbing in Sri Lanka: Sigiriya, Pidurangala & Beyond | The Trails of Ceylon" description="Sri Lanka's granite outcroppings offer excellent rock climbing — from the beginner-friendly routes at Pidurangala to technical climbing at lesser-known bouldering sites across the island." type="article" publishDate="2025-03-01">
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/sigiriya.jpg" alt="Rock climbing Pidurangala Sigiriya Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/things-to-do" class="hover:text-white">Things to Do</a><span>/</span>
+          <span class="text-white">Rock Climbing in Sri Lanka</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Adventure</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Rock Climbing in Sri Lanka</h1>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_260px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+        <p>Sri Lanka's dramatic granite inselbergs — the same geological formations that created Sigiriya and Pidurangala — offer surprisingly excellent rock climbing for a destination not traditionally associated with the sport. The Cultural Triangle's characteristic rock domes provide both accessible beginner routes and genuine technical challenges, while the bouldering fields around Kegalle and the limestone sea cliffs of the south coast add further variety. The climbing scene is small but growing, with a handful of local guides operating out of the Sigiriya area.</p>
+        <h2>Pidurangala Rock</h2>
+        <p><a href="/things-to-do/pidurangala-rock">Pidurangala Rock</a>, the forested hill immediately north of Sigiriya, has become Sri Lanka's most popular alternative viewpoint — a scramble (rather than a climb) over boulders and tree roots to a summit with arguably better views of Sigiriya than Sigiriya itself offers. The final section requires scrambling over a smooth granite face using iron handholds. No technical climbing equipment is needed, but good shoes with grip are essential. The climb takes 45 minutes to 1 hour and is suitable for fit adults with a reasonable head for heights.</p>
+        <h2>Sigiriya — The Royal Ascent</h2>
+        <p>Sigiriya itself is not a technical climb but an extraordinary feat of iron staircases and reinforced pathways ascending the sheer rock face. The final section — a metal staircase ascending the near-vertical northern face — is the most dramatic moment. For genuine rock climbers, the exterior faces of Sigiriya have been climbed in routes varying from 5.10 to 5.12 difficulty (contact local guide Kapila Madhushan for technical climbing permits and routes).</p>
+        <h2>Bouldering Near Kegalle</h2>
+        <p>The area around Kegalle, between Colombo and Kandy, has a growing bouldering community using the large granite boulders scattered through the landscape. Routes are informally documented and local climbers are welcoming to visiting sport climbers. This is the most accessible area for genuine rock climbing for those based in Colombo or Kandy.</p>
+        <h2>Practical Information</h2>
+        <p>Rock climbing as a formal tourist activity is underdeveloped in Sri Lanka — there are no dedicated climbing guiding companies operating at the level of established destinations. Visiting climbers should bring their own equipment, make contact with the Sri Lanka Mountaineering and Climbing Institute in Colombo, or connect with the informal climbing community through Facebook groups before arriving.</p>
+        <h2>Best Time for Climbing</h2>
+        <p>December through April is the driest and most comfortable period for climbing. The wet rock during monsoon months is a significant safety hazard on the smooth granite faces.</p>
+        <h2>Tips</h2>
+        <ul>
+          <li>Bring your own harness, shoes and hardware — equipment rental is not available</li>
+          <li>The heat is significant — start climbs before 8am and take a long midday break</li>
+          <li>Pidurangala requires sturdy shoes with grip rather than climbing shoes for the standard ascent</li>
+          <li>Connect with the Sri Lanka climbing community online before your trip for current route information</li>
+        </ul>
+        <AffiliateBox title="Explore the Cultural Triangle" description="The Sigiriya and Pidurangala area has excellent guesthouses as a climbing base — book your accommodation and explore the whole region." buttonText="Find Hotels Near Sigiriya" buttonHref="https://www.booking.com/searchresults.html?ss=Sigiriya+Sri+Lanka" variant="hotel" />
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Related Activities</h3>
+          <div class="space-y-3">
+            {[{"href":"/things-to-do/pidurangala-rock","label":"Pidurangala Rock Guide"},{"href":"/places/sigiriya","label":"Sigiriya"},{"href":"/things-to-do/hiking","label":"Hiking Guide"},{"href":"/things-to-do","label":"All Activities"}].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
