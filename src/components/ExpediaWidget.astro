@@ -1,0 +1,30 @@
+---
+interface Props {
+  heading?: string;
+  subtitle?: string;
+}
+const {
+  heading = 'Search Hotels & Flights to Sri Lanka',
+  subtitle = 'Powered by Expedia — compare prices and book securely',
+} = Astro.props;
+---
+
+<section class="bg-amber-50 border-t border-amber-100 py-14">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+    <h2 class="font-serif font-bold text-gray-900 text-3xl sm:text-4xl mb-2">
+      {heading}
+    </h2>
+    <p class="text-gray-500 text-sm mb-8">{subtitle}</p>
+    <div class="bg-white rounded-2xl shadow-sm p-6 sm:p-8">
+      <div
+        class="eg-widget"
+        data-widget="search"
+        data-program="nz-expedia"
+        data-lobs="stays,flights"
+        data-network="pz"
+        data-camref="1101l5J8EI"
+        data-pubref=""
+      ></div>
+    </div>
+  </div>
+</section>

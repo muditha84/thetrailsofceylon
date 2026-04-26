@@ -113,5 +113,7 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
     <slot />
   </main>
   <Footer />
+  <!-- Expedia Widgets — loaded once, initialises any .eg-widget divs on the page -->
+  <script is:inline class="eg-widgets-script" src="https://creator.expediagroup.com/products/widgets/assets/eg-widgets.js"></script>
 </body>
 </html>
