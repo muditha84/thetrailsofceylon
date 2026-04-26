@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AuthorBio from '../../components/AuthorBio.astro';
+import RelatedArticles from '../../components/RelatedArticles.astro';
 ---
 
 <BaseLayout
@@ -108,5 +110,7 @@ import ExpediaWidget from '../../components/ExpediaWidget.astro';
       <p class="text-gray-400 text-xs mt-10 pt-6 border-t border-gray-100">Last Updated: April 2026</p>
     </div>
   </article>
+  <RelatedArticles currentHref="/blog/sri-lanka-food-guide" />
+  <AuthorBio />
   <ExpediaWidget heading="🏨 Search Hotels & Flights to Sri Lanka" />
 </BaseLayout>

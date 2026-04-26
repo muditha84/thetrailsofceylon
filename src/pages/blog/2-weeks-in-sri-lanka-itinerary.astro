@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AuthorBio from '../../components/AuthorBio.astro';
+import RelatedArticles from '../../components/RelatedArticles.astro';
 import AffiliateBox from '../../components/AffiliateBox.astro';
 import CardBlog from '../../components/CardBlog.astro';
 ---
@@ -207,5 +209,7 @@ import CardBlog from '../../components/CardBlog.astro';
 
     </div>
   </div>
+  <RelatedArticles currentHref="/blog/2-weeks-in-sri-lanka-itinerary" />
+  <AuthorBio />
   <ExpediaWidget heading="🏨 Search Hotels & Flights to Sri Lanka" />
 </BaseLayout>

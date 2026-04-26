@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CardBlog from '../../components/CardBlog.astro';
-import SectionHeader from '../../components/SectionHeader.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
 
 const featured = {
   href: '/blog/2-weeks-in-sri-lanka-itinerary',
@@ -14,27 +14,32 @@ const featured = {
 };
 
 const posts = [
-  { href: '/blog/best-beaches-sri-lanka',          image: '/images/mirissa-beach.jpg',       title: "Sri Lanka's 10 Best Beaches",                          category: 'Beaches',        date: 'Mar 28, 2026', readTime: '8 min',  excerpt: "From surfers' paradise to hidden coves — discover Sri Lanka's most beautiful beaches." },
-  { href: '/blog/sri-lanka-budget-travel',         image: '/images/colombo.jpg',             title: 'Sri Lanka on a Budget: How to Travel Cheap',             category: 'Budget Travel',  date: 'Mar 15, 2026', readTime: '10 min', excerpt: 'Everything you need to visit Sri Lanka without breaking the bank — accommodation, food, transport.' },
-  { href: '/blog/ella-rock-hike',                  image: '/images/ella.jpg',                title: 'Hiking Ella Rock: A Complete Guide',                     category: 'Hiking',         date: 'Mar 5, 2026',  readTime: '7 min',  excerpt: 'The most rewarding hike in Sri Lanka — a step-by-step guide to Ella Rock with tips on routes and timing.' },
-  { href: '/blog/sri-lanka-food-guide',            image: '/images/cooking-classes.jpg',     title: 'Sri Lankan Food: What to Eat & Where',                   category: 'Food & Drink',   date: 'Feb 22, 2026', readTime: '9 min',  excerpt: 'A delicious guide to Sri Lankan cuisine — from coconut sambol to hoppers, rice and curry to kottu roti.' },
-  { href: '/blog/best-time-visit-sri-lanka',       image: '/images/heroes/hero-hills.jpg',   title: 'Best Time to Visit Sri Lanka (Month by Month)',           category: 'Planning',       date: 'Feb 10, 2026', readTime: '11 min', excerpt: "Sri Lanka's two monsoon seasons make timing crucial. Here's exactly when to go for your itinerary." },
-  { href: '/blog/sigiriya-tips',                   image: '/images/sigiriya.jpg',            title: '10 Essential Tips for Visiting Sigiriya',                category: 'Cultural Sites', date: 'Jan 30, 2026', readTime: '6 min',  excerpt: 'Everything first-time visitors need to know before climbing the iconic Lion Rock fortress.' },
-  { href: '/blog/sigiriya-rock-fortress-guide',    image: '/images/sigiriya.jpg',            title: 'Sigiriya Rock Fortress: The Complete Visitor Guide',      category: 'Cultural Sites', date: 'Mar 5, 2026',  readTime: '9 min',  excerpt: 'Everything you need to know before climbing the iconic Lion Rock — tickets, timing, frescoes, and how to avoid the crowds.' },
-  { href: '/blog/ella-travel-guide',               image: '/images/ella.jpg',                title: "Ella Travel Guide: The Best of Sri Lanka's Hill Country", category: 'Destinations',   date: 'Feb 20, 2026', readTime: '10 min', excerpt: "Ella in a nutshell: Nine Arch Bridge at dawn, Ella Rock hike, Little Adam's Peak and the best cafés in the hills." },
-  { href: '/blog/adams-peak-hiking-guide',    image: '/images/ella.jpg',          title: "Adam's Peak Hiking Guide: The Sacred Climb",        category: 'Hiking',          date: 'Jan 2026',     readTime: '9 min',  excerpt: "The sacred pilgrimage climb to Sri Pada — routes, timing, what to bring and how to see the famous sunrise shadow." },
-  { href: '/blog/hikkaduwa-travel-guide',     image: '/images/hikkaduwa.jpg',     title: 'Hikkaduwa Travel Guide: Coral Reef, Surf & Beach Life', category: 'Destinations', date: 'Feb 2026',     readTime: '8 min',  excerpt: 'Everything you need to know about Hikkaduwa — the coral sanctuary, surf breaks, best restaurants and where to stay.' },
-  { href: '/blog/kalpitiya-kitesurfing',      image: '/images/kalpitiya.jpg',     title: "Kalpitiya Kitesurfing: Sri Lanka's Kite Capital",   category: 'Adventure',       date: 'Feb 2026',     readTime: '7 min',  excerpt: "Two wind seasons, flat lagoon water, and spinner dolphins by the thousand — Kalpitiya is one of Asia's great kite destinations." },
-  { href: '/blog/pigeon-island-snorkelling',  image: '/images/pigeon-island.jpg', title: "Pigeon Island: Sri Lanka's Best Snorkelling",       category: 'Nature',          date: 'Feb 2026',     readTime: '7 min',  excerpt: 'Blacktip reef sharks, sea turtles and pristine coral — Pigeon Island National Park is the finest reef snorkelling in Sri Lanka.' },
-  { href: '/blog/colombo-city-guide',         image: '/images/colombo.jpg',       title: 'Colombo City Guide: See, Do and Eat',               category: 'Cities',          date: 'Mar 2026',     readTime: '9 min',  excerpt: 'A complete guide to Colombo — best neighbourhoods, temples, restaurants, shopping and how to get around.' },
-  { href: '/blog/sri-lanka-waterfalls',       image: '/images/ella.jpg',          title: "Sri Lanka's Most Spectacular Waterfalls",           category: 'Nature',          date: 'Mar 2026',     readTime: '8 min',  excerpt: 'Diyaluma, Ravana, Baker\'s and more — a complete guide to the best waterfalls in the Sri Lanka hill country.' },
-  { href: '/blog/turtle-watching-sri-lanka',  image: '/images/mirissa-beach.jpg', title: 'Sea Turtle Watching in Sri Lanka',                  category: 'Wildlife',        date: 'Mar 2026',     readTime: '7 min',  excerpt: 'Where and when to watch sea turtles nesting in Sri Lanka — the best beaches, ethical operators and conservation tips.' },
-  { href: '/blog/sri-lanka-honeymoon-guide',  image: '/images/mirissa-beach.jpg', title: 'Sri Lanka Honeymoon Guide: Romantic Escapes',       category: 'Planning',        date: 'Apr 2026',     readTime: '8 min',  excerpt: 'Private beach villas, hill country retreats, whale watching at dawn — the perfect Sri Lanka honeymoon itinerary.' },
-  { href: '/blog/sri-lanka-family-travel',    image: '/images/pinnawala.jpg',     title: 'Sri Lanka with Kids: Family Travel Guide',          category: 'Planning',        date: 'Apr 2026',     readTime: '8 min',  excerpt: 'Elephants, ancient fortresses, wildlife safaris and safe beaches — Sri Lanka is one of the world\'s great family destinations.' },
-  { href: '/blog/sri-lanka-photography-guide', image: '/images/scenic-train.jpg', title: 'Sri Lanka Photography Guide: Best Spots & Tips',    category: 'Photography',     date: 'Apr 2026',     readTime: '8 min',  excerpt: "From Sigiriya at sunrise to leopards at Yala — a photographer's guide to Sri Lanka's most spectacular locations." },
+  { href: '/blog/best-beaches-sri-lanka',          image: '/images/mirissa-beach.jpg',       title: "Sri Lanka's 10 Best Beaches",                              category: 'Beaches',        date: 'Mar 28, 2026', readTime: '8 min',  excerpt: "From surfers' paradise to hidden coves — discover Sri Lanka's most beautiful beaches." },
+  { href: '/blog/sri-lanka-budget-travel',         image: '/images/colombo.jpg',             title: 'Sri Lanka on a Budget: How to Travel Cheap',               category: 'Budget Travel',  date: 'Mar 15, 2026', readTime: '10 min', excerpt: 'Everything you need to visit Sri Lanka without breaking the bank — accommodation, food, transport.' },
+  { href: '/blog/ella-rock-hike',                  image: '/images/ella.jpg',                title: 'Hiking Ella Rock: A Complete Guide',                        category: 'Hiking',         date: 'Mar 5, 2026',  readTime: '7 min',  excerpt: 'The most rewarding hike in Sri Lanka — a step-by-step guide to Ella Rock with tips on routes and timing.' },
+  { href: '/blog/sri-lanka-food-guide',            image: '/images/cooking-classes.jpg',     title: 'Sri Lankan Food: What to Eat & Where',                     category: 'Food & Drink',   date: 'Feb 22, 2026', readTime: '9 min',  excerpt: 'A delicious guide to Sri Lankan cuisine — from coconut sambol to hoppers, rice and curry to kottu roti.' },
+  { href: '/blog/best-time-visit-sri-lanka',       image: '/images/heroes/hero-hills.jpg',   title: 'Best Time to Visit Sri Lanka (Month by Month)',            category: 'Planning',       date: 'Feb 10, 2026', readTime: '11 min', excerpt: "Sri Lanka's two monsoon seasons make timing crucial. Here's exactly when to go for your itinerary." },
+  { href: '/blog/sigiriya-tips',                   image: '/images/anuradhapura.jpg',        title: '10 Essential Tips for Visiting Sigiriya',                  category: 'Cultural Sites', date: 'Jan 30, 2026', readTime: '6 min',  excerpt: 'Everything first-time visitors need to know before climbing the iconic Lion Rock fortress.' },
+  { href: '/blog/sigiriya-rock-fortress-guide',    image: '/images/sigiriya.jpg',            title: 'Sigiriya Rock Fortress: The Complete Visitor Guide',        category: 'Cultural Sites', date: 'Mar 5, 2026',  readTime: '9 min',  excerpt: 'Everything you need to know before climbing the iconic Lion Rock — tickets, timing, frescoes, and how to avoid the crowds.' },
+  { href: '/blog/ella-travel-guide',               image: '/images/ella.jpg',                title: "Ella Travel Guide: The Best of Sri Lanka's Hill Country",   category: 'Destinations',   date: 'Feb 20, 2026', readTime: '10 min', excerpt: "Ella in a nutshell: Nine Arch Bridge at dawn, Ella Rock hike, Little Adam's Peak and the best cafés in the hills." },
+  { href: '/blog/adams-peak-hiking-guide',         image: '/images/adams-peak.jpg',          title: "Adam's Peak Hiking Guide: The Sacred Climb",               category: 'Hiking',         date: 'Jan 2026',     readTime: '9 min',  excerpt: "The sacred pilgrimage climb to Sri Pada — routes, timing, what to bring and how to see the famous sunrise shadow." },
+  { href: '/blog/hikkaduwa-travel-guide',          image: '/images/hikkaduwa.jpg',           title: 'Hikkaduwa Travel Guide: Coral Reef, Surf & Beach Life',    category: 'Destinations',   date: 'Feb 2026',     readTime: '8 min',  excerpt: 'Everything you need to know about Hikkaduwa — the coral sanctuary, surf breaks, best restaurants and where to stay.' },
+  { href: '/blog/kalpitiya-kitesurfing',           image: '/images/kalpitiya.jpg',           title: "Kalpitiya Kitesurfing: Sri Lanka's Kite Capital",          category: 'Adventure',      date: 'Feb 2026',     readTime: '7 min',  excerpt: "Two wind seasons, flat lagoon water, and spinner dolphins by the thousand — Kalpitiya is one of Asia's great kite destinations." },
+  { href: '/blog/pigeon-island-snorkelling',       image: '/images/pigeon-island.jpg',       title: "Pigeon Island: Sri Lanka's Best Snorkelling",              category: 'Nature',         date: 'Feb 2026',     readTime: '7 min',  excerpt: 'Blacktip reef sharks, sea turtles and pristine coral — Pigeon Island National Park is the finest reef snorkelling in Sri Lanka.' },
+  { href: '/blog/colombo-city-guide',              image: '/images/colombo.jpg',             title: 'Colombo City Guide: See, Do and Eat',                      category: 'Cities',         date: 'Mar 2026',     readTime: '9 min',  excerpt: 'A complete guide to Colombo — best neighbourhoods, temples, restaurants, shopping and how to get around.' },
+  { href: '/blog/sri-lanka-waterfalls',            image: '/images/ravana-falls.jpg',        title: "Sri Lanka's Most Spectacular Waterfalls",                  category: 'Nature',         date: 'Mar 2026',     readTime: '8 min',  excerpt: "Diyaluma, Ravana, Baker's and more — a complete guide to the best waterfalls in the Sri Lanka hill country." },
+  { href: '/blog/turtle-watching-sri-lanka',       image: '/images/turtle-watching.jpg',     title: 'Sea Turtle Watching in Sri Lanka',                         category: 'Wildlife',       date: 'Mar 2026',     readTime: '7 min',  excerpt: "Where and when to watch sea turtles nesting in Sri Lanka — the best beaches, ethical operators and conservation tips." },
+  { href: '/blog/sri-lanka-honeymoon-guide',       image: '/images/heroes/hero-beach.jpg',   title: 'Sri Lanka Honeymoon Guide: Romantic Escapes',              category: 'Planning',       date: 'Apr 2026',     readTime: '8 min',  excerpt: 'Private beach villas, hill country retreats, whale watching at dawn — the perfect Sri Lanka honeymoon itinerary.' },
+  { href: '/blog/sri-lanka-family-travel',         image: '/images/pinnawala.jpg',           title: 'Sri Lanka with Kids: Family Travel Guide',                 category: 'Planning',       date: 'Apr 2026',     readTime: '8 min',  excerpt: "Elephants, ancient fortresses, wildlife safaris and safe beaches — Sri Lanka is one of the world's great family destinations." },
+  { href: '/blog/sri-lanka-photography-guide',     image: '/images/scenic-train.jpg',        title: 'Sri Lanka Photography Guide: Best Spots & Tips',           category: 'Photography',    date: 'Apr 2026',     readTime: '8 min',  excerpt: "From Sigiriya at sunrise to leopards at Yala — a photographer's guide to Sri Lanka's most spectacular locations." },
 ];
 
-const categories = ['All', 'Itineraries', 'Beaches', 'Wildlife', 'Hiking', 'Budget Travel', 'Food & Drink', 'Planning', 'Cultural Sites', 'Adventure', 'Nature', 'Photography'];
+// Category counts (including featured)
+const allPosts = [featured, ...posts];
+const catCounts: Record<string, number> = {};
+allPosts.forEach(p => { catCounts[p.category] = (catCounts[p.category] || 0) + 1; });
+
+const categories = ['All', 'Itineraries', 'Beaches', 'Wildlife', 'Hiking', 'Budget Travel', 'Food & Drink', 'Planning', 'Cultural Sites', 'Adventure', 'Nature', 'Cities', 'Destinations', 'Photography'];
 ---
 
 <BaseLayout
@@ -56,19 +61,38 @@ const categories = ['All', 'Itineraries', 'Beaches', 'Wildlife', 'Hiking', 'Budg
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <p class="text-ceylon-gold-400 text-xs font-semibold uppercase tracking-widest mb-3">Sri Lanka Travel Blog</p>
       <h1 class="font-serif font-black text-white text-5xl sm:text-6xl mb-4">Travel Stories & Guides</h1>
-      <p class="text-ceylon-green-200 text-lg max-w-2xl mx-auto">Honest, expert travel content to help you explore Sri Lanka with confidence.</p>
+      <p class="text-ceylon-green-200 text-lg max-w-2xl mx-auto mb-8">Honest, expert travel content to help you explore Sri Lanka with confidence.</p>
+      <!-- Search bar -->
+      <div class="max-w-xl mx-auto relative">
+        <input
+          type="search"
+          id="blog-search"
+          placeholder="Search articles…"
+          autocomplete="off"
+          class="w-full pl-11 pr-4 py-3.5 rounded-full text-gray-900 placeholder:text-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-ceylon-gold-400"
+        />
+        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+      </div>
     </div>
   </section>
 
   <!-- Categories -->
   <section class="bg-white border-b border-gray-100 sticky top-16 lg:top-20 z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center gap-2 overflow-x-auto py-3">
-        {categories.map((cat, i) => (
-          <button class={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-colors ${i === 0 ? 'bg-ceylon-green-700 text-white' : 'text-gray-600 hover:bg-gray-100'}`}>
-            {cat}
-          </button>
-        ))}
+      <div class="flex items-center gap-2 overflow-x-auto py-3" id="category-filters">
+        {categories.map((cat, i) => {
+          const count = cat === 'All' ? allPosts.length : (catCounts[cat] || 0);
+          return (
+            <button
+              data-cat={cat}
+              class={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-medium transition-colors ${i === 0 ? 'bg-ceylon-green-700 text-white active-cat' : 'text-gray-600 hover:bg-gray-100'}`}
+            >
+              {cat}{count > 0 && cat !== 'All' ? ` (${count})` : cat === 'All' ? ` (${count})` : ''}
+            </button>
+          );
+        })}
       </div>
     </div>
   </section>
@@ -77,39 +101,107 @@ const categories = ['All', 'Itineraries', 'Beaches', 'Wildlife', 'Hiking', 'Budg
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Featured post -->
-      <a href={featured.href} class="group block mb-14 bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
-        <div class="grid md:grid-cols-[3fr_2fr]">
-          <div class="relative overflow-hidden aspect-[16/9] md:aspect-auto min-h-[280px]">
-            <img
-              src={featured.image}
-              alt={featured.title}
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              loading="eager"
-              width="960"
-              height="540"
-              style="object-fit:cover;"
-            />
-            <span class="absolute top-5 left-5 bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Featured</span>
-          </div>
-          <div class="p-8 lg:p-10 flex flex-col justify-center">
-            <span class="text-ceylon-green-600 text-xs font-semibold uppercase tracking-widest">{featured.category}</span>
-            <h2 class="font-serif font-bold text-gray-900 text-2xl lg:text-3xl mt-2 mb-3 group-hover:text-ceylon-green-700 transition-colors text-balance">{featured.title}</h2>
-            <p class="text-gray-500 text-sm leading-relaxed line-clamp-3">{featured.excerpt}</p>
-            <div class="flex items-center gap-3 mt-5 text-xs text-gray-400">
-              <span>{featured.date}</span><span>&bull;</span><span>{featured.readTime} read</span>
+      <div id="featured-post-wrap" data-category={featured.category} data-title={featured.title.toLowerCase()}>
+        <a href={featured.href} class="group block mb-14 bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+          <div class="grid md:grid-cols-[3fr_2fr]">
+            <div class="relative overflow-hidden aspect-[16/9] md:aspect-auto min-h-[280px]">
+              <img
+                src={featured.image}
+                alt={featured.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="eager"
+                width="960"
+                height="540"
+                style="object-fit:cover;"
+              />
+              <span class="absolute top-5 left-5 bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Featured</span>
             </div>
-            <div class="mt-5 inline-flex items-center gap-2 text-ceylon-green-700 font-semibold text-sm">
-              Read Article
-              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            <div class="p-8 lg:p-10 flex flex-col justify-center">
+              <span class="text-ceylon-green-600 text-xs font-semibold uppercase tracking-widest">{featured.category}</span>
+              <h2 class="font-serif font-bold text-gray-900 text-2xl lg:text-3xl mt-2 mb-3 group-hover:text-ceylon-green-700 transition-colors text-balance">{featured.title}</h2>
+              <p class="text-gray-500 text-sm leading-relaxed line-clamp-3">{featured.excerpt}</p>
+              <div class="flex items-center gap-3 mt-5 text-xs text-gray-400">
+                <span>{featured.date}</span><span>&bull;</span><span>{featured.readTime} read</span>
+              </div>
+              <div class="mt-5 inline-flex items-center gap-2 text-ceylon-green-700 font-semibold text-sm">
+                Read Article
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+              </div>
             </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
+
+      <!-- No results message -->
+      <p id="no-results" class="hidden text-center text-gray-500 py-16 text-lg">No articles found. Try a different search or category.</p>
 
       <!-- Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {posts.map(post => <CardBlog {...post} />)}
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="posts-grid">
+        {posts.map(post => (
+          <div data-category={post.category} data-title={post.title.toLowerCase()} class="post-card">
+            <CardBlog {...post} />
+          </div>
+        ))}
       </div>
     </div>
   </section>
+
+  <ExpediaWidget heading="✈️ Search Hotels & Flights to Sri Lanka" />
 </BaseLayout>
+
+<script>
+  const searchInput = document.getElementById('blog-search') as HTMLInputElement;
+  const filterBar = document.getElementById('category-filters');
+  const featuredWrap = document.getElementById('featured-post-wrap') as HTMLElement;
+  const postsGrid = document.getElementById('posts-grid');
+  const noResults = document.getElementById('no-results');
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('.post-card'));
+
+  let activeCat = 'All';
+  let searchTerm = '';
+
+  function filterAll() {
+    let visibleCount = 0;
+
+    // Featured post
+    const featCat = featuredWrap?.dataset.category || '';
+    const featTitle = featuredWrap?.dataset.title || '';
+    const featMatch =
+      (activeCat === 'All' || featCat === activeCat) &&
+      (searchTerm === '' || featTitle.includes(searchTerm));
+    if (featuredWrap) featuredWrap.style.display = featMatch ? '' : 'none';
+    if (featMatch) visibleCount++;
+
+    // Post cards
+    cards.forEach(card => {
+      const cardCat = card.dataset.category || '';
+      const cardTitle = card.dataset.title || '';
+      const show =
+        (activeCat === 'All' || cardCat === activeCat) &&
+        (searchTerm === '' || cardTitle.includes(searchTerm));
+      card.style.display = show ? '' : 'none';
+      if (show) visibleCount++;
+    });
+
+    if (noResults) noResults.classList.toggle('hidden', visibleCount > 0);
+  }
+
+  // Category click
+  filterBar?.addEventListener('click', e => {
+    const btn = (e.target as HTMLElement).closest('button[data-cat]') as HTMLButtonElement;
+    if (!btn) return;
+    activeCat = btn.dataset.cat || 'All';
+    filterBar.querySelectorAll('button').forEach(b => {
+      b.classList.toggle('bg-ceylon-green-700', b === btn);
+      b.classList.toggle('text-white', b === btn);
+      b.classList.toggle('text-gray-600', b !== btn);
+    });
+    filterAll();
+  });
+
+  // Search input
+  searchInput?.addEventListener('input', () => {
+    searchTerm = searchInput.value.trim().toLowerCase();
+    filterAll();
+  });
+</script>

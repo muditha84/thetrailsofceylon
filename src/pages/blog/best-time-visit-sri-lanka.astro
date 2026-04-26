@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AuthorBio from '../../components/AuthorBio.astro';
+import RelatedArticles from '../../components/RelatedArticles.astro';
 import AffiliateBox from '../../components/AffiliateBox.astro';
 ---
 <BaseLayout
@@ -145,5 +147,7 @@ import AffiliateBox from '../../components/AffiliateBox.astro';
       </aside>
     </div>
   </div>
+  <RelatedArticles currentHref="/blog/best-time-visit-sri-lanka" />
+  <AuthorBio />
   <ExpediaWidget heading="🏨 Search Hotels & Flights to Sri Lanka" />
 </BaseLayout>

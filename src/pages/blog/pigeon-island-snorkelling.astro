@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AuthorBio from '../../components/AuthorBio.astro';
+import RelatedArticles from '../../components/RelatedArticles.astro';
 ---
 
 <BaseLayout
@@ -91,5 +93,7 @@ import ExpediaWidget from '../../components/ExpediaWidget.astro';
       </div>
     </div>
   </article>
+  <RelatedArticles currentHref="/blog/pigeon-island-snorkelling" />
+  <AuthorBio />
   <ExpediaWidget heading="🏨 Search Hotels & Flights to Sri Lanka" />
 </BaseLayout>
