@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
 
 const guides = [
   {
@@ -23,7 +24,7 @@ const guides = [
   },
   {
     href: '/guides/sri-lanka-itinerary-1-month',
-    image: '/images/tea-plantation.jpg',
+    image: '/images/heroes/hero-wildlife.jpg',
     title: '1-Month Sri Lanka Itinerary',
     category: 'Itineraries',
     description: 'The ultimate slow-travel route covering every region — north, south, east coast, wildlife parks and hidden corners.',
@@ -32,7 +33,7 @@ const guides = [
   },
   {
     href: '/guides/best-time-to-visit',
-    image: '/images/tea-plantation.jpg',
+    image: '/images/heroes/hero-hills.jpg',
     title: 'Best Time to Visit Sri Lanka',
     category: 'Planning',
     description: 'Month-by-month breakdown of Sri Lanka\'s weather, monsoons and peak seasons.',
@@ -50,7 +51,7 @@ const guides = [
   },
   {
     href: '/guides/getting-around-sri-lanka',
-    image: '/images/scenic-train.jpg',
+    image: '/images/heroes/hero-train.jpg',
     title: 'Getting Around Sri Lanka',
     category: 'Transport',
     description: 'Trains, tuk-tuks, buses, drivers — every transport option compared honestly.',
@@ -173,4 +174,5 @@ const categories = ['All Guides', 'Itineraries', 'Planning', 'Transport', 'Accom
       </div>
     </div>
   </section>
+  <ExpediaWidget heading="✈️ Plan Your Sri Lanka Trip" />
 </BaseLayout>
