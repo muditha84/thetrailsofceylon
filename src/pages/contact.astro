@@ -27,18 +27,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             Have a question about Sri Lanka? Want to collaborate? Found an error in one of our guides? We're always happy to hear from fellow travellers.
           </p>
           <div class="space-y-4">
-            {[
-              { icon: '📧', label: 'Email', value: 'hello@thetrailsofceylon.com' },
-              { icon: '⏱️', label: 'Response time', value: 'Within 48 hours' },
-            ].map(item => (
-              <div class="flex items-start gap-3">
-                <span class="text-2xl flex-shrink-0">{item.icon}</span>
-                <div>
-                  <p class="text-xs font-semibold uppercase tracking-wider text-gray-400">{item.label}</p>
-                  <p class="text-gray-700 font-medium">{item.value}</p>
-                </div>
+            <div class="flex items-start gap-3">
+              <span class="text-2xl flex-shrink-0">📧</span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-gray-400">Email</p>
+                <p class="text-gray-700 font-medium">Use the form below to get in touch</p>
               </div>
-            ))}
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-2xl flex-shrink-0">⏱️</span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-gray-400">Response time</p>
+                <p class="text-gray-700 font-medium">Within 48 hours</p>
+              </div>
+            </div>
           </div>
 
           <div class="mt-8 bg-ceylon-green-50 rounded-2xl p-5">
@@ -50,127 +52,74 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
 
         <!-- Form -->
-        <div>
-          <!-- Success message (hidden until form submits) -->
-          <div id="form-success" class="hidden bg-green-50 border border-green-200 rounded-2xl p-6 text-center">
-            <p class="text-green-800 font-semibold text-lg">✅ Thank you! We'll get back to you within 48 hours.</p>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          action="/contact-success"
+          netlify-honeypot="bot-field"
+          class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-5"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700 mb-1.5">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-ceylon-green-500 focus:border-transparent text-sm"
+              placeholder="Jane Smith"
+            />
           </div>
-
-          <form
-            id="contact-form"
-            class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-5"
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-          >
-            <!-- Netlify hidden bot field -->
-            <input type="hidden" name="form-name" value="contact" />
-            <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
-
-            <div>
-              <label for="name" class="block text-sm font-medium text-gray-700 mb-1.5">Your Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-ceylon-green-500 focus:border-transparent text-sm"
-                placeholder="Jane Smith"
-              />
-            </div>
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-ceylon-green-500 focus:border-transparent text-sm"
-                placeholder="jane@example.com"
-              />
-            </div>
-            <div>
-              <label for="subject" class="block text-sm font-medium text-gray-700 mb-1.5">Subject</label>
-              <select
-                id="subject"
-                name="subject"
-                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-ceylon-green-500 focus:border-transparent text-sm bg-white"
-              >
-                <option>General Enquiry</option>
-                <option>Travel Question</option>
-                <option>Partnership / Collaboration</option>
-                <option>Press / Media</option>
-                <option>Feedback</option>
-              </select>
-            </div>
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-700 mb-1.5">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                required
-                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-ceylon-green-500 focus:border-transparent text-sm resize-none"
-                placeholder="Tell us how we can help..."
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              id="submit-btn"
-              class="w-full bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white font-semibold py-3.5 rounded-xl transition-colors text-sm"
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-ceylon-green-500 focus:border-transparent text-sm"
+              placeholder="jane@example.com"
+            />
+          </div>
+          <div>
+            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1.5">Subject</label>
+            <select
+              id="subject"
+              name="subject"
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-ceylon-green-500 focus:border-transparent text-sm bg-white"
             >
-              Send Message
-            </button>
-            <p class="text-xs text-gray-400 text-center">We reply to every message within 48 hours.</p>
-          </form>
-        </div>
+              <option>General Enquiry</option>
+              <option>Travel Question</option>
+              <option>Partnership / Collaboration</option>
+              <option>Press / Media</option>
+              <option>Feedback</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-1.5">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-ceylon-green-500 focus:border-transparent text-sm resize-none"
+              placeholder="Tell us how we can help..."
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white font-semibold py-3.5 rounded-xl transition-colors text-sm"
+          >
+            Send Message
+          </button>
+          <p class="text-xs text-gray-400 text-center">We reply to every message within 48 hours.</p>
+        </form>
 
       </div>
     </div>
   </section>
 </BaseLayout>
-
-<script>
-  const form = document.getElementById('contact-form') as HTMLFormElement;
-  const successBox = document.getElementById('form-success');
-  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
-
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    // Disable button while submitting
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
-
-    try {
-      const data = new FormData(form);
-      const res = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
-      });
-
-      if (res.ok) {
-        // Fire GA4 event
-        if (typeof gtag === 'function') {
-          gtag('event', 'form_submission', {
-            event_category: 'Contact',
-            event_label: 'Contact Form',
-            value: 1,
-          });
-        }
-
-        // Show success, hide form
-        form.style.display = 'none';
-        successBox?.classList.remove('hidden');
-      } else {
-        throw new Error('Network response was not ok');
-      }
-    } catch {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Send Message';
-      alert('Something went wrong. Please try again or email us directly at hello@thetrailsofceylon.com');
-    }
-  });
-</script>
