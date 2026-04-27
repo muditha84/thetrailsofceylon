@@ -57,7 +57,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          action="/contact-success/"
           class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-5"
         >
           <input type="hidden" name="form-name" value="contact" />
@@ -123,3 +122,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const form = document.querySelector('form[name="contact"]') as HTMLFormElement;
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
+      });
+      form.innerHTML = `
+        <div style="text-align:center; padding:3rem;">
+          <div style="font-size:4rem;">✅</div>
+          <h2 style="color:#2d5a27; margin:1rem 0;">Message Sent!</h2>
+          <p style="color:#666;">Thank you for getting in touch. We'll get back to you within 48 hours.</p>
+          <a href="/" style="display:inline-block; margin-top:1.5rem; background:#2d5a27; color:white; padding:0.75rem 2rem; border-radius:50px; text-decoration:none;">Back to Home</a>
+        </div>
+      `;
+    } catch(err) {
+      alert('Something went wrong. Please try again or email us directly.');
+    }
+  });
+</script>
