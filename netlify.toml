@@ -35,6 +35,11 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[redirects]]
+  from = "/contact-success"
+  to = "/contact-success/"
+  status = 301
+
+[[redirects]]
   from = "/feed"
   to = "/rss.xml"
   status = 301
