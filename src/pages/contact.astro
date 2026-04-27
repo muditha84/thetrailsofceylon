@@ -134,6 +134,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData as any).toString()
       });
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_submission', {
+          'event_category': 'Contact',
+          'event_label': 'Contact Form Submitted',
+          'value': 1
+        });
+      }
       form.innerHTML = `
         <div style="text-align:center; padding:3rem;">
           <div style="font-size:4rem;">✅</div>
