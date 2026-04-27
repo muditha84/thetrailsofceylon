@@ -1,50 +1,88 @@
+/**
+ * Converts all JPG/PNG images to WebP with size/quality optimisation.
+ * Heroes → max 1920×1080 @ 75% quality
+ * All other images → max 800×600 @ 75% quality
+ */
 import sharp from 'sharp';
-import { promises as fs } from 'fs';
+import { readdirSync, statSync, existsSync } from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const imgDir = path.join(__dirname, '..', 'public', 'images');
-
-const jobs = [
-  // [source filename, output filename, width, height]
-  ['hero.jpg.jpg',          'hero.jpg',          1920, 1080],
-  ['sigiriya.jpg.jpg',      'sigiriya.jpg',        800,  600],
-  ['galle-fort.jpg.jpg',    'galle-fort.jpg',      800,  600],
-  ['Ella.jpg.jpg',          'ella.jpg',            800,  600],
-  ['kandy.jpg.jpg',         'kandy.jpg',           800,  600],
-  ['mirissa-beach.jpg.jpg', 'mirissa-beach.jpg',   800,  600],
-  ['yala.jpg.jpg',          'yala.jpg',            800,  600],
-  ['tea-plantation.jpg.jpg','tea-plantation.jpg',  800,  600],
-  ['scenic-train.jpg.jpg',  'scenic-train.jpg',    800,  600],
-  ['whale-watching.jpg.jpg','whale-watching.jpg',  800,  600],
+const DIRS = [
+  { dir: 'public/images',        maxW: 800,  maxH: 600,  label: 'regular' },
+  { dir: 'public/images/heroes', maxW: 1920, maxH: 1080, label: 'hero'    },
 ];
 
-for (const [src, dest, w, h] of jobs) {
-  const srcPath  = path.join(imgDir, src);
-  const destPath = path.join(imgDir, dest);
+const QUALITY = 75;
+const EXTS = new Set(['.jpg', '.jpeg', '.png']);
 
-  try {
-    await fs.access(srcPath);
-  } catch {
-    console.warn(`  SKIP  ${src} — file not found`);
-    continue;
-  }
+let totalBefore = 0, totalAfter = 0, converted = 0, skipped = 0, errors = 0;
 
-  const info = await sharp(srcPath)
-    .resize(w, h, { fit: 'cover', position: 'centre' })
-    .jpeg({ quality: 82, mozjpeg: true, progressive: true })
-    .toFile(destPath);
-
-  const srcStat  = await fs.stat(srcPath);
-  const destStat = await fs.stat(destPath);
-  const saved    = (((srcStat.size - destStat.size) / srcStat.size) * 100).toFixed(0);
-
-  console.log(
-    `  OK    ${dest.padEnd(22)} ${w}×${h}  ` +
-    `${(srcStat.size / 1024).toFixed(0).padStart(5)} KB → ` +
-    `${(destStat.size / 1024).toFixed(0).padStart(5)} KB  (${saved}% smaller)`
-  );
+function fmtBytes(b) {
+  return b > 1_000_000 ? `${(b / 1_000_000).toFixed(1)} MB`
+       : b > 1_000     ? `${(b / 1_000).toFixed(0)} KB`
+       : `${b} B`;
 }
 
-console.log('\nDone. All images optimised.');
+for (const { dir, maxW, maxH, label } of DIRS) {
+  if (!existsSync(dir)) continue;
+
+  const files = readdirSync(dir).filter(f => {
+    const ext = path.extname(f).toLowerCase();
+    // Skip double-extension originals like adams-peak.jpg.jpg
+    if (f.endsWith('.jpg.jpg') || f.endsWith('.jpeg.jpg')) return false;
+    return EXTS.has(ext);
+  });
+
+  console.log(`\n── ${dir} (${files.length} images, ${label}) ──`);
+
+  for (const file of files) {
+    const srcPath = path.join(dir, file);
+    const base    = path.basename(file, path.extname(file));
+    const outPath = path.join(dir, base + '.webp');
+
+    // Skip if WebP already exists and is newer than source
+    if (existsSync(outPath)) {
+      const srcMtime = statSync(srcPath).mtimeMs;
+      const outMtime = statSync(outPath).mtimeMs;
+      if (outMtime >= srcMtime) {
+        console.log(`  SKIP  ${file} (webp up to date)`);
+        skipped++;
+        continue;
+      }
+    }
+
+    const sizeBefore = statSync(srcPath).size;
+
+    try {
+      await sharp(srcPath)
+        .resize(maxW, maxH, { fit: 'inside', withoutEnlargement: true })
+        .webp({ quality: QUALITY, effort: 4 })
+        .toFile(outPath);
+
+      const sizeAfter = statSync(outPath).size;
+      const saving    = ((1 - sizeAfter / sizeBefore) * 100).toFixed(0);
+
+      totalBefore += sizeBefore;
+      totalAfter  += sizeAfter;
+      converted++;
+
+      console.log(`  ✓  ${file.padEnd(42)} ${fmtBytes(sizeBefore).padStart(8)} → ${fmtBytes(sizeAfter).padStart(8)}  (-${saving}%)`);
+    } catch (e) {
+      console.log(`  ERR ${file}: ${e.message}`);
+      errors++;
+    }
+  }
+}
+
+const saving = totalBefore > 0 ? ((1 - totalAfter / totalBefore) * 100).toFixed(0) : 0;
+console.log(`
+────────────────────────────────────────
+Converted : ${converted}
+Skipped   : ${skipped}
+Errors    : ${errors}
+────────────────────────────────────────
+Before    : ${fmtBytes(totalBefore)}
+After     : ${fmtBytes(totalAfter)}
+Saved     : ${fmtBytes(totalBefore - totalAfter)} (-${saving}%)
+────────────────────────────────────────
+`);

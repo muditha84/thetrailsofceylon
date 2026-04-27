@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Best Beaches in Sri Lanka | The Trails of Ceylon" description="Sri Lanka's finest beaches — from the sheltered cove of Unawatuna to the whale-watching shores of Mirissa, the surfing beaches of Arugam Bay, and the untouched sands of Tangalle." type="article" publishDate="2025-03-15">
   <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
-    <img src="/images/mirissa-beach.jpg" alt="Mirissa beach, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <img src="/images/mirissa-beach.webp" alt="Mirissa beach, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
     <div class="absolute bottom-0 left-0 right-0 p-8">
       <div class="max-w-4xl mx-auto">
@@ -19,12 +19,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <p class="text-xl text-gray-600 mb-12 max-w-3xl">Sri Lanka has over 1,500km of coastline — and two distinct beach seasons. The south and west coasts are at their best November to April; the east coast shines from May to September. Which means there is always a stunning beach within reach, whatever the time of year.</p>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {[
-        {href:'/places/mirissa',img:'/images/mirissa-beach.jpg',alt:'Mirissa beach Sri Lanka',badge:'South Coast',title:'Mirissa',desc:'A crescent bay backed by coconut palms — famous for whale watching at dawn and sunset cocktails at Parrot Rock. Best November–April.'},
-        {href:'/places/unawatuna',img:'/images/mirissa-beach.jpg',alt:'Unawatuna beach Sri Lanka',badge:'South Coast',title:'Unawatuna',desc:'A sheltered, reef-protected bay near Galle — calm, swimmable water, snorkelling just offshore, and a lively beach strip.'},
-        {href:'/places/weligama',img:'/images/mirissa-beach.jpg',alt:'Weligama beach Sri Lanka',badge:'South Coast',title:'Weligama',desc:'The beginner surfer\'s paradise — a wide, gently shelved bay with a forgiving beach break and Sri Lanka\'s best surf schools.'},
-        {href:'/places/tangalle',img:'/images/tangalle.jpg',alt:'Tangalle beach Sri Lanka',badge:'South Coast',title:'Tangalle',desc:'Long, empty beaches and a slower pace — Rekawa Beach sees turtle nesting at night, and Maracolliya is one of the most beautiful stretches of sand on the island.'},
-        {href:'/places/arugam-bay',img:'/images/arugam-bay.jpg',alt:'Arugam Bay beach Sri Lanka',badge:'East Coast',title:'Arugam Bay',desc:'A laid-back surf village with a legendary right-hand point break. The best beach on the east coast, firing June–September.'},
-        {href:'/places/trincomalee',img:'/images/trincomalee.jpg',alt:'Nilaveli beach Trincomalee Sri Lanka',badge:'East Coast',title:'Trincomalee',desc:'Nilaveli beach — pristine white sand with Pigeon Island just offshore for world-class snorkelling among blacktip reef sharks.'},
+        {href:'/places/mirissa',img:'/images/mirissa-beach.webp',alt:'Mirissa beach Sri Lanka',badge:'South Coast',title:'Mirissa',desc:'A crescent bay backed by coconut palms — famous for whale watching at dawn and sunset cocktails at Parrot Rock. Best November–April.'},
+        {href:'/places/unawatuna',img:'/images/mirissa-beach.webp',alt:'Unawatuna beach Sri Lanka',badge:'South Coast',title:'Unawatuna',desc:'A sheltered, reef-protected bay near Galle — calm, swimmable water, snorkelling just offshore, and a lively beach strip.'},
+        {href:'/places/weligama',img:'/images/mirissa-beach.webp',alt:'Weligama beach Sri Lanka',badge:'South Coast',title:'Weligama',desc:'The beginner surfer\'s paradise — a wide, gently shelved bay with a forgiving beach break and Sri Lanka\'s best surf schools.'},
+        {href:'/places/tangalle',img:'/images/tangalle.webp',alt:'Tangalle beach Sri Lanka',badge:'South Coast',title:'Tangalle',desc:'Long, empty beaches and a slower pace — Rekawa Beach sees turtle nesting at night, and Maracolliya is one of the most beautiful stretches of sand on the island.'},
+        {href:'/places/arugam-bay',img:'/images/arugam-bay.webp',alt:'Arugam Bay beach Sri Lanka',badge:'East Coast',title:'Arugam Bay',desc:'A laid-back surf village with a legendary right-hand point break. The best beach on the east coast, firing June–September.'},
+        {href:'/places/trincomalee',img:'/images/trincomalee.webp',alt:'Nilaveli beach Trincomalee Sri Lanka',badge:'East Coast',title:'Trincomalee',desc:'Nilaveli beach — pristine white sand with Pigeon Island just offshore for world-class snorkelling among blacktip reef sharks.'},
       ].map(c=>(
         <a href={c.href} class="group rounded-2xl overflow-hidden bg-white shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
           <div class="aspect-[4/3] overflow-hidden">

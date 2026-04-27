@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Culture & History in Sri Lanka | The Trails of Ceylon" description="Sri Lanka's rich cultural experiences — ancient temple visits, the world's most scenic train ride, tea plantation tours, traditional cooking classes and Ayurveda." type="article" publishDate="2025-03-15">
   <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
-    <img src="/images/sigiriya.jpg" alt="Sigiriya Rock Fortress, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <img src="/images/sigiriya.webp" alt="Sigiriya Rock Fortress, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
     <div class="absolute bottom-0 left-0 right-0 p-8">
       <div class="max-w-4xl mx-auto">
@@ -19,11 +19,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <p class="text-xl text-gray-600 mb-12 max-w-3xl">Sri Lanka has one of the longest documented histories in Asia — eight UNESCO World Heritage Sites, a living Buddhist tradition over 2,000 years old, and cultural experiences ranging from the world's most scenic train journey to immersive cooking classes in a family home.</p>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {[
-        {href:'/things-to-do/temple-visits',img:'/images/sigiriya.jpg',alt:'Temple of the Tooth Kandy Sri Lanka',badge:'Heritage',title:'Temple Visits',desc:'The Temple of the Tooth in Kandy, the cave paintings of Dambulla, and the vast stupa complexes of Anuradhapura — Sri Lanka\'s sacred sites are among Asia\'s finest.'},
-        {href:'/things-to-do/train-rides',img:'/images/scenic-train.jpg',alt:'Scenic train Sri Lanka highlands',badge:'Experience',title:'Scenic Train Rides',desc:'The Kandy to Ella highland railway is one of the world\'s great train journeys — seven hours through tea estates, jungle and mountain scenery.'},
-        {href:'/things-to-do/tea-plantation-tours',img:'/images/tea-plantation.jpg',alt:'Tea plantation Sri Lanka',badge:'Culture',title:'Tea Plantation Tours',desc:'Visit a working tea factory, walk through the picking fields with estate workers, and drink the freshest cup of Ceylon tea at source.'},
-        {href:'/things-to-do/cooking-classes',img:'/images/cooking-classes.jpg',alt:'Sri Lankan cooking class',badge:'Food',title:'Cooking Classes',desc:'Learn to make rice and curry from scratch — tempering spices, making coconut sambol, preparing hoppers — in a family home or a dedicated cooking school.'},
-        {href:'/things-to-do/ayurveda',img:'/images/ayurveda.jpg',alt:'Ayurveda treatment Sri Lanka',badge:'Wellness',title:'Ayurveda & Wellness',desc:'Sri Lanka has one of the world\'s most developed Ayurvedic traditions — from single treatments to multi-week residential retreats for genuine therapeutic benefit.'},
+        {href:'/things-to-do/temple-visits',img:'/images/sigiriya.webp',alt:'Temple of the Tooth Kandy Sri Lanka',badge:'Heritage',title:'Temple Visits',desc:'The Temple of the Tooth in Kandy, the cave paintings of Dambulla, and the vast stupa complexes of Anuradhapura — Sri Lanka\'s sacred sites are among Asia\'s finest.'},
+        {href:'/things-to-do/train-rides',img:'/images/scenic-train.webp',alt:'Scenic train Sri Lanka highlands',badge:'Experience',title:'Scenic Train Rides',desc:'The Kandy to Ella highland railway is one of the world\'s great train journeys — seven hours through tea estates, jungle and mountain scenery.'},
+        {href:'/things-to-do/tea-plantation-tours',img:'/images/tea-plantation.webp',alt:'Tea plantation Sri Lanka',badge:'Culture',title:'Tea Plantation Tours',desc:'Visit a working tea factory, walk through the picking fields with estate workers, and drink the freshest cup of Ceylon tea at source.'},
+        {href:'/things-to-do/cooking-classes',img:'/images/cooking-classes.webp',alt:'Sri Lankan cooking class',badge:'Food',title:'Cooking Classes',desc:'Learn to make rice and curry from scratch — tempering spices, making coconut sambol, preparing hoppers — in a family home or a dedicated cooking school.'},
+        {href:'/things-to-do/ayurveda',img:'/images/ayurveda.webp',alt:'Ayurveda treatment Sri Lanka',badge:'Wellness',title:'Ayurveda & Wellness',desc:'Sri Lanka has one of the world\'s most developed Ayurvedic traditions — from single treatments to multi-week residential retreats for genuine therapeutic benefit.'},
       ].map(c=>(
         <a href={c.href} class="group rounded-2xl overflow-hidden bg-white shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
           <div class="aspect-[4/3] overflow-hidden">

@@ -8,7 +8,7 @@ import ExpediaWidget from '../components/ExpediaWidget.astro';
 const destinations = [
   {
     href: '/places/sigiriya',
-    image: '/images/sigiriya.jpg',
+    image: '/images/sigiriya.webp',
     title: 'Sigiriya Rock Fortress',
     subtitle: 'Cultural Triangle',
     tag: 'Must Visit',
@@ -16,7 +16,7 @@ const destinations = [
   },
   {
     href: '/places/ella',
-    image: '/images/ella.jpg',
+    image: '/images/ella.webp',
     title: 'Ella',
     subtitle: 'Hill Country',
     tag: 'Trending',
@@ -24,7 +24,7 @@ const destinations = [
   },
   {
     href: '/places/galle',
-    image: '/images/galle-fort.jpg',
+    image: '/images/galle-fort.webp',
     title: 'Galle Fort',
     subtitle: 'Southern Coast',
     tag: null,
@@ -32,7 +32,7 @@ const destinations = [
   },
   {
     href: '/places/kandy',
-    image: '/images/kandy.jpg',
+    image: '/images/kandy.webp',
     title: 'Kandy',
     subtitle: 'Hill Capital',
     tag: null,
@@ -40,7 +40,7 @@ const destinations = [
   },
   {
     href: '/places/yala',
-    image: '/images/yala.jpg',
+    image: '/images/yala.webp',
     title: 'Yala National Park',
     subtitle: 'Wildlife',
     tag: null,
@@ -48,7 +48,7 @@ const destinations = [
   },
   {
     href: '/places/mirissa',
-    image: '/images/mirissa-beach.jpg',
+    image: '/images/mirissa-beach.webp',
     title: 'Mirissa Beach',
     subtitle: 'Southern Coast',
     tag: null,
@@ -59,7 +59,7 @@ const destinations = [
 const activities = [
   {
     href: '/things-to-do/whale-watching',
-    image: '/images/whale-watching.jpg',
+    image: '/images/whale-watching.webp',
     title: 'Whale Watching',
     subtitle: 'Ocean Experience',
     tag: 'Popular',
@@ -67,7 +67,7 @@ const activities = [
   },
   {
     href: '/things-to-do/tea-plantation-tours',
-    image: '/images/tea-plantation.jpg',
+    image: '/images/tea-plantation.webp',
     title: 'Tea Plantation Tours',
     subtitle: 'Hill Country',
     tag: null,
@@ -75,7 +75,7 @@ const activities = [
   },
   {
     href: '/things-to-do/train-rides',
-    image: '/images/scenic-train.jpg',
+    image: '/images/scenic-train.webp',
     title: 'Scenic Train Rides',
     subtitle: 'Highland Railways',
     tag: null,
@@ -83,7 +83,7 @@ const activities = [
   },
   {
     href: '/things-to-do/wildlife-safaris',
-    image: '/images/yala.jpg',
+    image: '/images/yala.webp',
     title: 'Wildlife Safaris',
     subtitle: 'National Parks',
     tag: null,
@@ -91,7 +91,7 @@ const activities = [
   },
   {
     href: '/things-to-do/hiking',
-    image: '/images/adams-peak.jpg',
+    image: '/images/adams-peak.webp',
     title: 'Hiking',
     subtitle: 'Trails & Trekking',
     tag: null,
@@ -99,7 +99,7 @@ const activities = [
   },
   {
     href: '/things-to-do/surfing',
-    image: '/images/arugam-bay.jpg',
+    image: '/images/arugam-bay.webp',
     title: 'Surfing',
     subtitle: 'East & South Coast',
     tag: null,
@@ -110,7 +110,7 @@ const activities = [
 const blogPosts = [
   {
     href: '/blog/2-weeks-in-sri-lanka-itinerary',
-    image: '/images/scenic-train.jpg',
+    image: '/images/scenic-train.webp',
     title: 'The Perfect 2-Week Sri Lanka Itinerary',
     category: 'Itineraries',
     date: 'April 10, 2026',
@@ -119,7 +119,7 @@ const blogPosts = [
   },
   {
     href: '/blog/best-beaches-sri-lanka',
-    image: '/images/mirissa-beach.jpg',
+    image: '/images/mirissa-beach.webp',
     title: "Sri Lanka's 10 Best Beaches: A Complete Guide",
     category: 'Beaches',
     date: 'March 28, 2026',
@@ -128,7 +128,7 @@ const blogPosts = [
   },
   {
     href: '/blog/sri-lanka-budget-travel',
-    image: '/images/colombo.jpg',
+    image: '/images/colombo.webp',
     title: 'Sri Lanka on a Budget: How to Travel Cheap',
     category: 'Budget Travel',
     date: 'March 15, 2026',
@@ -137,7 +137,7 @@ const blogPosts = [
   },
   {
     href: '/blog/sigiriya-rock-fortress-guide',
-    image: '/images/sigiriya.jpg',
+    image: '/images/sigiriya.webp',
     title: 'Sigiriya Rock Fortress: The Complete Visitor Guide',
     category: 'Cultural Sites',
     date: 'March 5, 2026',
@@ -146,7 +146,7 @@ const blogPosts = [
   },
   {
     href: '/blog/ella-travel-guide',
-    image: '/images/ella.jpg',
+    image: '/images/ella.webp',
     title: 'Ella Travel Guide: The Best of Sri Lanka\'s Hill Country Village',
     category: 'Destinations',
     date: 'February 20, 2026',
@@ -155,7 +155,7 @@ const blogPosts = [
   },
   {
     href: '/blog/sri-lanka-food-guide',
-    image: '/images/cooking-classes.jpg',
+    image: '/images/cooking-classes.webp',
     title: 'Sri Lankan Food: What to Eat & Where',
     category: 'Food & Drink',
     date: 'February 22, 2026',
@@ -173,16 +173,16 @@ const blogPosts = [
   <!-- Hero Section -->
   {(() => {
     const slides = [
-      { img: '/images/heroes/hero-beach.jpg',     alt: 'Golden beaches of Sri Lanka',                label: 'Golden Beaches'      },
-      { img: '/images/heroes/hero-hills.jpg',     alt: 'Misty hill country tea estates',             label: 'Misty Hill Country'  },
-      { img: '/images/heroes/hero-wildlife.jpg',  alt: 'Leopard in Yala National Park',              label: 'Incredible Wildlife' },
-      { img: '/images/heroes/hero-sigiriya.jpg',  alt: 'Sigiriya rock fortress Sri Lanka',           label: 'Ancient Wonders'     },
-      { img: '/images/heroes/hero-train.jpg',     alt: 'Scenic highland railway Sri Lanka',          label: 'Scenic Journeys'     },
-      { img: '/images/heroes/hero-galle.jpg',     alt: 'Galle Fort colonial heritage',               label: 'Colonial Heritage'   },
-      { img: '/images/heroes/hero-food.jpg',      alt: 'Sri Lankan cuisine and spices',              label: 'Incredible Cuisine'  },
-      { img: '/images/heroes/hero-whale.jpg',     alt: 'Blue whale off Mirissa Sri Lanka',           label: 'Ocean Adventures'    },
-      { img: '/images/heroes/hero-adventure.jpg', alt: 'White-water rafting Kitulgala Sri Lanka',    label: 'Thrilling Adventures'},
-      { img: '/images/heroes/hero-temple.jpg',    alt: 'Sacred Buddhist temple Sri Lanka',           label: 'Sacred Temples'      },
+      { img: '/images/heroes/hero-beach.webp',     alt: 'Golden beaches of Sri Lanka',                label: 'Golden Beaches'      },
+      { img: '/images/heroes/hero-hills.webp',     alt: 'Misty hill country tea estates',             label: 'Misty Hill Country'  },
+      { img: '/images/heroes/hero-wildlife.webp',  alt: 'Leopard in Yala National Park',              label: 'Incredible Wildlife' },
+      { img: '/images/heroes/hero-sigiriya.webp',  alt: 'Sigiriya rock fortress Sri Lanka',           label: 'Ancient Wonders'     },
+      { img: '/images/heroes/hero-train.webp',     alt: 'Scenic highland railway Sri Lanka',          label: 'Scenic Journeys'     },
+      { img: '/images/heroes/hero-galle.webp',     alt: 'Galle Fort colonial heritage',               label: 'Colonial Heritage'   },
+      { img: '/images/heroes/hero-food.webp',      alt: 'Sri Lankan cuisine and spices',              label: 'Incredible Cuisine'  },
+      { img: '/images/heroes/hero-whale.webp',     alt: 'Blue whale off Mirissa Sri Lanka',           label: 'Ocean Adventures'    },
+      { img: '/images/heroes/hero-adventure.webp', alt: 'White-water rafting Kitulgala Sri Lanka',    label: 'Thrilling Adventures'},
+      { img: '/images/heroes/hero-temple.webp',    alt: 'Sacred Buddhist temple Sri Lanka',           label: 'Sacred Temples'      },
     ];
     return (
       <section class="relative min-h-screen flex items-center overflow-hidden" id="hero-section">
@@ -376,7 +376,7 @@ const blogPosts = [
   <section class="py-20 bg-ceylon-green-900 relative overflow-hidden">
     <div class="absolute inset-0 opacity-25">
       <img
-        src="/images/heroes/hero-wildlife.jpg"
+        src="/images/heroes/hero-wildlife.webp"
         alt=""
         class="w-full h-full object-cover object-center"
         loading="lazy"
@@ -447,7 +447,7 @@ const blogPosts = [
         </div>
         <div class="relative">
           <img
-            src="/images/ella.jpg"
+            src="/images/ella.webp"
             alt="Nine Arch Bridge in Ella — iconic hill country scenery"
             class="rounded-3xl w-full object-cover shadow-2xl aspect-[4/3]"
             loading="lazy"
@@ -494,7 +494,7 @@ const blogPosts = [
   <section class="py-20 bg-ceylon-green-900 relative overflow-hidden">
     <div class="absolute inset-0 opacity-25">
       <img
-        src="/images/heroes/hero-temple.jpg"
+        src="/images/heroes/hero-temple.webp"
         alt=""
         class="w-full h-full object-cover object-center"
         loading="lazy"
