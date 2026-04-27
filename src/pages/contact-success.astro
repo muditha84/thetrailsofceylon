@@ -1,28 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-
-<BaseLayout
-  title="Message Sent | The Trails of Ceylon"
-  description="Thank you for getting in touch with The Trails of Ceylon."
->
-  <section class="min-h-[70vh] flex items-center justify-center py-20 bg-gray-50">
-    <div class="max-w-lg mx-auto px-4 sm:px-6 text-center">
-      <div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-10 sm:p-14">
-        <span class="text-6xl block mb-6">✅</span>
-        <h1 class="font-serif font-bold text-gray-900 text-3xl sm:text-4xl mb-4">
-          Thank you for getting in touch!
-        </h1>
-        <p class="text-gray-600 text-lg leading-relaxed mb-8">
-          We'll get back to you within 48 hours.
-        </p>
-        <a
-          href="/"
-          class="inline-flex items-center gap-2 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white font-semibold px-8 py-3.5 rounded-full transition-colors text-sm"
-        >
-          ← Back to Homepage
-        </a>
-      </div>
+<BaseLayout title="Message Sent | The Trails of Ceylon" description="Thank you for contacting The Trails of Ceylon">
+  <section style="min-height:60vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:4rem 2rem;">
+    <div>
+      <div style="font-size:4rem; margin-bottom:1rem;">✅</div>
+      <h1 style="font-size:2.5rem; margin-bottom:1rem; color:#2d5a27;">Message Sent!</h1>
+      <p style="font-size:1.2rem; color:#666; margin-bottom:2rem; max-width:500px;">Thank you for getting in touch. We'll get back to you within 48 hours.</p>
+      <a href="/" style="background:#2d5a27; color:#fff; padding:0.75rem 2rem; border-radius:50px; text-decoration:none; font-weight:600;">Back to Home</a>
     </div>
   </section>
 </BaseLayout>
