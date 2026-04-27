@@ -332,19 +332,30 @@ const blogPosts = [
         centered
       />
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-12">
-        {[
-          { name: 'Cultural Triangle', icon: '🏛️', href: '/places/cultural-triangle', color: 'bg-amber-50 border-amber-200 hover:bg-amber-100' },
-          { name: 'Hill Country',      icon: '🌿', href: '/places/hill-country',      color: 'bg-ceylon-green-50 border-ceylon-green-200 hover:bg-ceylon-green-100' },
-          { name: 'South Coast',       icon: '🏖️', href: '/places/south-coast',       color: 'bg-blue-50 border-blue-200 hover:bg-blue-100' },
-          { name: 'East Coast',        icon: '🌊', href: '/places/east-coast',        color: 'bg-cyan-50 border-cyan-200 hover:bg-cyan-100' },
-          { name: 'North & Jaffna',    icon: '🦚', href: '/places/north-jaffna',      color: 'bg-purple-50 border-purple-200 hover:bg-purple-100' },
-          { name: 'Wildlife Parks',    icon: '🐆', href: '/places/wildlife-parks',    color: 'bg-orange-50 border-orange-200 hover:bg-orange-100' },
-        ].map(region => (
-          <a href={region.href} class={`flex flex-col items-center text-center p-5 rounded-2xl border-2 transition-all duration-200 hover:-translate-y-1 ${region.color}`}>
-            <span class="text-3xl mb-2">{region.icon}</span>
-            <span class="font-semibold text-gray-800 text-sm">{region.name}</span>
-          </a>
-        ))}
+        <a href="/places/cultural-triangle" class="flex flex-col items-center text-center p-5 rounded-2xl border-2 transition-all duration-200 hover:-translate-y-1 bg-amber-50 border-amber-200 hover:bg-amber-100">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 10v11M12 10v11M16 10v11"/></svg>
+          <span class="font-semibold text-gray-800 text-sm">Cultural Triangle</span>
+        </a>
+        <a href="/places/hill-country" class="flex flex-col items-center text-center p-5 rounded-2xl border-2 transition-all duration-200 hover:-translate-y-1 bg-ceylon-green-50 border-ceylon-green-200 hover:bg-ceylon-green-100">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3"><path d="M8 3l4 8 5-5 5 15H2L8 3z"/></svg>
+          <span class="font-semibold text-gray-800 text-sm">Hill Country</span>
+        </a>
+        <a href="/places/south-coast" class="flex flex-col items-center text-center p-5 rounded-2xl border-2 transition-all duration-200 hover:-translate-y-1 bg-blue-50 border-blue-200 hover:bg-blue-100">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2"/></svg>
+          <span class="font-semibold text-gray-800 text-sm">South Coast</span>
+        </a>
+        <a href="/places/east-coast" class="flex flex-col items-center text-center p-5 rounded-2xl border-2 transition-all duration-200 hover:-translate-y-1 bg-cyan-50 border-cyan-200 hover:bg-cyan-100">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0891b2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <span class="font-semibold text-gray-800 text-sm">East Coast</span>
+        </a>
+        <a href="/places/north-jaffna" class="flex flex-col items-center text-center p-5 rounded-2xl border-2 transition-all duration-200 hover:-translate-y-1 bg-purple-50 border-purple-200 hover:bg-purple-100">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span class="font-semibold text-gray-800 text-sm">North & Jaffna</span>
+        </a>
+        <a href="/places/wildlife-parks" class="flex flex-col items-center text-center p-5 rounded-2xl border-2 transition-all duration-200 hover:-translate-y-1 bg-orange-50 border-orange-200 hover:bg-orange-100">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-3"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="4" cy="8" r="2"/><circle cx="6.5" cy="15.5" r="2"/><path d="M12 17.5c0 0-3.5-4-6-4s-3 3-1.5 5 4.5 3.5 7.5 3.5 6-1.5 7.5-3.5S18 13.5 15 13.5s-3 4-3 4z"/></svg>
+          <span class="font-semibold text-gray-800 text-sm">Wildlife Parks</span>
+        </a>
       </div>
     </div>
   </section>
