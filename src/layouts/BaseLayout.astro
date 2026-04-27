@@ -140,10 +140,10 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
 
   <!-- ── Cookie Consent Banner ── -->
   <div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#1a1a1a; color:#fff; padding:1rem 2rem; z-index:9999; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
-    <p style="margin:0; font-size:0.9rem;">We use cookies to enhance your experience and analyse site traffic. By continuing to browse you agree to our <a href="/privacy-policy" style="color:#c9a84c;">Privacy Policy</a>.</p>
+    <p style="margin:0; font-size:0.9rem;">We use cookies to enhance your experience and analyse site traffic. By continuing to browse you agree to our <a href="/privacy" style="color:#c9a84c;">Privacy Policy</a>.</p>
     <div style="display:flex; gap:0.75rem;">
-      <button onclick="acceptCookies()" style="background:#2d5a27; color:#fff; border:none; padding:0.5rem 1.25rem; border-radius:4px; cursor:pointer; font-size:0.9rem;">Accept All</button>
-      <button onclick="declineCookies()" style="background:#555; color:#fff; border:none; padding:0.5rem 1.25rem; border-radius:4px; cursor:pointer; font-size:0.9rem;">Decline</button>
+      <button id="cookie-accept" style="background:#2d5a27; color:#fff; border:none; padding:0.5rem 1.25rem; border-radius:4px; cursor:pointer; font-size:0.9rem;">Accept All</button>
+      <button id="cookie-decline" style="background:#555; color:#fff; border:none; padding:0.5rem 1.25rem; border-radius:4px; cursor:pointer; font-size:0.9rem;">Decline</button>
     </div>
   </div>
 
@@ -156,23 +156,23 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
   <!-- ── Global interactive scripts ── -->
   <script>
     // ── Cookie consent ──
-    function showCookieBanner() {
+    document.addEventListener('DOMContentLoaded', function () {
+      const banner = document.getElementById('cookie-banner');
+      const acceptBtn = document.getElementById('cookie-accept');
+      const declineBtn = document.getElementById('cookie-decline');
+      if (!banner || !acceptBtn || !declineBtn) return;
       if (!localStorage.getItem('cookieChoice')) {
-        const b = document.getElementById('cookie-banner');
-        if (b) b.style.display = 'flex';
+        banner.style.display = 'flex';
       }
-    }
-    function acceptCookies() {
-      localStorage.setItem('cookieChoice', 'accepted');
-      const b = document.getElementById('cookie-banner');
-      if (b) b.style.display = 'none';
-    }
-    function declineCookies() {
-      localStorage.setItem('cookieChoice', 'declined');
-      const b = document.getElementById('cookie-banner');
-      if (b) b.style.display = 'none';
-    }
-    window.addEventListener('load', showCookieBanner);
+      acceptBtn.addEventListener('click', function () {
+        localStorage.setItem('cookieChoice', 'accepted');
+        banner.style.display = 'none';
+      });
+      declineBtn.addEventListener('click', function () {
+        localStorage.setItem('cookieChoice', 'declined');
+        banner.style.display = 'none';
+      });
+    });
 
     // ── Back to top ──
     window.addEventListener('scroll', function () {
