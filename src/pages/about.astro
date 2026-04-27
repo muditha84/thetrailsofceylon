@@ -7,124 +7,87 @@ import ExpediaWidget from '../components/ExpediaWidget.astro';
   title="About | The Trails of Ceylon — Sri Lanka Travel Guide"
   description="The Trails of Ceylon is an independent travel resource dedicated entirely to Sri Lanka. Learn about our mission, editorial approach and what we cover."
 >
-  <!-- Hero -->
-  <section class="relative h-[50vh] min-h-[360px] overflow-hidden">
-    <img
-      src="/images/heroes/hero-sigiriya.webp"
-      alt="Sigiriya rock fortress Sri Lanka"
-      class="w-full h-full object-cover object-center"
-      loading="eager"
-      fetchpriority="high"
-      width="1440"
-      height="810"
-      style="object-fit:cover;"
-    />
-    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-    <div class="absolute bottom-0 left-0 right-0 p-8">
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="font-serif font-black text-white text-5xl sm:text-6xl mb-3">About Us</h1>
-        <p class="text-white/80 text-xl">The independent Sri Lanka travel resource</p>
-      </div>
-    </div>
+
+  <!-- Photo grid hero -->
+  <section style="display:grid; grid-template-columns:1fr 1fr 1fr; grid-template-rows:250px 250px; gap:4px; max-height:500px; overflow:hidden;">
+    <img src="/images/heroes/hero-sigiriya.webp" alt="Sigiriya Rock Fortress" style="width:100%; height:100%; object-fit:cover; grid-column:1; grid-row:1/3;" loading="eager" fetchpriority="high" />
+    <img src="/images/heroes/hero-beach.webp" alt="Sri Lanka Beach" style="width:100%; height:100%; object-fit:cover;" loading="eager" />
+    <img src="/images/heroes/hero-wildlife.webp" alt="Sri Lanka Wildlife" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />
+    <img src="/images/heroes/hero-train.webp" alt="Scenic Train" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />
+    <img src="/images/heroes/hero-food.webp" alt="Sri Lankan Food" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />
   </section>
 
-  <!-- Stats -->
-  <section class="bg-ceylon-green-900 py-10">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
-        {[
-          { value: '35+',  label: 'Destinations Covered' },
-          { value: '26+',  label: 'Activity Guides' },
-          { value: '10+',  label: 'Travel Planning Guides' },
-          { value: '8',    label: 'UNESCO World Heritage Sites' },
-        ].map(stat => (
-          <div>
-            <p class="font-serif font-black text-ceylon-gold-400 text-4xl">{stat.value}</p>
-            <p class="text-ceylon-green-200 text-sm mt-1">{stat.label}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Main content -->
-  <section class="py-20">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6">
-      <div class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-ceylon-green-800 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
-
-        <h2>Welcome to The Trails of Ceylon</h2>
-        <p>The Trails of Ceylon is an independent travel resource dedicated entirely to Sri Lanka — one of the world's most extraordinary yet underrated destinations. Our mission is simple: to help travellers discover, plan and experience the very best that this remarkable island has to offer.</p>
-        <p>Sri Lanka has everything — ancient ruins, misty highlands, golden beaches, incredible wildlife and some of the world's most vibrant food culture — all packed into a compact island you can explore in any direction. Yet despite all of this, it remains refreshingly uncrowded and genuinely affordable compared to many other tropical destinations.</p>
-        <p>We built The Trails of Ceylon because we felt the island deserved a dedicated, beautifully designed and genuinely useful travel resource — one that goes beyond the typical tourist trail and helps visitors experience Sri Lanka at its very best.</p>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Train banner image -->
-  <div class="w-full h-64 sm:h-80 overflow-hidden">
-    <img
-      src="/images/heroes/hero-train.webp"
-      alt="Scenic highland railway Sri Lanka"
-      class="w-full h-full object-cover object-center"
-      loading="lazy"
-      width="1440"
-      height="810"
-      style="object-fit:cover;"
-    />
+  <div style="text-align:center; padding:3rem 1.5rem 1rem; background:#2d5a27; color:white;">
+    <h1 style="font-size:3rem; margin-bottom:0.5rem; font-family:Georgia,serif;">About Us</h1>
+    <p style="font-size:1.2rem; opacity:0.9;">The story behind The Trails of Ceylon</p>
   </div>
 
-  <!-- More content -->
-  <section class="py-20">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6">
-      <div class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-ceylon-green-800 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+  <!-- Main content -->
+  <section style="max-width:800px; margin:0 auto; padding:4rem 2rem;">
 
-        <h2>What We Cover</h2>
-        <p>Our team of Sri Lanka travel writers and researchers covers every corner of the island:</p>
-        <ul>
-          <li><strong>35+ destination guides</strong> — from Sigiriya to Jaffna, Ella to Arugam Bay</li>
-          <li><strong>26+ activity guides</strong> — wildlife safaris, whale watching, surfing, hiking and more</li>
-          <li><strong>Complete travel planning guides</strong> — visas, budgets, itineraries, getting around</li>
-          <li><strong>Honest blog articles</strong> — tips, stories and insider advice</li>
-        </ul>
+    <h2 style="font-family:Georgia,serif; color:#2d5a27; font-size:1.75rem; margin-bottom:1rem;">Welcome to The Trails of Ceylon</h2>
+    <p style="color:#444; line-height:1.8; margin-bottom:1rem;">The Trails of Ceylon is an independent travel resource dedicated entirely to Sri Lanka — one of the world's most extraordinary yet underrated destinations. Our mission is simple: to help travellers discover, plan and experience the very best that this remarkable island has to offer.</p>
+    <p style="color:#444; line-height:1.8; margin-bottom:1rem;">Sri Lanka has everything — ancient ruins, misty highlands, golden beaches, incredible wildlife and some of the world's most vibrant food culture — all packed into a compact island you can explore in any direction. Yet despite all of this, it remains refreshingly uncrowded and genuinely affordable compared to many other tropical destinations.</p>
+    <p style="color:#444; line-height:1.8; margin-bottom:1rem;">We built The Trails of Ceylon because we felt the island deserved a dedicated, beautifully designed and genuinely useful travel resource — one that goes beyond the typical tourist trail and helps visitors experience Sri Lanka at its very best.</p>
 
-        <h2>Our Editorial Approach</h2>
-        <p>Every piece of content on The Trails of Ceylon is thoroughly researched and written with the traveller's best interests in mind. We are committed to:</p>
-
-        <p><strong>Accuracy</strong> — We keep our guides up to date with current prices, opening hours and travel conditions.</p>
-        <p><strong>Honesty</strong> — We tell you what's worth your time and money — and what isn't.</p>
-        <p><strong>Responsibility</strong> — We promote ethical wildlife experiences, sustainable tourism and respect for local communities and culture.</p>
-        <p><strong>Practicality</strong> — Real, actionable information that helps you actually plan your trip — not just inspire you.</p>
-
-        <h2>How We Make Money</h2>
-        <p>The Trails of Ceylon is free to use and always will be. We keep the lights on through:</p>
-        <ul>
-          <li><strong>Affiliate commissions</strong> — when you book hotels or tours through our links, we earn a small commission at no extra cost to you</li>
-          <li><strong>Display advertising</strong> — carefully selected ads that don't compromise your reading experience</li>
-        </ul>
-        <p>We only recommend products and services we genuinely believe offer good value for travellers. Our editorial content is never influenced by commercial relationships.</p>
-
-        <h2>Get In Touch</h2>
-        <p>Have a question about Sri Lanka? Found an error in one of our guides? Want to work with us?</p>
-        <p>We'd love to hear from you — <a href="/contact/">get in touch here</a>.</p>
-
+    <!-- Stats grid -->
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; margin:3rem 0; text-align:center;">
+      <div style="background:#f0f7ee; padding:1.5rem; border-radius:12px;">
+        <div style="font-size:2rem; font-weight:700; color:#2d5a27;">35+</div>
+        <div style="font-size:0.9rem; color:#666;">Destinations</div>
       </div>
-
-      <!-- Values -->
-      <div class="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 not-prose">
-        {[
-          { title: 'Honest',      body: 'We tell you the truth — even if that means saying a famous attraction is overrated.' },
-          { title: 'Responsible', body: 'We promote ethical wildlife experiences and sustainable tourism practices.' },
-          { title: 'Practical',   body: 'Real, actionable information — not vague inspiration. We help you actually plan your trip.' },
-        ].map(val => (
-          <div class="text-center bg-ceylon-green-50 border border-ceylon-green-100 rounded-2xl p-6">
-            <h3 class="font-serif font-bold text-ceylon-green-800 text-lg mb-2">{val.title}</h3>
-            <p class="text-gray-500 text-sm leading-relaxed">{val.body}</p>
-          </div>
-        ))}
+      <div style="background:#f0f7ee; padding:1.5rem; border-radius:12px;">
+        <div style="font-size:2rem; font-weight:700; color:#2d5a27;">26+</div>
+        <div style="font-size:0.9rem; color:#666;">Activity Guides</div>
+      </div>
+      <div style="background:#f0f7ee; padding:1.5rem; border-radius:12px;">
+        <div style="font-size:2rem; font-weight:700; color:#2d5a27;">10+</div>
+        <div style="font-size:0.9rem; color:#666;">Travel Guides</div>
+      </div>
+      <div style="background:#f0f7ee; padding:1.5rem; border-radius:12px;">
+        <div style="font-size:2rem; font-weight:700; color:#2d5a27;">8</div>
+        <div style="font-size:0.9rem; color:#666;">UNESCO Sites</div>
       </div>
     </div>
+
+    <h2 style="font-family:Georgia,serif; color:#2d5a27; font-size:1.75rem; margin-bottom:1rem;">What We Cover</h2>
+    <p style="color:#444; line-height:1.8; margin-bottom:1rem;">Our team of Sri Lanka travel writers and researchers covers every corner of the island:</p>
+    <ul style="color:#444; line-height:2; margin-bottom:2rem; padding-left:1.5rem;">
+      <li><strong>35+ destination guides</strong> — from Sigiriya to Jaffna, Ella to Arugam Bay</li>
+      <li><strong>26+ activity guides</strong> — wildlife safaris, whale watching, surfing, hiking and more</li>
+      <li><strong>Complete travel planning guides</strong> — visas, budgets, itineraries, getting around</li>
+      <li><strong>Honest blog articles</strong> — tips, stories and insider advice</li>
+    </ul>
+
+    <h2 style="font-family:Georgia,serif; color:#2d5a27; font-size:1.75rem; margin-bottom:1rem;">Our Editorial Approach</h2>
+    <p style="color:#444; line-height:1.8; margin-bottom:1.5rem;">Every piece of content on The Trails of Ceylon is thoroughly researched and written with the traveller's best interests in mind. We are committed to:</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.5rem; margin:2rem 0;">
+      <div style="padding:1.5rem; border:1px solid #e0e0e0; border-radius:12px; text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.5rem;">✍️</div>
+        <h3 style="color:#2d5a27; margin-bottom:0.5rem; font-family:Georgia,serif;">Honest</h3>
+        <p style="font-size:0.9rem; color:#666; line-height:1.6;">We tell you what's worth your time and money — and what isn't.</p>
+      </div>
+      <div style="padding:1.5rem; border:1px solid #e0e0e0; border-radius:12px; text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.5rem;">🌿</div>
+        <h3 style="color:#2d5a27; margin-bottom:0.5rem; font-family:Georgia,serif;">Responsible</h3>
+        <p style="font-size:0.9rem; color:#666; line-height:1.6;">We promote ethical wildlife experiences and sustainable tourism.</p>
+      </div>
+      <div style="padding:1.5rem; border:1px solid #e0e0e0; border-radius:12px; text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.5rem;">🎯</div>
+        <h3 style="color:#2d5a27; margin-bottom:0.5rem; font-family:Georgia,serif;">Practical</h3>
+        <p style="font-size:0.9rem; color:#666; line-height:1.6;">Real, actionable information that helps you actually plan your trip.</p>
+      </div>
+    </div>
+
+    <h2 style="font-family:Georgia,serif; color:#2d5a27; font-size:1.75rem; margin-bottom:1rem;">How We Make Money</h2>
+    <p style="color:#444; line-height:1.8; margin-bottom:2rem;">The Trails of Ceylon is free to use and always will be. We keep the lights on through affiliate commissions when you book hotels or tours through our links, and carefully selected display advertising. We only recommend products and services we genuinely believe offer good value for travellers.</p>
+
+    <h2 style="font-family:Georgia,serif; color:#2d5a27; font-size:1.75rem; margin-bottom:1rem;">Get In Touch</h2>
+    <p style="color:#444; line-height:1.8;">Have a question about Sri Lanka? Found an error in one of our guides? Want to work with us? We'd love to hear from you — <a href="/contact/" style="color:#2d5a27; font-weight:600;">get in touch here</a>.</p>
+
   </section>
 
   <ExpediaWidget heading="✈️ Search Hotels & Flights to Sri Lanka" />
+
 </BaseLayout>
