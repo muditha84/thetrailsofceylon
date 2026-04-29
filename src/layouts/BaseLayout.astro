@@ -39,7 +39,7 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
   </script>
 
   <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4265255618600005" crossorigin="anonymous"></script>
+  <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4265255618600005" crossorigin="anonymous"></script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -154,8 +154,25 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
   <!-- ── Back to Top Button ── -->
   <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="display:none; position:fixed; bottom:2rem; right:2rem; background:#2d5a27; color:#fff; border:none; width:48px; height:48px; border-radius:50%; cursor:pointer; font-size:1.25rem; z-index:999; box-shadow:0 4px 12px rgba(0,0,0,0.3);">↑</button>
 
-  <!-- Expedia Widgets — loaded once, initialises any .eg-widget divs on the page -->
-  <script is:inline class="eg-widgets-script" src="https://creator.expediagroup.com/products/widgets/assets/eg-widgets.js"></script>
+  <!-- Expedia Widgets — lazy-loaded via IntersectionObserver when widget enters viewport -->
+  <script>
+    (function () {
+      const widget = document.querySelector('.eg-widget');
+      if (!widget) return;
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const script = document.createElement('script');
+            script.src = 'https://creator.expediagroup.com/products/widgets/assets/eg-widgets.js';
+            script.className = 'eg-widgets-script';
+            document.body.appendChild(script);
+            observer.disconnect();
+          }
+        });
+      });
+      observer.observe(widget);
+    })();
+  </script>
 
   <!-- ── Global interactive scripts ── -->
   <script>
