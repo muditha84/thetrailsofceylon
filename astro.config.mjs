@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://www.thetrailsofceylon.com',
+  site: 'https://thetrailsofceylon.com',
   trailingSlash: 'always',
   integrations: [sitemap()],
   vite: {

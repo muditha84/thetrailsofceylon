@@ -35,6 +35,12 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[redirects]]
+  from = "https://www.thetrailsofceylon.com/*"
+  to = "https://thetrailsofceylon.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/contact-success"
   to = "/contact-success/"
   status = 301
