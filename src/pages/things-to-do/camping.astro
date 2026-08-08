@@ -2,9 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import AffiliateBox from '../../components/AffiliateBox.astro';
 ---
-<BaseLayout title="Camping in Sri Lanka: Best Spots for an Outdoor Night Under the Stars | The Trails of Ceylon" description="Sri Lanka has excellent camping spots — from the beach dunes of Yala to the highland meadows of Knuckles Range and lake-edge campsites in the Cultural Triangle." type="article" publishDate="2025-03-01">
+<BaseLayout title="Camping in Sri Lanka: Best Spots, Permits & Essential Tips | The Trails of Ceylon" description="A complete guide to camping in Sri Lanka — from wild camping in the Knuckles Range and Kumana to beach camping on remote coastlines and glamping at the edge of Yala. Permits, gear, safety and the best spots." type="article" publishDate="2025-03-01">
   <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
-    <img src="/images/camping.webp" alt="Camping Sri Lanka highland landscape stars" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <img src="/images/camping.webp" alt="Camping in Sri Lanka highland landscape under stars" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
     <div class="absolute bottom-0 left-0 right-0 p-8">
       <div class="max-w-4xl mx-auto">
@@ -21,37 +21,200 @@ import AffiliateBox from '../../components/AffiliateBox.astro';
   <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
     <div class="grid lg:grid-cols-[1fr_260px] gap-12">
       <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
-        <p>Camping in Sri Lanka is an underutilised way to experience the island's extraordinary landscapes and wildlife at their most intimate — without the buffer of guesthouse walls between you and the natural world. The island has several genuine camping destinations ranging from national park wilderness camps (with advance permits) to beach camping on remote coastlines. This is not a well-developed camping tourism industry — you will need to organise your own equipment and logistics — but for self-sufficient travellers, the rewards are significant: waking to herds of elephants at a forest camp, seeing the Milky Way above the Knuckles Range, or watching the sunrise from a highland meadow campsite are experiences that justify considerable preparation.</p>
-        <h2>Knuckles Mountain Range</h2>
-        <p>The Knuckles Conservation Forest, east of Kandy, is the finest camping destination in Sri Lanka for wilderness enthusiasts. Multi-day trekking routes through cloud forest, montane jungle and grassland (patana) allow overnight camping in mountain meadows with genuinely dramatic scenery. The range is named for its knuckle-like peaks, which rise to 1,863 metres. Wildlife includes leopards, giant squirrels, endemic lizards and over 130 bird species. Camping is permitted with a Forest Department permit. Hire a local guide — the trails are unmapped and weather can change rapidly.</p>
-        <h2>Yala National Park — Buffer Zone</h2>
-        <p>Camping inside Yala National Park itself is not generally available to tourists, but several eco-camps operate in the buffer zone adjacent to the park — allowing you to be woken by the calls of jungle birds and (if you are lucky) the distant roar of leopards. These are not primitive camps — they typically offer furnished tents with beds and attached bathrooms, but the experience of sleeping at the edge of Yala's wilderness is genuinely special.</p>
-        <h2>Kumana National Park</h2>
-        <p>Overnight camping inside <a href="/places/kumana">Kumana National Park</a> is possible with advance permits from the Department of Wildlife Conservation. This is primitive camping — no facilities — in one of Sri Lanka's most remote wildernesses. The reward is the extraordinary bird colony and the sense of being entirely alone in a vast, ancient landscape.</p>
-        <h2>Highland Lake Camping</h2>
-        <p>Several operators around Kandy and the Hill Country offer lakeside camping experiences at reservoirs in the highlands — forest-edge campsites with basic facilities, campfire cooking and mountain views. These are more accessible than the wilderness options and suitable for families and less experienced campers.</p>
-        <h2>Essential Gear</h2>
-        <p>Bring a good quality tent (wind and rain resistant — Sri Lankan weather can surprise even in the dry season), a sleeping bag rated to 10°C for highland camping, a head torch, water purification tablets or a filter, and insect repellent. Bear in mind that camping near wildlife areas carries genuine risk — follow all guidelines from your guide or park authority.</p>
-        <h2>Tips</h2>
+
+        <p>Camping in Sri Lanka is one of the most underrated ways to experience the island. While most visitors stay in guesthouses and hotels, a small number of self-sufficient travellers — and an increasing number of glampers — are discovering what it means to sleep under a canopy of stars above the Knuckles Range, wake to elephants drinking at a Udawalawe reservoir, or fall asleep to the waves on a remote beach near Nilaveli. Sri Lanka is not a country with a mature camping infrastructure. Facilities are sparse, permits are bureaucratic, and most sites require advance planning. But the rewards — landscapes, wildlife and silence that the guesthouse circuit rarely offers — are extraordinary.</p>
+
+        <p>This guide covers every realistic camping option in Sri Lanka: from permitted wild camping in national park buffer zones to organised eco-camps and glamping lodges, plus the practicalities of permits, gear and safety around wildlife.</p>
+
+        <nav class="not-prose bg-stone-50 border border-stone-200 rounded-xl p-6 my-8">
+          <p class="font-serif font-bold text-gray-900 text-base mb-3">In this guide</p>
+          <ul class="space-y-1.5 text-sm text-ceylon-green-700 columns-2">
+            <li><a href="#knuckles" class="hover:underline">Knuckles Mountain Range</a></li>
+            <li><a href="#adams-peak" class="hover:underline">Adam's Peak Base Camp</a></li>
+            <li><a href="#horton-plains" class="hover:underline">Horton Plains / Ohiya</a></li>
+            <li><a href="#yala" class="hover:underline">Yala Buffer Zone</a></li>
+            <li><a href="#wilpattu" class="hover:underline">Wilpattu Buffer Zone</a></li>
+            <li><a href="#udawalawe" class="hover:underline">Udawalawe Buffer Zone</a></li>
+            <li><a href="#kumana" class="hover:underline">Kumana National Park</a></li>
+            <li><a href="#beach" class="hover:underline">Beach Camping</a></li>
+            <li><a href="#glamping" class="hover:underline">Glamping vs Wild Camping</a></li>
+            <li><a href="#best-time" class="hover:underline">Best Time to Camp</a></li>
+            <li><a href="#permits" class="hover:underline">How to Get Permits</a></li>
+            <li><a href="#gear" class="hover:underline">Essential Gear</a></li>
+            <li><a href="#safety" class="hover:underline">Wildlife Safety</a></li>
+            <li><a href="#tips" class="hover:underline">Top Tips</a></li>
+          </ul>
+        </nav>
+
+        <h2 id="knuckles">Knuckles Mountain Range</h2>
+        <figure class="not-prose my-6 rounded-xl overflow-hidden">
+          <img src="/images/waterfall-hiking.webp" alt="Forest trail and waterfall in the Knuckles Mountain Range, Sri Lanka" class="w-full object-cover max-h-72" width="800" height="450" loading="lazy" />
+          <figcaption class="text-xs text-gray-500 mt-2 text-center">The Knuckles Conservation Forest offers multi-day trekking with overnight camping in mountain meadows</figcaption>
+        </figure>
+        <p>The Knuckles Conservation Forest — a UNESCO World Heritage buffer zone northeast of Kandy — is the finest wild camping destination in Sri Lanka. The range takes its name from its knuckle-like peaks, which rise to 1,863 metres above sea level, and the landscape shifts dramatically as you climb: from lowland rice paddies and forest villages through dense jungle and cloud forest to exposed grassland (patana) with views across multiple mountain ridges.</p>
+        <p>Multi-day trekking routes allow overnight camping in mountain meadows. The most popular is the two-day route from Pitawala Pathana via Corbett's Gap to Mini World's End — a walk that covers jungle, open meadow and a viewpoint rivalling Horton Plains. Experienced trekkers also attempt the full Knuckles traverse, a three-to-four-day route requiring a guide and proper camping kit. Wildlife includes leopards (rarely seen), giant squirrels, purple-faced langur monkeys, endemic lizards and over 130 bird species including the Sri Lanka bush warbler and yellow-eared bulbul.</p>
+        <p><strong>Permits:</strong> Camping is permitted with a Forest Department permit, available from the Divisional Forest Office in Kandy (approximately LKR 500–1,000 per person per night). A permit-registered guide is compulsory for most camping routes — trails are not reliably marked and weather can deteriorate rapidly. Arrange permits and guides through tour operators in Kandy or directly with the Forest Department; bookings two to three weeks in advance are advisable in high season (December–March).</p>
+        <p><strong>Base towns:</strong> Kandy (1.5 hours by road) or Matale (45 minutes). Most guided Knuckles camping trips are arranged from Kandy.</p>
+
+        <h2 id="adams-peak">Adam's Peak — Base Camp Overnight</h2>
+        <figure class="not-prose my-6 rounded-xl overflow-hidden">
+          <img src="/images/adams-peak.webp" alt="Adam's Peak (Sri Pada) sacred mountain in the Hill Country, Sri Lanka" class="w-full object-cover max-h-72" width="800" height="450" loading="lazy" />
+          <figcaption class="text-xs text-gray-500 mt-2 text-center">The forest at the base of Adam's Peak offers a different camping experience to the pilgrimage summit climb</figcaption>
+        </figure>
+        <p>Most visitors to <a href="/places/adams-peak">Adam's Peak</a> focus on the overnight summit climb — the legendary pilgrimage ascent that begins at 2am and reaches the sacred footprint at sunrise. But the forest around the base of Sri Pada offers a completely different kind of camping experience: peaceful, biodiverse jungle with the sound of waterfalls and the possibility of rare bird sightings, without the crowds of the pilgrimage trail.</p>
+        <p>Several basic camp sites exist in the forest below the peak, particularly around Dalhousie and the Sri Pada Wildlife Sanctuary. This is best organised through a specialist eco-camping operator; independent wild camping in the sanctuary itself is restricted. The season for any camping here is December to May — outside the pilgrimage season, the forest is quieter and wildlife more active.</p>
+        <p>For those who do want to combine the summit climb with a camping experience, some guides will arrange overnight stays at forest camps near the Dalhousie trailhead rather than the tea-house rest stops on the route — a much quieter and more atmospheric option.</p>
+
+        <h2 id="horton-plains">Horton Plains — Camping Near Ohiya</h2>
+        <figure class="not-prose my-6 rounded-xl overflow-hidden">
+          <img src="/images/horton-plains.webp" alt="Open highland plateau and World's End escarpment, Horton Plains National Park, Sri Lanka" class="w-full object-cover max-h-72" width="800" height="450" loading="lazy" />
+          <figcaption class="text-xs text-gray-500 mt-2 text-center">The grasslands around Horton Plains are among the coldest and most dramatic landscapes in Sri Lanka</figcaption>
+        </figure>
+        <p>Camping inside <a href="/places/horton-plains">Horton Plains National Park</a> itself is not permitted for general visitors, but the area around Ohiya — the small railway station and village below the plateau — offers the closest camping experience to this extraordinary landscape. The highland grassland here sits above 2,000 metres and temperatures at night can drop to 5–8°C, making it one of the few places in Sri Lanka where you will genuinely be cold in your sleeping bag.</p>
+        <p>A handful of basic guesthouses and small-scale camps around Ohiya allow you to wake early and reach the Horton Plains entrance at opening time (6am) before the day-trip crowds arrive from Nuwara Eliya and Ella — a significant advantage for seeing World's End before the clouds close in (typically by 9am). The Ohiya approach also gives access to Baker's Falls from a different angle and allows longer walks in the surrounding cloud forest.</p>
+        <p>The Horton Plains and surrounding ridge are home to sambar deer, fishing cats, giant squirrels and an exceptional range of highland birds including the dull-blue flycatcher, Sri Lanka white-eye and yellow-eared bulbul. Pre-dawn is the best time for wildlife.</p>
+
+        <AffiliateBox title="Find Eco-Camp Accommodation" description="Luxury tented eco-camps and glamping options near Yala, Knuckles and the Cultural Triangle — the best of the camping experience with creature comforts." buttonText="Find Eco Camps" buttonHref="https://www.booking.com/searchresults.html?ss=Sri+Lanka+eco+camp&nflt=property_type%3D220" variant="hotel" />
+
+        <h2 id="yala">Yala National Park — Buffer Zone Eco-Camps</h2>
+        <figure class="not-prose my-6 rounded-xl overflow-hidden">
+          <img src="/images/yala.webp" alt="Yala National Park jungle landscape and wildlife, Sri Lanka" class="w-full object-cover max-h-72" width="800" height="450" loading="lazy" />
+          <figcaption class="text-xs text-gray-500 mt-2 text-center">Yala's buffer zone eco-camps place you at the edge of one of the world's densest leopard habitats</figcaption>
+        </figure>
+        <p>Camping inside <a href="/places/yala">Yala National Park</a> itself is not available to independent tourists, but the buffer zone around the park — particularly on its northern and western edges — hosts several eco-camps that offer a genuine wilderness sleep without requiring you to organise everything yourself. These are not primitive camps: most have furnished safari tents with proper beds, attached bathrooms and campfire cooking areas. What they offer is the sound of the bush at night — jackals, jungle fowl, the occasional elephant moving through the scrub — and the ability to enter the park at dawn without the long drive from Tissamaharama.</p>
+        <p>The most atmospheric are camps positioned along dry river beds or at forest clearings, where elephant sightings from the camp itself are possible in the early morning and late evening. Look for operators who offer morning and evening guided walks around the buffer zone as part of the stay — these walks, outside the formal park boundary, are often as rewarding as a jeep safari inside.</p>
+        <p><strong>Best for:</strong> First-time campers who want a comfortable introduction to sleeping in the bush; wildlife photography at golden hour.</p>
+
+        <h2 id="wilpattu">Wilpattu National Park — Buffer Zone</h2>
+        <figure class="not-prose my-6 rounded-xl overflow-hidden">
+          <img src="/images/wilpattu.webp" alt="Wilpattu National Park lake and jungle, Sri Lanka" class="w-full object-cover max-h-72" width="800" height="450" loading="lazy" />
+          <figcaption class="text-xs text-gray-500 mt-2 text-center">Wilpattu's famous villus — natural lake basins — attract leopards, sloth bears and elephants at dusk</figcaption>
+        </figure>
+        <p><a href="/places/wilpattu">Wilpattu National Park</a> is Sri Lanka's largest national park and arguably its most atmospheric — a vast, ancient wilderness of scrub jungle, grassland and natural lake basins (called villus) that attract leopards, sloth bears, elephants and an extraordinary range of waterbirds. It reopened to tourists relatively recently after years of closure during the civil war and remains far less visited than Yala, making buffer zone camping here a genuinely off-the-beaten-track experience.</p>
+        <p>A small number of eco-camps and tented lodge operations have opened in the Wilpattu buffer zone in recent years, particularly on the southern and eastern approaches to the park. These tend to be smaller and less polished than the Yala operations, but that is part of the appeal — you are likely to be the only guests, the nights are very quiet, and leopard sightings at the villus are a realistic possibility, particularly at dusk and dawn.</p>
+        <p><strong>Getting there:</strong> Wilpattu is approximately 30km north of Puttalam, accessible by road from Colombo (3 hours) or Anuradhapura (1.5 hours). The remoteness is part of the experience.</p>
+
+        <h2 id="udawalawe">Udawalawe Buffer Zone</h2>
+        <figure class="not-prose my-6 rounded-xl overflow-hidden">
+          <img src="/images/udawalawe.webp" alt="Elephants at Udawalawe National Park reservoir, Sri Lanka" class="w-full object-cover max-h-72" width="800" height="450" loading="lazy" />
+          <figcaption class="text-xs text-gray-500 mt-2 text-center">Udawalawe is home to over 600 wild elephants — buffer zone camps offer close encounters at dusk</figcaption>
+        </figure>
+        <p>Udawalawe National Park is Sri Lanka's best destination for elephant watching — over 600 wild elephants live here year-round, and sightings are virtually guaranteed on any jeep safari. The buffer zone on the park's northern and western edges offers camping experiences close to the reservoir, where elephant herds come to drink at dusk in what can be one of the most spectacular wildlife moments on the island.</p>
+        <p>A few small camps and eco-lodges in the Udawalawe buffer zone offer overnight stays with early-morning safari departures. Because Udawalawe's elephant population is so large and the terrain relatively open, the boundary between camp and wildlife is pleasantly blurry — elephants are often visible from camp without entering the park at all.</p>
+        <p><strong>Best for:</strong> Families and those whose primary goal is elephant watching; Udawalawe is an easier and more family-friendly camping option than Yala or Wilpattu.</p>
+
+        <h2 id="kumana">Kumana National Park</h2>
+        <figure class="not-prose my-6 rounded-xl overflow-hidden">
+          <img src="/images/kumana.webp" alt="Kumana National Park wetland and bird colony, Sri Lanka" class="w-full object-cover max-h-72" width="800" height="450" loading="lazy" />
+          <figcaption class="text-xs text-gray-500 mt-2 text-center">Kumana's mangrove lagoon hosts one of Asia's largest colonial waterbird nesting colonies</figcaption>
+        </figure>
+        <p>Overnight camping inside <a href="/places/kumana">Kumana National Park</a> is the most remote and demanding camping experience in Sri Lanka, and for the right traveller, the most rewarding. Kumana is Sri Lanka's eastern wilderness — a vast stretch of wetland, dry forest and mangrove lagoon on the coast south of Arugam Bay — and the Department of Wildlife Conservation permits overnight camping inside the park with advance permits. This is primitive camping: no facilities, no running water, no electricity.</p>
+        <p>What Kumana offers is extraordinary. The mangrove lagoon at the park's heart hosts one of Asia's most significant colonial waterbird nesting sites, with painted storks, night herons, little cormorants, spoonbills and open-billed storks nesting in their thousands. Leopards, elephants, crocodiles and endemic birds (the Kumana area has exceptional records for Sri Lanka's endemic species) are all present. The sense of solitude — of being genuinely alone in a vast, ancient landscape with no other humans visible — is rare anywhere in the world, let alone on a small and densely populated island.</p>
+        <p><strong>Permits:</strong> Apply to the Department of Wildlife Conservation (DWC) head office in Colombo well in advance — at least four to six weeks. A ranger escort is compulsory for overnight stays. Budget for significant permit and escort fees.</p>
+
+        <h2 id="beach">Beach Camping in Sri Lanka</h2>
+        <figure class="not-prose my-6 rounded-xl overflow-hidden">
+          <img src="/images/arugam-bay.webp" alt="Arugam Bay beach and surf, east coast Sri Lanka" class="w-full object-cover max-h-72" width="800" height="450" loading="lazy" />
+          <figcaption class="text-xs text-gray-500 mt-2 text-center">Arugam Bay and the remote beaches of the east coast are the best base for beach camping in Sri Lanka</figcaption>
+        </figure>
+        <p>Sri Lanka's coastline — particularly the east coast — has stretches of beach that are genuinely remote outside the peak surf and tourist season. Organised beach camping is limited and informal, but several areas offer realistic options for self-sufficient campers.</p>
+        <p><strong>Arugam Bay (East Coast):</strong> The surfing capital of Sri Lanka has a cluster of beach camps and basic eco-retreats south of the main bay — particularly around Pottuvil Lagoon and the beaches leading towards Panama. These are simple operations: a cleared beach area, fire pit, basic toilet facilities. The Pottuvil Lagoon itself backs onto the beach and is one of the best bird-watching sites in Sri Lanka, with flamingos, painted storks and breeding waterbirds visible from camp.</p>
+        <p><strong>Nilaveli (North East Coast):</strong> The long empty beach north of Trincomalee is one of the most beautiful in Sri Lanka — calm, clear water and white sand backed by casuarina trees. A small number of basic beach camps operate here, particularly around the access points to Pigeon Island. The season is May to September (the north-east monsoon makes this coast rough from October to April).</p>
+        <p><strong>Tangalle (South Coast):</strong> The south coast around <a href="/places/tangalle">Tangalle</a> has several small beach camps on the quieter stretches east of the town. These tend to be slightly more organised than the east coast options, with beach-side tent pitches, campfire cooking and snorkelling accessible from shore. Best season: December to April.</p>
+        <p><strong>Important note:</strong> Wild beach camping (pitching a tent anywhere on a public beach) is not officially regulated but should be done with caution — speak to local guesthouses and check current conditions before pitching on an unmanaged stretch of coast.</p>
+
+        <AffiliateBox title="Book a Beach Camp or Coastal Stay" description="Find tented beach camps and eco stays on Sri Lanka's east and south coasts — from Arugam Bay to Tangalle." buttonText="Find Coastal Camps" buttonHref="https://www.booking.com/searchresults.html?ss=Arugam+Bay+Sri+Lanka&nflt=property_type%3D220" variant="hotel" />
+
+        <h2 id="glamping">Glamping vs Wild Camping</h2>
+        <p>Sri Lanka's camping scene splits clearly into two categories, and understanding the difference before you plan your trip avoids disappointment.</p>
+        <p><strong>Glamping (Luxury Tented Camps):</strong> These are permanent or semi-permanent tented lodges — typically safari-style canvas tents on raised wooden platforms, with proper beds, linen, attached bathrooms and often a restaurant or dining area. You are sleeping in a tent, but with hotel-level comfort. These operate at Yala buffer zone, Wilpattu and some highland areas. Expect to pay USD 80–250 per night. Advance booking is required. No camping equipment needed.</p>
+        <p><strong>Eco-Camps (Basic but Organised):</strong> A step down from glamping — shared bathrooms, simpler tents or basic bungalows, camp-fire cooking. These are found around Knuckles, Arugam Bay and the east coast. Expect USD 20–60 per night. Your own sleeping bag may be useful.</p>
+        <p><strong>Wild Camping (Self-Sufficient):</strong> Bringing your own tent, sleeping bag and all equipment, with advance permits, into designated camping areas within national park buffer zones or Forest Department land. This is the hardest to organise, requires the most preparation, and delivers the most genuine wilderness experience. Required for Knuckles multi-day treks and Kumana overnight stays.</p>
+
+        <h2 id="best-time">Best Time to Camp in Sri Lanka</h2>
+        <p>Sri Lanka's two monsoon seasons create clear camping windows — and the right time depends heavily on where you want to camp.</p>
+        <p><strong>December to March (North-East Monsoon ends):</strong> The best all-round camping season. The south and west coasts are dry, the Hill Country is cool and clear, and Yala and Udawalawe are at peak wildlife density as water sources contract. Knuckles is accessible and at its most dramatic. Avoid the north and east coasts (still recovering from the north-east monsoon).</p>
+        <p><strong>April to May (Inter-Monsoon):</strong> An excellent window for east coast camping before the south-west monsoon arrives. Arugam Bay comes alive in May. Temperatures are higher but manageable. Good for Kumana (elephant herds gather at shrinking water sources).</p>
+        <p><strong>May to September (South-West Monsoon):</strong> The west coast, Hill Country and Yala become wetter and more difficult. The east coast is at its best — Arugam Bay, Nilaveli and Kumana are all excellent. Knuckles is more challenging but still doable with a good guide and rain-proof kit.</p>
+        <p><strong>October to November (Inter-Monsoon):</strong> Transitional and unpredictable — both coasts can receive rain. Generally not the best time for camping unless you are very experienced and well-equipped.</p>
+        <p><strong>Highland note:</strong> The Knuckles Range and Horton Plains area can be cold and wet at any time of year — even in the "dry" season, cloud and mist are common at elevation. Always bring waterproofs and a warm layer regardless of the season.</p>
+
+        <h2 id="permits">How to Get Camping Permits</h2>
+        <p>This is the most practically daunting aspect of camping in Sri Lanka, and it pays to start early.</p>
+        <p><strong>National Park Camping (Kumana, Udawalawe buffer zone, Wilpattu buffer zone):</strong> Apply to the Department of Wildlife Conservation (DWC) head office in Battaramulla, Colombo. You will need to submit a written application with your passport details, proposed dates and group size. A local tour operator or guide can handle this process on your behalf, which is strongly recommended. Budget at least four to six weeks lead time, and have backup dates available. Fees vary by park and group size; ranger escort fees are additional.</p>
+        <p><strong>Knuckles Forest Department Permits:</strong> Apply to the Divisional Forest Office in Kandy (located on Rajapihilla Mawatha). Permits cost approximately LKR 500–1,000 per person per night. A registered guide is compulsory. Most Kandy-based trekking operators can arrange permits as part of a package, which is the simplest approach.</p>
+        <p><strong>Eco-Camps and Glamping:</strong> These are privately operated and do not require separate permits — book directly through the operator or via Booking.com or similar. The operator handles all required park and buffer-zone permissions on your behalf.</p>
+        <p><strong>Beach Camping:</strong> No specific national permit is required for camping in non-restricted coastal areas, but check with the local police station or tourism authority if you are planning to camp on a stretch of beach that is not managed by an operator — regulations vary by district.</p>
+
+        <h2 id="gear">Essential Gear for Camping in Sri Lanka</h2>
+        <p>Sri Lanka's climate and terrain require some specific kit choices, particularly if you are planning highland or jungle camping rather than an organised eco-camp.</p>
         <ul>
-          <li>All national park camping requires advance permits from the Department of Wildlife Conservation in Colombo — apply weeks in advance</li>
-          <li>Hire an experienced local guide for any highland or wilderness camping</li>
-          <li>Never camp without proper bear/wildlife precautions in areas with elephants or leopards</li>
-          <li>The Knuckles Range requires Forest Department permits available from the divisional office in Kandy</li>
+          <li><strong>Tent:</strong> A quality three-season tent rated for wind and rain. Sri Lankan weather can surprise even in the dry season — don't bring a festival tent.</li>
+          <li><strong>Sleeping bag:</strong> For highland camping (Knuckles, Horton Plains area), bring a bag rated to at least 5°C. For lowland and beach camping, a lightweight 15°C bag or even a silk liner may be sufficient.</li>
+          <li><strong>Sleeping mat:</strong> Ground insulation is important in highland areas. A self-inflating mat or foam roll is sufficient.</li>
+          <li><strong>Water purification:</strong> Water tablets or a filter is essential for wild camping — don't rely on being able to buy bottled water in remote areas.</li>
+          <li><strong>Head torch:</strong> Essential. Bring spare batteries.</li>
+          <li><strong>Insect repellent:</strong> DEET-based repellent at 30%+ concentration. Leeches are present in jungle and highland areas (particularly in wet season); tuck trousers into socks and apply repellent to boots and socks as well as skin.</li>
+          <li><strong>Waterproofs:</strong> A lightweight rain jacket and waterproof bag cover for your pack. Essential in the Knuckles.</li>
+          <li><strong>First aid kit:</strong> Include antiseptic for leech bites and minor cuts, blister plasters, rehydration sachets and any personal medication.</li>
+          <li><strong>Camp shoes or sandals:</strong> To change into at camp — wearing wet boots all evening is miserable.</li>
+          <li><strong>Dry bags:</strong> For electronics and spare clothing in jungle and highland areas.</li>
+          <li><strong>Wildlife whistle or air horn:</strong> For buffer zone camps near elephants — a deterrent to use if an elephant approaches camp (your guide will advise on protocol).</li>
         </ul>
-        <AffiliateBox title="Find Eco-Camp Accommodation" description="Luxury tented eco-camps and glamping options near Yala, Knuckles and the Cultural Triangle — the best of the camping experience with creature comforts." buttonText="Find Eco Camps" buttonHref="https://www.booking.com/searchresults.html?ss=Yala+Sri+Lanka" variant="hotel" />
+
+        <h2 id="safety">Safety Around Wildlife</h2>
+        <p>Sri Lanka's camping areas bring you into proximity with animals that can be genuinely dangerous. The following is not optional advice.</p>
+        <p><strong>Elephants:</strong> Wild elephants kill more people in Sri Lanka each year than any other animal. Buffer zone camps near Yala, Wilpattu and Udawalawe are in areas where elephants move freely. Always follow your guide or camp host's instructions exactly. Never approach an elephant on foot. If an elephant enters the camp area at night, stay inside your tent (or in a solid structure if available), make no sudden movements and no noise, and wait for it to move on. Do not run — elephants can move at 25km/h and running triggers a chase response.</p>
+        <p><strong>Leopards:</strong> Leopards are present at Yala, Wilpattu, Knuckles and the buffer zones of several other parks. Attacks on humans are extremely rare, but leopards are active at night and should not be approached. Keep food inside sealed containers and never leave food outside your tent overnight — it attracts scavengers, which can in turn attract larger predators.</p>
+        <p><strong>Crocodiles:</strong> Mugger crocodiles are present in rivers, lakes and lagoons throughout the lowland parks and coastal areas. Do not swim in freshwater bodies at national parks or in remote coastal lagoons. Wash at least 10 metres back from any water source if camping near rivers or lakes.</p>
+        <p><strong>Snakes:</strong> Sri Lanka has several highly venomous snake species including the Russell's viper, saw-scaled viper and king cobra. Always check inside shoes before putting them on in the morning. Watch where you step at night. If someone in your group is bitten, immobilise the limb, keep the patient calm and horizontal, and get to a hospital immediately — do not cut, suck or apply a tourniquet. Anti-venom is available at district hospitals.</p>
+        <p><strong>Scorpions:</strong> Common in dry lowland areas. Shake out bedding and clothing before use. Painful but rarely life-threatening for adults.</p>
+
+        <h2 id="tips">Practical Tips</h2>
+        <ul>
+          <li>Apply for national park permits at least four to six weeks in advance — earlier for peak season (December–March)</li>
+          <li>Hire a local guide for any highland or wilderness camping — trail marking is minimal and wildlife knowledge is invaluable</li>
+          <li>Tell someone at your guesthouse or hotel your exact route and expected return time before any wild camping trip</li>
+          <li>Mobile phone coverage is surprisingly good even in remote areas of Sri Lanka, but does not extend to all parts of the Knuckles Range or Kumana interior — download offline maps (Maps.me or OsmAnd work well)</li>
+          <li>Carry enough food for an extra day on any multi-day trek — weather delays are common</li>
+          <li>Practice Leave No Trace: carry all waste out with you; use biodegradable soap at least 50 metres from water sources; do not collect plants or disturb wildlife</li>
+          <li>Camping fires are not permitted in national parks or Forest Department areas; portable camp stoves are acceptable</li>
+          <li>Travel insurance that specifically covers camping, trekking and wildlife areas is strongly recommended</li>
+          <li>The Knuckles Range requires Forest Department permits available from the Divisional Forest Office in Kandy — your guide can arrange these but you should confirm in advance</li>
+          <li>For overnight stays near elephants, keep your camp tidy and never leave food outside — a curious elephant in a camp is extremely dangerous</li>
+        </ul>
+
+        <AffiliateBox title="Book a Guided Camping Experience" description="Join an expert-led camping or overnight trek in Sri Lanka — guides handle permits, equipment logistics and wildlife safety so you can focus on the experience." buttonText="Find Camping Tours" buttonHref="https://www.getyourguide.com/sri-lanka-l976/outdoor-activities-tc67/" variant="tour" />
+
       </article>
       <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
         <div class="plan-visit-box">
           <h3 class="font-serif font-bold text-white text-lg mb-4">Related Activities</h3>
           <div class="space-y-3">
-            {[{"href":"/things-to-do/hiking","label":"Hiking Guide"},{"href":"/places/yala","label":"Yala National Park"},{"href":"/places/kumana","label":"Kumana National Park"},{"href":"/things-to-do","label":"All Activities"}].map(link => (
+            {[
+              {"href":"/things-to-do/hiking","label":"Hiking in Sri Lanka"},
+              {"href":"/places/yala","label":"Yala National Park"},
+              {"href":"/places/kumana","label":"Kumana National Park"},
+              {"href":"/places/wilpattu","label":"Wilpattu National Park"},
+              {"href":"/places/horton-plains","label":"Horton Plains"},
+              {"href":"/places/adams-peak","label":"Adam's Peak"},
+              {"href":"/things-to-do/bird-watching","label":"Bird Watching"},
+              {"href":"/things-to-do","label":"All Activities"}
+            ].map(link => (
               <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
                 <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                 {link.label}
               </a>
             ))}
           </div>
+        </div>
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-base mb-2">Permit Tip</h3>
+          <p class="text-sm text-ceylon-green-800">National park camping permits must be arranged through the DWC head office in Colombo — apply at least 4–6 weeks in advance and have backup dates ready.</p>
+        </div>
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-5">
+          <h3 class="font-serif font-bold text-amber-900 text-base mb-2">Best Season</h3>
+          <p class="text-sm text-amber-800">December–March for south and west; May–September for east coast (Arugam Bay, Nilaveli, Kumana). Highland camping is possible year-round with the right gear.</p>
         </div>
       </aside>
     </div>
