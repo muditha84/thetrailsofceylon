@@ -177,8 +177,8 @@
 
   /* ── Plan Your Visit sidebar ─────────────── */
   .plan-visit-box {
-    background: linear-gradient(135deg, #f0f7f0 0%, #fdf8ed 100%);
-    border: 1px solid #bcdcbc;
+    background: linear-gradient(135deg, #1a4a1a 0%, #245724 100%);
+    border: 1px solid #3d8b3d;
     border-radius: 1rem;
     padding: 1.25rem;
   }
