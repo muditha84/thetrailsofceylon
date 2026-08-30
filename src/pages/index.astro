@@ -246,6 +246,24 @@ const blogPosts = [
                 Explore Destinations
               </a>
             </div>
+
+            <!-- Site Search -->
+            <div class="mt-6 relative max-w-lg" id="search-wrapper">
+              <div class="flex items-center gap-3 bg-white/15 hover:bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl px-4 py-3.5 transition-colors focus-within:bg-white/25 focus-within:border-white/50">
+                <svg class="w-5 h-5 text-white/70 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+                <input
+                  type="text"
+                  id="site-search"
+                  placeholder="Search destinations, activities &amp; guides…"
+                  autocomplete="off"
+                  class="flex-1 bg-transparent text-white placeholder:text-white/55 outline-none text-sm min-w-0"
+                />
+                <span id="search-clear" class="hidden cursor-pointer text-white/50 hover:text-white text-lg leading-none select-none">✕</span>
+              </div>
+              <div id="search-results" class="hidden absolute top-full mt-2 left-0 right-0 bg-white rounded-2xl shadow-2xl overflow-hidden z-50 max-h-[22rem] overflow-y-auto border border-gray-100"></div>
+            </div>
           </div>
         </div>
 
@@ -580,4 +598,169 @@ const blogPosts = [
   container?.addEventListener('mouseleave', start);
 
   start();
+</script>
+
+<script>
+// ── Site Search ──
+const searchIndex = [
+  // Places
+  { t: 'Sigiriya Rock Fortress', h: '/places/sigiriya', c: 'Place', k: 'lion rock ancient kingdom climb frescoes cultural triangle unesco' },
+  { t: 'Ella', h: '/places/ella', c: 'Place', k: 'hill country nine arch bridge ella rock little adams peak tea mist' },
+  { t: 'Galle Fort', h: '/places/galle', c: 'Place', k: 'dutch colonial fort southern coast ramparts boutiques unesco heritage' },
+  { t: 'Kandy', h: '/places/kandy', c: 'Place', k: 'temple tooth relic cultural capital lake botanical gardens peradeniya' },
+  { t: 'Yala National Park', h: '/places/yala', c: 'Place', k: 'safari leopard elephant wildlife jungle southern sri lanka' },
+  { t: 'Mirissa Beach', h: '/places/mirissa', c: 'Place', k: 'beach whale watching sunset southern coast swimming' },
+  { t: 'Arugam Bay', h: '/places/arugam-bay', c: 'Place', k: 'surf surfing east coast beach lagoon pottuvil' },
+  { t: 'Trincomalee', h: '/places/trincomalee', c: 'Place', k: 'north east coast beach harbour fort dutch bay' },
+  { t: 'Nilaveli Beach', h: '/places/nilaveli', c: 'Place', k: 'beach east coast snorkelling pigeon island trincomalee' },
+  { t: 'Hikkaduwa', h: '/places/hikkaduwa', c: 'Place', k: 'beach reef snorkelling coral surf south west coast' },
+  { t: 'Unawatuna', h: '/places/unawatuna', c: 'Place', k: 'beach south coast galle swimming snorkelling' },
+  { t: 'Tangalle', h: '/places/tangalle', c: 'Place', k: 'beach south coast turtle nesting quiet remote' },
+  { t: 'Weligama', h: '/places/weligama', c: 'Place', k: 'surf surfing learn beginner south coast beach stilt fishing' },
+  { t: 'Hiriketiya', h: '/places/hiriketiya', c: 'Place', k: 'beach horseshoe cove surf south coast boutique' },
+  { t: 'Bentota', h: '/places/bentota', c: 'Place', k: 'beach river lagoon water sports south west coast' },
+  { t: 'Negombo', h: '/places/negombo', c: 'Place', k: 'beach airport lagoon fish market north colombo' },
+  { t: 'Colombo', h: '/places/colombo', c: 'Place', k: 'capital city fort galle face green gangaramaya shopping food' },
+  { t: 'Anuradhapura', h: '/places/anuradhapura', c: 'Place', k: 'ancient kingdom sacred city bodhi tree dagoba stupa ruins north' },
+  { t: 'Polonnaruwa', h: '/places/polonnaruwa', c: 'Place', k: 'ancient ruins medieval kingdom cultural triangle unesco cycling' },
+  { t: 'Dambulla Cave Temple', h: '/places/dambulla', c: 'Place', k: 'cave temple buddha statues paintings rock cultural triangle unesco' },
+  { t: 'Minneriya National Park', h: '/places/minneriya', c: 'Place', k: 'elephant gathering safari wildlife lake cultural triangle' },
+  { t: 'Udawalawe National Park', h: '/places/udawalawe', c: 'Place', k: 'elephant safari wildlife south buffalo reservoir' },
+  { t: 'Wilpattu National Park', h: '/places/wilpattu', c: 'Place', k: 'leopard sloth bear safari wildlife north west willu lake jungle' },
+  { t: 'Kumana National Park', h: '/places/kumana', c: 'Place', k: 'birds bird watching wetland east coast remote camping mangrove' },
+  { t: 'Bundala National Park', h: '/places/bundala', c: 'Place', k: 'birds flamingo south coast ramsar wetland' },
+  { t: 'Horton Plains & World\'s End', h: '/places/horton-plains', c: 'Place', k: 'worlds end cliff highland plateau walk hike plateau deer' },
+  { t: 'World\'s End', h: '/places/worlds-end', c: 'Place', k: 'horton plains cliff escarpment highland view hike' },
+  { t: 'Adam\'s Peak', h: '/places/adams-peak', c: 'Place', k: 'sri pada pilgrimage climb steps sacred footprint sunrise highland' },
+  { t: 'Ambuluwawa', h: '/places/ambuluwawa', c: 'Place', k: 'tower spiral staircase view kandy hill' },
+  { t: 'Ravana Falls', h: '/places/ravana-falls', c: 'Place', k: 'waterfall ella ravana mythical swimming' },
+  { t: 'Diyaluma Falls', h: '/places/diyaluma-falls', c: 'Place', k: 'waterfall highest sri lanka swimming pool natural ella ella' },
+  { t: 'Nine Arch Bridge', h: '/places/nine-arch-bridge', c: 'Place', k: 'ella train bridge colonial arch viaduct photography' },
+  { t: 'Pinnawala Elephant Orphanage', h: '/places/pinnawala', c: 'Place', k: 'elephant orphanage baby feeding bathing river kandy' },
+  { t: 'Gangaramaya Temple', h: '/places/gangaramaya-temple', c: 'Place', k: 'colombo buddhist temple lake beira perahera' },
+  { t: 'Galle Face Green', h: '/places/galle-face-green', c: 'Place', k: 'colombo promenade kite flying sunset ocean seafront' },
+  { t: 'Pigeon Island', h: '/places/pigeon-island', c: 'Place', k: 'snorkelling coral reef nilaveli trincomalee marine park' },
+  { t: 'Delft Island', h: '/places/delft-island', c: 'Place', k: 'jaffna north wild ponies dutch ruins remote' },
+  { t: 'Mannar', h: '/places/mannar', c: 'Place', k: 'north baobab tree adam\'s bridge flamingo birds remote' },
+  { t: 'Jaffna', h: '/places/jaffna', c: 'Place', k: 'north peninsula tamil culture fort dutch cuisine' },
+  { t: 'Batticaloa', h: '/places/batticaloa', c: 'Place', k: 'east coast lagoon singing fish fort dutch' },
+  { t: 'Kalpitiya', h: '/places/kalpitiya', c: 'Place', k: 'kitesurfing dolphins north west lagoon whale' },
+  { t: 'Nuwara Eliya', h: '/places/nuwara-eliya', c: 'Place', k: 'little england tea colonial hill country cool horse racing' },
+  { t: 'Matara', h: '/places/matara', c: 'Place', k: 'south coast fort dutch city beach surf' },
+  { t: 'Dikwella', h: '/places/dikwella', c: 'Place', k: 'south coast beach blow hole hiriketiya' },
+  { t: 'Uppuveli', h: '/places/uppuveli', c: 'Place', k: 'beach north east trincomalee quiet calm' },
+  { t: 'Wasgamuwa National Park', h: '/places/wasgamuwa', c: 'Place', k: 'elephant safari wildlife river off beaten track' },
+  { t: 'Sinharaja Forest Reserve', h: '/places/sinharaja', c: 'Place', k: 'rainforest unesco endemic birds langur wildlife jungle leech hiking trekking' },
+  { t: 'Knuckles Mountain Range', h: '/places/knuckles', c: 'Place', k: 'trekking hiking camping cloud forest grassland patana kandy endemic birds corbetts gap' },
+  // Things to do
+  { t: 'Hiking in Sri Lanka', h: '/things-to-do/hiking', c: 'Activity', k: 'hike walk trail ella rock adams peak horton plains knuckles' },
+  { t: 'Camping in Sri Lanka', h: '/things-to-do/camping', c: 'Activity', k: 'camp tent wild glamping knuckles yala kumana beach overnight' },
+  { t: 'Surfing in Sri Lanka', h: '/things-to-do/surfing', c: 'Activity', k: 'surf arugam bay weligama hikkaduwa waves beginner advanced' },
+  { t: 'Bird Watching', h: '/things-to-do/bird-watching', c: 'Activity', k: 'birds endemic sinharaja kumana bundala birdwatching wildlife' },
+  { t: 'Whale Watching', h: '/things-to-do/whale-watching', c: 'Activity', k: 'whale blue whale mirissa kalpitiya boat ocean' },
+  { t: 'Wildlife Safaris', h: '/things-to-do/wildlife-safaris', c: 'Activity', k: 'safari yala udawalawe minneriya leopard elephant jeep' },
+  { t: 'Scenic Train Rides', h: '/things-to-do/train-rides', c: 'Activity', k: 'train kandy ella scenic railway highland tea estates journey' },
+  { t: 'Tea Plantation Tours', h: '/things-to-do/tea-plantation-tours', c: 'Activity', k: 'tea factory tour nuwara eliya hill country plantation ceylon' },
+  { t: 'Cooking Classes', h: '/things-to-do/cooking-classes', c: 'Activity', k: 'cooking class sri lankan food curry spices local chef' },
+  { t: 'Scuba Diving', h: '/things-to-do/scuba-diving', c: 'Activity', k: 'diving dive coral reef hikkaduwa pigeon island trincomalee' },
+  { t: 'Snorkelling', h: '/things-to-do/snorkelling', c: 'Activity', k: 'snorkel reef pigeon island hikkaduwa coral fish' },
+  { t: 'Kitesurfing', h: '/things-to-do/kitesurfing', c: 'Activity', k: 'kitesurf kite kalpitiya wind lagoon north west' },
+  { t: 'White Water Rafting', h: '/things-to-do/white-water-rafting', c: 'Activity', k: 'rafting kitulgala rapids adventure river kelani' },
+  { t: 'Hot Air Ballooning', h: '/things-to-do/hot-air-ballooning', c: 'Activity', k: 'balloon hot air dambulla sigiriya cultural triangle sunrise' },
+  { t: 'Turtle Watching', h: '/things-to-do/turtle-watching', c: 'Activity', k: 'turtle sea turtle nesting beach south coast watch' },
+  { t: 'Dolphin Watching', h: '/things-to-do/dolphin-watching', c: 'Activity', k: 'dolphin spinner dolphin kalpitiya trincomalee boat' },
+  { t: 'Deep Sea Fishing', h: '/things-to-do/deep-sea-fishing', c: 'Activity', k: 'fishing deep sea boat ocean sport' },
+  { t: 'Ayurveda & Wellness', h: '/things-to-do/ayurveda', c: 'Activity', k: 'ayurveda spa massage wellness retreat health herbal' },
+  { t: 'Rock Climbing', h: '/things-to-do/rock-climbing', c: 'Activity', k: 'rock climbing boulder ella sigiriya sport adventure' },
+  { t: 'Cycling in Sri Lanka', h: '/things-to-do/cycling', c: 'Activity', k: 'cycling bike bicycle ride cultural triangle polonnaruwa' },
+  { t: 'Waterfall Hiking', h: '/things-to-do/waterfall-hiking', c: 'Activity', k: 'waterfall hike diyaluma ravana bambarakanda ella' },
+  { t: 'Stilt Fishing', h: '/things-to-do/stilt-fishing', c: 'Activity', k: 'stilt fishing galle koggala traditional south coast photo' },
+  // Guides
+  { t: 'Sri Lanka ETA & Visa Guide', h: '/guides/sri-lanka-eta-visa-guide', c: 'Guide', k: 'eta visa tourist authorization apply online how cost fee extension' },
+  { t: 'Best Time to Visit Sri Lanka', h: '/guides/best-time-to-visit', c: 'Guide', k: 'best time season monsoon weather when to go visit month' },
+  { t: 'Getting Around Sri Lanka', h: '/guides/getting-around-sri-lanka', c: 'Guide', k: 'transport bus train tuk tuk taxi car hire getting around travel' },
+  { t: 'Sri Lanka Budget Guide', h: '/guides/sri-lanka-budget-guide', c: 'Guide', k: 'budget cheap cost money travel cheap backpacker save' },
+  { t: '2-Week Sri Lanka Itinerary', h: '/guides/sri-lanka-itinerary-2-weeks', c: 'Guide', k: 'itinerary 2 weeks two week route plan trip' },
+  { t: '1-Week Sri Lanka Itinerary', h: '/guides/sri-lanka-itinerary-1-week', c: 'Guide', k: 'itinerary 1 week one week route plan short trip' },
+  { t: '1-Month Sri Lanka Itinerary', h: '/guides/sri-lanka-itinerary-1-month', c: 'Guide', k: 'itinerary 1 month one month long trip route plan' },
+  { t: 'Sri Lanka Safety Guide', h: '/guides/sri-lanka-safety-guide', c: 'Guide', k: 'safety safe tips travel health risk scam' },
+  { t: 'What to Pack for Sri Lanka', h: '/guides/what-to-pack-sri-lanka', c: 'Guide', k: 'packing list what to bring clothes kit gear luggage' },
+  { t: 'Sri Lanka Food Guide', h: '/guides/sri-lanka-food-guide', c: 'Guide', k: 'food guide eat cuisine rice curry hopper kottu' },
+  // Blog
+  { t: 'The Perfect 2-Week Itinerary', h: '/blog/2-weeks-in-sri-lanka-itinerary', c: 'Blog', k: 'itinerary 2 weeks two week route best places' },
+  { t: 'Sri Lanka\'s Best Beaches', h: '/blog/best-beaches-sri-lanka', c: 'Blog', k: 'beaches best top mirissa unawatuna hikkaduwa arugam nilaveli' },
+  { t: 'Sri Lanka on a Budget', h: '/blog/sri-lanka-budget-travel', c: 'Blog', k: 'budget cheap travel backpacker save money tips' },
+  { t: 'Sigiriya: Complete Visitor Guide', h: '/blog/sigiriya-rock-fortress-guide', c: 'Blog', k: 'sigiriya lion rock tickets tips climbing frescoes' },
+  { t: 'Ella Travel Guide', h: '/blog/ella-travel-guide', c: 'Blog', k: 'ella hill country nine arch bridge rock hike cafes' },
+  { t: 'Sri Lankan Food Guide', h: '/blog/sri-lanka-food-guide', c: 'Blog', k: 'food eat rice curry hopper kottu street food cuisine' },
+  { t: 'Adam\'s Peak Hiking Guide', h: '/blog/adams-peak-hiking-guide', c: 'Blog', k: 'adams peak climb hike steps sacred sunrise pilgrimage' },
+  { t: 'Ella Rock Hike Guide', h: '/blog/ella-rock-hike', c: 'Blog', k: 'ella rock hike trail tea estate views hill country' },
+  { t: 'Best Time to Visit Sri Lanka', h: '/blog/best-time-visit-sri-lanka', c: 'Blog', k: 'best time season monsoon weather when to visit month' },
+  { t: 'Colombo City Guide', h: '/blog/colombo-city-guide', c: 'Blog', k: 'colombo city guide what to do see eat fort pettah' },
+  { t: 'Day Trips from Colombo', h: '/blog/colombo-day-trips', c: 'Blog', k: 'day trip colombo kandy pinnawala galle sigiriya dambulla negombo' },
+  { t: 'Hikkaduwa Travel Guide', h: '/blog/hikkaduwa-travel-guide', c: 'Blog', k: 'hikkaduwa beach reef surf snorkel south west coast' },
+  { t: 'Kalpitiya Kitesurfing Guide', h: '/blog/kalpitiya-kitesurfing', c: 'Blog', k: 'kalpitiya kitesurf kite wind lagoon north west' },
+  { t: 'Pigeon Island Snorkelling', h: '/blog/pigeon-island-snorkelling', c: 'Blog', k: 'pigeon island snorkel coral reef nilaveli trincomalee' },
+  { t: 'Sri Lanka Family Travel Guide', h: '/blog/sri-lanka-family-travel', c: 'Blog', k: 'family kids children travel tips safe activities' },
+  { t: 'Sri Lanka Honeymoon Guide', h: '/blog/sri-lanka-honeymoon-guide', c: 'Blog', k: 'honeymoon romantic couples luxury beach villa' },
+  { t: 'Sri Lanka Photography Guide', h: '/blog/sri-lanka-photography-guide', c: 'Blog', k: 'photography photo spots instagram locations tips camera' },
+  { t: 'Sri Lanka Waterfalls Guide', h: '/blog/sri-lanka-waterfalls', c: 'Blog', k: 'waterfalls diyaluma ravana bambarakanda laxapana swimming' },
+  { t: 'Turtle Watching in Sri Lanka', h: '/blog/turtle-watching-sri-lanka', c: 'Blog', k: 'turtle sea turtle watching nesting kosgoda beach' },
+];
+
+const typeColors: Record<string, string> = {
+  Place:    'bg-ceylon-green-100 text-ceylon-green-800',
+  Activity: 'bg-amber-100 text-amber-800',
+  Guide:    'bg-blue-100 text-blue-800',
+  Blog:     'bg-purple-100 text-purple-800',
+};
+
+const input   = document.getElementById('site-search') as HTMLInputElement;
+const results = document.getElementById('search-results') as HTMLDivElement;
+const clear   = document.getElementById('search-clear') as HTMLSpanElement;
+const wrapper = document.getElementById('search-wrapper') as HTMLDivElement;
+
+function doSearch(q: string) {
+  const query = q.toLowerCase().trim();
+  if (query.length < 2) { hide(); return; }
+  const matches = searchIndex.filter(item =>
+    (item.t + ' ' + item.k).toLowerCase().includes(query)
+  ).slice(0, 7);
+  if (!matches.length) {
+    results.innerHTML = `<div class="px-5 py-4 text-sm text-gray-400 text-center">No results for "${q}"</div>`;
+  } else {
+    results.innerHTML = matches.map(m => `
+      <a href="${m.h}" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-0 group">
+        <div class="flex-1 min-w-0">
+          <div class="font-semibold text-gray-900 text-sm truncate group-hover:text-ceylon-green-700">${m.t}</div>
+        </div>
+        <span class="text-xs font-medium px-2 py-0.5 rounded-full flex-shrink-0 ${typeColors[m.c] ?? 'bg-gray-100 text-gray-600'}">${m.c}</span>
+        <svg class="w-4 h-4 text-gray-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+    `).join('');
+  }
+  results.classList.remove('hidden');
+}
+
+function hide() { results.classList.add('hidden'); }
+
+input?.addEventListener('input', () => {
+  const q = input.value;
+  clear.classList.toggle('hidden', !q);
+  doSearch(q);
+});
+
+input?.addEventListener('keydown', (e: KeyboardEvent) => {
+  if (e.key === 'Escape') { input.value = ''; clear.classList.add('hidden'); hide(); }
+  if (e.key === 'Enter') {
+    const first = results.querySelector('a') as HTMLAnchorElement;
+    if (first) window.location.href = first.getAttribute('href')!;
+  }
+});
+
+clear?.addEventListener('click', () => { input.value = ''; clear.classList.add('hidden'); hide(); input.focus(); });
+
+document.addEventListener('click', (e) => {
+  if (!wrapper?.contains(e.target as Node)) hide();
+});
 </script>
