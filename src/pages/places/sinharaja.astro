@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Sinharaja Forest Reserve, Sri Lanka: A Complete Visitor Guide | The Trails of Ceylon"
+  description="Sinharaja is Sri Lanka's last viable primary rainforest and a UNESCO World Heritage Site — home to endemic birds, purple-faced langurs and extraordinary biodiversity. A complete guide to visiting."
+  type="article"
+  publishDate="2025-04-10"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/bird-watching.webp" alt="Endemic birds in Sinharaja rainforest, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <span class="text-white">Sinharaja Forest Reserve</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Sinharaja Forest Reserve</h1>
+        <p class="text-white/80 mt-2">Sabaragamuwa &amp; Southern Province &bull; UNESCO World Heritage Site</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2>Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Province','Sabaragamuwa / Southern'],
+              ['Size','11,187 hectares'],
+              ['UNESCO Status','World Heritage Site (1988)'],
+              ['Best For','Endemic birds, rainforest'],
+              ['Best Season','Jan–Apr, Aug–Sep'],
+              ['From Colombo','~3–3.5 hours'],
+            ].map(([k,v]) => (<><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>))}
+          </dl>
+        </div>
+
+        <p>Sinharaja Forest Reserve is Sri Lanka's most important patch of wilderness — the last substantial area of primary lowland rainforest remaining on the island. It was declared a UNESCO World Heritage Site in 1988 in recognition of its extraordinary biodiversity: over 60% of the trees found here are endemic to Sri Lanka and found nowhere else on Earth, and the forest harbours the highest concentration of endemic bird species in the country. For serious bird watchers, Sinharaja is one of the most rewarding destinations in Asia. For everyone else, it is simply one of the most atmospheric places in Sri Lanka — a place where the forest closes around you and the noise of the outside world disappears entirely.</p>
+
+        <h2>Why Sinharaja Matters</h2>
+        <p>Sri Lanka was once almost entirely forested. Centuries of settlement, agriculture, and colonial-era plantation development stripped the lowland rainforest to a fraction of its original extent. Sinharaja is what remains — a 11,187-hectare remnant of what the island's interior once looked like everywhere. The forest is not simply valuable as a tourist attraction: it is a critical watershed, supplying water to 12 rivers and streams that serve communities across the south and southwest of the island. It is also a living seed bank for plant species that exist nowhere else.</p>
+        <p>The name Sinharaja means "Lion King" in Sinhala — a reference to the legendary founding king of the Sinhalese people, whose kingdom, according to myth, began in this forest. The reserve's boundaries have been contested and encroached upon repeatedly over the past century, but it remains legally protected and a Sri Lanka Forest Department permit is required to enter.</p>
+
+        <h2>Birds of Sinharaja</h2>
+        <p>Sinharaja is the finest bird watching destination in Sri Lanka and one of the top sites in South Asia. The forest is home to 147 bird species of which 26 are endemic to Sri Lanka — and remarkably, most of these endemics can be seen in a single morning visit with a good guide. The bird diversity is concentrated partly because of a remarkable local behaviour: Sinharaja's endemic species form large mixed-species feeding flocks that move through the forest together, sometimes containing 10–15 different species at once. Following one of these flocks through the undergrowth is one of the great wildlife experiences in Sri Lanka.</p>
+        <p>Key species to look for include the Sri Lanka blue magpie (one of the most striking birds in Asia), the red-faced malkoha, the green-billed coucal, the chestnut-backed owlet, the Sri Lanka spurfowl, the ashy-headed laughingthrush, and the white-faced starling. The Sri Lanka crested drongo often leads the feeding flocks, acting as a sentinel. Come at dawn — activity drops significantly after 9am as the forest heats up.</p>
+
+        <h2>Other Wildlife</h2>
+        <p>Beyond birds, Sinharaja has exceptional reptile diversity — 45 species of reptile are found here, of which many are endemic, including several species of gecko, skink and snake discovered only in the past few decades. The purple-faced langur monkey is frequently seen in the canopy — noisy, acrobatic and curious about visitors. The rare and shy red slender loris (a small nocturnal primate) lives in Sinharaja but is almost never seen without a specialist night tour. Leopards and elephants are technically present in the peripheral buffer zone but sightings are extremely rare.</p>
+        <p>The forest floor is extraordinarily rich in invertebrates — giant millipedes, land crabs, extraordinary stick insects, and (in wet season) leeches in significant numbers. Leech socks and DEET applied to footwear are essential. Butterflies are abundant throughout: Sinharaja has 21 endemic butterfly species.</p>
+
+        <h2>Trekking in Sinharaja</h2>
+        <p>All visitors to Sinharaja must be accompanied by a registered guide — solo entry is not permitted. This is both a conservation measure and a practical necessity: the forest has no marked trails and orientation is extremely difficult without experience. Guides are available at the main entry points (Kudawa, Deniyaya and Pitadeniya) and must be booked in advance, particularly at weekends when demand from domestic visitors is high.</p>
+        <p>The most common trek follows the trail from the Kudawa entrance to the Moulawella Peak — a half-day walk of about 3–4 hours that passes through several forest types and offers the best chance of encountering the endemic bird flocks. A longer full-day route continues to the Sinhagala Peak (742 metres), the highest point within the reserve, with panoramic views across the forest canopy and surrounding hills when visibility is clear. Both routes require a reasonable level of fitness — the terrain is uneven, often muddy, and steep in places.</p>
+        <p>There are no facilities inside the forest — no shops, toilets or rest areas. Bring everything you need: water (at least 2 litres per person), snacks, rain gear (even in the dry season the forest creates its own microclimate and showers are common), and sturdy closed-toe shoes.</p>
+
+        <AffiliateBox title="Book a Sinharaja Bird Watching Tour" description="Expert birding guides can dramatically increase your sightings in Sinharaja — local knowledge of the endemic flocks' movements is invaluable." buttonText="Find Birding Tours" buttonHref="https://www.getyourguide.com/sri-lanka-l976/nature-and-wildlife-tc239/" variant="tour" />
+
+        <h2>Entry Permits and Fees</h2>
+        <p>Entry to Sinharaja requires a permit from the Forest Department, payable at the entrance. Fees as of 2025:</p>
+        <ul>
+          <li><strong>Foreign adults:</strong> approximately LKR 1,500–2,000 per person</li>
+          <li><strong>Foreign children:</strong> approximately LKR 750–1,000</li>
+          <li><strong>Guide fee:</strong> approximately LKR 2,000–3,500 per group per half-day (mandatory)</li>
+          <li><strong>Video camera fee:</strong> additional charge applies if bringing professional equipment</li>
+        </ul>
+        <p>Fees are subject to change — check with your accommodation or the Forest Department (forestdept.gov.lk) for current rates. Weekends and public holidays see the highest visitor numbers; weekday visits are quieter and wildlife encounters tend to be better.</p>
+
+        <h2>Best Time to Visit</h2>
+        <p>Sinharaja has two distinct dry seasons: <strong>January to April</strong> and <strong>August to September</strong>. These are the best times to visit — trails are more manageable, leeches less abundant, and bird activity at its highest. The inter-monsoon periods (May and October–November) can bring heavy rain that makes the forest trails slippery and the experience uncomfortable.</p>
+        <p>That said, Sinharaja receives rain year-round — it is a rainforest, and even in the dry season morning mist and afternoon showers are common. The forest after rain is extraordinarily beautiful, with the canopy dripping and light filtering through in golden columns. Many serious bird watchers prefer the damp conditions as birds are more active after rain.</p>
+
+        <h2>Getting to Sinharaja</h2>
+        <p>Sinharaja has three main entrance points:</p>
+        <ul>
+          <li><strong>Kudawa (north):</strong> The most popular entrance, accessed from Weddagala village near Kalawana. From Colombo: take the highway south toward Ratnapura, then Kalawana. Journey time: 3–3.5 hours. This is the main entrance used by most tour operators.</li>
+          <li><strong>Deniyaya (south):</strong> The southern entrance, accessed from Deniyaya town on the Matara–Rakwana road. More convenient if approaching from Galle or Matara (approximately 2 hours from Galle). Fewer visitors use this entrance, making it a quieter option.</li>
+          <li><strong>Pitadeniya:</strong> A less-used western entrance, accessible from the Neluwa–Udugama road. Best for those with a private vehicle.</li>
+        </ul>
+        <p>There is no direct public bus to the Kudawa entrance — the nearest bus stop is at Weddagala, from which you will need a three-wheeler. Most visitors arrive by private vehicle or as part of an organised tour.</p>
+
+        <h2>Where to Stay Near Sinharaja</h2>
+        <p>Accommodation near Sinharaja is limited. The village of Kudawa has a few basic guesthouses and homestays — staying here allows an early start (before 6am) that is essential for the best bird watching. The Forest Department also operates a basic rest house near the Kudawa entrance which can be booked in advance through their Colombo office. In Deniyaya, a small number of guesthouses cater to visitors approaching from the south. Most higher-end accommodation options require a 45–60 minute drive from the park boundary.</p>
+
+        <AffiliateBox title="Find Accommodation Near Sinharaja" description="Book guesthouses and eco-lodges near Sinharaja and the surrounding rainforest area." buttonText="Search Accommodation" buttonHref="https://www.booking.com/searchresults.html?ss=Kalawana+Sri+Lanka" variant="hotel" />
+
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3">
+            {[
+              {href:'/things-to-do/bird-watching', label:'Bird Watching Guide'},
+              {href:'/places/horton-plains', label:'Horton Plains'},
+              {href:'/places/knuckles', label:'Knuckles Range'},
+              {href:'/things-to-do/hiking', label:'Hiking in Sri Lanka'},
+              {href:'/things-to-do/camping', label:'Camping in Sri Lanka'},
+              {href:'/places', label:'All Destinations'},
+            ].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-5">
+          <h3 class="font-serif font-bold text-amber-900 text-base mb-2">Leech Warning</h3>
+          <p class="text-sm text-amber-800">Leeches are abundant year-round, particularly after rain. Wear leech socks, tuck trousers in, and apply DEET to footwear. They are harmless but unpleasant.</p>
+        </div>
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-base mb-2">Bird Tip</h3>
+          <p class="text-sm text-ceylon-green-800">Arrive at the entrance no later than 6am. The endemic bird flocks are most active in the first two hours after dawn — activity drops sharply as the day warms up.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

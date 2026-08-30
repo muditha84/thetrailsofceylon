@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Knuckles Mountain Range, Sri Lanka: Trekking, Wildlife & Travel Guide | The Trails of Ceylon"
+  description="The Knuckles Conservation Forest is Sri Lanka's finest trekking destination — a UNESCO buffer zone of cloud forest, grassland and mountain peaks northeast of Kandy. A complete visitor guide."
+  type="article"
+  publishDate="2025-04-12"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/waterfall-hiking.webp" alt="Trekking through the Knuckles Mountain Range, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <span class="text-white">Knuckles Mountain Range</span>
+        </nav>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Knuckles Mountain Range</h1>
+        <p class="text-white/80 mt-2">Central Province &bull; UNESCO World Heritage Buffer Zone</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2>Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Province','Central Province'],
+              ['Highest Peak','Gombaniya, 1,906m'],
+              ['UNESCO Status','World Heritage buffer zone'],
+              ['Best For','Trekking, camping, birds'],
+              ['Best Season','Dec–Apr'],
+              ['From Kandy','~35km (1–1.5 hrs)'],
+            ].map(([k,v]) => (<><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>))}
+          </dl>
+        </div>
+
+        <p>The Knuckles Mountain Range is Sri Lanka's most rewarding multi-day trekking destination — a wild, complex landscape of cloud forest, montane jungle, open grassland (patana), cascading waterfalls and dramatic peaks northeast of <a href="/places/kandy">Kandy</a>. Named for the series of recumbent peaks that resemble a clenched fist when seen from Kandy town, the range rises to 1,906 metres at Gombaniya Peak and forms part of the Central Highlands UNESCO World Heritage Site. It is less visited than most of Sri Lanka's major attractions, which is precisely why serious hikers and naturalists love it.</p>
+
+        <h2>The Landscape</h2>
+        <p>What makes the Knuckles exceptional is its diversity of ecosystems compressed into a relatively small area. At lower elevations, the range is covered in dense wet-zone jungle — giant trees, tangled undergrowth, streams and waterfalls. As you climb, the jungle gives way to cloud forest, where trees are draped in moss and the air is permanently damp and cool. Higher still, the cloud forest opens into patana grassland — wide, windswept meadows with extraordinary views across multiple ridgelines and, on clear days, across to the Central Highlands and the distant peak of Pidurutalagala.</p>
+        <p>The range includes several distinct ecological zones: the western slopes receive heavy rainfall from the south-west monsoon and support dense wet-zone forest; the eastern slopes lie in the rain shadow and are considerably drier, with scrubland and semi-arid vegetation. This diversity of habitats is one reason the biodiversity here is so high.</p>
+
+        <h2>Wildlife</h2>
+        <p>The Knuckles Conservation Forest is one of the most biodiverse areas in Sri Lanka. It supports 34 endemic bird species — more than any other single site on the island outside Sinharaja. Look for the Sri Lanka white-eye, dull-blue flycatcher, yellow-eared bulbul, Sri Lanka bush warbler and Legge's flowerpecker in the highland zones. The forest also has Sri Lankan leopards (very rarely seen), purple-faced langur monkeys, giant squirrels, and porcupines. The reptile fauna is remarkable — several species of lizard and gecko found here are found nowhere else on Earth, including the distinctive Calotes liolepis agamid lizard of the highland grasslands.</p>
+        <p>The Knuckles streams support endemic freshwater fish including the Knuckles rock gudgeon, and the wet-zone forest is home to land leeches (particularly in the wet season — wear leech socks), land crabs and extraordinary insect diversity including numerous endemic butterfly species.</p>
+
+        <h2>Trekking Routes</h2>
+        <p>The Knuckles has a network of trails ranging from half-day walks to four-day traverses. A guide is strongly recommended for all routes — the trails are not clearly marked, weather can change rapidly, and getting lost in the dense cloud forest is a real possibility. Most Kandy-based trekking operators offer guided day and multi-day Knuckles treks.</p>
+
+        <h3>Pitawala Pathana — Mini World's End (1 day)</h3>
+        <p>The most popular day trek in the Knuckles. The trail starts near Rattota and climbs through jungle to the open grassland plateau of Pitawala Pathana, then continues to the viewpoint known as Mini World's End — a cliff edge with views down to the lowlands below, reminiscent of the famous World's End at Horton Plains but far less crowded. The full day trek covers approximately 12km and requires a moderate level of fitness. The plateau section offers excellent bird watching for highland species.</p>
+
+        <h3>Corbett's Gap Circuit (1–2 days)</h3>
+        <p>Corbett's Gap is the main pass through the Knuckles, connecting the Kandy side with the drier Mahaweli valley. The circuit trek from Corbett's Gap takes in cloud forest, grassland and viewpoints on both sides of the range. It can be done as a long day or as a comfortable overnight with camping on the plateau. This is one of the most scenic routes in the range and offers the best chance of seeing the endemic bird flocks.</p>
+
+        <h3>The Knuckles Traverse (3–4 days)</h3>
+        <p>The full traverse of the Knuckles range — crossing from one side to the other via the high peaks — is one of the most challenging and rewarding multi-day hikes in Sri Lanka. Routes vary but typically cover 30–40km over three to four days, with camping on the plateau each night. This requires experience, good fitness, full camping equipment, and an excellent guide. The reward is extraordinary: you pass through every ecosystem the range has to offer and spend nights at elevation seeing the Milky Way above the grassland.</p>
+
+        <AffiliateBox title="Book a Knuckles Trekking Tour" description="Expert local guides know the unmarked trails, the best viewpoints and the endemic wildlife of the Knuckles Range — book a guided trek from Kandy." buttonText="Find Trekking Tours" buttonHref="https://www.getyourguide.com/kandy-l967/" variant="tour" />
+
+        <h2>Permits</h2>
+        <p>Trekking in the Knuckles Conservation Forest requires a permit from the Forest Department. Day trekkers can usually purchase permits at the main entry points (Rathugala, Knuckles Forest Edge, or Riverston). For overnight camping and the full traverse, permits must be arranged in advance through the Divisional Forest Office in Kandy (Rajapihilla Mawatha).</p>
+        <p>Permit fees for foreign visitors are approximately LKR 1,000–2,000 per person per day. A registered guide is compulsory for multi-day treks and strongly recommended for all routes. Most Kandy trekking operators handle permits as part of their packages — this is the simplest approach.</p>
+
+        <h2>Best Time to Visit</h2>
+        <p><strong>December to April</strong> is the best season — the north-east monsoon has ended, the highlands are at their most accessible, and bird activity is at its peak. February and March tend to have the clearest skies and the best visibility from the viewpoints.</p>
+        <p>The south-west monsoon (May–September) brings heavy rain to the western slopes, making some trails very difficult. The eastern approaches are somewhat drier and can still be trekked in wet season with the right kit. October and November are the wettest months on the western side and the most difficult for trekking.</p>
+        <p>Weather in the Knuckles can change rapidly at any time of year. Even in the dry season, cloud and mist are common above 1,000 metres. Always bring waterproofs.</p>
+
+        <h2>Getting to the Knuckles</h2>
+        <p>The Knuckles range is northeast of Kandy. There are several access points depending on your route:</p>
+        <ul>
+          <li><strong>Riverston (north):</strong> The most accessible viewpoint, about 35km from Kandy. The road to Riverston is paved and can be reached by three-wheeler or private vehicle. Riverston itself offers a spectacular viewpoint (no trekking permit needed for the viewpoint itself) and is the trailhead for several northern routes.</li>
+          <li><strong>Rathugala / Knuckles Village (west):</strong> The main entry point for the Corbett's Gap and western routes. Accessible from Kandy via Hasalaka — about 45 minutes by car.</li>
+          <li><strong>Meemure (east):</strong> A remote village on the dry eastern side of the range, accessible via a rough road from Laggala. Meemure is a beautiful and authentic village with basic homestay accommodation — a base for exploring the eastern slopes. The road to Meemure is in poor condition and requires a 4WD vehicle or motorcycle.</li>
+        </ul>
+        <p>There is no reliable public transport to most Knuckles trailheads. Arrange a private vehicle from Kandy or book with a tour operator who handles transport.</p>
+
+        <h2>Where to Stay</h2>
+        <p>Accommodation in and around the Knuckles range ranges from basic village homestays to comfortable eco-lodges. The village of Knuckles itself has several small guesthouses used by trekkers. Meemure village on the eastern side has a handful of simple homestays — staying here is a cultural experience as well as a base for trekking. The Riverston area has a small number of eco-lodges and bungalows with views across the range. For most visitors, <a href="/places/kandy">Kandy</a> is the most practical base — the city has a wide range of accommodation and trekking operators who run day and multi-day Knuckles trips.</p>
+
+        <AffiliateBox title="Find Accommodation Near Knuckles" description="Book guesthouses and eco-lodges in Kandy and the Knuckles area — from budget homestays to comfortable hill-country retreats." buttonText="Search Accommodation" buttonHref="https://www.booking.com/searchresults.html?ss=Kandy+Sri+Lanka" variant="hotel" />
+
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3">
+            {[
+              {href:'/things-to-do/hiking', label:'Hiking in Sri Lanka'},
+              {href:'/things-to-do/camping', label:'Camping Guide'},
+              {href:'/things-to-do/bird-watching', label:'Bird Watching'},
+              {href:'/places/kandy', label:'Kandy'},
+              {href:'/places/horton-plains', label:'Horton Plains'},
+              {href:'/places/sinharaja', label:'Sinharaja Forest'},
+              {href:'/places', label:'All Destinations'},
+            ].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-base mb-2">Guide Tip</h3>
+          <p class="text-sm text-ceylon-green-800">Always hire a guide — Knuckles trails are unmarked and cloud can descend quickly. Most Kandy operators include permits in their package price.</p>
+        </div>
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-5">
+          <h3 class="font-serif font-bold text-amber-900 text-base mb-2">Best Season</h3>
+          <p class="text-sm text-amber-800">December to April for clearest skies and best trail conditions. Bring waterproofs year-round — cloud and mist are common above 1,000m.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
