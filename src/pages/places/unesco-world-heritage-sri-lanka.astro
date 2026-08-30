@@ -1,0 +1,224 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="UNESCO World Heritage Sites in Sri Lanka: All 8 Sites Guide | The Trails of Ceylon"
+  description="Sri Lanka has 8 UNESCO World Heritage Sites — from Sigiriya Rock Fortress and Galle Fort to Sinharaja Rainforest and the Central Highlands. A complete guide to visiting every one."
+  type="article"
+  publishDate="2025-04-20"
+>
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/sigiriya.webp" alt="Sigiriya Rock Fortress — one of Sri Lanka's UNESCO World Heritage Sites" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <span class="text-white">UNESCO World Heritage Sites</span>
+        </nav>
+        <span class="inline-block bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">UNESCO</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">UNESCO World Heritage Sites in Sri Lanka</h1>
+        <p class="text-white/80 mt-2">8 Sites &bull; Ancient Kingdoms, Sacred Cities, Rainforest & Highland Wilderness</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_260px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <p>Sri Lanka is one of the most UNESCO-dense destinations on earth relative to its size — a small island with 8 World Heritage Sites spanning ancient royal capitals, sacred Buddhist cities, a Dutch colonial fort, a living rainforest and the Central Highlands wilderness. You can visit all 8 in a single two-week trip, and many itineraries naturally pass through most of them. Here is a complete guide to every UNESCO site in Sri Lanka and how to visit.</p>
+
+        <!-- Site cards -->
+        {[
+          {
+            num: '01',
+            name: 'Sigiriya Rock Fortress',
+            href: '/places/sigiriya',
+            img: '/images/sigiriya.webp',
+            alt: 'Sigiriya rock fortress rising above the jungle',
+            year: 'Inscribed 1982',
+            region: 'Cultural Triangle, North Central Province',
+            why: 'An extraordinary 5th-century royal palace built atop a 200-metre granite monolith. King Kasyapa chose this near-vertical rock as his fortified capital — the summit holds ruins of bathing pools, throne rooms and terraced gardens. Halfway up, a sheltered rock gallery contains the famous Sigiriya frescoes — painted celestial maidens considered among the finest ancient paintings in Asia. The surrounding water gardens and moats at ground level are equally remarkable examples of early landscape design.',
+            tip: 'Arrive by 7am to beat the crowds and the heat. Entry fees are approximately USD 30–35 for foreign visitors.',
+          },
+          {
+            num: '02',
+            name: 'Ancient City of Anuradhapura',
+            href: '/places/anuradhapura',
+            img: '/images/anuradhapura.webp',
+            alt: 'Ancient dagobas at Anuradhapura sacred city, Sri Lanka',
+            year: 'Inscribed 1982',
+            region: 'North Central Province',
+            why: 'Sri Lanka\'s first and longest-serving royal capital — Anuradhapura was the centre of Sinhalese civilisation for over 1,300 years (4th century BC to 10th century AD). The site contains some of the largest ancient structures in the world: the Jetavanaramaya stupa was once the third-tallest building on earth. At the heart of the complex stands the Sri Maha Bodhi — a fig tree grown from a cutting of the original Bodhi tree under which the Buddha attained enlightenment, making it the oldest historically documented tree on Earth. Still an active place of worship, Anuradhapura receives Sri Lankan pilgrims daily.',
+            tip: 'Hire a bicycle or tuk-tuk inside the site — the ruins are spread across a large area and walking the full circuit is exhausting. The site is most atmospheric at dawn when pilgrims are active.',
+          },
+          {
+            num: '03',
+            name: 'Ancient City of Polonnaruwa',
+            href: '/places/polonnaruwa',
+            img: '/images/polonnaruwa.webp',
+            alt: 'Medieval ruins at Polonnaruwa, Sri Lanka',
+            year: 'Inscribed 1982',
+            region: 'North Central Province',
+            why: 'Sri Lanka\'s second ancient capital — Polonnaruwa was the royal seat from the 11th to 13th centuries and reached its peak under King Parakramabahu I, who united the island and built one of the ancient world\'s most sophisticated irrigation systems. The ruins include a royal palace complex, the circular Vatadage relic house, the remarkable Gal Vihara — four colossal Buddha figures carved directly from a single granite face — and the Parakrama Samudra reservoir, still in use today after 800 years.',
+            tip: 'Polonnaruwa is best explored by bicycle — the site is flat, shaded and well laid out for cycling. Less visited than Sigiriya, it rewards a full day of exploration.',
+          },
+          {
+            num: '04',
+            name: 'Dambulla Cave Temple',
+            href: '/places/dambulla',
+            img: '/images/dambulla.webp',
+            alt: 'Dambulla cave temple paintings and Buddha statues, Sri Lanka',
+            year: 'Inscribed 1991',
+            region: 'Cultural Triangle, Central Province',
+            why: 'The largest and best-preserved cave temple complex in Sri Lanka — five cave shrines carved into a massive granite dome that rises 160 metres above the surrounding plain. Inside, every surface is covered with 2,100 square metres of paintings and 153 Buddha statues, accumulated over more than 2,000 years of continuous use as a sacred site. The complex dates to the 1st century BC and is still an active Buddhist temple today. The golden Buddha statue at the entrance to the complex has become one of the most recognisable images of Sri Lanka.',
+            tip: 'Combine with Sigiriya (20km away) for a full-day Cultural Triangle trip. Remove shoes before entering the cave shrines — the rock surface can be hot on sunny days, so visit in the morning.',
+          },
+          {
+            num: '05',
+            name: 'Sacred City of Kandy',
+            href: '/places/kandy',
+            img: '/images/kandy.webp',
+            alt: 'Kandy Lake and Temple of the Tooth Relic, Sri Lanka',
+            year: 'Inscribed 1988',
+            region: 'Central Province',
+            why: 'The last royal capital of the Sinhalese kings and the cultural heartland of Sri Lanka. The UNESCO designation covers the historic city centre including the Temple of the Tooth Relic (Sri Dalada Maligawa) — the most sacred Buddhist site in Sri Lanka, housing what is believed to be a tooth of the Buddha. The temple sits on the edge of a beautiful artificial lake created by the last Kandyan king. The city hosts the magnificent Esala Perahera festival each July/August — one of the most spectacular processions in Asia, with decorated elephants, drummers and fire-dancers.',
+            tip: 'Visit the temple for the evening puja (offering ceremony) at 6:30pm — the most atmospheric time, with drumming, incense and oil lamps. Dress modestly (shoulders and knees covered).',
+          },
+          {
+            num: '06',
+            name: 'Old Town of Galle and its Fortifications',
+            href: '/places/galle',
+            img: '/images/galle-fort.webp',
+            alt: 'Galle Fort ramparts and lighthouse, southern Sri Lanka',
+            year: 'Inscribed 1988',
+            region: 'Southern Province',
+            why: 'A perfectly preserved 17th-century Dutch colonial fort city on a rocky promontory overlooking the Indian Ocean — the finest example of a European fortified city in Asia. Unlike many UNESCO sites which are ruins or museums, Galle Fort is a living city: within the ramparts are boutique hotels, independent cafes, art galleries, antique dealers, working churches and the offices of colonial administration still functioning as government buildings. The fort walls remain intact and walkable, with the lighthouse at one end and ocean views on three sides.',
+            tip: 'Walk the fort walls at sunset — the light on the old buildings and the sea beyond is extraordinary. The fort is busiest on weekends; weekday visits are more peaceful.',
+          },
+          {
+            num: '07',
+            name: 'Sinharaja Forest Reserve',
+            href: '/places/sinharaja',
+            img: '/images/bird-watching.webp',
+            alt: 'Endemic birds in Sinharaja rainforest, Sri Lanka',
+            year: 'Inscribed 1988',
+            region: 'Sabaragamuwa & Southern Province',
+            why: 'Sri Lanka\'s last viable primary rainforest and the most biodiverse patch of land on the island. Over 60% of the trees here are endemic to Sri Lanka, and the forest is home to 26 endemic bird species — making it one of the top bird watching destinations in Asia. The famous mixed-species feeding flocks move through the forest in the early morning, sometimes containing 10-15 endemic species at once. The forest also protects endemic reptiles, the purple-faced langur monkey, the red slender loris and extraordinary insect diversity.',
+            tip: 'A registered guide is mandatory. Arrive at the entrance by 6am for the best bird watching — activity drops sharply once the forest heats up. Wear leech socks year-round.',
+          },
+          {
+            num: '08',
+            name: 'Central Highlands of Sri Lanka',
+            href: '/places/horton-plains',
+            img: '/images/horton-plains.webp',
+            alt: 'Horton Plains highland plateau and World\'s End escarpment, Sri Lanka',
+            year: 'Inscribed 2010',
+            region: 'Central & Uva Provinces',
+            why: 'The most recently inscribed of Sri Lanka\'s UNESCO sites — a serial property covering three protected areas: the Peak Wilderness Sanctuary (which includes Adam\'s Peak), the Horton Plains National Park (including World\'s End and Baker\'s Falls), and the Knuckles Conservation Forest. Together these highland areas form the primary watershed of Sri Lanka, supplying water to rivers that serve most of the island. The biodiversity is exceptional: the highlands contain many of Sri Lanka\'s rarest endemic species of birds, mammals and plants, found nowhere else on Earth.',
+            tip: 'Horton Plains is the most accessible part of this UNESCO site — arrive at 6am for World\'s End before the clouds close in (usually by 9–10am). The Knuckles range requires a guide and Forest Department permit.',
+          },
+        ].map(site => (
+          <div class="not-prose border border-gray-200 rounded-2xl overflow-hidden mb-8 hover:shadow-md transition-shadow">
+            <div class="relative h-52 overflow-hidden">
+              <img src={site.img} alt={site.alt} class="w-full h-full object-cover" width="800" height="400" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 p-5 flex items-end gap-3">
+                <span class="font-serif font-black text-white/30 text-4xl leading-none">{site.num}</span>
+                <div>
+                  <span class="inline-block bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wide mb-1">UNESCO</span>
+                  <h2 class="font-serif font-black text-white text-xl leading-tight">{site.name}</h2>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex flex-wrap gap-3 mb-4 text-xs text-gray-500">
+                <span class="flex items-center gap-1">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  {site.year}
+                </span>
+                <span class="flex items-center gap-1">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  {site.region}
+                </span>
+              </div>
+              <p class="text-gray-700 text-sm leading-relaxed mb-4">{site.why}</p>
+              <div class="bg-amber-50 border border-amber-100 rounded-xl px-4 py-3 mb-4">
+                <p class="text-xs text-amber-800"><strong>Visitor tip:</strong> {site.tip}</p>
+              </div>
+              <a href={site.href} class="inline-flex items-center gap-2 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition-colors">
+                Full Guide to {site.name}
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        ))}
+
+        <h2>Visiting All 8 UNESCO Sites: Practical Tips</h2>
+        <p>Sri Lanka's 8 UNESCO sites fall naturally into clusters that make combining them easy:</p>
+        <ul>
+          <li><strong>Cultural Triangle (3–4 days):</strong> Sigiriya, Anuradhapura, Polonnaruwa and Dambulla are all within 100km of each other in the north-central plains. Staying in Sigiriya or Dambulla gives the best access to all four.</li>
+          <li><strong>Kandy (1–2 days):</strong> The city is a natural base for the Temple of the Tooth and a gateway to the Hill Country and Knuckles Range (part of the Central Highlands UNESCO site).</li>
+          <li><strong>South Coast (1–2 days):</strong> Galle Fort is a must-stop on the south coast route and pairs naturally with beach time in Unawatuna or Mirissa.</li>
+          <li><strong>Highlands (2–3 days):</strong> Horton Plains and Knuckles require dedicated time — base yourself in Nuwara Eliya for Horton Plains and Kandy for Knuckles.</li>
+          <li><strong>Sinharaja (1–2 days):</strong> The most remote site — plan for a dedicated visit from Deniyaya or Kudawa. Hard to combine with other sites in a single day.</li>
+        </ul>
+        <p>Entry fees vary widely: Sigiriya charges approximately USD 30–35, Horton Plains USD 30, Kandy's Temple of the Tooth approximately USD 10, and Anuradhapura and Polonnaruwa approximately USD 25 each. Budget these into your trip planning. Sinharaja and the Knuckles Range charge Forest Department fees rather than national park fees.</p>
+
+        <AffiliateBox title="Book a UNESCO Heritage Tour of Sri Lanka" description="Guided tours of the Cultural Triangle and the UNESCO sites — expert guides bring the history of Sigiriya, Anuradhapura and Polonnaruwa to life." buttonText="Find Heritage Tours" buttonHref="https://www.getyourguide.com/sri-lanka-l976/cultural-and-theme-tours-tc65/" variant="tour" />
+
+      </article>
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">All 8 UNESCO Sites</h3>
+          <div class="space-y-2">
+            {[
+              {href:'/places/sigiriya', label:'Sigiriya Rock Fortress'},
+              {href:'/places/anuradhapura', label:'Anuradhapura'},
+              {href:'/places/polonnaruwa', label:'Polonnaruwa'},
+              {href:'/places/dambulla', label:'Dambulla Cave Temple'},
+              {href:'/places/kandy', label:'Sacred City of Kandy'},
+              {href:'/places/galle', label:'Galle Fort'},
+              {href:'/places/sinharaja', label:'Sinharaja Forest'},
+              {href:'/places/horton-plains', label:'Central Highlands'},
+            ].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-white/90 hover:text-white text-sm font-medium transition-colors">
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-5">
+          <h3 class="font-serif font-bold text-blue-900 text-base mb-2">Fast Facts</h3>
+          <div class="space-y-1.5 text-sm text-blue-800">
+            <div class="flex justify-between"><span>Total sites</span><strong>8</strong></div>
+            <div class="flex justify-between"><span>Cultural sites</span><strong>6</strong></div>
+            <div class="flex justify-between"><span>Natural sites</span><strong>2</strong></div>
+            <div class="flex justify-between"><span>First inscribed</span><strong>1982</strong></div>
+            <div class="flex justify-between"><span>Latest inscribed</span><strong>2010</strong></div>
+          </div>
+        </div>
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-base mb-2">Related Guides</h3>
+          <div class="space-y-2">
+            {[
+              {href:'/guides/sri-lanka-itinerary-2-weeks', label:'2-Week Itinerary'},
+              {href:'/places/cultural-triangle', label:'Cultural Triangle'},
+              {href:'/guides/best-time-to-visit', label:'Best Time to Visit'},
+              {href:'/things-to-do/hiking', label:'Hiking Guide'},
+            ].map(link => (
+              <a href={link.href} class="flex items-center gap-2 text-ceylon-green-700 hover:text-ceylon-green-900 text-sm transition-colors">
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
