@@ -375,6 +375,80 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
       }
     })();
 
+    // ── Hub/activity page widgets (pages with no sidebar) ──
+    (function () {
+      const path = window.location.pathname.replace(/\/$/, '');
+      const isContent = (
+        (path.startsWith('/places/') && path !== '/places') ||
+        (path.startsWith('/things-to-do/') && path !== '/things-to-do') ||
+        (path.startsWith('/guides/') && path !== '/guides')
+      );
+      if (!isContent) return;
+      if (document.querySelector('aside')) return; // sidebar pages already have map
+
+      const main = document.querySelector('main');
+      if (!main) return;
+
+      const wrapper = document.createElement('div');
+      wrapper.style.cssText = 'border-top:1px solid #e5e7eb;';
+      wrapper.innerHTML = `
+        <section style="background:linear-gradient(135deg,#1c4d1c 0%,#245724 100%);padding:3rem 1.5rem;">
+          <div style="max-width:56rem;margin:0 auto;">
+            <p style="color:rgba(255,255,255,0.6);font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 0.4rem;">Trip Planning</p>
+            <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:1.75rem;font-weight:900;color:#fff;margin:0 0 1.75rem;line-height:1.2;">Ready to Plan Your Sri Lanka Trip?</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;">
+              <a href="/guides/sri-lanka-eta-visa-guide/" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:0.875rem;padding:1.25rem;text-decoration:none;display:block;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.18)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+                <div style="font-size:1.6rem;margin-bottom:0.6rem;">🛂</div>
+                <p style="color:#fff;font-weight:700;font-size:0.9rem;margin:0 0 0.25rem;">ETA &amp; Visa Guide</p>
+                <p style="color:rgba(255,255,255,0.6);font-size:0.78rem;margin:0;line-height:1.4;">How to apply before you fly</p>
+              </a>
+              <a href="/guides/sri-lanka-itinerary-2-weeks/" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:0.875rem;padding:1.25rem;text-decoration:none;display:block;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.18)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+                <div style="font-size:1.6rem;margin-bottom:0.6rem;">🗓️</div>
+                <p style="color:#fff;font-weight:700;font-size:0.9rem;margin:0 0 0.25rem;">2-Week Itinerary</p>
+                <p style="color:rgba(255,255,255,0.6);font-size:0.78rem;margin:0;line-height:1.4;">The perfect two-week route</p>
+              </a>
+              <a href="/guides/best-time-to-visit/" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:0.875rem;padding:1.25rem;text-decoration:none;display:block;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.18)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+                <div style="font-size:1.6rem;margin-bottom:0.6rem;">☀️</div>
+                <p style="color:#fff;font-weight:700;font-size:0.9rem;margin:0 0 0.25rem;">Best Time to Visit</p>
+                <p style="color:rgba(255,255,255,0.6);font-size:0.78rem;margin:0;line-height:1.4;">Month-by-month breakdown</p>
+              </a>
+              <a href="/guides/what-to-pack-sri-lanka/" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:0.875rem;padding:1.25rem;text-decoration:none;display:block;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.18)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+                <div style="font-size:1.6rem;margin-bottom:0.6rem;">🎒</div>
+                <p style="color:#fff;font-weight:700;font-size:0.9rem;margin:0 0 0.25rem;">What to Pack</p>
+                <p style="color:rgba(255,255,255,0.6);font-size:0.78rem;margin:0;line-height:1.4;">The essential packing list</p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section style="background:#f9fafb;padding:3rem 1.5rem;">
+          <div style="max-width:56rem;margin:0 auto;">
+            <p style="color:#245724;font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 0.4rem;">Before You Go</p>
+            <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:1.75rem;font-weight:900;color:#111;margin:0 0 1.5rem;line-height:1.2;">Sri Lanka Travel Essentials</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.875rem;">
+              ${[
+                ['🛂','Visa','ETA required — apply at eta.gov.lk'],
+                ['💵','Currency','Sri Lankan Rupee (LKR)'],
+                ['🗣️','Languages','Sinhala, Tamil &amp; English'],
+                ['🕐','Time Zone','UTC +5:30 (no DST)'],
+                ['🌤️','Best Season','December – April'],
+                ['🚗','Drive on','Left side of the road'],
+                ['🔌','Power','Type D &amp; G · 230V / 50Hz'],
+                ['🆘','Emergency','119 Police · 110 Ambulance'],
+              ].map(([icon, label, value]) => `
+                <div style="background:#fff;border:1px solid #e5e7eb;border-radius:0.875rem;padding:1rem;">
+                  <div style="font-size:1.35rem;margin-bottom:0.4rem;">${icon}</div>
+                  <p style="font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.06em;margin:0 0 0.2rem;">${label}</p>
+                  <p style="font-size:0.8rem;font-weight:600;color:#111;margin:0;line-height:1.35;">${value}</p>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </section>
+      `;
+      main.appendChild(wrapper);
+    })();
+
     // ── Share buttons (injected on blog and place pages) ──
     (function () {
       const path = window.location.pathname;
