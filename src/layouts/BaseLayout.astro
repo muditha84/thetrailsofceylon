@@ -323,7 +323,7 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
           <span style="color:white;font-weight:600;font-size:0.875rem;">${name}</span>
           <span style="color:rgba(255,255,255,0.55);font-size:0.7rem;margin-left:auto;">Sri Lanka</span>
         </div>
-        <div id="tc-map" style="height:210px;position:relative;z-index:0;"></div>
+        <div id="tc-map" style="height:240px;position:relative;z-index:0;"></div>
       `;
       sidebar.insertBefore(card, sidebar.firstChild);
 
@@ -335,22 +335,32 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
           scrollWheelZoom: false,
           zoomControl: true,
           attributionControl: false,
-        }).setView([lat, lng], zoom);
+          dragging: false,
+        });
 
         (window as any).L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
           attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
         }).addTo(map);
 
+        // Fit to Sri Lanka bounds so the whole island is always visible
+        map.fitBounds([[5.9, 79.6], [9.84, 81.9]], { padding: [8, 8] });
+
+        const pinSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="26" height="34" viewBox="0 0 26 34">
+          <path d="M13 0C5.82 0 0 5.82 0 13c0 9.75 13 21 13 21S26 22.75 26 13C26 5.82 20.18 0 13 0z" fill="#245724" stroke="white" stroke-width="1.5"/>
+          <circle cx="13" cy="13" r="5.5" fill="white"/>
+          <circle cx="13" cy="13" r="3" fill="#245724"/>
+        </svg>`;
+
         const icon = (window as any).L.divIcon({
-          html: `<div style="background:#245724;width:14px;height:14px;border-radius:50%;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.45);"></div>`,
-          className: '', iconSize: [14, 14], iconAnchor: [7, 7], popupAnchor: [0, -12],
+          html: pinSvg,
+          className: '',
+          iconSize: [26, 34],
+          iconAnchor: [13, 34],
+          popupAnchor: [0, -36],
         });
 
-        (window as any).L.marker([lat, lng], { icon })
-          .addTo(map)
-          .bindPopup(`<strong style="font-family:serif;">${name}</strong>`, { closeButton: false, offset: [0, -4] })
-          ;
+        (window as any).L.marker([lat, lng], { icon }).addTo(map);
 
         setTimeout(() => map.invalidateSize(), 150);
       }
