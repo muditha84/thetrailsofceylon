@@ -187,30 +187,80 @@
 
   /* ── Plan Your Visit sidebar ─────────────── */
   .plan-visit-box {
-    background: linear-gradient(135deg, #1a4a1a 0%, #245724 100%);
-    border: 1px solid #3d8b3d;
-    border-radius: 1rem;
-    padding: 1.25rem;
-    color: rgba(255,255,255,0.9) !important;
+    background: linear-gradient(160deg, #1c4d1c 0%, #245724 100%);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+    color: #fff !important;
   }
   .plan-visit-box * { color: rgba(255,255,255,0.88) !important; }
-  .plan-visit-box h3, .plan-visit-box strong { color: #ffffff !important; }
-  .plan-visit-box a:hover { color: #ffffff !important; opacity: 1 !important; }
+  .plan-visit-box h3 {
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+  .plan-visit-box strong { color: #ffffff !important; }
+  .plan-visit-box dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0;
+  }
+  .plan-visit-box dt {
+    color: rgba(255,255,255,0.6) !important;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-right: 1rem;
+    align-self: center;
+  }
+  .plan-visit-box dd {
+    color: #ffffff !important;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    text-align: right;
+    align-self: center;
+  }
+  .plan-visit-box dt:last-of-type,
+  .plan-visit-box dd:last-of-type { border-bottom: none; }
+  /* link-list variant (knuckles, sinharaja etc) */
+  .plan-visit-box a {
+    color: rgba(255,255,255,0.82) !important;
+    font-size: 0.875rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0;
+    transition: color 0.15s;
+  }
+  .plan-visit-box a:hover { color: #ffffff !important; }
   .plan-visit-box .book-btn {
     display: block;
     margin-top: 1.25rem;
-    background: #245724;
-    color: #fff;
+    background: #c9a84c;
+    color: #1a1a1a !important;
     text-align: center;
-    font-weight: 600;
-    padding: 0.75rem 1rem;
-    border-radius: 0.75rem;
+    font-weight: 700;
     font-size: 0.875rem;
-    transition: background 0.15s;
+    padding: 0.8rem 1rem;
+    border-radius: 0.75rem;
     text-decoration: none;
+    transition: background 0.15s, transform 0.1s;
+    letter-spacing: 0.01em;
   }
   .plan-visit-box .book-btn:hover {
-    background: #183a18;
+    background: #b8962e !important;
+    color: #1a1a1a !important;
+    transform: translateY(-1px);
   }
 
   /* ── Quick Facts card ─────────────────────── */
