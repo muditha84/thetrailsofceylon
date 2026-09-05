@@ -191,7 +191,13 @@
     border: 1px solid #3d8b3d;
     border-radius: 1rem;
     padding: 1.25rem;
+    color: rgba(255,255,255,0.9);
   }
+  .plan-visit-box h3 { color: #ffffff; }
+  .plan-visit-box p, .plan-visit-box span, .plan-visit-box dt, .plan-visit-box dd, .plan-visit-box li { color: rgba(255,255,255,0.85); }
+  .plan-visit-box a { color: rgba(255,255,255,0.85); }
+  .plan-visit-box a:hover { color: #ffffff; }
+  .plan-visit-box strong { color: #ffffff; }
   .plan-visit-box .book-btn {
     display: block;
     margin-top: 1.25rem;

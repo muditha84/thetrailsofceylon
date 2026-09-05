@@ -349,7 +349,7 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
         (window as any).L.marker([lat, lng], { icon })
           .addTo(map)
           .bindPopup(`<strong style="font-family:serif;">${name}</strong>`, { closeButton: false, offset: [0, -4] })
-          .openPopup();
+          ;
 
         setTimeout(() => map.invalidateSize(), 150);
       }
