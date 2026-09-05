@@ -337,8 +337,9 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
           attributionControl: false,
         }).setView([lat, lng], zoom);
 
-        (window as any).L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-          maxZoom: 19, subdomains: 'abcd',
+        (window as any).L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
         }).addTo(map);
 
         const icon = (window as any).L.divIcon({
