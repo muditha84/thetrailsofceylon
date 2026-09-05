@@ -95,6 +95,9 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
   <!-- Sitemap -->
   <link rel="sitemap" href="/sitemap-index.xml" />
 
+  <!-- Leaflet (map widget — loaded only on place pages) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+
   <!-- Smooth scroll -->
   <style>html { scroll-behavior: smooth; }</style>
 
@@ -246,6 +249,119 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
         list.style.display = open ? 'none' : '';
         chevron?.classList.toggle('rotate-180', !open);
       });
+    })();
+
+    // ── Location map (injected into sidebar on place pages) ──
+    (function () {
+      const coords: Record<string, [number, number, number, string]> = {
+        '/places/sigiriya':         [7.9572,  80.7600, 13, 'Sigiriya Rock Fortress'],
+        '/places/anuradhapura':     [8.3114,  80.4037, 12, 'Anuradhapura'],
+        '/places/polonnaruwa':      [7.9403,  80.9997, 13, 'Polonnaruwa'],
+        '/places/dambulla':         [7.8731,  80.6497, 13, 'Dambulla Cave Temple'],
+        '/places/kandy':            [7.2906,  80.6337, 13, 'Kandy'],
+        '/places/galle':            [6.0328,  80.2170, 14, 'Galle Fort'],
+        '/places/ella':             [6.8667,  81.0466, 13, 'Ella'],
+        '/places/sinharaja':        [6.4016,  80.4868, 12, 'Sinharaja Forest Reserve'],
+        '/places/knuckles':         [7.4536,  80.8982, 11, 'Knuckles Mountain Range'],
+        '/places/horton-plains':    [6.8024,  80.7884, 12, 'Horton Plains'],
+        '/places/yala':             [6.3728,  81.5175, 11, 'Yala National Park'],
+        '/places/nuwara-eliya':     [6.9497,  80.7891, 13, 'Nuwara Eliya'],
+        '/places/colombo':          [6.9271,  79.8612, 13, 'Colombo'],
+        '/places/trincomalee':      [8.5874,  81.2152, 13, 'Trincomalee'],
+        '/places/jaffna':           [9.6615,  80.0255, 13, 'Jaffna'],
+        '/places/arugam-bay':       [6.8401,  81.8326, 14, 'Arugam Bay'],
+        '/places/mirissa':          [5.9463,  80.4710, 14, 'Mirissa'],
+        '/places/unawatuna':        [6.0114,  80.2494, 14, 'Unawatuna'],
+        '/places/hikkaduwa':        [6.1407,  80.1060, 14, 'Hikkaduwa'],
+        '/places/weligama':         [5.9754,  80.4235, 14, 'Weligama'],
+        '/places/tangalle':         [6.0254,  80.7929, 13, 'Tangalle'],
+        '/places/nine-arch-bridge': [6.8760,  81.0587, 15, 'Nine Arch Bridge'],
+        '/places/worlds-end':       [6.7967,  80.7954, 13, "World's End"],
+        '/places/diyaluma-falls':   [6.7003,  81.0005, 14, 'Diyaluma Falls'],
+        '/places/ravana-falls':     [6.8645,  81.0382, 14, 'Ravana Falls'],
+        '/places/adams-peak':       [6.8096,  80.4994, 12, "Adam's Peak"],
+        '/places/pinnawala':        [7.2985,  80.3535, 14, 'Pinnawala Elephant Orphanage'],
+        '/places/udawalawe':        [6.4364,  80.8990, 11, 'Udawalawe National Park'],
+        '/places/minneriya':        [8.0244,  80.8994, 12, 'Minneriya National Park'],
+        '/places/wilpattu':         [8.4550,  80.0144, 10, 'Wilpattu National Park'],
+        '/places/kumana':           [6.5846,  81.7209, 11, 'Kumana National Park'],
+        '/places/bundala':          [6.2041,  81.2169, 11, 'Bundala National Park'],
+        '/places/wasgamuwa':        [7.7228,  80.8987, 11, 'Wasgamuwa National Park'],
+        '/places/negombo':          [7.2088,  79.8358, 13, 'Negombo'],
+        '/places/kalpitiya':        [8.2333,  79.7676, 12, 'Kalpitiya'],
+        '/places/mannar':           [8.9761,  79.9038, 12, 'Mannar'],
+        '/places/batticaloa':       [7.7170,  81.6990, 13, 'Batticaloa'],
+        '/places/nilaveli':         [8.7086,  81.2298, 14, 'Nilaveli'],
+        '/places/pigeon-island':    [8.5763,  81.2267, 14, 'Pigeon Island'],
+        '/places/delft-island':     [9.6562,  79.6934, 13, 'Delft Island'],
+        '/places/pidurangala':      [7.9611,  80.7556, 14, 'Pidurangala Rock'],
+        '/places/ambuluwawa':       [7.2514,  80.5872, 14, 'Ambuluwawa'],
+        '/places/galle-face-green': [6.9195,  79.8444, 15, 'Galle Face Green'],
+        '/places/gangaramaya':      [6.9169,  79.8566, 15, 'Gangaramaya Temple'],
+        '/places/matara':           [5.9460,  80.5353, 13, 'Matara'],
+        '/places/dikwella':         [5.9630,  80.6910, 14, 'Dikwella'],
+        '/places/bentota':          [6.4271,  80.0015, 14, 'Bentota'],
+        '/places/hiriketiya':       [5.9811,  80.5700, 14, 'Hiriketiya Beach'],
+        '/places/east-coast':       [8.0000,  81.2000,  9, 'East Coast, Sri Lanka'],
+        '/places/horton-plains':    [6.8024,  80.7884, 12, 'Horton Plains'],
+      };
+
+      const path = window.location.pathname.replace(/\/$/, '');
+      const entry = coords[path];
+      if (!entry) return;
+      const [lat, lng, zoom, name] = entry;
+
+      const sidebar = document.querySelector('aside');
+      if (!sidebar) return;
+
+      // Build map card
+      const card = document.createElement('div');
+      card.className = 'not-prose rounded-xl overflow-hidden border border-gray-200 shadow-sm';
+      card.innerHTML = `
+        <div style="background:#245724;padding:0.6rem 1rem;display:flex;align-items:center;gap:0.5rem;">
+          <svg width="14" height="14" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span style="color:white;font-weight:600;font-size:0.875rem;">${name}</span>
+          <span style="color:rgba(255,255,255,0.55);font-size:0.7rem;margin-left:auto;">Sri Lanka</span>
+        </div>
+        <div id="tc-map" style="height:210px;position:relative;z-index:0;"></div>
+      `;
+      sidebar.insertBefore(card, sidebar.firstChild);
+
+      // Load Leaflet and init map
+      function initMap() {
+        const mapEl = document.getElementById('tc-map');
+        if (!mapEl || (mapEl as any)._leaflet_id) return;
+        const map = (window as any).L.map('tc-map', {
+          scrollWheelZoom: false,
+          zoomControl: true,
+          attributionControl: false,
+        }).setView([lat, lng], zoom);
+
+        (window as any).L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+          maxZoom: 19, subdomains: 'abcd',
+        }).addTo(map);
+
+        const icon = (window as any).L.divIcon({
+          html: `<div style="background:#245724;width:14px;height:14px;border-radius:50%;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.45);"></div>`,
+          className: '', iconSize: [14, 14], iconAnchor: [7, 7], popupAnchor: [0, -12],
+        });
+
+        (window as any).L.marker([lat, lng], { icon })
+          .addTo(map)
+          .bindPopup(`<strong style="font-family:serif;">${name}</strong>`, { closeButton: false, offset: [0, -4] })
+          .openPopup();
+
+        setTimeout(() => map.invalidateSize(), 150);
+      }
+
+      if (typeof (window as any).L !== 'undefined') {
+        initMap();
+      } else {
+        const s = document.createElement('script');
+        s.src = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
+        s.onload = initMap;
+        document.head.appendChild(s);
+      }
     })();
 
     // ── Share buttons (injected on blog and place pages) ──
