@@ -292,6 +292,7 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
         '/places/mannar':           [8.9761,  79.9038, 12, 'Mannar'],
         '/places/batticaloa':       [7.7170,  81.6990, 13, 'Batticaloa'],
         '/places/nilaveli':         [8.7086,  81.2298, 14, 'Nilaveli'],
+        '/places/uppuveli':         [8.6167,  81.2000, 14, 'Uppuveli'],
         '/places/pigeon-island':    [8.5763,  81.2267, 14, 'Pigeon Island'],
         '/places/delft-island':     [9.6562,  79.6934, 13, 'Delft Island'],
         '/places/pidurangala':      [7.9611,  80.7556, 14, 'Pidurangala Rock'],
@@ -375,8 +376,11 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
       }
     })();
 
-    // ── Hub/activity page widgets (pages with no sidebar) ──
+    // ── Hub/activity page sidebar injection (compact right-hand widgets) ──
     (function () {
+      if (window.innerWidth < 1024) return; // desktop only
+      if (document.querySelector('aside')) return; // place pages already have sidebar with map
+
       const path = window.location.pathname.replace(/\/$/, '');
       const isContent = (
         (path.startsWith('/places/') && path !== '/places') ||
@@ -384,69 +388,62 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
         (path.startsWith('/guides/') && path !== '/guides')
       );
       if (!isContent) return;
-      if (document.querySelector('aside')) return; // sidebar pages already have map
 
-      const main = document.querySelector('main');
-      if (!main) return;
+      // Find the main readable content block (article on activity pages, .prose div on hub pages)
+      const proseEl = document.querySelector('main article') ||
+                      document.querySelector('main .prose');
+      if (!proseEl) return;
 
-      const wrapper = document.createElement('div');
-      wrapper.style.cssText = 'border-top:1px solid #e5e7eb;';
-      wrapper.innerHTML = `
-        <section style="background:linear-gradient(135deg,#1c4d1c 0%,#245724 100%);padding:3rem 1.5rem;">
-          <div style="max-width:56rem;margin:0 auto;">
-            <p style="color:rgba(255,255,255,0.6);font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 0.4rem;">Trip Planning</p>
-            <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:1.75rem;font-weight:900;color:#fff;margin:0 0 1.75rem;line-height:1.2;">Ready to Plan Your Sri Lanka Trip?</h2>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;">
-              <a href="/guides/sri-lanka-eta-visa-guide/" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:0.875rem;padding:1.25rem;text-decoration:none;display:block;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.18)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
-                <div style="font-size:1.6rem;margin-bottom:0.6rem;">🛂</div>
-                <p style="color:#fff;font-weight:700;font-size:0.9rem;margin:0 0 0.25rem;">ETA &amp; Visa Guide</p>
-                <p style="color:rgba(255,255,255,0.6);font-size:0.78rem;margin:0;line-height:1.4;">How to apply before you fly</p>
-              </a>
-              <a href="/guides/sri-lanka-itinerary-2-weeks/" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:0.875rem;padding:1.25rem;text-decoration:none;display:block;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.18)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
-                <div style="font-size:1.6rem;margin-bottom:0.6rem;">🗓️</div>
-                <p style="color:#fff;font-weight:700;font-size:0.9rem;margin:0 0 0.25rem;">2-Week Itinerary</p>
-                <p style="color:rgba(255,255,255,0.6);font-size:0.78rem;margin:0;line-height:1.4;">The perfect two-week route</p>
-              </a>
-              <a href="/guides/best-time-to-visit/" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:0.875rem;padding:1.25rem;text-decoration:none;display:block;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.18)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
-                <div style="font-size:1.6rem;margin-bottom:0.6rem;">☀️</div>
-                <p style="color:#fff;font-weight:700;font-size:0.9rem;margin:0 0 0.25rem;">Best Time to Visit</p>
-                <p style="color:rgba(255,255,255,0.6);font-size:0.78rem;margin:0;line-height:1.4;">Month-by-month breakdown</p>
-              </a>
-              <a href="/guides/what-to-pack-sri-lanka/" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:0.875rem;padding:1.25rem;text-decoration:none;display:block;transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.18)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
-                <div style="font-size:1.6rem;margin-bottom:0.6rem;">🎒</div>
-                <p style="color:#fff;font-weight:700;font-size:0.9rem;margin:0 0 0.25rem;">What to Pack</p>
-                <p style="color:rgba(255,255,255,0.6);font-size:0.78rem;margin:0;line-height:1.4;">The essential packing list</p>
-              </a>
-            </div>
-          </div>
-        </section>
+      // Wrap the prose in a flex row then append sidebar
+      const flexRow = document.createElement('div');
+      flexRow.style.cssText = 'display:flex;gap:2.5rem;align-items:flex-start;';
+      proseEl.parentNode!.insertBefore(flexRow, proseEl);
+      flexRow.appendChild(proseEl);
 
-        <section style="background:#f9fafb;padding:3rem 1.5rem;">
-          <div style="max-width:56rem;margin:0 auto;">
-            <p style="color:#245724;font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 0.4rem;">Before You Go</p>
-            <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:1.75rem;font-weight:900;color:#111;margin:0 0 1.5rem;line-height:1.2;">Sri Lanka Travel Essentials</h2>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.875rem;">
-              ${[
-                ['🛂','Visa','ETA required — apply at eta.gov.lk'],
-                ['💵','Currency','Sri Lankan Rupee (LKR)'],
-                ['🗣️','Languages','Sinhala, Tamil &amp; English'],
-                ['🕐','Time Zone','UTC +5:30 (no DST)'],
-                ['🌤️','Best Season','December – April'],
-                ['🚗','Drive on','Left side of the road'],
-                ['🔌','Power','Type D &amp; G · 230V / 50Hz'],
-                ['🆘','Emergency','119 Police · 110 Ambulance'],
-              ].map(([icon, label, value]) => `
-                <div style="background:#fff;border:1px solid #e5e7eb;border-radius:0.875rem;padding:1rem;">
-                  <div style="font-size:1.35rem;margin-bottom:0.4rem;">${icon}</div>
-                  <p style="font-size:0.65rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.06em;margin:0 0 0.2rem;">${label}</p>
-                  <p style="font-size:0.8rem;font-weight:600;color:#111;margin:0;line-height:1.35;">${value}</p>
-                </div>
-              `).join('')}
-            </div>
-          </div>
-        </section>
+      // Reset any centering that would fight the flex layout
+      (proseEl as HTMLElement).style.flex = '1 1 0';
+      (proseEl as HTMLElement).style.minWidth = '0';
+      (proseEl as HTMLElement).style.maxWidth = 'none';
+      (proseEl as HTMLElement).style.marginLeft = '0';
+      (proseEl as HTMLElement).style.marginRight = '0';
+
+      const sidebarEl = document.createElement('aside');
+      sidebarEl.style.cssText = 'width:236px;min-width:236px;flex-shrink:0;position:sticky;top:5.5rem;display:flex;flex-direction:column;gap:1.25rem;';
+      sidebarEl.innerHTML = `
+        <div style="background:linear-gradient(160deg,#1c4d1c 0%,#245724 100%);border-radius:1.125rem;padding:1.25rem 1.25rem 1.125rem;box-shadow:0 4px 18px rgba(0,0,0,0.16);">
+          <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:0.975rem;font-weight:700;color:#fff;margin:0 0 0.875rem;padding-bottom:0.625rem;border-bottom:1px solid rgba(255,255,255,0.15);">Plan Your Trip</h3>
+          <nav>
+            ${[
+              ['/guides/sri-lanka-eta-visa-guide/', '🛂', 'ETA &amp; Visa Guide'],
+              ['/guides/sri-lanka-itinerary-2-weeks/', '🗓️', '2-Week Itinerary'],
+              ['/guides/best-time-to-visit/', '☀️', 'Best Time to Visit'],
+              ['/guides/what-to-pack-sri-lanka/', '🎒', 'What to Pack'],
+              ['/places/', '📍', 'Explore All Places'],
+            ].map(([href, icon, label]) =>
+              `<a href="${href}" style="display:flex;align-items:center;gap:0.55rem;color:rgba(255,255,255,0.82);font-size:0.82rem;text-decoration:none;padding:0.38rem 0.25rem;border-radius:0.375rem;transition:color 0.15s;" onmouseover="this.style.color='#fff';this.style.background='rgba(255,255,255,0.07)'" onmouseout="this.style.color='rgba(255,255,255,0.82)';this.style.background='none'"><span style="font-size:0.95rem;">${icon}</span><span>${label}</span></a>`
+            ).join('')}
+          </nav>
+          <a href="https://www.booking.com/country/lk.html?aid=2311236" target="_blank" rel="noopener"
+            style="display:block;margin-top:1rem;background:#c9a84c;color:#1a1a1a;text-align:center;font-weight:700;font-size:0.81rem;padding:0.65rem 0.75rem;border-radius:0.625rem;text-decoration:none;letter-spacing:0.01em;transition:background 0.15s;"
+            onmouseover="this.style.background='#b8962e'" onmouseout="this.style.background='#c9a84c'">
+            Find Hotels in Sri Lanka
+          </a>
+        </div>
+
+        <div style="background:#fff;border:1px solid #e2e8f0;border-radius:1.125rem;padding:1.125rem 1.25rem;box-shadow:0 1px 6px rgba(0,0,0,0.05);">
+          <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:0.975rem;font-weight:700;color:#1a202c;margin:0 0 0.75rem;">Sri Lanka Essentials</h3>
+          ${[
+            ['Visa', 'ETA required'],
+            ['Currency', 'Rupee (LKR)'],
+            ['Best Time', 'Dec – Apr'],
+            ['Emergency', '119 Police'],
+          ].map(([dt, dd], i, arr) =>
+            `<div style="display:flex;justify-content:space-between;align-items:center;padding:0.45rem 0;${i < arr.length - 1 ? 'border-bottom:1px solid #f0f4f8;' : ''}"><span style="color:#718096;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;">${dt}</span><span style="color:#2d3748;font-size:0.8rem;font-weight:500;">${dd}</span></div>`
+          ).join('')}
+        </div>
       `;
-      main.appendChild(wrapper);
+
+      flexRow.appendChild(sidebarEl);
     })();
 
     // ── Share buttons (injected on blog and place pages) ──
