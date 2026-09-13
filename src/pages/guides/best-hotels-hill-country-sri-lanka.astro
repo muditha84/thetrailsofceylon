@@ -1,0 +1,230 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+
+// TODO: When Booking.com affiliate approved, append &aid=YOUR_ID to each bookingUrl
+const hotels = [
+  {
+    area: 'Ella',
+    name: '98 Acres Resort & Spa',
+    type: 'Luxury',
+    priceRange: 'USD 180–320/night',
+    image: '/images/ella.webp',
+    highlight: 'The most photographed hotel in Ella — an infinity pool that appears to hang over the valley, surrounded by working tea estate. Rooms are spacious split-level cottages with unobstructed views of the hills. The restaurant grows much of its produce on-site and the spa uses locally sourced herbs.',
+    bookingUrl: 'https://www.booking.com/searchresults.html?ss=98+Acres+Resort+Ella+Sri+Lanka',
+    tag: '🏆 Best Views',
+  },
+  {
+    area: 'Ella',
+    name: 'Zion View',
+    type: 'Boutique',
+    priceRange: 'USD 60–110/night',
+    image: '/images/nine-arch-bridge.webp',
+    highlight: 'A small boutique property with a very specific selling point: rooms with direct sightlines to the Nine Arch Bridge. Watch trains cross the viaduct from your balcony at breakfast. Intimate, well-run and significantly cheaper than 98 Acres for a comparable view experience.',
+    bookingUrl: 'https://www.booking.com/searchresults.html?ss=Zion+View+Ella+Sri+Lanka',
+    tag: '🚂 Nine Arch Views',
+  },
+  {
+    area: 'Ella',
+    name: 'Ella Flower Garden Resort',
+    type: 'Mid-Range',
+    priceRange: 'USD 35–65/night',
+    image: '/images/ella.webp',
+    highlight: 'The go-to mid-range pick in Ella — consistently well-reviewed, reliably clean and positioned on the hillside with good valley views. A solid choice for travellers who want comfort without luxury prices. Guesthouse-style hospitality means staff know guests by name within a day.',
+    bookingUrl: 'https://www.booking.com/searchresults.html?ss=Ella+Flower+Garden+Resort+Sri+Lanka',
+    tag: '💰 Best Value',
+  },
+  {
+    area: 'Kandy',
+    name: 'The Kandy House',
+    type: 'Luxury',
+    priceRange: 'USD 250–400/night',
+    image: '/images/kandy.webp',
+    highlight: 'A Relais & Châteaux property and one of Sri Lanka\'s finest boutique hotels — a restored 200-year-old manor house with just nine suites, set among paddy fields 15 minutes from Kandy. Antique-furnished rooms, a plunge pool and exceptional service. Not for sightseeing convenience — for the experience of the house itself.',
+    bookingUrl: 'https://www.booking.com/searchresults.html?ss=The+Kandy+House+Sri+Lanka',
+    tag: '🏛️ Heritage Property',
+  },
+  {
+    area: 'Kandy',
+    name: 'Cinnamon Citadel',
+    type: 'Mid-Luxury',
+    priceRange: 'USD 90–160/night',
+    image: '/images/kandy.webp',
+    highlight: 'The most reliable mid-luxury option in Kandy — a large riverside hotel with pool and multiple restaurants. Not the most atmospheric, but it delivers what it promises every time. Good base for the Temple of the Tooth, Peradeniya Gardens and the Cultural Triangle.',
+    bookingUrl: 'https://www.booking.com/searchresults.html?ss=Cinnamon+Citadel+Kandy+Sri+Lanka',
+    tag: '📍 Best Location',
+  },
+  {
+    area: 'Nuwara Eliya',
+    name: 'Heritance Tea Factory',
+    type: 'Luxury',
+    priceRange: 'USD 150–280/night',
+    image: '/images/tea-plantation.webp',
+    highlight: 'Built inside a working Victorian tea factory at 2,200 metres, this is one of Sri Lanka\'s most distinctive hotels. Original machinery is preserved throughout — tea pickers\' baskets hang from ceilings, conveyor belts become architectural features. Rooms feel genuinely cosy in the cool mountain air.',
+    bookingUrl: 'https://www.booking.com/searchresults.html?ss=Heritance+Tea+Factory+Nuwara+Eliya+Sri+Lanka',
+    tag: '🏭 Most Unique',
+  },
+  {
+    area: 'Nuwara Eliya',
+    name: 'Grand Hotel Nuwara Eliya',
+    type: 'Mid-Range',
+    priceRange: 'USD 70–130/night',
+    image: '/images/tea-plantation.webp',
+    highlight: 'The original grand colonial hotel of Nuwara Eliya — built in 1891, still preserving its Victorian character with wood-panelled bars, billiard rooms and lawns that feel like England. The Grand is the best surviving example of the era when British planters built a hill station here to escape the lowland heat.',
+    bookingUrl: 'https://www.booking.com/searchresults.html?ss=Grand+Hotel+Nuwara+Eliya+Sri+Lanka',
+    tag: '🕰️ Colonial Character',
+  },
+  {
+    area: 'Nuwara Eliya',
+    name: 'Araliya Green Hills Hotel',
+    type: 'Mid-Luxury',
+    priceRange: 'USD 100–180/night',
+    image: '/images/tea-plantation.webp',
+    highlight: 'A modern luxury hotel with floor-to-ceiling mountain views, large heated pool and well-equipped rooms. A contrast to the colonial aesthetic of the Grand Hotel — choose this if you want contemporary comfort. The rooftop bar overlooking the golf course and surrounding hills is excellent at sunset.',
+    bookingUrl: 'https://www.booking.com/searchresults.html?ss=Araliya+Green+Hills+Nuwara+Eliya+Sri+Lanka',
+    tag: '🏔️ Mountain Views',
+  },
+];
+
+const areas = ['Ella', 'Kandy', 'Nuwara Eliya'];
+
+const carouselImages = [
+  { src: '/images/tea-plantation.webp', alt: 'Tea estates in Sri Lanka Hill Country' },
+  { src: '/images/nine-arch-bridge.webp', alt: 'Nine Arch Bridge Ella' },
+  { src: '/images/ella.webp', alt: 'Ella valley views' },
+  { src: '/images/kandy.webp', alt: 'Kandy Sri Lanka' },
+  { src: '/images/worlds-end.webp', alt: 'Horton Plains World\'s End viewpoint' },
+];
+
+const typeColors: Record<string, string> = {
+  'Luxury': 'bg-ceylon-gold-100 text-ceylon-gold-800',
+  'Mid-Luxury': 'bg-ceylon-green-100 text-ceylon-green-800',
+  'Boutique': 'bg-purple-100 text-purple-800',
+  'Mid-Range': 'bg-blue-100 text-blue-800',
+};
+---
+<BaseLayout title="Best Hotels in Sri Lanka's Hill Country (2026) | The Trails of Ceylon" description="Hand-picked hotels in Ella, Kandy and Nuwara Eliya — from boutique tea estate retreats to colonial grand hotels, across all budgets." type="article" publishDate="2026-09-13">
+
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/tea-plantation.webp" alt="Tea estate hills Sri Lanka Hill Country" class="w-full h-full object-cover" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span><a href="/guides" class="hover:text-white">Travel Guides</a><span>/</span><span class="text-white">Hill Country Hotels</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Accommodation</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl mb-2">Best Hotels in Sri Lanka's Hill Country</h1>
+        <p class="text-white/80 text-sm">8 hand-picked stays across Ella, Kandy and Nuwara Eliya</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10">
+    <p class="text-xs text-gray-400 mb-6 flex items-center gap-1.5">
+      <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+      Last Updated: September 2026
+    </p>
+
+    <p class="text-gray-700 text-lg leading-relaxed mb-10">Sri Lanka's Hill Country has some of the most atmospheric places to stay in the country — tea estate bungalows, converted Victorian factories, colonial grand hotels and boutique properties with infinity pools overlooking mist-covered valleys. The cool air (nights drop to 15°C in Ella, lower in Nuwara Eliya) makes it feel like a completely different country from the coastal lowlands. These are the properties worth staying in.</p>
+
+    <!-- Photo Carousel -->
+    <div class="relative mb-14 rounded-2xl overflow-hidden" id="carousel">
+      <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out">
+        {carouselImages.map((img) => (
+          <div class="min-w-full aspect-[16/7]">
+            <img src={img.src} alt={img.alt} class="w-full h-full object-cover" loading="lazy" width="800" height="350" />
+          </div>
+        ))}
+      </div>
+      <button id="carousel-prev" aria-label="Previous image" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition-colors z-10">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+      </button>
+      <button id="carousel-next" aria-label="Next image" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition-colors z-10">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      </button>
+      <div id="carousel-dots" class="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 z-10">
+        {carouselImages.map((_, i) => (
+          <button data-index={i} class={`carousel-dot w-2 h-2 rounded-full transition-colors ${i === 0 ? 'bg-white' : 'bg-white/40'}`} aria-label={`Go to image ${i + 1}`}></button>
+        ))}
+      </div>
+    </div>
+
+    <!-- Hotels by area -->
+    {areas.map(area => (
+      <div class="mb-16">
+        <h2 class="font-serif font-black text-gray-900 text-3xl mb-6 pb-3 border-b-2 border-ceylon-gold-200">{area}</h2>
+        <div class="space-y-5">
+          {hotels.filter(h => h.area === area).map(hotel => (
+            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <div class="sm:flex">
+                <div class="sm:w-48 sm:flex-shrink-0 h-44 sm:h-auto overflow-hidden">
+                  <img src={hotel.image} alt={hotel.name} class="w-full h-full object-cover" loading="lazy" width="192" height="176" />
+                </div>
+                <div class="p-5 flex flex-col flex-1">
+                  <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                    <div>
+                      <h3 class="font-serif font-bold text-gray-900 text-lg">{hotel.name}</h3>
+                      <div class="flex flex-wrap gap-1.5 mt-1.5">
+                        <span class={`text-xs font-semibold px-2 py-0.5 rounded-full ${typeColors[hotel.type]}`}>{hotel.type}</span>
+                        <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">{hotel.tag}</span>
+                      </div>
+                    </div>
+                    <span class="text-sm font-bold text-ceylon-green-700 whitespace-nowrap">{hotel.priceRange}</span>
+                  </div>
+                  <p class="text-gray-600 text-sm leading-relaxed mb-4 flex-1">{hotel.highlight}</p>
+                  <a
+                    href={hotel.bookingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    class="self-start inline-flex items-center gap-2 bg-ceylon-green-700 hover:bg-ceylon-green-800 text-white font-semibold px-4 py-2 rounded-xl text-sm transition-colors"
+                  >
+                    Check Prices
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+
+    <div class="bg-gradient-to-br from-ceylon-gold-50 to-ceylon-green-50 border border-ceylon-gold-200 rounded-2xl p-6 mt-4 mb-6">
+      <h3 class="font-serif font-bold text-gray-900 text-lg mb-3">Tips for Booking Hill Country Accommodation</h3>
+      <ul class="text-sm text-gray-600 space-y-2 leading-relaxed list-none p-0 m-0">
+        <li><strong>Book Ella well in advance.</strong> The best-value guesthouses sell out 4–8 weeks ahead in peak season (Dec–Mar and Jul–Aug). Luxury properties like 98 Acres need even longer lead time.</li>
+        <li><strong>Nuwara Eliya is genuinely cold.</strong> At 1,900m, nights drop to 8–10°C. Confirm your room has hot water and heating before booking budget options.</li>
+        <li><strong>Mid-week is cheaper.</strong> Hill Country (especially Ella) sees significant weekend markups from Colombo domestic tourists. Arrive Sunday–Thursday for better rates and quieter trails.</li>
+        <li><strong>The train route matters.</strong> Arriving by the highland train? Ella is at the end of the scenic section — book a guesthouse within walking distance of the station if you're carrying luggage.</li>
+      </ul>
+    </div>
+
+    <p class="text-xs text-gray-400 mt-4">Prices are approximate and vary by season. We may earn a small commission if you book via links on this page, at no extra cost to you.</p>
+  </div>
+
+  <ExpediaWidget heading="🏨 Search Hill Country Hotels" />
+</BaseLayout>
+
+<script>
+  const track = document.getElementById('carousel-track') as HTMLElement;
+  const dots = document.querySelectorAll('.carousel-dot') as NodeListOf<HTMLButtonElement>;
+  const total = dots.length;
+  let current = 0;
+
+  function goTo(index: number) {
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => {
+      d.classList.toggle('bg-white', i === current);
+      d.classList.toggle('bg-white/40', i !== current);
+    });
+  }
+
+  document.getElementById('carousel-prev')?.addEventListener('click', () => goTo(current - 1));
+  document.getElementById('carousel-next')?.addEventListener('click', () => goTo(current + 1));
+  dots.forEach(dot => dot.addEventListener('click', () => goTo(Number(dot.dataset.index))));
+
+  // Auto-advance every 4 seconds
+  setInterval(() => goTo(current + 1), 4000);
+</script>
