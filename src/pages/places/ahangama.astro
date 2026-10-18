@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Ahangama, Sri Lanka: Stilt Fishermen, Surf & South Coast Guide | The Trails of Ceylon"
+  description="Ahangama is the quiet heart of Sri Lanka's south coast — stilt fishermen, the Kabalana surf break and easy access to Galle, Weligama and Unawatuna."
+  image="/images/stilt-fishing.webp"
+  type="article"
+  publishDate="2025-03-01"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/stilt-fishing.webp" alt="Stilt fishermen at dawn, Ahangama, Sri Lanka south coast" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/south-coast" class="hover:text-white">South Coast</a><span>/</span>
+          <span class="text-white">Ahangama</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">South Coast</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Ahangama</h1>
+        <p class="text-white/80 mt-2 text-lg">Southern Province &bull; Stilt Fishermen &bull; Surf &bull; Koggala Lake</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Province', 'Southern Province'],
+              ['Best For', 'Stilt fishermen, surfing'],
+              ['Season', 'Nov–April'],
+              ['Budget', 'LKR 3,000–15,000/night'],
+              ['Days Needed', '1–2 days'],
+              ['From Galle', '10km (15 min)'],
+              ['From Weligama', '5km (10 min)'],
+              ['From Colombo', '145km (2 hrs via E01)'],
+            ].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Ahangama sits quietly on the <a href="/places/south-coast">south coast of Sri Lanka</a>, wedged between the bustle of <a href="/places/galle">Galle</a> to the east and the surf schools of <a href="/places/weligama">Weligama</a> to the west. It is one of those places that manages to be simultaneously close to everything and, by south coast standards, genuinely unhurried. The town itself is little more than a coastal strip — temples, fishing boats, a few guesthouses and an outstanding fish market — but the coastline around Ahangama contains two of the south coast's defining images: the iconic stilt fishermen balanced above the surf at dawn, and the Kabalana reef break, a wave that has drawn serious surfers for decades.</p>
+
+        <p>Ahangama is not a destination that markets itself. There is no beachfront promenade, no row of beach bars, no surf-school touts on the sand. What it offers is the south coast in a more local register — excellent food, proximity to Galle Fort and Unawatuna, and a pace of life that the more famous beach towns nearby have largely lost. For travellers who want a south coast base without the crowds of Unawatuna or the surf-school intensity of Weligama, Ahangama is the quiet answer.</p>
+
+        <h2>The Stilt Fishermen</h2>
+        <p>The stilt fishermen are perhaps Sri Lanka's single most recognisable image: a lone figure perched on a cross-pole driven into the seabed, line dangling into the surf below, silhouetted against a pink or gold sky. The technique originated in the south coast's post-war period and is concentrated in the Koggala–Ahangama stretch of coastline — this, not Weligama, is where the practice is most deeply rooted.</p>
+        <p>The fishermen typically take their perches in the early morning (from around 5:30am) and again in the late afternoon before sunset. Early morning offers the best photography light, with the rising sun behind the poles creating dramatic silhouettes. The section of coast between Ahangama and Koggala — particularly at the 120km marker on the coastal road — has the densest concentration of stilt spots. Be aware that the fishermen are increasingly accustomed to being photographed and may ask for a tip; this is reasonable given that they are performing a role that is as much cultural spectacle as genuine fishing. Arrive early to see them before the tour vans.</p>
+
+        <h2>Kabalana — The Surf Break</h2>
+        <p>A kilometre west of Ahangama, Kabalana is one of Sri Lanka's best-known reef breaks — a left-hander that peels over a shallow reef and produces long, fast walls when the swell cooperates. This is not a beginner wave: the reef is unforgiving and the takeoff can be steep. Intermediate to experienced surfers will find Kabalana one of the most rewarding breaks on the south coast, with walls that allow proper turns and an occasional barrel section on larger swells.</p>
+        <p>The break works best from November to April on south and south-west swells of 1.5 to 3 metres, with an offshore wind from the north-east (most reliable in December and January). The lineup is smaller and more knowledgeable than the beginner scenes at Weligama or Hikkaduwa. A few local surf shops near Ahangama junction rent boards and fins; there are no formal surf schools at Kabalana, which keeps the lineup relatively uncrowded.</p>
+        <p><strong>Note for beginners:</strong> Kabalana is not recommended for first-timers. Head 5km west to Weligama for beach-break lessons, then return to Kabalana once you have the basics.</p>
+
+        <AffiliateBox
+          title="Find Hotels in Ahangama"
+          description="Ahangama has a growing selection of boutique guesthouses and surf villas — most offering easy access to both Kabalana and the stilt fishermen coast."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Ahangama+Sri+Lanka"
+          variant="hotel"
+        />
+
+        <h2>Koggala Lake</h2>
+        <p>A kilometre east of Ahangama, Koggala Lake is one of Sri Lanka's largest natural lakes — a broad, calm body of water dotted with small islands, some inhabited, others given over to cinnamon plantations and Buddhist temples. Boat trips out to the lake's islands are available from the lakeside road for LKR 1,500–2,500 per boat; the most visited is the island temple, Kataluwa Purvarama, though the cinnamon-island stop — where a small cooperative demonstrates the hand-peeling of Ceylon cinnamon — is the most interesting.</p>
+        <p>Koggala Lake is also exceptional for birdwatching. Purple herons, painted storks, cormorants and kingfishers are resident year-round; the lake's reed beds attract migrants in season. Early morning boat trips offer the best wildlife sightings.</p>
+        <p>On the lakeside, the <strong>Martin Wickramasinghe Folk Museum</strong> — named after one of Sri Lanka's most important 20th-century Sinhala novelists, who was born in Koggala — is a thoughtfully curated collection of traditional rural craft, rural life and literary heritage. One of the most charming small museums on the south coast, and free to enter.</p>
+
+        <h2>Where to Eat</h2>
+        <p>Ahangama punches well above its weight on food. The fish market near the junction sells the morning's catch direct from boats, and the surrounding small restaurants and family-run cadés turn this into some of the best fresh seafood on the south coast. Look for grilled reef fish, devilled cuttlefish and prawn curry at local restaurants where a full meal rarely costs more than LKR 1,200–1,800. Several more upmarket restaurants have opened along the coastal road as boutique hotel development has increased — these are good, if considerably pricier. The best budget option is simply to follow the fishing boats to the nearest beachside kadé.</p>
+
+        <h2>Day Trips from Ahangama</h2>
+        <p>Ahangama's central south coast position makes it an excellent base for day trips. <a href="/places/galle">Galle Fort</a> is 10km east — 15 minutes by tuk-tuk — and easily visited in a half-day. <a href="/places/unawatuna">Unawatuna</a> is 8km east, <a href="/places/weligama">Weligama</a> 5km west and <a href="/places/hikkaduwa">Hikkaduwa</a> 20km west. <a href="/places/mirissa">Mirissa</a>, for whale watching, is 15km east. The <a href="/things-to-do/rope-swing">Dalawella rope swing</a> is a 20-minute tuk-tuk ride towards Unawatuna. Brief Garden — the extraordinary tropical garden created by Bevis Bawa — is about 45 minutes by road near Beruwala, best visited on a dedicated half-day.</p>
+
+        <h2>Getting to Ahangama</h2>
+        <p>Ahangama has its own railway station on the Colombo–Matara coastal line — trains from Colombo Fort take approximately 3 hours; from Galle, it is one stop (15 minutes). The station is a 5-minute walk from the coast. By road, Ahangama sits on the A2 coastal highway: tuk-tuks from Galle cost around LKR 500–700; from Weligama, LKR 300–400. Colombo to Ahangama via the Southern Expressway takes under 2 hours by car. Intercity buses from Galle and Matara stop at Ahangama junction regularly throughout the day.</p>
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[
+              ['Best Season', 'Nov–Apr'],
+              ['Days to Spend', '1–2 days'],
+              ['Top Activity', 'Stilt fishermen at dawn'],
+              ["Surf Level", 'Intermediate+'],
+              ["Don't Miss", 'Koggala Lake boat trip'],
+            ].map(([k, v]) => (
+              <div class="flex justify-between gap-4">
+                <span class="font-medium text-white/80">{k}</span>
+                <span class="text-white/70 text-right">{v}</span>
+              </div>
+            ))}
+          </div>
+          <a
+            href="https://www.booking.com/searchresults.html?ss=Ahangama+Sri+Lanka"
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            class="book-btn"
+          >
+            Book Hotel in Ahangama
+          </a>
+        </div>
+
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/places/weligama', label: 'Weligama (5km)' },
+              { href: '/places/galle', label: 'Galle Fort (10km)' },
+              { href: '/places/unawatuna', label: 'Unawatuna (8km)' },
+              { href: '/places/mirissa', label: 'Mirissa (15km)' },
+              { href: '/places/hikkaduwa', label: 'Hikkaduwa (20km)' },
+              { href: '/places/south-coast', label: 'South Coast Guide' },
+            ].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-base mb-2">Surf Tip</h3>
+          <p class="text-sm text-ceylon-green-800">Kabalana is best December–January with north-east offshore winds. Check Magic Seaweed or Surf Forecast for swell direction — it only works on south/south-west swells.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <ExpediaWidget heading="🏨 Find Hotels in Ahangama & South Coast" />
+</BaseLayout>
