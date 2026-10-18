@@ -1,8 +1,31 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import AffiliateBox from '../../components/AffiliateBox.astro';
+
+const ropeSwingFaq = [
+  {
+    question: "Where is the Dalawella rope swing?",
+    answer: "The Dalawella rope swing is on Dalawella beach, 1km east of Unawatuna and approximately 3km east of Galle Fort on Sri Lanka's south coast. It hangs from a large leaning palm tree at the eastern end of the beach. From Galle, take a tuk-tuk east along the coastal A2 road for about 10–15 minutes."
+  },
+  {
+    question: "How much does the Dalawella rope swing cost?",
+    answer: "Using the Dalawella rope swing is free — there is no entrance fee. The swing is adjacent to a beachside restaurant, and ordering food or drinks gives you more relaxed access and time for photos. Tips to the local attendant are customary."
+  },
+  {
+    question: "Is the Dalawella rope swing safe?",
+    answer: "The rope swing is generally safe for most adults — it swings out over the sea from the palm tree. Check the condition of the rope and the water depth before using it. Sea conditions are best from November to April when the south coast is calm; the sea beneath the swing can become rough during the south-west monsoon from May to September."
+  },
+  {
+    question: "What is the best time to visit the Dalawella rope swing?",
+    answer: "Visit between 8am and 11am on a weekday morning for the best combination of golden-hour light and smaller crowds. The south coast season (November to April) gives the calmest sea and best swimming conditions. Avoid midday in peak season when crowds are at their largest."
+  },
+  {
+    question: "Is the Dalawella rope swing still there in 2025?",
+    answer: "Yes, the Dalawella rope swing is still there in 2025. It has been a fixture at Dalawella beach for many years and remains one of Sri Lanka's most photographed spots. The palm tree and setup remain as they have always been, with the adjacent beachside restaurants welcoming visitors year-round."
+  }
+];
 ---
-<BaseLayout title="Dalawella Rope Swing, Sri Lanka: Location, Cost & Tips (2025) | The Trails of Ceylon" description="Visit Sri Lanka's most famous beach rope swing at Dalawella, near Unawatuna. Exact location, entrance cost, best time to visit and what to expect — complete visitor guide." type="article" publishDate="2025-03-01">
+<BaseLayout title="Dalawella Rope Swing, Sri Lanka: Location, Cost & Tips (2025) | The Trails of Ceylon" description="Visit Sri Lanka's most famous beach rope swing at Dalawella, near Unawatuna. Exact location, entrance cost, best time to visit and what to expect — complete visitor guide." type="article" publishDate="2025-03-01" faqSchema={ropeSwingFaq}>
   <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
     <img src="/images/rope-swing.webp" alt="Rope swing Dalawella beach Unawatuna Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -38,6 +61,22 @@ import AffiliateBox from '../../components/AffiliateBox.astro';
           <li>Combine with Unawatuna beach and Galle Fort for a complete south coast day</li>
         </ul>
         <AffiliateBox title="Find Hotels Near Unawatuna" description="Dalawella and Unawatuna have excellent beachside guesthouses — the best base for this part of the south coast." buttonText="Search Hotels on Booking.com" buttonHref="https://www.booking.com/searchresults.html?ss=Unawatuna+Sri+Lanka" variant="hotel" />
+
+        <section class="not-prose mt-12 border-t border-gray-100 pt-10">
+          <h2 class="font-serif font-bold text-gray-900 text-2xl mb-6">Frequently Asked Questions</h2>
+          <div class="space-y-5">
+            {ropeSwingFaq.map(item => (
+              <details class="group border border-gray-200 rounded-xl overflow-hidden">
+                <summary class="flex items-center justify-between gap-3 cursor-pointer px-5 py-4 font-semibold text-gray-900 text-base select-none list-none [&::-webkit-details-marker]:hidden">
+                  {item.question}
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="px-5 pb-5 text-gray-700 text-sm leading-relaxed">{item.answer}</div>
+              </details>
+            ))}
+          </div>
+        </section>
+
       </article>
       <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
         <div class="plan-visit-box">

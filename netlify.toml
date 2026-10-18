@@ -54,3 +54,9 @@
   from = "/sitemap"
   to = "/sitemap-index.xml"
   status = 301
+
+[[redirects]]
+  from = "/guides/sri-lanka-visa-guide/"
+  to = "/guides/sri-lanka-eta-visa-guide/"
+  status = 301
+  force = true

@@ -11,6 +11,7 @@ interface Props {
   type?: string;
   publishDate?: string;
   author?: string;
+  faqSchema?: Array<{question: string; answer: string}>;
 }
 
 const {
@@ -21,6 +22,7 @@ const {
   type = 'website',
   publishDate,
   author = 'The Trails of Ceylon',
+  faqSchema,
 } = Astro.props;
 
 const siteURL = 'https://thetrailsofceylon.com';
@@ -134,7 +136,7 @@ const publisherOrg = {
   <link rel="sitemap" href="/sitemap-index.xml" />
 
   <!-- Leaflet (map widget — loaded only on place pages) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  {isPlacePage && <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />}
 
   <!-- Smooth scroll -->
   <style>html { scroll-behavior: smooth; }</style>
@@ -184,6 +186,16 @@ const publisherOrg = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": breadcrumbItems
+  })} />}
+  <!-- Schema.org: FAQPage (pages that pass faqSchema) -->
+  {faqSchema && faqSchema.length > 0 && <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqSchema.map((item: {question: string; answer: string}) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+    }))
   })} />}
 </head>
 <body class="min-h-screen flex flex-col">

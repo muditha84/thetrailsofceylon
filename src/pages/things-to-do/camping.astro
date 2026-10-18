@@ -1,8 +1,31 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import AffiliateBox from '../../components/AffiliateBox.astro';
+
+const campingFaq = [
+  {
+    question: "Do you need a permit to camp in Sri Lanka?",
+    answer: "Yes, for wild camping in national park buffer zones and Forest Department areas. National park permits require an application to the DWC head office in Colombo — allow 4–6 weeks. Knuckles camping requires a Forest Department permit from the Divisional Forest Office in Kandy (approximately LKR 500–1,000 per person per night). Organised eco-camps and glamping operations handle their own permits on your behalf."
+  },
+  {
+    question: "Can you camp at Yala National Park?",
+    answer: "Camping inside Yala National Park itself is not available to independent tourists. However, several eco-camps and glamping lodges operate in the buffer zone around the park, particularly on its northern and western edges. These offer a genuine wilderness experience with the possibility of seeing wildlife from your tent, plus early-morning safari access into the park."
+  },
+  {
+    question: "What is the best place to go camping in Sri Lanka?",
+    answer: "The Knuckles Conservation Forest is considered the finest wild camping destination — a UNESCO buffer zone with multi-day trekking routes, endemic wildlife and dramatic highland scenery. For an easier introduction with more comfort, buffer zone eco-camps at Yala or Udawalawe are excellent. Beach camping is best at Arugam Bay (May–September) or Nilaveli on the east coast."
+  },
+  {
+    question: "Is camping safe in Sri Lanka?",
+    answer: "Camping is safe when properly planned. The main risks are from wildlife — elephants kill more people in Sri Lanka each year than any other animal, and crocodiles, leopards and venomous snakes require awareness. Always camp with a licensed guide in buffer zones, follow instructions around wildlife exactly, and never leave food outside your tent. Organised eco-camps greatly reduce these risks with experienced hosts on site."
+  },
+  {
+    question: "Can you camp on the beach in Sri Lanka?",
+    answer: "Yes. Organised beach camping is available at Arugam Bay, Nilaveli and Tangalle, with basic eco-retreats offering cleared beach areas, fire pits and basic facilities. Wild beach camping on unmanaged stretches of coast is not specifically prohibited but check with local guesthouses first. Best seasons: May–September for the east coast (Arugam Bay, Nilaveli) and November–April for the south coast (Tangalle)."
+  }
+];
 ---
-<BaseLayout title="Camping in Sri Lanka: Best Spots, Permits & Essential Tips | The Trails of Ceylon" description="Camp under stars in the Knuckles, on remote coastlines or at the edge of Yala. Complete guide to camping in Sri Lanka — best spots, permits, gear and safety tips." type="article" publishDate="2025-03-01">
+<BaseLayout title="Camping in Sri Lanka: Best Spots, Permits & Essential Tips | The Trails of Ceylon" description="Camp under stars in the Knuckles, on remote coastlines or at the edge of Yala. Complete guide to camping in Sri Lanka — best spots, permits, gear and safety tips." type="article" publishDate="2025-03-01" faqSchema={campingFaq}>
   <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
     <img src="/images/camping.webp" alt="Camping in Sri Lanka highland landscape under stars" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -185,6 +208,21 @@ import AffiliateBox from '../../components/AffiliateBox.astro';
         </ul>
 
         <AffiliateBox title="Book a Guided Camping Experience" description="Join an expert-led camping or overnight trek in Sri Lanka — guides handle permits, equipment logistics and wildlife safety so you can focus on the experience." buttonText="Find Camping Tours" buttonHref="https://www.getyourguide.com/sri-lanka-l976/outdoor-activities-tc67/" variant="tour" />
+
+        <section class="not-prose mt-12 border-t border-gray-100 pt-10">
+          <h2 class="font-serif font-bold text-gray-900 text-2xl mb-6">Frequently Asked Questions</h2>
+          <div class="space-y-5">
+            {campingFaq.map(item => (
+              <details class="group border border-gray-200 rounded-xl overflow-hidden">
+                <summary class="flex items-center justify-between gap-3 cursor-pointer px-5 py-4 font-semibold text-gray-900 text-base select-none list-none [&::-webkit-details-marker]:hidden">
+                  {item.question}
+                  <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </summary>
+                <div class="px-5 pb-5 text-gray-700 text-sm leading-relaxed">{item.answer}</div>
+              </details>
+            ))}
+          </div>
+        </section>
 
       </article>
       <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
