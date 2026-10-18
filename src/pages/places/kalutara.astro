@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Kalutara, Sri Lanka: West Coast Beach Town & Coconut Capital | The Trails of Ceylon"
+  description="Kalutara is Sri Lanka's closest beach destination to Colombo — a laid-back West Coast town with golden sand beaches, a famous Buddhist stupa and the start of the coconut coast."
+  type="article"
+  publishDate="2026-09-13"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/bentota.webp" alt="Golden beach along Sri Lanka's West Coast near Kalutara" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/south-coast" class="hover:text-white">West Coast</a><span>/</span>
+          <span class="text-white">Kalutara</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">West Coast</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Kalutara</h1>
+        <p class="text-white/80 mt-2 text-lg">West Coast • Beach • Kalu Ganga River • Buddhist Stupa • Coconut Country</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","Western Province"],["Distance from Colombo","43km (1 hr)"],["Best For","Beach, relaxation, day trips"],["Best Season","Nov–April (West Coast)"],["Days Needed","1–3 days"],["River","Kalu Ganga (Black River)"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Kalutara is Sri Lanka's closest beach town to Colombo — just 43km south on the coastal road, or about an hour's drive without traffic — and one of the most popular weekend beach destinations for Colombo residents. It marks the beginning of the West Coast's famous coconut coast, where the road runs through an almost continuous corridor of coconut palms, beach hotels and lagoon waterways. The town itself sits at the mouth of the Kalu Ganga (Black River), which flows into the Indian Ocean here, creating a broad, scenic estuary. Kalutara is a good choice for travellers who want a beach base within easy reach of Colombo — either as a first or last stop on a Sri Lanka itinerary, or as a base for day trips further along the coast.</p>
+
+        <h2>Kalutara Beach</h2>
+        <p>Kalutara's main beach stretches for several kilometres along the coast, lined with coconut palms and a mix of resort hotels, small guesthouses and local warungs. The beach is wide and sandy, with the calm period running November through April when the southwest monsoon has retreated and the Indian Ocean is at its most inviting. Swimming is generally safe during the season with relatively calm conditions; outside season (May–October) the sea can be rough with strong currents. The northern end of the beach, near the Kalu Ganga river mouth, is particularly scenic and less developed than the hotel strip. Sunset over the Indian Ocean from the beach is consistently excellent.</p>
+
+        <h2>Kalutara Bodiya (Sacred Stupa)</h2>
+        <p>The most distinctive landmark in Kalutara is the Kalutara Bodiya — a large white dagoba (stupa) that sits dramatically at the northern end of town, right beside the bridge over the Kalu Ganga. What makes it architecturally unusual is that it is hollow — visitors can enter the interior of the stupa, where a smaller shrine is located within. The dagoba is visible for kilometres around and is particularly atmospheric at dusk when it is illuminated. A Bodhi tree of significant age stands in the temple grounds. The stupa is actively venerated and visitors of all backgrounds are welcome with the usual Buddhist temple respect (covered knees and shoulders, shoes removed).</p>
+
+        <h2>Kalu Ganga River & Water Activities</h2>
+        <p>The Kalu Ganga estuary and river offer boat trips through mangroves, past small islands and fishing communities. Several operators offer river boat tours of 1–3 hours; the early morning trip is particularly good for birdwatching, with herons, kingfishers and egrets common. The wider Kalu Ganga river upstream offers pleasant scenery through rice paddies and coconut groves — a contrast to the coastal beach strip.</p>
+
+        <h2>Mangrove Forest at Muthurajawela</h2>
+        <p>Just north of Kalutara, towards Colombo, the Muthurajawela Marsh and mangrove wetlands offer a completely different environment — a network of tidal channels through dense mangrove forest that is home to crocodiles, water monitors, purple-faced langurs and a variety of waterbirds. Boat tours through the marsh depart from the Hendala visitor centre and take about 1.5–2 hours. It's a surprisingly wild experience given its proximity to Colombo.</p>
+
+        <h2>Getting to Kalutara</h2>
+        <p>Kalutara is one of the easiest destinations to reach from Colombo. By road on the Southern Expressway, the drive takes about 45 minutes in good traffic (exit at Gelanigama and continue south on the coastal road). The A2 coastal road is slower but more scenic, passing through Moratuwa, Panadura and Kalutara North before reaching the beach strip. Regular trains on the Colombo–Galle line stop at Kalutara North and South stations — the journey takes about 1.5 hours. Frequent express buses from Colombo's Bastian Mawatha terminal also serve Kalutara.</p>
+
+        <h2>Combining Kalutara with the West Coast</h2>
+        <p>Kalutara is well positioned as the northern anchor of a West Coast beach trip. Beruwala is just 10km south — home to a historic Arab trading community and a long beach. Bentota is 20km south — the premier beach resort on the West Coast, with water sports, luxury hotels and the Bentota River. Hikkaduwa is another 35km south with its famous coral reef and surf scene. All of these can be explored from a Kalutara base, or done as a progressive journey south towards Galle.</p>
+
+        <AffiliateBox
+          title="Find Hotels in Kalutara"
+          description="From beachfront resorts to small family guesthouses — Kalutara has accommodation for every budget on the West Coast."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Kalutara+Sri+Lanka"
+          variant="hotel"
+        />
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","Nov–April"],["Ideal Stay","1–3 days"],["Top Activity","Beach + Kalutara Bodiya"],["From Colombo","45 min by expressway"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Kalutara+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">
+            Find Hotels Nearby
+          </a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/colombo","label":"Colombo (43km)"},{"href":"/places/bentota","label":"Bentota (20km)"},{"href":"/places/hikkaduwa","label":"Hikkaduwa (55km)"},{"href":"/places/negombo","label":"Negombo (80km)"},{"href":"/places/south-coast","label":"West Coast Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <ExpediaWidget heading="🏨 Find Hotels in Kalutara" />
+</BaseLayout>

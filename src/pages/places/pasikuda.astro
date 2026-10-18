@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Pasikuda, Sri Lanka: East Coast Beach, Shallow Lagoon & Coral Reef | The Trails of Ceylon"
+  description="Pasikuda is Sri Lanka's most famous East Coast beach — a shallow turquoise lagoon with calm waters, white sand and excellent snorkelling on the fringing reef."
+  type="article"
+  publishDate="2026-09-13"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/nilaveli.webp" alt="Shallow turquoise waters at Pasikuda beach, East Coast Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/east-coast" class="hover:text-white">East Coast</a><span>/</span>
+          <span class="text-white">Pasikuda</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">East Coast</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Pasikuda</h1>
+        <p class="text-white/80 mt-2 text-lg">East Coast • Shallow Lagoon • Snorkelling • White Sand Beach</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","Eastern Province"],["Distance from Colombo","310km (6–7 hrs)"],["Best For","Swimming, snorkelling, relaxation"],["Best Season","Apr–Sep (East Coast)"],["Days Needed","2–4 days"],["Water Depth","Very shallow — safe for families"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Pasikuda is Sri Lanka's most famous East Coast beach — a sweeping arc of white sand fronting a remarkably shallow turquoise lagoon, where the water stays chest-deep for nearly a kilometre from shore. That unusual depth profile, created by a fringing reef that acts as a natural breakwater, produces the calmest, most swimmable sea conditions on the island. While the south and west coasts can be rough for much of the year, Pasikuda's East Coast location means it has its own distinct season — April to September — when the water is glassy, the sky clear and the beach at its best. The reef also makes it one of the better snorkelling spots in Sri Lanka without needing to go to a dedicated dive site.</p>
+
+        <h2>The Lagoon & Swimming</h2>
+        <p>The defining feature of Pasikuda is its shallow lagoon, created by a coral reef that runs roughly parallel to the shore. Within the lagoon, the water is flat, calm and crystal clear — ideal for families with children, non-swimmers and anyone who wants to wade, float or swim without dealing with waves or currents. The sand underfoot is fine and white. The lagoon is warm year-round, typically 28–30°C during the season. Beyond the reef line, the ocean conditions are more exposed, but most visitors stay within the protected zone. The beach itself is several kilometres long, with the most developed section concentrated around the resort strip.</p>
+
+        <h2>Snorkelling</h2>
+        <p>The fringing reef at Pasikuda supports moderate coral coverage and a good variety of reef fish — parrotfish, sergeant majors, surgeonfish and the occasional sea turtle are regularly sighted. Snorkelling directly from the beach is possible — swim out to the reef edge and look down. Most resorts provide snorkelling equipment; gear can also be rented cheaply from operators on the beach. The reef is healthiest in sections away from the areas of high hotel density where anchor damage and runoff have had an impact. Ask at your resort which reef sections are currently in best condition.</p>
+
+        <h2>The East Coast Season</h2>
+        <p>Understanding Sri Lanka's two monsoon systems is essential for planning a Pasikuda trip. The East Coast has its dry season from approximately April through September — the opposite of the South and West coasts. This means Pasikuda is at its best when Mirissa, Unawatuna and Hikkaduwa are experiencing their rainy season. December through March brings the northeast monsoon to the east — this is when the coast can be rough and some accommodation closes. The ideal window is May to August; shoulder months (April and September) are still generally good but can have occasional overcast days.</p>
+
+        <h2>Getting to Pasikuda</h2>
+        <p>Pasikuda is about 310km from Colombo by road — approximately 6–7 hours by car via the A6 through Kandy. The nearest town is Kattankudy, and the nearest major city is Batticaloa (about 30km north). There are no direct trains to Pasikuda; the closest railway station is Batticaloa, from which a tuk-tuk takes about 45 minutes. Most visitors either drive from Colombo (direct, or via a stop at Polonnaruwa or Sigiriya), or fly from Colombo to Batticaloa — FitsAir and other domestic carriers operate this route, cutting travel to about 1 hour.</p>
+
+        <h2>Where to Stay</h2>
+        <p>Pasikuda has developed significantly since the end of the civil war in 2009, and now has a range of accommodation from large resort hotels to smaller guesthouses. The main resort strip fronts the beach directly. Several large Sri Lankan chain hotels — Amaya Beach, Uga Bay, Maalu Maalu — are established here, with more development ongoing. For budget accommodation, smaller guesthouses can be found in the surrounding villages. Book well ahead for the peak season (June–August) as the better properties fill up quickly.</p>
+
+        <h2>Combining with Nearby Sites</h2>
+        <p>Pasikuda works well as part of an East Coast circuit. Batticaloa town (30km north) has an interesting Dutch fort and a famous lagoon where singing fish are supposedly heard on certain nights. Kalkudah beach is immediately adjacent to Pasikuda and typically quieter. Polonnaruwa — the ancient capital — is about 90km west, making it a feasible day trip from Pasikuda for those who want to combine beach and culture. Arugam Bay, Sri Lanka's surf capital, is about 100km south and makes a natural next stop for those travelling down the coast.</p>
+
+        <AffiliateBox
+          title="Find Hotels in Pasikuda"
+          description="From beachfront resorts to guesthouses — Pasikuda has options for every budget during the East Coast season."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Pasikuda+Sri+Lanka"
+          variant="hotel"
+        />
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","Apr–Sep"],["Ideal Stay","2–4 days"],["Top Activity","Snorkelling on the reef"],["From Colombo","6–7 hrs by road"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Pasikuda+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">
+            Find Hotels Nearby
+          </a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/trincomalee","label":"Trincomalee (140km)"},{"href":"/places/nilaveli","label":"Nilaveli Beach"},{"href":"/places/polonnaruwa","label":"Polonnaruwa (90km)"},{"href":"/places/arugam-bay","label":"Arugam Bay (100km)"},{"href":"/places/east-coast","label":"East Coast Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <ExpediaWidget heading="🏨 Find Hotels in Pasikuda" />
+</BaseLayout>

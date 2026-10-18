@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Mihintale, Sri Lanka: Birthplace of Buddhism in Sri Lanka | The Trails of Ceylon"
+  description="Mihintale is where Buddhism arrived in Sri Lanka in 247 BC — a sacred mountain with 1,840 steps, ancient dagobas and extraordinary views over the Cultural Triangle."
+  type="article"
+  publishDate="2026-09-13"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/anuradhapura.webp" alt="Ancient ruins at Mihintale, birthplace of Buddhism in Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/cultural-triangle" class="hover:text-white">Cultural Triangle</a><span>/</span>
+          <span class="text-white">Mihintale</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Cultural Triangle</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Mihintale</h1>
+        <p class="text-white/80 mt-2 text-lg">Cultural Triangle • Buddhism's Arrival • Ancient Ruins • Sacred Mountain</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","North Central Province"],["Distance from Anuradhapura","13km"],["Best For","Buddhist history, pilgrimage"],["Best Season","Nov–April"],["Days Needed","Half day to full day"],["Steps to Summit","1,840 granite steps"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Mihintale is arguably the most historically significant site in Sri Lanka — the mountain where, in 247 BC, the monk Mahinda (son of the Indian Emperor Ashoka) met the Sinhalese King Devanampiya Tissa and introduced Buddhism to the island. That encounter changed Sri Lankan civilisation permanently. Today Mihintale is a sacred mountain rising from the surrounding plain, covered with ancient dagobas, monk caves, meditation platforms and granite steps, and visited by both Buddhist pilgrims and curious travellers exploring the Cultural Triangle. It lies just 13km east of Anuradhapura and makes a natural half-day addition to any visit to the ancient capital.</p>
+
+        <h2>Historical Significance</h2>
+        <p>The encounter between Mahinda and King Devanampiya Tissa — traditionally said to have occurred during a royal deer hunt on this mountain — is the founding moment of Theravada Buddhism in Sri Lanka, from which it spread to much of Southeast Asia. The mountain was declared a sacred sanctuary immediately after and has been a place of pilgrimage for over two millennia. The ruins on Mihintale date primarily from the Anuradhapura kingdom period (3rd century BC to 10th century AD), though the site has been continuously maintained. The Poya (full moon) days in June — the Poson festival — draw tens of thousands of pilgrims to Mihintale in white clothes, making it one of the most visually spectacular religious gatherings in the country.</p>
+
+        <h2>The 1,840 Steps</h2>
+        <p>The main approach to the summit is a broad granite stairway of 1,840 steps — the exact number traditionally counted by pilgrims. The steps date from the reign of King Mahadathika Mahanaga (1st century AD), though they have been repaired and rebuilt multiple times since. The climb takes 30–45 minutes at a steady pace; the steps are shaded by trees and generally manageable in the cooler morning hours. Shoes must be removed at the base of the main stairway — bring socks if the stone gets hot. At intervals along the route are resting platforms, ancient inscriptions and subsidiary shrines. The final section becomes steeper and narrower, emerging at the summit complex.</p>
+
+        <h2>What to See at the Summit</h2>
+        <p>The summit of Mihintale holds several significant structures. The <strong>Maha Seya dagoba</strong> is the largest — a white-domed stupa said to enshrine a single hair of the Buddha and built on the spot where Mahinda first spoke to the king. The <strong>Ambastala dagoba</strong> marks the exact location of the historic encounter. The <strong>Mahinda's Cave</strong> is where the monk is believed to have meditated; it contains an ancient stone bed. From the summit there are wide views over the surrounding flat plains and the spires of Anuradhapura's dagobas visible on the horizon. A small enclosure near the summit contains the <strong>Sinha Pokuna</strong> — a carved lion-shaped water cistern from the 3rd century BC.</p>
+
+        <h2>The Lower Ruins</h2>
+        <p>Below the main stairway, a separate area of ruins includes the <strong>Kantaka Cetiya</strong> — a partially restored semi-circular dagoba dating from around the 2nd century BC, decorated with carved panels of elephants, horses and other figures along its base. This is one of the oldest and most interesting ruins in the complex and is often overlooked by visitors who focus only on the summit climb. The surrounding area also contains ancient bathing pools (pokuna), hospital ruins and monastic cells carved directly into the rock face.</p>
+
+        <h2>Combining with Anuradhapura</h2>
+        <p>Mihintale is almost always visited as a half-day add-on to Anuradhapura — the ancient capital lies just 13km to the west and the two sites together make a full day. The admission ticket for Mihintale is purchased separately from the Anuradhapura ticket. Most visitors do Anuradhapura first (the larger site with more to see) and then Mihintale in the late afternoon, when the crowds thin and the light on the surrounding plain becomes golden. Tuk-tuks from Anuradhapura to Mihintale take about 20 minutes; negotiate a return fare including a wait time.</p>
+
+        <h2>Getting There & Practical Tips</h2>
+        <p>Mihintale is 13km east of Anuradhapura on the A9 road. Admission is approximately USD 5 for foreigners (separate from the Anuradhapura ticket). White clothing is not required but respectful dress (covered shoulders and knees) is essential — a shawl or sarong can be bought at the base. The site is busiest on Poya days and during the June Poson festival. Visit early morning for the best light and coolest temperatures for the climb.</p>
+
+        <AffiliateBox
+          title="Find Hotels near Mihintale & Anuradhapura"
+          description="Stay in or near Anuradhapura to explore both ancient sites at your own pace."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Anuradhapura+Sri+Lanka"
+          variant="hotel"
+        />
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","Nov–April"],["Ideal Stay","Half day"],["Top Activity","Summit climb + dagobas"],["From Anuradhapura","13km (20 min)"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Anuradhapura+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">
+            Find Hotels Nearby
+          </a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/anuradhapura","label":"Anuradhapura (13km)"},{"href":"/places/polonnaruwa","label":"Polonnaruwa (100km)"},{"href":"/places/sigiriya","label":"Sigiriya (60km)"},{"href":"/places/cultural-triangle","label":"Cultural Triangle Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <ExpediaWidget heading="🏨 Find Hotels near Mihintale" />
+</BaseLayout>

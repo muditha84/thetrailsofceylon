@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Hatton, Sri Lanka: Gateway to Adam's Peak & Tea Country | The Trails of Ceylon"
+  description="Hatton is the base town for climbing Adam's Peak (Sri Pada) — Sri Lanka's most sacred mountain — and the gateway to some of the island's most beautiful tea country."
+  type="article"
+  publishDate="2026-09-13"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/tea-plantation.webp" alt="Tea estates and hills near Hatton, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/hill-country" class="hover:text-white">Hill Country</a><span>/</span>
+          <span class="text-white">Hatton</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Hill Country</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Hatton</h1>
+        <p class="text-white/80 mt-2 text-lg">Hill Country • Adam's Peak • Tea Estates • Maskeliya Reservoir</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","Central Province"],["Distance from Colombo","130km (3.5 hrs)"],["Best For","Adam's Peak, tea estates"],["Pilgrimage Season","Dec–May"],["Days Needed","1–2 days"],["Nearest Peak","Adam's Peak (2,243m)"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Hatton is a small hill town in Sri Lanka's Central Province that most travellers pass through rather than stay in — but it punches well above its modest appearance in terms of what it gives access to. It is the primary gateway town for climbing Adam's Peak (Sri Pada), Sri Lanka's most sacred mountain, and sits in the heart of some of the most productive and scenic tea country on the island. The town itself is a functional, working-class place — a real Sri Lankan hill town with markets, local restaurants and a busy railway station — rather than a tourist hub. That makes it an interesting base for travellers who want to experience the Hill Country away from the backpacker circuit of Ella and Nuwara Eliya.</p>
+
+        <h2>Adam's Peak (Sri Pada)</h2>
+        <p>Adam's Peak is the reason most travellers visit Hatton. The mountain — 2,243m high — is sacred to four religions simultaneously: Buddhists believe the summit footprint is that of the Buddha; Hindus identify it with Shiva; Muslims and Christians associate it with Adam. This cross-religious significance makes it one of the most unusual pilgrimage sites in the world. The pilgrim trail — accessed from Dalhousie, 18km from Hatton — involves climbing approximately 5,500 steps over about 7km to reach the summit. The climb typically takes 3–4 hours up and 2.5–3 hours down. Almost all visitors climb at night to reach the summit before dawn to watch the sunrise — on clear days the famous triangular shadow of the peak is cast across the landscape below as the sun rises. The season runs from December to May (Vesak); the mountain is closed for climbing in the off-season. The trail is lit throughout and busy with pilgrims during the season — it is less a solitary mountain experience and more a shared religious occasion.</p>
+
+        <h2>The Tea Country Around Hatton</h2>
+        <p>Hatton is surrounded by working tea estates — the area produces some of Ceylon's finest high-grown teas. The landscape between Hatton and Maskeliya is particularly beautiful: rolling green hills covered with tea bushes, broken by waterfalls and the silver glint of the Castlereagh and Maussakele reservoirs. The road from Hatton to Dalhousie (for Adam's Peak) passes through consistently spectacular scenery. Several tea estate bungalows in the area — historic colonial-era properties — have been converted to accommodation and offer a genuinely atmospheric stay surrounded by working estates.</p>
+
+        <h2>Castlereagh & Maskeliya Reservoirs</h2>
+        <p>The Castlereagh and Maskeliya reservoirs near Hatton are part of the Mahaweli hydroelectric system and create large, striking bodies of water in the highland landscape. The road along the Castlereagh reservoir shore is particularly scenic. Fishing and boating are sometimes available; mostly the reservoirs make for excellent scenic drives or cycling through the surrounding tea estates.</p>
+
+        <h2>Getting to Hatton</h2>
+        <p>Hatton is on the main Colombo–Badulla highland railway line — the same scenic route used to reach Ella and Nuwara Eliya. The train from Colombo Fort takes about 4.5–5 hours to Hatton; from Kandy about 3 hours. The railway journey is itself one of the highlights — the line climbs through dramatic highland scenery past tea estates and waterfalls. From Hatton station, tuk-tuks and buses cover the 18km to Dalhousie (the Adam's Peak trailhead). By road from Colombo, Hatton is about 130km via the A7.</p>
+
+        <h2>When to Visit</h2>
+        <p>If climbing Adam's Peak is the priority, visit between December and May when the trail is open and lit. The peak months are January–March when the weather is most settled and the sunrise views most reliable. April is busy with end-of-season pilgrims. Outside the pilgrim season, the surrounding tea country and reservoirs are equally beautiful — and the town is quieter and more affordable.</p>
+
+        <AffiliateBox
+          title="Find Hotels in Hatton"
+          description="From colonial tea estate bungalows to guesthouses near the Adam's Peak trailhead — book early for the pilgrimage season."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Hatton+Sri+Lanka"
+          variant="hotel"
+        />
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Climbing Season","Dec–May"],["Ideal Stay","1–2 days"],["Top Activity","Adam's Peak sunrise climb"],["From Kandy","3 hrs by scenic train"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Hatton+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">
+            Find Hotels Nearby
+          </a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/kandy","label":"Kandy (80km)"},{"href":"/places/nuwara-eliya","label":"Nuwara Eliya (55km)"},{"href":"/places/kitulgala","label":"Kitulgala (40km)"},{"href":"/places/hill-country","label":"Hill Country Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <ExpediaWidget heading="🏨 Find Hotels in Hatton" />
+</BaseLayout>

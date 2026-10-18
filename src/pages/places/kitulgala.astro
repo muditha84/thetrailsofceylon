@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Kitulgala, Sri Lanka: White Water Rafting & Adventure Guide | The Trails of Ceylon"
+  description="Kitulgala is Sri Lanka's adventure capital — class 3 white water rafting, canyoning, jungle hiking and the filming location for The Bridge on the River Kwai."
+  type="article"
+  publishDate="2026-09-13"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/white-water-rafting.webp" alt="White water rafting on the Kelani River at Kitulgala, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/hill-country" class="hover:text-white">Hill Country</a><span>/</span>
+          <span class="text-white">Kitulgala</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Hill Country</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Kitulgala</h1>
+        <p class="text-white/80 mt-2 text-lg">Kelani River • White Water Rafting • Rainforest • Adventure</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","Sabaragamuwa"],["Distance from Colombo","95km (2–2.5 hrs)"],["Best For","Rafting, canyoning, hiking"],["Best Season","Year-round"],["Days Needed","1–2 days"],["River","Kelani River (Class 2–3)"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Kitulgala is Sri Lanka's adventure capital — a small town on the banks of the Kelani River in the foothills of the central mountains, surrounded by tropical rainforest and best known for white water rafting. The river here produces some of the most accessible and exciting rapids in South Asia, drawing rafting groups from Colombo on weekends and international travellers looking for a day of adrenaline between the cultural triangle and the coast. Beyond the river, Kitulgala also has dense jungle for birdwatching and hiking, and a curious cinematic claim: the river and its surroundings stood in for a location in David Lean's 1957 film The Bridge on the River Kwai.</p>
+
+        <h2>White Water Rafting</h2>
+        <p>The Kelani River at Kitulgala produces class 2–3 rapids — challenging enough to be genuinely exciting for first-timers, manageable enough that previous experience is not required. The standard rafting stretch covers about 8–10 kilometres and takes 2–3 hours on the water, passing through rapids with names like "The Killer" and "The Plunge" before finishing at a calmer section downstream. All operators provide life jackets, helmets and paddles; guides are positioned in the raft to direct paddlers through the rapids. Wetsuits are available for the cooler months. The river is best after rains when the level is higher and the rapids more powerful — May and October typically produce the most dramatic conditions, though the river runs year-round. Rafting costs approximately LKR 3,000–5,000 per person depending on operator and whether transport from Colombo is included.</p>
+
+        <h2>Canyoning & Rock Jumping</h2>
+        <p>After rafting, many operators offer canyoning in the streams and waterfalls that feed the Kelani from the surrounding hills. This involves scrambling through stream channels, abseiling short drops, sliding down natural rock chutes and jumping into deep pools — a wet, exhilarating 2–3 hour experience through the jungle. The jumping pools at Kitulgala are well-known, with drops ranging from 3 metres to around 10 metres for the more committed. A guide is essential — conditions and safe jump zones change with water level.</p>
+
+        <h2>The Bridge on the River Kwai Connection</h2>
+        <p>David Lean's 1957 film — winner of seven Academy Awards — was partially shot on location at Kitulgala. The famous bridge was constructed over the Kelani River here for the production; it was later deliberately destroyed for filming. The actual bridge is long gone, but local guides can show you the site where it stood, identifiable by the stone supports visible above the water level. For film enthusiasts, reaching the site by boat from the rafting launch point adds an interesting cultural dimension to the visit.</p>
+
+        <h2>Birdwatching in the Rainforest</h2>
+        <p>The forest around Kitulgala is among the most biodiverse in Sri Lanka, sitting in the wet zone foothills that are a key habitat for endemic birds. The area is particularly good for Sri Lanka's endemic species: the Sri Lanka blue magpie, the red-faced malkoha, the Sri Lanka green pigeon and the chestnut-backed owlet have all been recorded here. Birding is best at dawn, before the rafting groups arrive and the noise level rises. Several guesthouses in the area can connect visitors with local birding guides.</p>
+
+        <h2>Getting to Kitulgala</h2>
+        <p>Kitulgala is on the A7 road from Colombo to Nuwara Eliya, approximately 95km from Colombo. By car, the drive takes about 2 to 2.5 hours via Avissawella. Most visitors join organised day trips from Colombo that include transport, rafting and lunch — this is the most practical option. Independent travellers can take a bus from Colombo's Bastian Mawatha terminal to Kitulgala (around 3 hours), or combine it with a stop in Kegalle. Kitulgala also sits on the route between Colombo and Kandy or Nuwara Eliya, making it a natural half-day stop on a longer journey.</p>
+
+        <h2>Best Time to Visit</h2>
+        <p>Kitulgala can be visited year-round but the river experience varies significantly by season. The peak rafting months are October–November and May–June when rainfall raises the river level and produces more powerful rapids. December through April is the dry season in this area — conditions are pleasant and the river is still runnable, though less dramatic. Avoid planning a visit during heavy monsoon flooding (May can occasionally produce conditions that shut down operations temporarily). Weekdays are significantly quieter than weekends.</p>
+
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Wear clothes you don't mind getting completely soaked — you will get wet regardless of how careful you are</li>
+          <li>Bring a dry bag for your phone and any valuables — most operators provide one, but bring your own to be sure</li>
+          <li>Sunscreen in a water-resistant formula is essential; the equatorial sun is intense even when you're on the water</li>
+          <li>Book a reputable operator — safety standards vary. Look for operators who provide proper helmets, life jackets and qualified river guides with first aid training</li>
+          <li>Combined Colombo day-trip packages (rafting + transport + lunch) typically cost USD 30–50 per person and are good value</li>
+        </ul>
+
+        <AffiliateBox
+          title="Find Hotels in Kitulgala"
+          description="From riverside eco-lodges to comfortable guesthouses — Kitulgala has a small but good selection of places to stay near the water."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Kitulgala+Sri+Lanka"
+          variant="hotel"
+        />
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","Year-round"],["Ideal Stay","1–2 days"],["Top Activity","White water rafting"],["From Colombo","2–2.5 hrs by car"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Kitulgala+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">
+            Find Hotels Nearby
+          </a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/kandy","label":"Kandy (65km)"},{"href":"/places/nuwara-eliya","label":"Nuwara Eliya (95km)"},{"href":"/places/colombo","label":"Colombo (95km)"},{"href":"/places/sinharaja","label":"Sinharaja Rainforest"},{"href":"/things-to-do/white-water-rafting","label":"Rafting Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <ExpediaWidget heading="🏨 Find Hotels near Kitulgala" />
+</BaseLayout>

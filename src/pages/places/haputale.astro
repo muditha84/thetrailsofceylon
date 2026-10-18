@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Haputale, Sri Lanka: Tea Country, Lipton's Seat & Hill Country Views | The Trails of Ceylon"
+  description="Haputale is one of Sri Lanka's most dramatic viewpoints — a ridge-top hill town surrounded by tea estates, with sweeping views across the lowlands from Lipton's Seat."
+  type="article"
+  publishDate="2026-09-13"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/tea-plantation.webp" alt="Tea estates and misty hills around Haputale, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/hill-country" class="hover:text-white">Hill Country</a><span>/</span>
+          <span class="text-white">Haputale</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Hill Country</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Haputale</h1>
+        <p class="text-white/80 mt-2 text-lg">Hill Country • Tea Estates • Lipton's Seat • Mountain Views</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","Uva Province"],["Distance from Colombo","195km (4–4.5 hrs)"],["Best For","Views, tea estates, hiking"],["Best Season","Dec–April, Jul–Aug"],["Days Needed","1–2 days"],["Elevation","1,431m above sea level"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Haputale is one of the Hill Country's best-kept secrets — a small ridge-top town perched on a narrow strip of land between two valley systems, with views that extend from the cool highland tea estates down to the hot, hazy lowlands on either side. On a clear morning you can see the south coast from Haputale. The town itself is quiet, unhurried and genuinely local in character — far less touristy than Ella, which lies about 25km to the east on the same ridge. Haputale is for travellers who want the Hill Country experience without the backpacker scene: misty mornings, tea estate walks and the extraordinary panorama from Lipton's Seat.</p>
+
+        <h2>Lipton's Seat</h2>
+        <p>The single most compelling reason to visit Haputale is Lipton's Seat — a viewpoint at 1,970 metres where Sir Thomas Lipton, the tea baron, is said to have stood to survey his estates. On a clear morning the view is genuinely extraordinary: a 270-degree panorama across wave after wave of tea-covered hills, dropping away to the coastal lowlands and, on the clearest days, the glittering line of the Indian Ocean. The viewpoint is reached by tuk-tuk from Haputale town (about 25 minutes) and then a walk through the Dambatenne estate. The best time to go is early — 6–8am before the clouds roll in from the valleys. By 10am the view is often obscured. The approach passes through working tea estate, making the journey itself as good as the destination.</p>
+
+        <h2>Dambatenne Tea Factory</h2>
+        <p>The Dambatenne Tea Factory, on the road to Lipton's Seat, was established by Thomas Lipton in 1890 and is one of the oldest working tea factories in Sri Lanka. Factory tours run daily (roughly 8am–5pm) and show the complete process from fresh leaf to finished tea — withering, rolling, fermenting, drying and grading. The tour takes about 45 minutes and ends at the factory shop where estate teas are available to buy at source price, which is significantly cheaper than you'll find in Colombo or at the airport.</p>
+
+        <h2>Adisham Monastery</h2>
+        <p>About 3km from Haputale town, Adisham Monastery is a 1931 English manor house built in the Tudor-Jacobean style by Sir Thomas Villiers and later donated to the Benedictine monks. The monks still live and work here, producing honey, jams and herbal products sold at a small shop on the premises. The house is open to visitors on weekends and public holidays (9–11am and 2–4pm); the gardens are open more regularly. It's an unexpectedly serene spot — part of the peculiar charm of Haputale is that it contains a piece of rural England transplanted to the tropics.</p>
+
+        <h2>Tea Estate Walks</h2>
+        <p>Haputale is surrounded by working tea estates that can be walked freely. The roads and footpaths through the Dambatenne, Idalgashinna and Tangamalai estates make for excellent walking — passing tea pluckers at work (early morning), processing sheds and colonial-era bungalows. The Idalgashinna road, about 5km from town, passes through particularly beautiful terrain and is quieter than the Lipton's Seat route. A local guide is worth hiring for a half-day walk through the estates — ask at your guesthouse.</p>
+
+        <h2>Getting to Haputale</h2>
+        <p>Haputale is on the main highland railway line and is one of the most enjoyable train destinations in Sri Lanka. Trains run from Colombo Fort via Kandy, Nanuoya (for Nuwara Eliya) and Ella — the scenery approaching Haputale from either direction is excellent. The journey from Ella takes about 1.5 hours; from Nuwara Eliya (Nanuoya) about 2 hours. The station is central to town. By bus, Haputale is connected to Bandarawela (30 mins) and Welimada. By car, the drive from Colombo takes 4–4.5 hours via the Southern Expressway and then the mountain roads up through Beragala.</p>
+
+        <h2>Best Time to Visit</h2>
+        <p>The clearest views at Lipton's Seat are December through April and July–August. The Uva Province — which includes Haputale — receives its heaviest rainfall between May and September from the northeast monsoon, which can persist as cloud cover even on dry days. December and January are typically the clearest months. Mornings are always better than afternoons for views — plan accordingly regardless of when you visit.</p>
+
+        <AffiliateBox
+          title="Find Hotels in Haputale"
+          description="Haputale has a small selection of guesthouses and tea estate bungalows — book ahead as options are limited."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Haputale+Sri+Lanka"
+          variant="hotel"
+        />
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","Dec–April"],["Ideal Stay","1–2 days"],["Top Activity","Lipton's Seat at sunrise"],["From Ella","1.5 hrs by train"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Haputale+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">
+            Find Hotels Nearby
+          </a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/ella","label":"Ella (25km)"},{"href":"/places/nuwara-eliya","label":"Nuwara Eliya (60km)"},{"href":"/places/horton-plains","label":"Horton Plains"},{"href":"/places/hill-country","label":"Hill Country Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <ExpediaWidget heading="🏨 Find Hotels in Haputale" />
+</BaseLayout>

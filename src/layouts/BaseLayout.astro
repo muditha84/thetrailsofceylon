@@ -23,8 +23,46 @@ const {
   author = 'The Trails of Ceylon',
 } = Astro.props;
 
-const siteURL = 'https://www.thetrailsofceylon.com';
+const siteURL = 'https://thetrailsofceylon.com';
 const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
+
+// Page-type context
+const pathname = Astro.url.pathname;
+const isHomePage = pathname === '/' || pathname === '';
+const isArticle = type === 'article';
+const isPlacePage = /^\/places\/[^/]+\/?$/.test(pathname) && pathname.replace(/\/$/, '') !== '/places';
+
+// Breadcrumb items derived from URL path
+const sectionLabels: Record<string, string> = {
+  'places': 'Places to Visit',
+  'things-to-do': 'Things to Do',
+  'guides': 'Travel Guides',
+  'blog': 'Blog',
+};
+const pathSegments = pathname.split('/').filter(Boolean);
+const breadcrumbItems = [
+  { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': `${siteURL}/` },
+  ...pathSegments.map((seg: string, i: number) => ({
+    '@type': 'ListItem',
+    'position': i + 2,
+    'name': i === pathSegments.length - 1
+      ? (title.includes(' | ') ? title.split(' | ')[0].trim() : title)
+      : (sectionLabels[seg] || seg.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')),
+    'item': `${siteURL}/${pathSegments.slice(0, i + 1).join('/')}/`,
+  }))
+];
+
+const publisherOrg = {
+  "@type": "Organization",
+  "name": "The Trails of Ceylon",
+  "url": siteURL,
+  "logo": { "@type": "ImageObject", "url": `${siteURL}/images/logo.svg`, "width": 200, "height": 60 },
+  "sameAs": [
+    "https://www.instagram.com/thetrailsofceylon",
+    "https://www.pinterest.com/thetrailsofceylon",
+    "https://www.facebook.com/thetrailsofceylon"
+  ]
+};
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -101,48 +139,52 @@ const fullImageURL = image.startsWith('http') ? image : `${siteURL}${image}`;
   <!-- Smooth scroll -->
   <style>html { scroll-behavior: smooth; }</style>
 
-  <!-- Schema.org JSON-LD: page-level -->
+  <!-- Schema.org: WebSite (all pages) + TravelAgency -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": type === 'article' ? 'Article' : 'WebSite',
-    "name": title,
+    "@type": "WebSite",
+    "name": "The Trails of Ceylon",
+    "url": siteURL,
+    "description": "Expert travel guides and itineraries for Sri Lanka — destinations, activities, visa info and planning resources.",
+    "publisher": publisherOrg
+  })} />
+  <!-- Schema.org: Article (article pages only) -->
+  {isArticle && <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title.includes(' | ') ? title.split(' | ')[0].trim() : title,
     "description": description,
     "url": canonicalURL,
-    "publisher": {
-      "@type": "Organization",
-      "name": "The Trails of Ceylon",
-      "url": siteURL,
-      "logo": {
-        "@type": "ImageObject",
-        "url": `${siteURL}/images/logo.svg`
-      }
-    },
-    ...(publishDate && {
-      "datePublished": publishDate,
-      "author": { "@type": "Person", "name": author }
-    })
-  })} />
-  <!-- Schema.org JSON-LD: TravelAgency -->
-  <script type="application/ld+json" set:html={JSON.stringify({
+    "image": { "@type": "ImageObject", "url": fullImageURL, "width": 1200, "height": 630 },
+    "datePublished": publishDate || '2026-01-01',
+    "dateModified": publishDate || '2026-01-01',
+    "author": { "@type": "Person", "name": author, "url": siteURL },
+    "publisher": publisherOrg,
+    "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalURL }
+  })} />}
+  <!-- Schema.org: TouristDestination (place pages only) -->
+  {isPlacePage && <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "TravelAgency",
-    "name": "The Trails of Ceylon",
-    "description": "Expert travel guides and itineraries for Sri Lanka — destinations, activities, visa info and planning resources.",
-    "url": siteURL,
-    "logo": {
-      "@type": "ImageObject",
-      "url": `${siteURL}/images/logo.svg`
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Sri Lanka"
-    },
-    "sameAs": [
-      "https://www.instagram.com/thetrailsofceylon",
-      "https://www.pinterest.com/thetrailsofceylon",
-      "https://www.facebook.com/thetrailsofceylon"
-    ]
-  })} />
+    "@type": "TouristDestination",
+    "name": title.split(',')[0].split(':')[0].trim(),
+    "description": description,
+    "url": canonicalURL,
+    "image": fullImageURL,
+    "touristType": { "@type": "Audience", "audienceType": "Traveller" },
+    "includesAttraction": {
+      "@type": "TouristAttraction",
+      "name": title.split(',')[0].split(':')[0].trim(),
+      "description": description,
+      "url": canonicalURL,
+      "image": fullImageURL
+    }
+  })} />}
+  <!-- Schema.org: BreadcrumbList (all non-home pages) -->
+  {pathSegments.length > 0 && <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbItems
+  })} />}
 </head>
 <body class="min-h-screen flex flex-col">
   <Header />

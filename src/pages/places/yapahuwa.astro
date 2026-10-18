@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Yapahuwa, Sri Lanka: Forgotten Rock Fortress of the 13th Century | The Trails of Ceylon"
+  description="Yapahuwa is a dramatic rock fortress and former royal capital dating from the 13th century — Sri Lanka's lesser-known answer to Sigiriya, with far fewer crowds."
+  type="article"
+  publishDate="2026-09-13"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/sigiriya.webp" alt="The rock fortress of Yapahuwa, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/cultural-triangle" class="hover:text-white">Cultural Triangle</a><span>/</span>
+          <span class="text-white">Yapahuwa</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Cultural Triangle</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Yapahuwa</h1>
+        <p class="text-white/80 mt-2 text-lg">Rock Fortress • 13th-Century Capital • Ornate Stairway • Off the Beaten Path</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","North Western Province"],["Distance from Colombo","160km (3 hrs)"],["Best For","Ruins, history, climbing"],["Best Season","Nov–April"],["Days Needed","Half day"],["Royal Period","1272–1284 AD"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Yapahuwa is one of Sri Lanka's most dramatic and undervisited ancient sites — a 90-metre granite rock that served as the royal capital of Sri Lanka for a brief period in the 13th century, during an era of Indian invasions and shifting power. The centrepiece is a remarkably ornate decorative stairway on the rock's southern face, considered a masterpiece of Sinhalese medieval architecture, which leads to the ruins of the royal palace on the summit plateau. Compared to Sigiriya — which attracts thousands of visitors daily — Yapahuwa sees a fraction of the foot traffic, making it a genuinely peaceful and immersive archaeological experience.</p>
+
+        <h2>The Ornate Stairway</h2>
+        <p>The defining feature of Yapahuwa is its decorative ceremonial stairway — a two-flight stone staircase leading to what was once the entrance to the royal palace. The stairway is flanked by large carved lions (now badly eroded) and features elaborate carved panels of dancers, musicians and animals in the Polonnaruwa-era decorative style. At the top of the stairway stands a doorway arch — now free-standing, with the palace hall behind it reduced to foundation stones — that gives a sense of the architectural ambition of what once stood here. The stairway is often compared to that of Sigiriya for its combination of functional and aesthetic purpose, though it is smaller and less restored.</p>
+
+        <h2>History of the Capital</h2>
+        <p>Yapahuwa served as the royal capital during the reign of King Bhuvanaikabahu I (1272–1284 AD), who moved the court here from Dambadeniya to better defend against South Indian (Pandyan) invasions. The most significant object ever held at Yapahuwa was the Sacred Tooth Relic of the Buddha — the most politically important object in Sri Lankan kingship, possession of which was seen as conferring legitimacy to rule. The relic was kept here during the capital period but was captured by a Pandyan army after the fall of the fortress in 1284 and later returned. The city was abandoned after the capital moved to Kurunegala and the forest gradually reclaimed the rock.</p>
+
+        <h2>Climbing the Rock</h2>
+        <p>Beyond the decorative stairway, a rough path continues up the rock to the summit at 90 metres above the surrounding plain. The climb is steep and requires some scrambling over bare rock in the upper section. The path passes monastic caves with ancient inscriptions and faded paintings, a small dagoba and the foundations of various structures. From the summit the views across the surrounding flat farmland are excellent — a reminder of why the site was chosen defensively. The full climb and descent takes about 1–1.5 hours. Wear rubber-soled shoes with good grip and bring water.</p>
+
+        <h2>The Museum & Lower Complex</h2>
+        <p>At the base of the rock, a small museum displays carved panels, sculptures and artefacts recovered from the site, including beautifully carved decorative elements from the palace building. The lower area of the site also contains the ruins of a moat system and outer fortifications. A Buddhist temple — still active — sits at the base of the rock and is usually open to visitors.</p>
+
+        <h2>Getting to Yapahuwa</h2>
+        <p>Yapahuwa is on the Colombo–Anuradhapura railway line, and the Yapahuwa railway station is within walking distance of the site — making it one of the few Cultural Triangle ruins accessible by train without a tuk-tuk connection. Trains from Colombo take approximately 3 hours to Yapahuwa station; from Anuradhapura about 1.5 hours. By road, Yapahuwa is about 4km east of the town of Maho, off the A10 road. A tuk-tuk from Kurunegala takes about 1 hour.</p>
+
+        <AffiliateBox
+          title="Find Hotels near Yapahuwa"
+          description="Kurunegala is the most convenient base for Yapahuwa — well connected by road and rail to both Colombo and Anuradhapura."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Kurunegala+Sri+Lanka"
+          variant="hotel"
+        />
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","Nov–April"],["Ideal Stay","Half day"],["Top Activity","Climb the rock fortress"],["From Colombo","3 hrs by train"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Kurunegala+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">
+            Find Hotels Nearby
+          </a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/anuradhapura","label":"Anuradhapura (90km)"},{"href":"/places/sigiriya","label":"Sigiriya (110km)"},{"href":"/places/dambulla","label":"Dambulla (90km)"},{"href":"/places/cultural-triangle","label":"Cultural Triangle Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <ExpediaWidget heading="🏨 Find Hotels near Yapahuwa" />
+</BaseLayout>

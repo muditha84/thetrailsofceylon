@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Nainativu, Sri Lanka: Sacred Island of the North | The Trails of Ceylon"
+  description="Nainativu is a small sacred island in Jaffna's Palk Strait — home to both a revered Hindu shrine and a Buddhist temple, reached by boat through a lagoon."
+  type="article"
+  publishDate="2026-09-13"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/delft-island.webp" alt="Island boat approach to Nainativu, Jaffna, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/jaffna" class="hover:text-white">Jaffna</a><span>/</span>
+          <span class="text-white">Nainativu</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Northern Province</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Nainativu</h1>
+        <p class="text-white/80 mt-2 text-lg">Sacred Island • Hindu Shrine • Buddhist Temple • Jaffna Lagoon</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","Northern Province"],["Distance from Colombo","370km (7–8 hrs)"],["Best For","Pilgrimage, island experience"],["Best Season","Nov–April"],["Days Needed","Half day from Jaffna"],["Access","Boat from Kurikadduwan"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Nainativu is a small island in the Palk Strait, about 30km northwest of Jaffna town, accessible only by boat through the shallow Jaffna lagoon. What makes it remarkable is that this tiny island — just a few square kilometres — holds two significant religious sites that draw pilgrims from both the Hindu and Buddhist traditions: the Nagapooshani Amman Temple and the Nagadeepa Buddhist Vihara. The island is considered sacred in both traditions, and visiting it on the same day means witnessing the unusual harmony of two major religions sharing one small piece of land in the sea. For travellers exploring the north, Nainativu is one of the most memorable and genuinely unique experiences Sri Lanka offers.</p>
+
+        <h2>Nagapooshani Amman Temple</h2>
+        <p>The Nagapooshani Amman Temple is one of the most important Hindu pilgrimage sites in Sri Lanka, dedicated to the goddess Bhagavathi (also known as Parvati or Shakti) in her aspect as Nagapooshani — the one adorned with serpents. The temple is believed to be over 2,000 years old, though the current structure dates from a later period and has been extensively rebuilt. The presiding deity — a standing goddess image — is associated with the power to bless devotees with children, health and prosperity. The temple draws large numbers of Tamil Hindu pilgrims, particularly from the north of Sri Lanka and from the Tamil diaspora in India. Visitors of all backgrounds are generally welcome, though modesty of dress is required and shoes must be removed at the entrance.</p>
+
+        <h2>Nagadeepa Buddhist Vihara</h2>
+        <p>A short walk from the Hindu temple, the Nagadeepa Buddhist Vihara is one of the oldest Buddhist sites in Sri Lanka — traditionally identified as the island where the Buddha is said to have visited, in his second of three legendary visits to Sri Lanka, to mediate a dispute between two Naga kings over a gem-studded throne. The event is recorded in the Mahavamsa chronicle. The vihara holds a Bodhi tree and a small dagoba enshrining a throne relic. It is a significant pilgrimage site for Sri Lankan Buddhists and is regularly visited by the President and other officials on Poson Poya day. The site is quiet and peaceful, and the contrast between the busy Hindu temple and the serene Buddhist vihara — separated by just a few minutes' walk on the same tiny island — is striking.</p>
+
+        <h2>Getting to Nainativu</h2>
+        <p>To reach Nainativu you take a ferry from Kurikadduwan jetty on Punkudutivu island, which is itself reached by a series of causeways and ferry crossings from Jaffna. The full journey from Jaffna town to the Nainativu jetty takes about 1.5–2 hours including the ferry crossings. A government ferry runs from Kurikadduwan to Nainativu regularly throughout the day — the journey takes about 30 minutes. Private boats can also be arranged. The entire visit — Jaffna to island and back — takes a full day. Many travellers combine the Nainativu trip with a visit to Delft (Neduntivu) island, which is accessible on the same boat route.</p>
+
+        <h2>Visiting Practicalities</h2>
+        <p>Both religious sites are free to enter; donations are welcome. Dress modestly for both — covered shoulders and knees for the Hindu temple; the Buddhist site follows similar conventions. The ferry from Kurikadduwan runs from early morning (around 6am) with the last return typically in the early afternoon — check the current timetable locally as schedules vary by season and day. The island has a few small food stalls near the ferry jetty serving basic snacks and drinks. There are no hotels on Nainativu; the island is a day-trip destination only.</p>
+
+        <h2>Combining with Jaffna Exploration</h2>
+        <p>Nainativu is best combined with a broader Jaffna visit — the peninsula has a distinct Tamil culture, excellent seafood, colonial Dutch forts, and a fascinating modern history. Plan at least 2–3 days in the Jaffna area to do justice to both the mainland and island attractions. The best time to visit the north is November through April, when the weather is dry and the sea is calm for island crossings.</p>
+
+        <AffiliateBox
+          title="Find Hotels in Jaffna"
+          description="Stay in Jaffna city to explore the peninsula and organise day trips to Nainativu and other islands."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Jaffna+Sri+Lanka"
+          variant="hotel"
+        />
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","Nov–April"],["Ideal Stay","Full day (day trip)"],["Top Activity","Hindu temple + Buddhist vihara"],["From Jaffna","1.5–2 hrs to jetty"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Jaffna+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">
+            Find Hotels Nearby
+          </a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/jaffna","label":"Jaffna City"},{"href":"/places/delft-island","label":"Delft Island"},{"href":"/places/trincomalee","label":"Trincomalee (250km)"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <ExpediaWidget heading="🏨 Find Hotels in Jaffna" />
+</BaseLayout>

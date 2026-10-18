@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Ritigala, Sri Lanka: Ancient Monastery & Jungle Ruins | The Trails of Ceylon"
+  description="Ritigala is Sri Lanka's most atmospheric ancient site — a jungle-covered mountain with hidden monastery ruins, medicinal herb gardens and almost no other tourists."
+  type="article"
+  publishDate="2026-09-13"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/dambulla.webp" alt="Ancient jungle ruins at Ritigala, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/cultural-triangle" class="hover:text-white">Cultural Triangle</a><span>/</span>
+          <span class="text-white">Ritigala</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Cultural Triangle</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Ritigala</h1>
+        <p class="text-white/80 mt-2 text-lg">Ancient Monastery • Jungle Ruins • Off the Beaten Path • Cultural Triangle</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[["Province","North Central Province"],["Distance from Sigiriya","30km"],["Best For","Ruins, jungle, solitude"],["Best Season","Nov–April"],["Days Needed","Half day"],["Height","766m above sea level"]].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Ritigala is one of Sri Lanka's most atmospheric ancient sites — and one of its least visited. A forested mountain rising dramatically from the dry zone scrubland between Anuradhapura and Habarana, Ritigala is home to the ruins of an ancient forest monastery that was abandoned around the 12th century and slowly consumed by the jungle. Unlike the major Cultural Triangle sites, Ritigala has no crowds, no tour buses and no souvenir stalls. Walking through the ruins here — stone platforms half-buried in roots, meditation paths disappearing into dense forest, the silence broken only by birdsong — is a completely different experience from Sigiriya or Polonnaruwa.</p>
+
+        <h2>The Monastery Ruins</h2>
+        <p>Ritigala Strict Nature Reserve contains an extensive complex of ruins from what was once a significant forest monastery — the Aritta Vihara, mentioned in ancient chronicles. The most distinctive features are the <strong>double-platform structures</strong> unique to Ritigala: pairs of raised stone platforms connected by a stone bridge, used by meditating monks. The platforms were deliberately built away from ground level so that monks could meditate above the tree canopy. Stone pathways connect the various monastic structures across the mountain — you can trace the old walking routes through the forest, following stone-paved paths that have been partly cleared by the archaeology department. The ruins also include stone bathing pools (pokuna), a refectory and what appears to be a medicinal herb garden — the mountain's diverse micro-climate supported plants not found in the surrounding dry zone.</p>
+
+        <h2>The Jungle Environment</h2>
+        <p>Part of what makes Ritigala extraordinary is the contrast between the mountain and its surroundings. The slopes of Ritigala receive significantly more rainfall than the surrounding dry zone — creating a patch of dense, moist forest on an otherwise arid plain. The mountain is a registered Strict Nature Reserve and wildlife sanctuary. Deer, monitor lizards and a variety of birds inhabit the forest; elephants move through seasonally. The paths through the ruins pass under large trees, with roots and vines slowly reclaiming the stonework. The atmosphere — especially in the early morning before the heat builds — is genuinely remarkable.</p>
+
+        <h2>Historical Context</h2>
+        <p>Ritigala appears in the Mahavamsa chronicle and is associated with the forest-dwelling (aranyaka) tradition of Buddhist monasticism — monks who lived in remote forest settings away from urban monasteries. The site was used from at least the 1st century BC through to the 12th century AD. Local legend also identifies Ritigala with the Lank­agiri mountain mentioned in the Ramayana, from which the monkey king Hanuman gathered medicinal herbs to revive Lakshmana — a claim that adds another layer of mythological significance to the mountain's reputation for medicinal plants.</p>
+
+        <h2>Visiting Ritigala</h2>
+        <p>The site is managed by the Central Cultural Fund and has a small admission fee. A guide is strongly recommended — the paths through the ruins are not always obvious and the historical context adds considerably to the experience. Guides are usually available at the entrance; negotiate in advance. The walk through the main ruins takes about 1.5–2 hours. Start early to avoid the heat — by late morning the forest can become uncomfortably warm. Bring water, sturdy shoes (the stone surfaces are uneven) and insect repellent.</p>
+
+        <h2>Getting There</h2>
+        <p>Ritigala is located about 30km west of Habarana and 50km east of Anuradhapura, signposted from the A11 road between those two cities. There is no public transport directly to the site; tuk-tuk from Habarana (the most convenient base) takes about 45 minutes each way. Most visitors combine Ritigala with nearby Aukana Buddha statue or add it as a side trip from the Sigiriya/Habarana area. A tuk-tuk waiting round trip typically costs LKR 3,000–4,000 from Habarana.</p>
+
+        <h2>Tips for Visitors</h2>
+        <ul>
+          <li>Arrive early — 7–9am is ideal for cool temperatures and good light</li>
+          <li>Hire a guide at the entrance; the ruins are hard to navigate alone and the historical context is worth having</li>
+          <li>Wear long trousers and closed shoes — the forest paths have uneven stone and potential for ant contact</li>
+          <li>Ritigala pairs well with Aukana (30km away) for a full day of off-the-beaten-track Cultural Triangle sites</li>
+          <li>There is no food or water available on site — bring everything you need from Habarana</li>
+        </ul>
+
+        <AffiliateBox
+          title="Find Hotels near Ritigala & Habarana"
+          description="Habarana is the best base for Ritigala — central to Sigiriya, Polonnaruwa and the Cultural Triangle."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Habarana+Sri+Lanka"
+          variant="hotel"
+        />
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[["Best Season","Nov–April"],["Ideal Stay","Half day"],["Top Activity","Jungle monastery walk"],["From Habarana","45 min by tuk-tuk"]].map(([k, v]) => (
+              <div class="flex justify-between gap-4"><span class="font-medium text-white/80">{k}</span><span class="text-white/70 text-right">{v}</span></div>
+            ))}
+          </div>
+          <a href="https://www.booking.com/searchresults.html?ss=Habarana+Sri+Lanka" target="_blank" rel="noopener noreferrer sponsored" class="book-btn mt-4 block text-center">
+            Find Hotels Nearby
+          </a>
+        </div>
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[{"href":"/places/sigiriya","label":"Sigiriya (30km)"},{"href":"/places/anuradhapura","label":"Anuradhapura (50km)"},{"href":"/places/polonnaruwa","label":"Polonnaruwa (60km)"},{"href":"/places/dambulla","label":"Dambulla (25km)"},{"href":"/places/cultural-triangle","label":"Cultural Triangle Guide"}].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <ExpediaWidget heading="🏨 Find Hotels near Ritigala" />
+</BaseLayout>
