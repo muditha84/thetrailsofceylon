@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Talpe Sri Lanka: Reef Pools, Stilt Fishermen & South Coast Guide | The Trails of Ceylon"
+  description="Talpe Sri Lanka (also spelled Thalpe) — ancient rock pools cut into coral reef, iconic stilt fishermen at dawn, and a quiet beach minutes from Galle Fort. Complete visitor guide."
+  image="/images/stilt-fishing.webp"
+  type="article"
+  publishDate="2025-04-10"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/stilt-fishing.webp" alt="Stilt fishermen at Talpe on Sri Lanka's south coast at dawn" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/south-coast" class="hover:text-white">South Coast</a><span>/</span>
+          <span class="text-white">Talpe</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">South Coast</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Talpe Sri Lanka</h1>
+        <p class="text-white/80 mt-2 text-lg">Southern Province &bull; Reef Pools &bull; Stilt Fishermen &bull; Near Galle</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Also Known As', 'Thalpe'],
+              ['Province', 'Southern Province'],
+              ['Best For', 'Reef pools, stilt fishermen'],
+              ['Season', 'Nov–Apr'],
+              ['Days Needed', '1–2 days'],
+              ['From Galle', '10km (15–20 min)'],
+              ['From Unawatuna', '3km (10 min)'],
+              ['Train Station', 'Yes (Colombo–Matara line)'],
+            ].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Talpe Sri Lanka — also written Thalpe — is a quiet coastal village on the south coast, tucked between <a href="/places/galle">Galle Fort</a> to the east and <a href="/places/ahangama">Ahangama</a> to the west, about 10 kilometres from Galle and a short tuk-tuk from the crowds of <a href="/places/unawatuna">Unawatuna</a>. It is one of those rare south coast spots where the beach road stays unhurried, the guesthouses are genuinely intimate, and the defining sight — stilt fishermen balanced on cross-poles above the surf at first light — has not yet been entirely absorbed into a tourist production line.</p>
+
+        <p>What Talpe is most famous for, aside from its stilt fishermen, are its ancient rock pools: rectangular cuts in the coral reef made by local communities over 50 years ago, now providing some of the most unusual natural swimming on the south coast. Add a sheltered reef lagoon at neighbouring Wijaya Beach, good snorkelling conditions from November to April, and proximity to Galle Fort (15 minutes by tuk-tuk), and Talpe makes a compelling base or overnight stop for anyone exploring the south coast at a slower pace than Unawatuna allows.</p>
+
+        <h2>The Rock Pools</h2>
+        <p>The rock pools of Talpe are one of Sri Lanka's more unusual natural attractions. They were cut by hand into the coastal coral reef by local communities more than half a century ago — originally to serve as salt pans for drying seawater, or to soak coconut husks for the production of coir fibre. Today, the rectangular pools fill and drain with the tides, creating calm, naturally enclosed swimming pools right at the edge of the Indian Ocean.</p>
+        <p>The pools are best visited at low tide, when the water is calmer and deeper, and the surrounding reef is more exposed and interesting to explore. At high tide, the ocean washes more forcefully over the reef edge, which can make conditions rougher. Wear reef shoes or sandals if you have them — the coral edges are sharp and sea urchins can lurk among the rocks. The pools are free to use and are a favourite spot for local families in the early morning and late afternoon.</p>
+
+        <h2>Wijaya Beach & Snorkelling</h2>
+        <p>About a kilometre west of the village centre, Wijaya Beach (also called Dallawella Beach) is one of the south coast's most quietly beautiful spots. A natural reef and dramatic rock formation shelter the bay from the open ocean, creating a calm lagoon that is ideal for swimming and, when visibility is good, snorkelling. Sea turtles are occasionally spotted in the reef area — an unhurried morning in the water is the best way to encounter them.</p>
+        <p>Snorkelling is generally best from November to April when the water is clearest and the south coast sea is at its calmest. The coral at Wijaya is not as pristine as Pigeon Island or Pasikuda on the east coast, but the shallow reef fish and the calm conditions make it highly accessible even for beginners. Mask and fins can be rented from shops along the Galle road. As with the rock pools, reef shoes are recommended — the rocky bottom has hidden hazards.</p>
+
+        <h2>The Stilt Fishermen</h2>
+        <p>The stilt fishermen are Sri Lanka's most iconic image, and the stretch of coast running from Talpe through <a href="/places/ahangama">Ahangama</a> towards Koggala is where the practice is most deeply rooted. The technique — balancing on a cross-pole driven into the seabed, dropping a line into the surf below — developed along this coastline in the post-war period and remains both a genuine fishing method and a deeply photogenic tradition.</p>
+        <p>The fishermen typically appear at their poles just before sunrise (from around 5:30am) and again in the late afternoon as the light softens before sunset. Early morning offers the most dramatic photography: the low sun behind the silhouetted figures is one of those travel images that rarely disappoints. The fishermen are accustomed to being photographed and it is customary to offer a small tip (LKR 200–500) for the time they spend on their poles while visitors photograph them — a reasonable acknowledgement that their presence has become as much cultural spectacle as livelihood. Arriving early means fewer tour vans and more natural behaviour.</p>
+
+        <h2>Where to Stay in Talpe</h2>
+        <p>Talpe has built a quiet reputation for some of the south coast's finest boutique accommodation — converted colonial estates, beachfront villas and intimate guesthouses that attract visitors looking for something more personal than the hotel strips of Unawatuna or Hikkaduwa. The village has a particular concentration of high-quality villa stays, many set within tropical gardens just steps from the beach.</p>
+        <p><strong>Era Beach by Jetwing</strong> is one of the standout properties — a stylish boutique hotel right on the beach with a strong sense of place and excellent food. <strong>Cantaloupe Aqua</strong> and <strong>The Frangipani Tree</strong> are both well-regarded for their combination of design, service and seafront location. For independent travellers on mid-range budgets, several smaller guesthouses along the coastal road offer good value with easy beach access. Booking ahead is recommended between December and March, when the south coast fills up quickly.</p>
+
+        <AffiliateBox
+          title="Find Hotels in Talpe"
+          description="From intimate beachfront villas to boutique colonial guesthouses — Talpe has some of the south coast's most characterful places to stay."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Talpe+Sri+Lanka"
+          variant="hotel"
+        />
+
+        <h2>Day Trips from Talpe</h2>
+        <p><a href="/places/galle">Galle Fort</a> is the obvious priority — just 10km away and reachable in 15 minutes by tuk-tuk, the UNESCO-listed Dutch colonial fort is one of Sri Lanka's finest destinations for walking, eating and history. Budget a half-day minimum.</p>
+        <p><a href="/places/unawatuna">Unawatuna</a> is only 3km away — close enough to walk along the coast road or take a quick tuk-tuk, and worth visiting for its famous crescent beach even if you prefer Talpe's quieter base. The Jungle Beach near Unawatuna is a further short walk and well worth it.</p>
+        <p>The <strong>Koggala Sea Turtle Conservation Project</strong>, about 4km west near Koggala, runs guided visits to a turtle hatchery where eggs are protected and hatchlings released — one of the more thoughtful wildlife interactions on the south coast, best visited in the early morning. The <strong>Madu Ganga river safari</strong> (around 30km north near Balapitiya) takes visitors through an extraordinary mangrove river system by boat, past cinnamon islands and a temple on stilts — a half-day trip that makes an excellent contrast to the beach.</p>
+        <p>For whale watching, boat trips depart from <a href="/places/mirissa">Mirissa</a>, about 35km east — most easily organised as a full-day tour from November to April.</p>
+
+        <h2>Getting to Talpe</h2>
+        <p>Talpe has its own station on the Colombo–Matara coastal railway — one of Sri Lanka's most scenic lines, which runs right along the shoreline through Talpe. From Colombo Fort, the journey takes approximately 3 hours; from Galle, it is just 10–15 minutes (one or two stops). The station is a short walk from the beach road.</p>
+        <p>By tuk-tuk, Talpe is 15–20 minutes from Galle junction (LKR 500–700) and about 10 minutes from Unawatuna (LKR 300–400). From Colombo by car via the Southern Expressway, allow around 1 hour 50 minutes. Intercity buses on the A2 coastal road run frequently between Galle and Matara and stop near the village.</p>
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[
+              ['Best Season', 'Nov–Apr'],
+              ['Days to Spend', '1–2 days'],
+              ['Top Experience', 'Rock pools at low tide'],
+              ["Don't Miss", 'Stilt fishermen at dawn'],
+              ['Snorkelling', 'Wijaya Beach reef'],
+              ['Nearest City', 'Galle (10km)'],
+            ].map(([k, v]) => (
+              <div class="flex justify-between gap-4">
+                <span class="font-medium text-white/80">{k}</span>
+                <span class="text-white/70 text-right">{v}</span>
+              </div>
+            ))}
+          </div>
+          <a
+            href="https://www.booking.com/searchresults.html?ss=Talpe+Sri+Lanka"
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            class="book-btn"
+          >
+            Book Hotel in Talpe
+          </a>
+        </div>
+
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/places/galle',       label: 'Galle Fort (10km)' },
+              { href: '/places/unawatuna',   label: 'Unawatuna (3km)' },
+              { href: '/places/ahangama',    label: 'Ahangama (3km)' },
+              { href: '/places/hikkaduwa',   label: 'Hikkaduwa (18km)' },
+              { href: '/places/mirissa',     label: 'Mirissa (35km)' },
+              { href: '/places/south-coast', label: 'South Coast Guide' },
+            ].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-base mb-2">Local Tip</h3>
+          <p class="text-sm text-ceylon-green-800">The rock pools are best at low tide. Check a tide table for your visit date — low tide in the early morning combines perfectly with stilt fishermen photography just along the coast.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <ExpediaWidget heading="🏨 Find Hotels in Talpe & South Coast" />
+</BaseLayout>
