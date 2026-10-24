@@ -1,4 +1,5 @@
 ---
+import LanguageSelector from './LanguageSelector.astro';
 const currentPath = Astro.url.pathname;
 
 const dropdowns = {
@@ -96,6 +97,8 @@ const navLinks = [
 
       <!-- CTA + Search + Mobile toggle -->
       <div class="flex items-center gap-2">
+        <!-- Language selector -->
+        <LanguageSelector />
         <!-- Search icon -->
         <button
           id="search-toggle"
@@ -156,12 +159,77 @@ const navLinks = [
           </div>
         );
       })}
-      <a href="/guides" class="mt-2 text-center bg-ceylon-green-700 text-white text-sm font-semibold px-4 py-3 rounded-lg">
+      <!-- Mobile language picker -->
+      <div class="mt-2 px-2">
+        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-2 mb-2">Language</p>
+        <div id="mobile-lang-grid" class="grid grid-cols-5 gap-1"></div>
+      </div>
+      <a href="/guides" class="mt-3 text-center bg-ceylon-green-700 text-white text-sm font-semibold px-4 py-3 rounded-lg">
         Plan Your Trip
       </a>
     </nav>
   </div>
 </header>
+
+<script>
+  // ── Mobile language picker ──
+  (function() {
+    var MOBILE_LANGS = [
+      { code: 'en',    flag: '🇬🇧', short: 'EN' },
+      { code: 'de',    flag: '🇩🇪', short: 'DE' },
+      { code: 'fr',    flag: '🇫🇷', short: 'FR' },
+      { code: 'zh-CN', flag: '🇨🇳', short: 'ZH' },
+      { code: 'ru',    flag: '🇷🇺', short: 'RU' },
+      { code: 'nl',    flag: '🇳🇱', short: 'NL' },
+      { code: 'it',    flag: '🇮🇹', short: 'IT' },
+      { code: 'es',    flag: '🇪🇸', short: 'ES' },
+      { code: 'ja',    flag: '🇯🇵', short: 'JA' },
+      { code: 'ko',    flag: '🇰🇷', short: 'KO' },
+    ];
+
+    function getCookie(name) {
+      var match = document.cookie.split(';').map(function(c) { return c.trim(); })
+        .find(function(c) { return c.startsWith(name + '='); });
+      return match ? match.split('=').slice(1).join('=') : '';
+    }
+    function setCookie(name, value) {
+      var expires = new Date();
+      expires.setFullYear(expires.getFullYear() + 1);
+      var base = name + '=' + value + '; expires=' + expires.toUTCString() + '; path=/; SameSite=Lax';
+      document.cookie = base;
+      document.cookie = base + '; domain=.' + location.hostname;
+    }
+    function clearCookie(name) {
+      document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+      document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + location.hostname + ';';
+    }
+
+    var gtCookie = getCookie('googtrans');
+    var activeCode = (gtCookie && gtCookie.split('/').length >= 3) ? gtCookie.split('/')[2] : 'en';
+
+    var grid = document.getElementById('mobile-lang-grid');
+    if (!grid) return;
+
+    MOBILE_LANGS.forEach(function(lang) {
+      var btn = document.createElement('button');
+      var isActive = lang.code === activeCode;
+      btn.className = 'flex flex-col items-center gap-0.5 py-2 px-1 rounded-lg text-xs transition-colors' +
+        (isActive ? ' bg-ceylon-green-50 text-ceylon-green-700 font-bold' : ' text-gray-600 hover:bg-gray-50');
+      btn.innerHTML = '<span class="text-xl leading-none">' + lang.flag + '</span><span>' + lang.short + '</span>';
+      btn.addEventListener('click', function() {
+        if (lang.code === 'en') {
+          clearCookie('googtrans');
+          localStorage.removeItem('tc_lang');
+        } else {
+          setCookie('googtrans', '/en/' + lang.code);
+          localStorage.setItem('tc_lang', lang.code);
+        }
+        window.location.reload();
+      });
+      grid.appendChild(btn);
+    });
+  })();
+</script>
 
 <!-- ── Search modal overlay ── -->
 <div id="search-modal" class="fixed inset-0 z-[200] hidden" role="dialog" aria-modal="true" aria-label="Site search">

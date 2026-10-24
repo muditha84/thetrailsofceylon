@@ -1,0 +1,148 @@
+---
+// Language selector — uses Google Translate cookie mechanism + reload
+// Supported: DE, FR, ZH-CN, RU, NL, IT, ES, JA, KO (top non-English Sri Lanka markets)
+---
+
+<div id="lang-selector" class="relative">
+  <button
+    id="lang-btn"
+    class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-sm font-medium text-gray-600 hover:text-ceylon-green-700 hover:bg-ceylon-green-50 transition-colors"
+    aria-label="Select language"
+    aria-expanded="false"
+    aria-haspopup="listbox"
+  >
+    <!-- Globe icon -->
+    <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    </svg>
+    <span id="lang-label" class="text-xs font-bold tracking-wider">EN</span>
+    <svg class="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </button>
+
+  <div
+    id="lang-menu"
+    class="absolute right-0 top-full mt-1.5 bg-white rounded-xl shadow-xl border border-gray-100 pt-1.5 pb-1 z-[60] min-w-[180px] hidden"
+    role="listbox"
+    aria-label="Select language"
+  >
+    <p class="px-3.5 pb-1 pt-0.5 text-[10px] font-bold text-gray-400 uppercase tracking-widest">Language</p>
+    <!-- Options injected by JS -->
+  </div>
+</div>
+
+<script>
+(function () {
+  var LANGS = [
+    { code: 'en',    flag: '🇬🇧', native: 'English',    short: 'EN' },
+    { code: 'de',    flag: '🇩🇪', native: 'Deutsch',    short: 'DE' },
+    { code: 'fr',    flag: '🇫🇷', native: 'Français',   short: 'FR' },
+    { code: 'zh-CN', flag: '🇨🇳', native: '中文',       short: 'ZH' },
+    { code: 'ru',    flag: '🇷🇺', native: 'Русский',    short: 'RU' },
+    { code: 'nl',    flag: '🇳🇱', native: 'Nederlands', short: 'NL' },
+    { code: 'it',    flag: '🇮🇹', native: 'Italiano',   short: 'IT' },
+    { code: 'es',    flag: '🇪🇸', native: 'Español',    short: 'ES' },
+    { code: 'ja',    flag: '🇯🇵', native: '日本語',     short: 'JA' },
+    { code: 'ko',    flag: '🇰🇷', native: '한국어',     short: 'KO' },
+  ];
+
+  // ── Cookie helpers ──
+  function getCookie(name) {
+    var match = document.cookie.split(';').map(function(c) { return c.trim(); })
+      .find(function(c) { return c.startsWith(name + '='); });
+    return match ? match.split('=').slice(1).join('=') : '';
+  }
+  function setCookie(name, value) {
+    var expires = new Date();
+    expires.setFullYear(expires.getFullYear() + 1);
+    var base = name + '=' + value + '; expires=' + expires.toUTCString() + '; path=/; SameSite=Lax';
+    document.cookie = base;
+    document.cookie = base + '; domain=.' + location.hostname;
+  }
+  function clearCookie(name) {
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + location.hostname + ';';
+  }
+
+  // ── Determine active language from googtrans cookie ──
+  var gtCookie = getCookie('googtrans'); // e.g. "/en/de"
+  var activeCode = (gtCookie && gtCookie.split('/').length >= 3) ? gtCookie.split('/')[2] : 'en';
+  var activeLang = LANGS.find(function(l) { return l.code === activeCode; }) || LANGS[0];
+
+  // ── Update button label ──
+  var labelEl = document.getElementById('lang-label');
+  if (labelEl) labelEl.textContent = activeLang.short;
+
+  // ── Build dropdown options ──
+  var menu = document.getElementById('lang-menu');
+  if (menu) {
+    LANGS.forEach(function(lang) {
+      var btn = document.createElement('button');
+      var isActive = lang.code === activeLang.code;
+      btn.className = 'w-full flex items-center gap-2.5 px-3.5 py-2 text-sm transition-colors text-left' +
+        (isActive ? ' bg-ceylon-green-50 text-ceylon-green-700 font-semibold' : ' text-gray-700 hover:bg-ceylon-green-50 hover:text-ceylon-green-700');
+      btn.setAttribute('role', 'option');
+      btn.setAttribute('aria-selected', String(isActive));
+      btn.dataset.code = lang.code;
+      btn.innerHTML = '<span class="text-base leading-none w-6 flex-shrink-0">' + lang.flag + '</span>' +
+        '<span>' + lang.native + '</span>' +
+        (isActive ? '<svg class="w-3.5 h-3.5 ml-auto text-ceylon-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>' : '');
+      menu.appendChild(btn);
+    });
+  }
+
+  // ── Toggle dropdown ──
+  var toggleBtn = document.getElementById('lang-btn');
+  if (toggleBtn && menu) {
+    toggleBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var open = menu.classList.toggle('hidden') === false;
+      toggleBtn.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  // ── Close on outside click ──
+  document.addEventListener('click', function() {
+    if (menu) menu.classList.add('hidden');
+    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+  });
+
+  // ── Handle language selection ──
+  if (menu) {
+    menu.addEventListener('click', function(e) {
+      var btn = e.target instanceof Element ? e.target.closest('[data-code]') : null;
+      if (!btn) return;
+      var code = btn.dataset.code;
+      if (!code || code === activeLang.code) { menu.classList.add('hidden'); return; }
+
+      if (code === 'en') {
+        clearCookie('googtrans');
+        localStorage.removeItem('tc_lang');
+      } else {
+        setCookie('googtrans', '/en/' + code);
+        localStorage.setItem('tc_lang', code);
+      }
+      window.location.reload();
+    });
+  }
+
+  // ── Auto-detect browser language on first visit ──
+  var langChecked = localStorage.getItem('tc_lang_auto');
+  if (!gtCookie && !langChecked) {
+    localStorage.setItem('tc_lang_auto', '1');
+    var browser = (navigator.language || '').toLowerCase();
+    var langMap = {
+      'de': 'de', 'fr': 'fr', 'it': 'it', 'es': 'es',
+      'nl': 'nl', 'ru': 'ru', 'ja': 'ja', 'ko': 'ko',
+      'zh': 'zh-CN', 'zh-cn': 'zh-CN', 'zh-tw': 'zh-CN',
+    };
+    var detected = langMap[browser] || langMap[browser.split('-')[0]];
+    if (detected) {
+      setCookie('googtrans', '/en/' + detected);
+      localStorage.setItem('tc_lang', detected);
+      window.location.reload();
+    }
+  }
+})();
+</script>

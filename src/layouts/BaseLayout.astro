@@ -124,6 +124,8 @@ const publisherOrg = {
   <link rel="preconnect" href="https://c.travel-assets.com" />
   <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
   <link rel="preconnect" href="https://googleads.g.doubleclick.net" />
+  <link rel="preconnect" href="https://translate.googleapis.com" />
+  <link rel="preconnect" href="https://translate.google.com" />
 
   <!-- Fonts — non-render-blocking via preload trick -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -149,6 +151,24 @@ const publisherOrg = {
 
   <!-- Smooth scroll -->
   <style>html { scroll-behavior: smooth; }</style>
+
+  <!-- Google Translate: suppress toolbar, init widget -->
+  <style>
+    .goog-te-banner-frame.skiptranslate { display: none !important; }
+    .skiptranslate > iframe { display: none !important; }
+    body { top: 0 !important; }
+    #goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
+  </style>
+  <script is:inline>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'de,fr,zh-CN,ru,nl,it,es,ja,ko',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script async defer src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <!-- Schema.org: WebSite (all pages) + TravelAgency -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -551,6 +571,21 @@ const publisherOrg = {
 
       // Append at end of prose
       proseEl.appendChild(buildShareBar('Share this article:'));
+    })();
+  </script>
+
+  <!-- Google Translate widget mount point (hidden — we use our own UI in the header) -->
+  <div id="google_translate_element" style="display:none;position:absolute;left:-9999px;"></div>
+  <!-- Prevent Google Translate from shifting page layout -->
+  <script is:inline>
+    (function() {
+      var obs = new MutationObserver(function() {
+        var t = document.body.style.top;
+        if (t && t !== '' && t !== '0px') {
+          document.body.style.removeProperty('top');
+        }
+      });
+      obs.observe(document.body, { attributes: true, attributeFilter: ['style'] });
     })();
   </script>
 </body>
