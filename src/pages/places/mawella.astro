@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Mawella Bay Sri Lanka: Lagoon, Fishing Village & Tangalle's Hidden Beach | The Trails of Ceylon"
+  description="Mawella Bay Sri Lanka — a calm lagoon sheltered by a natural breakwater, colourful fishing boats and one of the quietest beach settings near Tangalle. Complete visitor guide."
+  image="/images/tangalle.webp"
+  type="article"
+  publishDate="2025-04-15"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/tangalle.webp" alt="Mawella Bay lagoon and fishing village near Tangalle, south coast Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/south-coast" class="hover:text-white">South Coast</a><span>/</span>
+          <span class="text-white">Mawella Bay</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">South Coast</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Mawella Bay Sri Lanka</h1>
+        <p class="text-white/80 mt-2 text-lg">Southern Province &bull; Lagoon &bull; Fishing Village &bull; Near Tangalle</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Province', 'Southern Province'],
+              ['Best For', 'Lagoon swimming, kayaking'],
+              ['Season', 'Nov–Apr'],
+              ['Days Needed', '1–2 days'],
+              ['From Tangalle', '7km (15 min tuk-tuk)'],
+              ['From Matara', '~35km'],
+              ['From Colombo', '~220km via E01'],
+              ['Lifeguards', 'None — take care'],
+            ].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Mawella Bay Sri Lanka is one of the south coast's best-kept secrets — a quiet, horseshoe-shaped bay about 7 kilometres west of <a href="/places/tangalle">Tangalle</a>, where a natural breakwater and reef formation create a sheltered lagoon that bears almost no resemblance to the busy beach towns further along the coast. There are no beach bars strung along the sand here, no rows of sun loungers for rent, no surf school touts — just colourful fishing boats, calm water, mangrove-edged lagoon, and a working village that hasn't been reshaped for tourism.</p>
+
+        <p>Mawella is one of those south coast spots that rewards visitors who seek it out. The lagoon is ideal for calm swimming, kayaking and morning birdwatching; the beach itself has a gentle shorebreak good for bodyboarding; and the surrounding coastline is some of the most unspoilt on the entire southern tip of Sri Lanka. For those staying in Tangalle — already one of the coast's quieter destinations — Mawella makes an easy and deeply rewarding half-day or full day excursion.</p>
+
+        <h2>The Lagoon & Swimming</h2>
+        <p>The defining feature of Mawella Bay is its lagoon — a naturally sheltered body of water enclosed by a curving breakwater and rocky reef that absorbs the energy of the Indian Ocean before it reaches the beach. The result is a calm, warm stretch of water that is safe and gentle for swimming even when the open sea outside is choppy. The lagoon is particularly shallow at its edges, making it ideal for families and nervous swimmers.</p>
+        <p>The best time to swim is in the morning, before the sea breeze picks up and when the water is at its clearest. There are no lifeguards at Mawella, so swimmers should take care and stay within the sheltered section. The far end of the bay, where the breakwater meets the open ocean, picks up more of the natural swell and produces shorebreak waves that suit bodyboarding — a pleasant contrast to the calm lagoon just metres away.</p>
+
+        <h2>Kayaking & Lagoon Boat Trips</h2>
+        <p>Mawella Lagoon — the brackish water body that runs behind the beach, separated from the bay by a narrow sandbar — is an excellent place to spend a morning by kayak or flat-bottomed boat. The lagoon extends inland through mangrove channels, and the birdlife is exceptional: purple herons, painted storks, cormorants, kingfishers and egrets are common year-round, with additional migrants arriving between October and March. A two-hour guided boat trip through the lagoon and fishing village typically costs LKR 2,500–4,000 for a small group and can be arranged through guesthouses in Tangalle or directly with local boatmen at the lagoon's edge.</p>
+        <p>Morning trips are best — the light is good for photography, the birds are most active, and the fishing boats are returning from their overnight runs, creating one of the south coast's most atmospheric scenes.</p>
+
+        <h2>The Fishing Village</h2>
+        <p>Mawella is a genuine working fishing village, and this is much of its appeal. The beach in the early morning is busy with colourful oruwa outriggers returning from night fishing, their catch sorted and sold directly to local traders on the sand. The fleet is one of the prettiest on the south coast — the boats painted in reds, blues and yellows contrast sharply with the white surf and green palms behind. Photographing the morning return (from around 5:30–7:00am) is one of the most rewarding activities at Mawella.</p>
+        <p>The village life and the beach coexist naturally here, and visitors are welcome to watch without it feeling like a performance. Buying fish directly from the fishermen for a guesthouse cook-your-own dinner is possible if you have accommodation with kitchen facilities — fresh-caught reef fish, prawns and cuttlefish are all on offer at prices considerably below restaurant rates.</p>
+
+        <AffiliateBox
+          title="Find Hotels near Mawella Bay"
+          description="Mawella has some of the south coast's most intimate boutique stays — converted colonial homes and private villas right on the beach."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Mawella+Sri+Lanka"
+          variant="hotel"
+        />
+
+        <h2>Day Trips from Mawella</h2>
+        <p><a href="/places/tangalle">Tangalle</a> is 7km east — a small town with excellent seafood restaurants and its own beautiful, wind-swept beach. The drive or tuk-tuk along the coast road passes through several small villages and is scenic in its own right. <a href="/places/hiriketiya">Hiriketiya Beach</a> — the photogenic bowl-shaped cove beloved by surfers and photographers — is about 15km west, roughly 25 minutes by tuk-tuk, and well worth a half-day visit.</p>
+        <p>Mulkirigala Rock Temple, about 16km north of Mawella, is one of the south's most impressive ancient sites — a series of cave temples carved into a 200-metre granite outcrop, with reclining Buddha images and painted ceilings that date back over 2,000 years. Far fewer visitors come here than to Dambulla or Sigiriya, making it one of the most atmospheric temple visits in the country. Combine it with a morning at Mawella Bay for a memorable full day.</p>
+
+        <h2>Getting to Mawella Bay</h2>
+        <p>There is no train station at Mawella. The most practical approach is to take a train or bus to <a href="/places/tangalle">Tangalle</a> and then hire a tuk-tuk for the 7km journey west (LKR 400–600). Alternatively, many guesthouses in Tangalle will arrange a tuk-tuk for the day. From Colombo, the Southern Expressway to Matara takes about 2.5 hours, then the A2 coastal road continues east to Tangalle. From <a href="/places/mirissa">Mirissa</a>, allow 1.5 hours by road. From <a href="/places/yala">Yala</a>, Tangalle is the nearest major town — about 1.5 hours by car.</p>
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[
+              ['Best Season', 'Nov–Apr'],
+              ['Days to Spend', '1–2 days'],
+              ['Top Experience', 'Morning lagoon kayak'],
+              ["Don't Miss", 'Fishing boats at 6am'],
+              ['Day Trip', 'Mulkirigala temple'],
+              ['Nearest Town', 'Tangalle (7km)'],
+            ].map(([k, v]) => (
+              <div class="flex justify-between gap-4">
+                <span class="font-medium text-white/80">{k}</span>
+                <span class="text-white/70 text-right">{v}</span>
+              </div>
+            ))}
+          </div>
+          <a
+            href="https://www.booking.com/searchresults.html?ss=Mawella+Sri+Lanka"
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            class="book-btn"
+          >
+            Book Hotel near Mawella
+          </a>
+        </div>
+
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/places/tangalle',   label: 'Tangalle (7km)' },
+              { href: '/places/hiriketiya', label: 'Hiriketiya (15km)' },
+              { href: '/places/mirissa',    label: 'Mirissa (55km)' },
+              { href: '/places/yala',       label: 'Yala National Park' },
+              { href: '/places/south-coast', label: 'South Coast Guide' },
+            ].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-base mb-2">Local Tip</h3>
+          <p class="text-sm text-ceylon-green-800">Arrive at the beach by 6am to see the fishing fleet returning. The colours of the boats and the morning light make for some of the best photography on the south coast — and you'll likely have the beach entirely to yourself.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <ExpediaWidget heading="🏨 Find Hotels near Mawella & Tangalle" />
+</BaseLayout>

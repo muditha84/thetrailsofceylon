@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Talalla Sri Lanka: Quiet South Coast Beach, Surf & Yoga Retreats | The Trails of Ceylon"
+  description="Talalla Sri Lanka — an undeveloped bay on the south coast with a gentle beachbreak for beginner surfers, yoga retreats and easy access to Hiriketiya and Tangalle. Complete guide."
+  image="/images/hiriketiya.webp"
+  type="article"
+  publishDate="2025-04-15"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/hiriketiya.webp" alt="Talalla beach bay on Sri Lanka's south coast near Dickwella" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/south-coast" class="hover:text-white">South Coast</a><span>/</span>
+          <span class="text-white">Talalla</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">South Coast</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Talalla Sri Lanka</h1>
+        <p class="text-white/80 mt-2 text-lg">Southern Province &bull; Beginner Surf &bull; Yoga Retreats &bull; Undeveloped Bay</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Province', 'Southern Province'],
+              ['Best For', 'Beginner surf, yoga, quiet'],
+              ['Surf Level', 'Beginner–longboard'],
+              ['Season', 'Nov–Apr'],
+              ['Days Needed', '2–4 days'],
+              ['From Matara', '12km (25 min)'],
+              ['From Hiriketiya', '20 min tuk-tuk'],
+              ['Vibe', 'Slow, retreat-focused'],
+            ].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Talalla Sri Lanka is the south coast's slow lane — an undeveloped bay about 12 kilometres east of Matara that has resisted the commercial development reshaping its better-known neighbours. There are no resort strips here, no jet-ski operators, no rows of identical beach restaurants. What Talalla has instead is a long, sweeping beach facing the open Indian Ocean, a gentle beachbreak that suits beginners and longboarders, a cluster of yoga retreats and surf camps embedded in the coconut groves behind the sand, and a pace of life that genuinely reflects the Sri Lanka that existed before the tourist boom reached this coast.</p>
+
+        <p>Talalla is for a particular kind of traveller — one who wants to learn to surf without joining a scrum of beginners, or spend a week on a yoga retreat without feeling like they're in a wellness factory, or simply sit on a beach that is not yet curated for Instagram. It is, in the best sense, unfinished — and all the better for it. Experienced surfers often day-trip to nearby <a href="/places/hiriketiya">Hiriketiya</a> for better waves, returning to Talalla's quieter base at the end of the day.</p>
+
+        <h2>The Beach & Surf</h2>
+        <p>Talalla beach is a broad, south-facing bay with a sandy bottom and consistent beachbreak waves throughout the south coast season (November to April). The break is characterised by mellow, forgiving A-frame peaks that peel both left and right — ideal for beginners working on their pop-up and first turns, and enjoyable for longboarders who prefer a wave they can cruise rather than fight. The sandy bottom means falls are soft and reef cuts are not a concern, making this one of the more beginner-friendly surf settings on the coast.</p>
+        <p>The waves here are modest in size — typically 1–2 feet on smaller days, up to 3–4 feet when a solid south swell arrives — and they rarely produce the powerful walls that more advanced surfers seek. The December to February window is optimal: consistent swell, offshore north-east winds in the mornings, warm 28–30°C water, and the least crowds. Several surf camps and independent instructors operate from Talalla, offering lessons from around USD 25–35 for a two-hour session including board. For those who want bigger, more exciting waves, a 20-minute tuk-tuk ride to <a href="/places/hiriketiya">Hiriketiya</a> delivers them.</p>
+
+        <h2>Yoga & Wellness Retreats</h2>
+        <p>Talalla has developed quietly into one of the south coast's better spots for yoga and wellness retreats — partly because of the calm, unhurried environment, and partly because the beach provides a natural setting for early morning practice that is hard to replicate in busier towns. Several retreat centres operate in the coconut groves and gardens behind the beach, offering packages that combine daily yoga sessions with surf lessons, Ayurvedic treatments and locally sourced Sri Lankan food.</p>
+        <p>Retreats range from a few days to two weeks, and the quality varies — it is worth reading reviews carefully before booking. The best-regarded centres combine serious yoga instruction with genuine immersion in the local environment: growing their own food, working with village communities, and structuring days around the natural rhythm of the coast (early morning surf or yoga, afternoon rest in the heat, sunset sessions on the beach). Talalla suits this kind of retreat far better than the busier beaches, where noise and distraction are constant.</p>
+
+        <AffiliateBox
+          title="Find Hotels & Retreats in Talalla"
+          description="From boutique surf camps to yoga retreat packages — Talalla's small guesthouses and villas offer some of the south coast's most peaceful stays."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Talalla+Sri+Lanka"
+          variant="hotel"
+        />
+
+        <h2>Day Trips from Talalla</h2>
+        <p><a href="/places/hiriketiya">Hiriketiya Beach</a> is the natural first day trip — around 20 minutes east by tuk-tuk (via Dickwella), its perfectly bowl-shaped bay with a fun left and right is one of the most photogenic surf spots in Sri Lanka. Even non-surfers enjoy the swimming and the atmosphere. Dickwella itself is a small town with a good fish market and the enormous Wewurukannala Vihara — a 50-metre seated Buddha figure that is one of the largest in Sri Lanka, richly decorated and completely unexpected in this quiet part of the coast.</p>
+        <p><a href="/places/tangalle">Tangalle</a> is about 30 minutes east — a town with some of the coast's best seafood and the gateway to the remote beaches of the deep south. <a href="/places/mirissa">Mirissa</a> for whale watching is roughly 50 minutes west and best visited on a dedicated half-day (morning departure, back by noon). <a href="/places/yala">Yala National Park</a>, about 2.5 hours east, can be done as a very early departure day trip but is better visited with a night's stay in Tissamaharama.</p>
+
+        <h2>Getting to Talalla</h2>
+        <p>Talalla has no train station. The practical approach is to travel by train or bus to Matara (the end of the coastal express from Colombo — about 3.5 hours by train) and then hire a tuk-tuk for the 12km journey east along the A2 coastal road (LKR 600–800, about 25 minutes). Buses between Matara and Tangalle run along the coast road and pass through Talalla — ask to be dropped at the beach junction. From Colombo by car via the Southern Expressway, allow 2.5–3 hours total. From Galle, the drive east along the A2 takes about 1.5 hours.</p>
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[
+              ['Best Season', 'Nov–Apr'],
+              ['Surf Season', 'Dec–Feb (optimal)'],
+              ['Days to Spend', '2–4 days'],
+              ['Top Activity', 'Beginner surf lessons'],
+              ["Don't Miss", 'Day trip to Hiriketiya'],
+              ['Nearest Station', 'Matara (12km)'],
+            ].map(([k, v]) => (
+              <div class="flex justify-between gap-4">
+                <span class="font-medium text-white/80">{k}</span>
+                <span class="text-white/70 text-right">{v}</span>
+              </div>
+            ))}
+          </div>
+          <a
+            href="https://www.booking.com/searchresults.html?ss=Talalla+Sri+Lanka"
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            class="book-btn"
+          >
+            Book Hotel in Talalla
+          </a>
+        </div>
+
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/places/hiriketiya', label: 'Hiriketiya (20 min)' },
+              { href: '/places/tangalle',   label: 'Tangalle (30 min)' },
+              { href: '/places/mirissa',    label: 'Mirissa (50 min)' },
+              { href: '/places/yala',       label: 'Yala National Park' },
+              { href: '/places/south-coast', label: 'South Coast Guide' },
+            ].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-base mb-2">Surf Tip</h3>
+          <p class="text-sm text-ceylon-green-800">Talalla's break is best in the morning before the sea breeze kicks in. If you want bigger waves, ask your guesthouse to arrange a tuk-tuk to Hiriketiya — the 20-minute ride is worth it for the quality improvement.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <ExpediaWidget heading="🏨 Find Hotels in Talalla & South Coast" />
+</BaseLayout>

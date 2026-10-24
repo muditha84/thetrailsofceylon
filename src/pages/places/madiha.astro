@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Madiha Sri Lanka: Quiet Beach, Sea Turtles & Snorkelling Guide | The Trails of Ceylon"
+  description="Madiha Sri Lanka — a quiet south coast beach between Mirissa and Matara with reef snorkelling, sea turtles and far fewer crowds than its famous neighbours. Complete guide."
+  image="/images/snorkelling.webp"
+  type="article"
+  publishDate="2025-04-15"
+>
+  <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
+    <img src="/images/snorkelling.webp" alt="Snorkelling with sea turtles off Madiha beach, south coast Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/south-coast" class="hover:text-white">South Coast</a><span>/</span>
+          <span class="text-white">Madiha</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">South Coast</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Madiha Sri Lanka</h1>
+        <p class="text-white/80 mt-2 text-lg">Southern Province &bull; Sea Turtles &bull; Snorkelling &bull; Quiet Beach</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Province', 'Southern Province'],
+              ['Best For', 'Snorkelling, turtles, quiet'],
+              ['Season', 'Nov–Apr'],
+              ['Days Needed', '1–2 days'],
+              ['From Matara', '4km (10 min tuk-tuk)'],
+              ['From Mirissa', '8km (15 min)'],
+              ['From Colombo', '~160km via E01'],
+              ['Turtle Nesting', 'April–May'],
+            ].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Madiha Sri Lanka sits on the south coast between <a href="/places/mirissa">Mirissa</a> and Matara — just far enough from its famous neighbours to have escaped the beach-bar build-up, but close enough to reach everything they offer in under 20 minutes. It is, in the truest sense, a quiet alternative: a small, sandy bay with reef patches close to shore, sea turtles that visit the water regularly, and a pace of life that belongs more to the fishing village than the tourist circuit.</p>
+
+        <p>For travellers who want the south coast experience — warm water, coral reef, the chance of a turtle encounter — without the crowds that now define Mirissa or the surf-school intensity of <a href="/places/weligama">Weligama</a>, Madiha is the answer. The beach is genuinely uncrowded, the snorkelling is accessible directly from shore, and the accommodation options — while modest — include some thoughtfully run guesthouses with direct beach access. It is the kind of place that rewards a slower pace and a willingness to stay an extra day.</p>
+
+        <h2>Snorkelling & Sea Turtles</h2>
+        <p>The main draw of Madiha is its reef — a series of coral patches that begin just a short swim from the beach, accessible without a boat and without a guide. The reef supports a good range of tropical reef fish, and sea turtles are a genuine, if not guaranteed, presence in the water. Green sea turtles and hawksbill turtles both use this stretch of coast for feeding and, during April and May, for nesting on the beach — making early morning walks along the sand particularly special during nesting season.</p>
+        <p>Snorkelling conditions are best from December to April, when the south coast sea is at its calmest and underwater visibility is highest. A mask and snorkel is all you need — the reef is shallow enough in places that fins are optional, though they help. Reef shoes are worth wearing for the entry and exit over rocks. If you want a guide to show you the best turtle spots, local hotels and guesthouses can usually arrange one for a modest fee. The nearby village of Polhena (about 10 minutes by tuk-tuk, closer to Matara) is also famous for resident green turtles year-round and is worth combining with a morning at Madiha.</p>
+
+        <h2>The Beach</h2>
+        <p>Madiha beach is a relaxed, unhurried stretch of sand — not the dramatic crescent of Mirissa, but genuinely pleasant and, by south coast standards, refreshingly free of the infrastructure that crowds beaches to the west. The sand is soft and the water warm, and on a good December or January day the sea here can be as calm and clear as anywhere on the coast.</p>
+        <p>The beach is best in the morning — the light is good, the water calmer before any afternoon wind picks up, and the village is at its most active with fishing boats. A few small beachside cafés serve fresh coconut, simple rice-and-curry lunches and grilled fish — the kind of beach food that is gradually disappearing from the more touristy south coast spots. Sunset from Madiha beach, looking westward toward Mirissa, is beautiful.</p>
+
+        <h2>Surfing at Madiha</h2>
+        <p>Madiha has a surf break — a fairly gentle beachbreak that produces rideable waves in the south coast season (November to April) and suits beginners to intermediate surfers better than it suits experienced wave hunters. The waves here are soft and forgiving compared to the reef breaks at Ahangama or <a href="/places/hiriketiya">Hiriketiya</a>, which makes the beach useful as a learning ground without the crowds that pack Weligama. A handful of local instructors and board rental shops serve the small surf scene; those who want more advanced waves typically day-trip to the better-known breaks along the coast.</p>
+
+        <AffiliateBox
+          title="Find Hotels in Madiha"
+          description="Madiha's guesthouses are small and intimate — most with direct beach access and homestyle Sri Lankan food. Book ahead in peak season."
+          buttonText="Search Hotels on Booking.com"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Madiha+Sri+Lanka"
+          variant="hotel"
+        />
+
+        <h2>Day Trips from Madiha</h2>
+        <p><a href="/places/mirissa">Mirissa</a> is 8km west — 15 minutes by tuk-tuk — and the departure point for <a href="/things-to-do/whale-watching">whale watching</a> trips between November and April. Blue whales, sperm whales and spinner dolphin pods are all possible. Book a morning trip (depart 6–6:30am) the day before through your guesthouse.</p>
+        <p>Matara — the major city at the southern tip of the expressway — is 4km east. It has good food, a Dutch fort of its own (smaller and less visited than Galle), and the southern terminus of the coastal railway. The Dondra Head Lighthouse at Sri Lanka's southernmost point is a 10-minute drive east of Matara; this is as far south as Sri Lanka goes, and the lighthouse perch above the cliffs gives a perspective on the island's geography that's hard to find elsewhere.</p>
+        <p><a href="/places/galle">Galle Fort</a> is about 35km west — a one-hour tuk-tuk or 45-minute bus — and the most rewarding day trip from the Madiha area. The fort's cobbled streets, boutique hotels, galleries and rampart sunset walk are incomparable.</p>
+
+        <h2>Getting to Madiha</h2>
+        <p>The nearest railway station is Matara, 4km east. The Colombo–Matara coastal train (around 3.5 hours from Colombo Fort) is one of the most scenic in Asia; from Matara, a tuk-tuk to Madiha costs LKR 300–400 and takes around 10 minutes. Buses along the A2 coastal road between Galle and Matara pass through Madiha — ask to be dropped at the beach road. From Colombo by car via the Southern Expressway, allow 2–2.5 hours to Matara, then a short drive west along the coast.</p>
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[
+              ['Best Season', 'Nov–Apr'],
+              ['Days to Spend', '1–2 days'],
+              ['Top Experience', 'Snorkelling with turtles'],
+              ["Don't Miss", 'Mirissa whale watching'],
+              ['Turtle Nesting', 'April–May'],
+              ['Nearest Station', 'Matara (4km)'],
+            ].map(([k, v]) => (
+              <div class="flex justify-between gap-4">
+                <span class="font-medium text-white/80">{k}</span>
+                <span class="text-white/70 text-right">{v}</span>
+              </div>
+            ))}
+          </div>
+          <a
+            href="https://www.booking.com/searchresults.html?ss=Madiha+Sri+Lanka"
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            class="book-btn"
+          >
+            Book Hotel in Madiha
+          </a>
+        </div>
+
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/places/mirissa',    label: 'Mirissa (8km)' },
+              { href: '/places/weligama',   label: 'Weligama (14km)' },
+              { href: '/places/galle',      label: 'Galle Fort (35km)' },
+              { href: '/places/tangalle',   label: 'Tangalle (55km)' },
+              { href: '/places/south-coast', label: 'South Coast Guide' },
+            ].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-ceylon-green-50 border border-ceylon-green-200 rounded-xl p-5">
+          <h3 class="font-serif font-bold text-ceylon-green-900 text-base mb-2">Turtle Tip</h3>
+          <p class="text-sm text-ceylon-green-800">Snorkel early morning (7–9am) for the best chance of encountering turtles in the water — they are most active before the beach fills up. Visibility is usually excellent from December to February.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <ExpediaWidget heading="🏨 Find Hotels in Madiha & South Coast" />
+</BaseLayout>
