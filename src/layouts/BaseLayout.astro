@@ -11,6 +11,7 @@ interface Props {
   type?: string;
   publishDate?: string;
   author?: string;
+  lastModified?: string;
   faqSchema?: Array<{question: string; answer: string}>;
 }
 
@@ -21,6 +22,7 @@ const {
   canonicalURL = Astro.url.href,
   type = 'website',
   publishDate,
+  lastModified,
   author = 'The Trails of Ceylon',
   faqSchema,
 } = Astro.props;
@@ -114,6 +116,7 @@ const publisherOrg = {
 
   <!-- Article-specific meta -->
   {publishDate && <meta property="article:published_time" content={publishDate} />}
+  {publishDate && <meta property="article:modified_time" content={lastModified || publishDate} />}
   {type === 'article' && <meta property="article:author" content={author} />}
 
   <!-- Preconnect hints for third-party origins -->
@@ -134,6 +137,12 @@ const publisherOrg = {
 
   <!-- Sitemap -->
   <link rel="sitemap" href="/sitemap-index.xml" />
+
+  <!-- RSS feed discovery -->
+  <link rel="alternate" type="application/rss+xml" title="The Trails of Ceylon — Travel Blog" href="/rss.xml" />
+
+  <!-- Hero image preload (LCP optimisation) -->
+  {image !== '/images/og-default.webp' && <link rel="preload" as="image" href={image} />}
 
   <!-- Leaflet (map widget — loaded only on place pages) -->
   {isPlacePage && <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />}
@@ -159,8 +168,8 @@ const publisherOrg = {
     "url": canonicalURL,
     "image": { "@type": "ImageObject", "url": fullImageURL, "width": 1200, "height": 630 },
     "datePublished": publishDate || '2026-01-01',
-    "dateModified": publishDate || '2026-01-01',
-    "author": { "@type": "Person", "name": author, "url": siteURL },
+    "dateModified": lastModified || publishDate || '2026-01-01',
+    "author": { "@type": "Organization", "name": author, "url": siteURL },
     "publisher": publisherOrg,
     "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalURL }
   })} />}

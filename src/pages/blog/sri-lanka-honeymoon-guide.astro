@@ -3,11 +3,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ExpediaWidget from '../../components/ExpediaWidget.astro';
 import AuthorBio from '../../components/AuthorBio.astro';
 import RelatedArticles from '../../components/RelatedArticles.astro';
+
+const honeymoonFaq = [
+  { question: "Is Sri Lanka good for a honeymoon?", answer: "Sri Lanka is an excellent honeymoon destination — it combines beautiful beaches, lush hill country, wildlife and culture in one compact island, with a wide range of romantic boutique hotels and luxury resorts. It feels special and exotic without being logistically difficult. The hill country train journey, a whale-watching trip off Mirissa, and a sunset at Galle Fort are among the most romantic experiences in Asia." },
+  { question: "When is the best time for a honeymoon in Sri Lanka?", answer: "December through March is ideal for most honeymoon itineraries combining beaches and culture. The south coast (Mirissa, Tangalle, Unawatuna) and the Cultural Triangle are at their best. April and early May are beautiful and slightly quieter. For a purely east coast honeymoon (Nilaveli, Arugam Bay), May through September is the season." },
+  { question: "How long should a Sri Lanka honeymoon be?", answer: "Ten to fourteen days is the sweet spot for a Sri Lanka honeymoon — enough time to cover the Cultural Triangle, one or two nights in the hill country, and at least five days on the beach without feeling rushed. Ten days works well if you want to keep things relaxed with fewer hotel moves." },
+  { question: "What is the most romantic place in Sri Lanka?", answer: "Tangalle on the south coast is consistently rated the most romantic destination — quiet beaches, boutique eco-resorts and turtles nesting at night. Galle Fort's heritage hotels, Mirissa for whale watching and sunsets, and the hill country around Kandy with its tea estate boutique hotels are all exceptionally romantic. For luxury, Amanwella and Wild Coast Tented Lodge near Yala are world-class." },
+  { question: "Is Sri Lanka expensive for a honeymoon?", answer: "Sri Lanka can be done at any budget. A luxury honeymoon with boutique beach hotels and a private driver costs USD 300–600/day for two. A comfortable mid-range honeymoon with 3–4 star hotels and a mix of private and shared transport runs USD 150–250/day. Sri Lanka's luxury hotels often provide complimentary honeymoon touches (flowers, cake, sunset cruises) when you notify them in advance." },
+];
 ---
 
 <BaseLayout
   title="Sri Lanka Honeymoon Guide: Romantic Escapes & Luxury Stays | The Trails of Ceylon"
   description="Plan the perfect Sri Lanka honeymoon — from private beach villas and hill country retreats to whale watching and sunset dinners. Itinerary ideas and the best romantic hotels."
+  image="/images/mirissa-beach.webp"
+  type="article"
+  publishDate="2025-05-10"
+  faqSchema={honeymoonFaq}
 >
   <article>
     <div class="relative py-24 bg-ceylon-green-900 overflow-hidden">

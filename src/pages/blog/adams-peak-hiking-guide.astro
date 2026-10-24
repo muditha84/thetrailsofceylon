@@ -3,11 +3,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ExpediaWidget from '../../components/ExpediaWidget.astro';
 import AuthorBio from '../../components/AuthorBio.astro';
 import RelatedArticles from '../../components/RelatedArticles.astro';
+
+const adamsPeakFaq = [
+  { question: "How long does it take to hike Adam's Peak?", answer: "The ascent from Nallathanniya (the main trailhead) takes 2.5–4 hours depending on fitness. The descent takes 2–3 hours. Most people hike at night, leaving around midnight to reach the summit for sunrise (around 6:00am December–April). The trail is 7km each way with approximately 5,500 steps." },
+  { question: "What is the best time to climb Adam's Peak?", answer: "The pilgrimage season runs December to May, when the weather is dry and the trail is lit and serviced with tea stalls open. January, February and March offer the most reliable clear skies at sunrise. Climbing outside the season (June–November) is possible but the trail is unlit and often foggy at the summit." },
+  { question: "Is Adam's Peak hard to climb?", answer: "Adam's Peak is challenging but achievable for most reasonably fit adults. The steps are continuous and steep in the final section. The main difficulty is the altitude (2,243m) and the sheer number of steps. Most people find the descent harder on the knees than the climb. Children above 8–10 years generally manage it. Trekking poles help significantly on the way down." },
+  { question: "Do you need a guide to climb Adam's Peak?", answer: "No — the trail is clearly marked and extremely busy during pilgrimage season with thousands of pilgrims hiking nightly. The route from Nallathanniya is impossible to miss, and the entire path is lit with electric lights from December to May. No guide is needed. At peak times (January–March) the trail can feel like a slow-moving queue near the top." },
+  { question: "Where should I stay for Adam's Peak?", answer: "Nallathanniya (Dalhousie) at the base of the mountain has guesthouses, and most hikers stay here to start the climb at midnight. Hatton (23km away) has more accommodation options and is the nearest town with ATMs. Coming from Ella or Kandy, a private taxi to Nallathanniya takes 3–4 hours." },
+];
 ---
 
 <BaseLayout
   title="Adam's Peak Hiking Guide: The Sacred Climb to Sri Pada | The Trails of Ceylon"
   description="Everything you need to know about climbing Adam's Peak (Sri Pada) in Sri Lanka — the best season, routes, what to expect at the summit, and how to get there."
+  image="/images/adams-peak.webp"
+  type="article"
+  publishDate="2025-03-20"
+  faqSchema={adamsPeakFaq}
 >
   <article>
     <div class="relative py-24 bg-ceylon-green-900 overflow-hidden">

@@ -3,11 +3,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ExpediaWidget from '../../components/ExpediaWidget.astro';
 import AuthorBio from '../../components/AuthorBio.astro';
 import RelatedArticles from '../../components/RelatedArticles.astro';
+
+const photographyFaq = [
+  { question: "What are the best photography locations in Sri Lanka?", answer: "The top photography spots are: Sigiriya Rock at sunrise (from Pidurangala for a free viewpoint), the Nine Arch Bridge in Ella when a train passes (every 1–2 hours), Horton Plains' World's End viewpoint at dawn, Yala National Park for wildlife, the Kandy Lake and Temple of the Tooth at dusk, tea estate workers in Nuwara Eliya, and the colourful fishing boats on the east coast at Batticaloa and Nilaveli." },
+  { question: "What camera gear should I bring to Sri Lanka?", answer: "For wildlife photography (Yala, Minneriya), a telephoto lens of at least 300mm is essential. For landscapes and cultural sites, a wide angle (16–35mm) and a mid-range zoom (24–70mm) cover most situations. A polarising filter helps with coastal and tea estate shots in bright sunlight. Bring extra memory cards and a laptop for daily backup — heat and humidity affect cards. A rain cover for the wet season is useful." },
+  { question: "When is the best light for photography in Sri Lanka?", answer: "Golden hour (first and last hour of daylight) is best as in any tropical destination. Mornings in the hill country often offer mist in the valleys — beautiful and brief, gone by 9am. The monsoon season brings dramatic cloud formations for landscape photography. Harsh midday light (10am–3pm) is challenging; plan indoor or shaded activities then. The cool morning light at Sigiriya between 6–8am is exceptional." },
+  { question: "Do I need permits for photography in Sri Lanka?", answer: "Commercial photography and drone flights in national parks require permits from the Department of Wildlife Conservation — obtain these in advance through their Colombo office. Still photography for personal use at temples and cultural sites is generally free, but some temples charge LKR 200–500 for camera permits. Photographing military installations is prohibited. Always ask permission before photographing individuals at close range." },
+];
 ---
 
 <BaseLayout
   title="Sri Lanka Photography Guide: Best Spots, Light & Tips | The Trails of Ceylon"
   description="A photographer's guide to Sri Lanka — the best locations, golden hour spots, wildlife photography tips, and how to capture the island's most iconic images."
+  image="/images/scenic-train.webp"
+  type="article"
+  publishDate="2025-05-15"
+  faqSchema={photographyFaq}
 >
   <article>
     <div class="relative py-24 bg-ceylon-green-900 overflow-hidden">

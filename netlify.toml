@@ -51,6 +51,11 @@
   status = 301
 
 [[redirects]]
+  from = "/feed/"
+  to = "/rss.xml"
+  status = 301
+
+[[redirects]]
   from = "/sitemap"
   to = "/sitemap-index.xml"
   status = 301

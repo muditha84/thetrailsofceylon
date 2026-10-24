@@ -3,11 +3,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ExpediaWidget from '../../components/ExpediaWidget.astro';
 import AuthorBio from '../../components/AuthorBio.astro';
 import RelatedArticles from '../../components/RelatedArticles.astro';
+
+const turtleFaq = [
+  { question: "Where is the best place to see turtles in Sri Lanka?", answer: "Rekawa Beach (near Tangalle) is the best ethical turtle watching location — guided night walks during nesting season let you watch green and loggerhead turtles nest in the wild, run by a community conservation project. Hikkaduwa has resident sea turtles visible while snorkelling or from glass-bottom boats year-round. Kosgoda on the west coast has several hatcheries where you can see baby turtles." },
+  { question: "When can you see turtles in Sri Lanka?", answer: "Sea turtles nest year-round in Sri Lanka, with peak nesting on the south and west coasts from November through April (coinciding with the tourist season). At Rekawa, guided night turtle watches operate most evenings during nesting season (November–April). Hikkaduwa's reef turtles are resident year-round, visible while snorkelling any time from November to April when the sea is calm." },
+  { question: "Is turtle watching in Sri Lanka ethical?", answer: "It depends on the operator. The Rekawa Turtle Conservation Project (run by the Wildlife Conservation Society) is considered the gold standard for ethical turtle watching in Sri Lanka — no artificial lighting, guides trained not to disturb nesting turtles, and proceeds support the community. Avoid operators who disturb nesting turtles, use flash photography, or let tourists handle baby turtles at hatcheries." },
+  { question: "Which turtles can you see in Sri Lanka?", answer: "Five of the seven sea turtle species nest in Sri Lanka: the green turtle (most common), loggerhead, olive ridley, hawksbill and leatherback (rarest). Green turtles are the ones seen most frequently while snorkelling at Hikkaduwa and Unawatuna. Leatherbacks are the most endangered and less frequently sighted." },
+];
 ---
 
 <BaseLayout
   title="Sea Turtle Watching in Sri Lanka: Where, When and How | The Trails of Ceylon"
   description="A guide to watching and supporting sea turtles in Sri Lanka — the best beaches for nesting, hatcheries to visit, ethical operators, and the best time of year."
+  image="/images/mirissa-beach.webp"
+  type="article"
+  publishDate="2025-04-05"
+  faqSchema={turtleFaq}
 >
   <article>
     <div class="relative py-24 bg-ceylon-green-900 overflow-hidden">

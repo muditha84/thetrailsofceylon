@@ -4,12 +4,22 @@ import ExpediaWidget from '../../components/ExpediaWidget.astro';
 import AuthorBio from '../../components/AuthorBio.astro';
 import RelatedArticles from '../../components/RelatedArticles.astro';
 import AffiliateBox from '../../components/AffiliateBox.astro';
+
+const bestTimeFaq = [
+  { question: "When is the best time to visit Sri Lanka?", answer: "The best overall time to visit Sri Lanka is December through April, when the southwest coast (Galle, Mirissa, Unawatuna) and the Cultural Triangle (Sigiriya, Kandy) are dry. If you want to visit the east coast (Arugam Bay, Trincomalee), May through October is the dry season there — the opposite of the west." },
+  { question: "Does Sri Lanka have a rainy season?", answer: "Sri Lanka has two monsoon seasons. The southwest monsoon (May–September) brings rain to the west and south coasts and the hill country. The northeast monsoon (October–January) affects the north and east. The Cultural Triangle in the centre has a drier climate year-round. In practice, you can visit most parts of Sri Lanka in any month — just plan your regions according to which coast is in season." },
+  { question: "Is December a good time to visit Sri Lanka?", answer: "December is excellent for the south and west coasts (Galle, Mirissa, Hikkaduwa) and the Cultural Triangle. It is one of the most popular months — expect crowds and higher prices. Book accommodation well in advance, especially for Christmas and New Year. The east coast (Arugam Bay) is in its off-season in December." },
+  { question: "What is Sri Lanka like in July and August?", answer: "July and August are peak season for the east coast — Arugam Bay surfing season, Trincomalee beaches and Nilaveli snorkelling are at their best. The south and west coasts experience the southwest monsoon with frequent rain, and beach conditions are rough. The hill country remains green but overcast. July also features the Esala Perahera festival in Kandy, one of Asia's most spectacular events." },
+  { question: "How many days do you need in Sri Lanka?", answer: "Two weeks (14 days) is the minimum to see the highlights — the Cultural Triangle, hill country, and south coast. Three weeks allows you to add the east coast. One week is possible if you focus on one or two regions (south coast + Kandy is a popular combo). A full month lets you explore the north (Jaffna) and off-the-beaten-track areas." },
+];
 ---
 <BaseLayout
   title="When to Visit Sri Lanka: Month-by-Month Weather & Travel Tips | The Trails of Ceylon"
   description="Sri Lanka has two monsoon seasons — timing your visit matters. A practical month-by-month breakdown of weather, crowds and what to do, coast by coast."
+  image="/images/heroes/hero-hills.webp"
   type="article"
   publishDate="2025-02-10"
+  faqSchema={bestTimeFaq}
 >
   <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
     <img

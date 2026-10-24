@@ -5,13 +5,23 @@ import AuthorBio from '../../components/AuthorBio.astro';
 import RelatedArticles from '../../components/RelatedArticles.astro';
 import AffiliateBox from '../../components/AffiliateBox.astro';
 import CardBlog from '../../components/CardBlog.astro';
+
+const twoWeeksFaq = [
+  { question: "Is 2 weeks enough for Sri Lanka?", answer: "Two weeks is the most popular length for a Sri Lanka trip and covers the highlights comfortably. You can fit in the Cultural Triangle (Sigiriya, Dambulla, Kandy), the hill country (Ella, Nuwara Eliya), and the south coast (Galle, Mirissa, Unawatuna). The east coast (Arugam Bay, Trincomalee) usually requires 3 weeks to add meaningfully." },
+  { question: "What is the best 2-week Sri Lanka route?", answer: "The classic 2-week circuit: Colombo (1 night) → Negombo (1 night) → Sigiriya/Dambulla (2 nights) → Kandy (2 nights) → Nuwara Eliya (1 night) → Ella (2 nights) → Yala safari (1 night) → Mirissa/Unawatuna (2 nights) → Galle (1 night) → Colombo (1 night). This covers cultural highlights, hill country and beaches without too much backtracking." },
+  { question: "How much does 2 weeks in Sri Lanka cost?", answer: "Budget travellers can get by on USD 40–60/day (guesthouses, local food, buses). Mid-range travellers typically spend USD 80–150/day (3-star hotels, private drivers, some activities). A comfortable trip with nice hotels and private transport runs USD 200–350/day for two people. The biggest variables are accommodation and transport — a private driver-guide adds comfort but roughly doubles the transport budget." },
+  { question: "Should I hire a driver for 2 weeks in Sri Lanka?", answer: "A private driver-guide is the most comfortable way to travel and makes a lot of sense for 2 weeks or more, especially for families or couples. Expect to pay around USD 50–80/day all-in (vehicle, driver, fuel). The train between Kandy and Ella is so scenic it's worth doing even with a driver. Tuk-tuks and public buses work well within towns." },
+  { question: "What time of year is best for a 2-week Sri Lanka trip?", answer: "December through March is the best overall period for the classic west-south-hill country circuit. April is quieter and warm. May–September suits the east coast more than the south. October–November can see rain on the south coast. The Cultural Triangle and Kandy are good year-round with the dry zone getting much less rain than the coasts." },
+];
 ---
 
 <BaseLayout
   title="The Perfect 2-Week Sri Lanka Itinerary (2025) | The Trails of Ceylon"
   description="The ultimate 2-week Sri Lanka itinerary covering the Cultural Triangle, Hill Country, southern beaches and wildlife safaris. Day-by-day breakdown with tips."
+  image="/images/scenic-train.webp"
   type="article"
   publishDate="2025-04-10"
+  faqSchema={twoWeeksFaq}
 >
 
   <!-- Hero -->

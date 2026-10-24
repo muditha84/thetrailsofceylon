@@ -3,13 +3,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ExpediaWidget from '../../components/ExpediaWidget.astro';
 import AuthorBio from '../../components/AuthorBio.astro';
 import RelatedArticles from '../../components/RelatedArticles.astro';
+
+const sigiriyaFaq = [
+  { question: "How long does it take to climb Sigiriya?", answer: "Allow 2–3 hours for the full experience — about 45 minutes up, 30 minutes at the top, and 30 minutes down, plus time for the frescoes and mirror wall. The ascent involves 1,200 steps and the final climb on metal staircases can be slow in a queue. Start at 7:00–8:00am to avoid both heat and crowds." },
+  { question: "What is the entry fee for Sigiriya?", answer: "Foreign adults pay USD 30 (approximately LKR 9,000) per person. Children aged 5–12 pay half price. The Cultural Triangle Round Ticket covers Sigiriya plus Polonnaruwa, Anuradhapura and Dambulla and works out cheaper if you plan to visit all four sites." },
+  { question: "What is the best time to visit Sigiriya?", answer: "Early morning at opening time (7:00am) is best — cooler temperatures and fewer crowds. The dry season (May–September) sees minimal rainfall. Avoid midday: the exposed rock face gets very hot from 10am onward and the queues for the staircases can be 30+ minutes." },
+  { question: "Can you visit Sigiriya without a guide?", answer: "Yes — Sigiriya is easy to explore independently. Information boards throughout the site explain the history at each point, and an audio guide is available at the ticket office. A licensed guide adds depth to the frescoes and mirror wall but is not necessary." },
+  { question: "What is the best way to get to Sigiriya?", answer: "Most visitors arrive from Dambulla (20km, 30 mins by tuk-tuk) or from the nearby village of Inamaluwa on the Habarana–Dambulla road. Tuk-tuks from Dambulla cost around LKR 600–900. Many travellers base themselves in Habarana or Sigiriya village for easy early-morning access." },
+];
 ---
 
 <BaseLayout
   title="Sigiriya Rock Fortress: The Complete Visitor's Guide | The Trails of Ceylon"
   description="Everything you need to know to visit Sigiriya Rock Fortress in Sri Lanka — history, what to see, entry fees, best time to visit and how to get there."
+  image="/images/sigiriya.webp"
   type="article"
   publishDate="2026-04-26"
+  faqSchema={sigiriyaFaq}
 >
   <article>
     <div class="relative py-24 bg-ceylon-green-900 overflow-hidden">

@@ -3,11 +3,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ExpediaWidget from '../../components/ExpediaWidget.astro';
 import AuthorBio from '../../components/AuthorBio.astro';
 import RelatedArticles from '../../components/RelatedArticles.astro';
+
+const familyFaq = [
+  { question: "Is Sri Lanka good for families with kids?", answer: "Yes — Sri Lanka is one of the best family destinations in Asia. The elephant encounters at Pinnawala, whale watching off Mirissa, train rides through the hill country, Yala safari, and calm beach swimming at Unawatuna are all genuinely exciting for children. Sri Lankans are very welcoming to families with young children. The food is adaptable and the infrastructure for tourism is well-developed." },
+  { question: "What is the best age to take kids to Sri Lanka?", answer: "Children from around 5 years and up get the most from Sri Lanka. Younger children can find the heat and long transfers tiring, though many families travel with babies and toddlers successfully. The highlights — elephants, trains, beaches, wildlife — are accessible to most ages. Teenagers in particular love the surfing, whale watching, and the independence a well-organised itinerary allows." },
+  { question: "Is Sri Lanka safe for children?", answer: "Sri Lanka is generally very safe for families. Medical facilities in Colombo, Kandy and Galle are reasonable for routine issues. Vaccinations recommended include Hepatitis A, Typhoid and routine vaccines (check with your GP). Dengue mosquitoes are present — use repellent. The main risks are sunburn, dehydration and upset stomachs from food — standard tropical travel precautions apply." },
+  { question: "How long should a family trip to Sri Lanka be?", answer: "Two weeks is ideal for families — enough time to cover the highlights without exhausting everyone with constant hotel moves. A realistic 2-week family itinerary: Colombo (2 nights) → Pinnawala/Kandy (2 nights) → Sigiriya (2 nights) → Ella (2 nights) → Yala (2 nights) → south coast beach (4 nights). Keep transfers under 3–4 hours where possible." },
+  { question: "What are the best family-friendly activities in Sri Lanka?", answer: "Top family activities: elephant watching at Pinnawala Elephant Orphanage or Udawalawe National Park, the Kandy–Ella scenic train, Yala National Park safari (leopards, elephants), whale watching from Mirissa (November–April), snorkelling at Hikkaduwa or Pigeon Island, and beach time at Unawatuna or Mirissa. Avoid overcrowded tourist traps and private elephant rides — they are unethical and Sri Lanka's wild elephant experiences are far better." },
+];
 ---
 
 <BaseLayout
   title="Sri Lanka with Kids: The Complete Family Travel Guide | The Trails of Ceylon"
   description="Planning a family trip to Sri Lanka? This guide covers the best destinations, activities and hotels for families with children, plus practical tips for travelling with kids."
+  image="/images/pinnawala.webp"
+  type="article"
+  publishDate="2025-05-01"
+  faqSchema={familyFaq}
 >
   <article>
     <div class="relative py-24 bg-ceylon-green-900 overflow-hidden">

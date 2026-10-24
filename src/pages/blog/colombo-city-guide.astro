@@ -3,11 +3,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ExpediaWidget from '../../components/ExpediaWidget.astro';
 import AuthorBio from '../../components/AuthorBio.astro';
 import RelatedArticles from '../../components/RelatedArticles.astro';
+
+const colomboFaq = [
+  { question: "Is Colombo worth visiting?", answer: "Yes — Colombo deserves more than just a transit stop. The Pettah bazaar, the colonial Fort district, the trendy Colombo 7 restaurant scene, and the National Museum are all worth half a day to a full day. Most visitors stay 1–2 nights at the start or end of a Sri Lanka trip. It is more interesting than many travellers expect." },
+  { question: "What is the best area to stay in Colombo?", answer: "Colombo 3 (Kollupitiya) and Colombo 7 (Cinnamon Gardens) are the most comfortable and convenient areas, close to restaurants, the seafront Galle Face Green and easy tuk-tuk distance from most sights. Fort (Colombo 1) suits business travellers and those who want walkable access to the historic district. Avoid the outskirts unless you have specific reason to be there." },
+  { question: "How many days do you need in Colombo?", answer: "One to two days is ideal. Day 1: Pettah market and Gangaramaya Temple in the morning, Galle Face Green for sunset, dinner in Colombo 7. Day 2: National Museum, a walk through the Fort district, Barefoot café for shopping. Colombo is best experienced early in a trip as an introduction to Sri Lanka, rather than as a destination in its own right." },
+  { question: "Is Colombo safe for tourists?", answer: "Colombo is generally safe for tourists. Petty theft can occur in crowded market areas like Pettah. The city is well-policed and tourist-friendly. Tuk-tuk drivers will sometimes propose tours for commission — negotiate fares before getting in and agree on a price. The main tourist areas (Galle Face, Fort, Cinnamon Gardens) are all safe to walk around in daylight." },
+  { question: "What is Colombo famous for?", answer: "Colombo is Sri Lanka's commercial capital and its most cosmopolitan city. It is known for its mix of colonial architecture (the Fort district), bustling bazaars (Pettah), the landmark Gangaramaya Temple, the Beira Lake waterfront, and one of the best restaurant and café scenes in South Asia. The National Museum is the best place to understand Sri Lanka's history and culture before exploring the island." },
+];
 ---
 
 <BaseLayout
   title="Colombo City Guide: What to See, Do and Eat in Sri Lanka's Capital | The Trails of Ceylon"
   description="A complete guide to Colombo — the best neighbourhoods, sights, restaurants, markets and nightlife in Sri Lanka's vibrant commercial capital."
+  image="/images/colombo.webp"
+  type="article"
+  publishDate="2025-04-01"
+  faqSchema={colomboFaq}
 >
   <article>
     <div class="relative py-24 bg-ceylon-green-900 overflow-hidden">

@@ -4,12 +4,22 @@ import ExpediaWidget from '../../components/ExpediaWidget.astro';
 import AuthorBio from '../../components/AuthorBio.astro';
 import RelatedArticles from '../../components/RelatedArticles.astro';
 import AffiliateBox from '../../components/AffiliateBox.astro';
+
+const budgetFaq = [
+  { question: "How much does it cost to travel Sri Lanka on a budget?", answer: "A genuine budget traveller can manage on USD 30–45 per day — this covers a dorm bed or cheap guesthouse (USD 8–15), local rice and curry meals (USD 2–4 each), public buses and trains, and a couple of paid attractions per week. A more comfortable budget of USD 50–70/day allows private rooms, occasional tuk-tuks and restaurant meals." },
+  { question: "Is Sri Lanka cheap to travel?", answer: "Sri Lanka is moderately priced by Southeast Asian standards. It is cheaper than Thailand's resort islands but similar to Bali or Vietnam. Food, public transport and local guesthouses are genuinely cheap. Entrance fees to major cultural sites (Sigiriya, Polonnaruwa) add up quickly for foreigners at USD 25–30 each. Safaris, domestic flights and beach resorts are priced comparably to or above Southeast Asia." },
+  { question: "What is the cheapest way to get around Sri Lanka?", answer: "Public buses are the cheapest transport — intercity routes cost LKR 100–400 (about USD 0.30–1.20) for most journeys. Second-class train seats are only slightly more and offer more comfort plus the famous scenic routes. Tuk-tuks within towns cost LKR 200–500 for short trips. A private car with driver at USD 50–80/day is expensive but often the most practical for families or groups of 3–4 people." },
+  { question: "What are the free things to do in Sri Lanka?", answer: "Many beaches (Mirissa, Unawatuna, Arugam Bay), temple visits with a donation, Colombo's Pettah market and Galle Face Green, the Peradeniya Botanical Gardens (small fee), hiking trails in Ella (Little Adam's Peak path is free), and exploring Galle Fort's streets. The national parks and cultural sites charge significant entrance fees for foreigners but most natural scenery is free to enjoy." },
+  { question: "How much is a meal in Sri Lanka?", answer: "A plate of rice and curry from a local restaurant costs LKR 200–500 (USD 0.60–1.50). Roti and curry from a roadside stall is LKR 100–200. Tourist restaurants in Galle, Ella and Colombo charge LKR 1,000–2,500 (USD 3–8) per main. A beer at a beach bar runs LKR 600–1,000 (USD 2–3). Supermarket food and street food are extremely cheap; tourist-area restaurants are 3–5x the local price." },
+];
 ---
 <BaseLayout
   title="Sri Lanka on a Budget: How to Travel Cheap (2025) | The Trails of Ceylon"
   description="Everything you need to visit Sri Lanka without breaking the bank — budget accommodation, cheap food, transport tips, free things to do and realistic daily costs."
+  image="/images/heroes/hero-beach.webp"
   type="article"
   publishDate="2025-03-15"
+  faqSchema={budgetFaq}
 >
   <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
     <img

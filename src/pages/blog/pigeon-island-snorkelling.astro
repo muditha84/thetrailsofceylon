@@ -3,11 +3,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ExpediaWidget from '../../components/ExpediaWidget.astro';
 import AuthorBio from '../../components/AuthorBio.astro';
 import RelatedArticles from '../../components/RelatedArticles.astro';
+
+const pigeonIslandFaq = [
+  { question: "How do you get to Pigeon Island?", answer: "Pigeon Island is 1km offshore from Nilaveli beach, 15km north of Trincomalee. Glass-bottom boats and snorkelling trips depart from Nilaveli Beach Hotel jetty and nearby operators. The journey takes 10–15 minutes. Most operators charge LKR 500–800 per person for the boat plus the national park entry fee (USD 15 for foreigners)." },
+  { question: "What can you see snorkelling at Pigeon Island?", answer: "Pigeon Island has some of the best coral in Sri Lanka — staghorn and brain coral, sea fans, and a diverse reef fish population. The main attraction is the blacktip reef sharks that cruise the reef in shallow water (1–3m depth), completely harmless and accustomed to snorkellers. Green turtles are also regularly seen. The coral is in better condition on the southern side of the island." },
+  { question: "When is the best time to visit Pigeon Island?", answer: "April through September is the dry season for Trincomalee and the best time for Pigeon Island — calm seas, good visibility and settled weather. May and June offer particularly excellent conditions before the wind picks up. The area is closed to tourists during the northeast monsoon (October–January) when rough seas make boat trips impossible." },
+  { question: "Is Pigeon Island worth visiting?", answer: "Yes — Pigeon Island is consistently rated as Sri Lanka's best snorkelling location for a reason. The blacktip reef sharks alone make it special, and the coral diversity is genuinely impressive for a site this accessible. Go early (arrive by 9am) before the organised tour boats arrive around 10am, and you will often have the reef nearly to yourself." },
+];
 ---
 
 <BaseLayout
   title="Pigeon Island: Sri Lanka's Best Snorkelling Destination | The Trails of Ceylon"
   description="A complete guide to Pigeon Island National Park near Trincomalee — coral reefs, blacktip reef sharks, getting there, entry fees, and the best time to visit."
+  image="/images/pigeon-island.webp"
+  type="article"
+  publishDate="2025-04-15"
+  faqSchema={pigeonIslandFaq}
 >
   <article>
     <div class="relative py-24 bg-ceylon-green-900 overflow-hidden">

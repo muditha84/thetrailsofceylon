@@ -3,11 +3,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ExpediaWidget from '../../components/ExpediaWidget.astro';
 import AuthorBio from '../../components/AuthorBio.astro';
 import RelatedArticles from '../../components/RelatedArticles.astro';
+
+const kalpitiyaFaq = [
+  { question: "When is the best time for kitesurfing in Kalpitiya?", answer: "Kalpitiya has two kite seasons. The main season runs May to September when the southwest monsoon delivers strong, consistent winds (15–25 knots) — ideal for kitesurfing. A secondary season occurs December to March. May to July offers the most reliable wind for beginners; August and September can bring very strong gusts better suited to experienced kiters." },
+  { question: "Is Kalpitiya good for beginner kitesurfers?", answer: "Yes — the Dutch Bay lagoon is one of the best beginner kitesurfing spots in Asia. The flat, waist-deep water with sandy bottom and consistent side-shore wind creates ideal learning conditions. Several professional kite schools operate from May to September with IKO-certified instructors. A standard learn-to-kite course takes 9–12 hours spread over 3–4 days." },
+  { question: "How do I get to Kalpitiya from Colombo?", answer: "Kalpitiya is 180km north of Colombo — about 3.5–4 hours by car via the A003 road through Kurunegala. A private taxi from Colombo costs around LKR 8,000–12,000. There is no direct train; the nearest railway station is Puttalam, 40km south. Most kite schools arrange transfers from Colombo on request." },
+  { question: "Can non-kiters enjoy Kalpitiya?", answer: "Yes — Kalpitiya offers dolphin and whale watching tours in the lagoon and open sea (spinner dolphins are resident year-round, blue and sperm whales are seen offshore). The lagoon also suits stand-up paddleboarding and snorkelling around the islands in the Kalpitiya peninsula's Bar Reef Marine Sanctuary, one of Sri Lanka's largest coral reefs." },
+];
 ---
 
 <BaseLayout
   title="Kalpitiya Kitesurfing: Sri Lanka's Kite Capital | The Trails of Ceylon"
   description="Your complete guide to kitesurfing in Kalpitiya, Sri Lanka — the best season, schools, flat water lagoons, wind conditions, and how to get there from Colombo."
+  image="/images/kalpitiya.webp"
+  type="article"
+  publishDate="2025-04-10"
+  faqSchema={kalpitiyaFaq}
 >
   <article>
     <div class="relative py-24 bg-ceylon-green-900 overflow-hidden">

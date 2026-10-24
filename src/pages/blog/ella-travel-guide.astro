@@ -3,13 +3,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ExpediaWidget from '../../components/ExpediaWidget.astro';
 import AuthorBio from '../../components/AuthorBio.astro';
 import RelatedArticles from '../../components/RelatedArticles.astro';
+
+const ellaFaq = [
+  { question: "How do I get to Ella, Sri Lanka?", answer: "The most popular way is the scenic train from Kandy (5–6 hours) or from Colombo via Kandy (8–9 hours total). Book train tickets in advance at the Sri Lanka Railways website or at Colombo/Kandy station — 2nd class reserved seats sell out weeks ahead. You can also take a bus from Colombo (6–7 hours) or hire a car, which takes about 6 hours from Colombo." },
+  { question: "How many days do you need in Ella?", answer: "Two to three days is the sweet spot. Day 1: arrive, Nine Arch Bridge at sunset. Day 2: Ella Rock hike in the morning (3–4 hours), Little Adam's Peak in the afternoon (1 hour). Day 3: morning departure by train toward Nuwara Eliya or Yala. If you only have one day, prioritise the Nine Arch Bridge and Little Adam's Peak." },
+  { question: "What is Ella most famous for?", answer: "Ella is best known for the Nine Arch Bridge — a colonial-era viaduct framed by tea plantations, most dramatic when a train passes through. It's also the trailhead for the Ella Rock hike (the best viewpoint in the area), Little Adam's Peak (an easy hike with big views), and the Ravana Waterfall, 6km from town." },
+  { question: "Is Ella worth visiting?", answer: "Yes — Ella consistently ranks as one of Sri Lanka's most popular destinations for good reason. The scenery is spectacular, the hikes are accessible, and the small town has a relaxed backpacker energy with good food and accommodation options. It is very busy in peak season (December–March) — book accommodation well in advance." },
+  { question: "What is the best time to visit Ella?", answer: "January through April is the driest and best time, with clear skies and the best visibility for the views. May to September brings the southwest monsoon, which affects the hill country with frequent rain but remains lush and green. Avoid public holidays and school holidays when the Nine Arch Bridge and trails get very crowded." },
+];
 ---
 
 <BaseLayout
   title="Ella Travel Guide: Sri Lanka's Most Beloved Hill Town | The Trails of Ceylon"
   description="A complete guide to Ella, Sri Lanka — Nine Arch Bridge, Ella Rock, Little Adam's Peak, where to stay, where to eat and how to get there on the scenic train."
+  image="/images/ella.webp"
   type="article"
   publishDate="2026-04-26"
+  faqSchema={ellaFaq}
 >
   <article>
     <div class="relative py-24 bg-ceylon-green-900 overflow-hidden">

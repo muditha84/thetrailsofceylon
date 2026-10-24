@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Page Not Found | The Trails of Ceylon"
+  description="The page you're looking for doesn't exist. Explore Sri Lanka's best destinations, travel guides and itineraries."
+>
+  <div class="min-h-[70vh] flex items-center justify-center px-4 py-20">
+    <div class="text-center max-w-xl mx-auto">
+      <div class="text-8xl font-black text-ceylon-green-100 font-serif leading-none mb-2">404</div>
+      <h1 class="font-serif font-bold text-3xl text-gray-900 mb-3">Page not found</h1>
+      <p class="text-gray-500 text-lg mb-10 leading-relaxed">
+        This trail doesn't exist — but there's a whole island to explore. Try one of these starting points.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-4 mb-10 text-left">
+        {[
+          { href: '/places/', icon: '📍', title: 'Places to Visit', desc: 'Beaches, temples, national parks and more' },
+          { href: '/things-to-do/', icon: '🌊', title: 'Things to Do', desc: 'Surfing, safaris, hiking and activities' },
+          { href: '/guides/', icon: '🗺️', title: 'Travel Guides', desc: 'Visas, itineraries, packing lists' },
+          { href: '/blog/', icon: '✍️', title: 'Travel Blog', desc: 'In-depth articles and travel stories' },
+        ].map(({ href, icon, title, desc }) => (
+          <a href={href} class="flex items-start gap-3 p-4 rounded-xl border border-gray-100 hover:border-ceylon-green-200 hover:bg-ceylon-green-50 transition-colors group">
+            <span class="text-2xl mt-0.5">{icon}</span>
+            <div>
+              <div class="font-semibold text-gray-900 group-hover:text-ceylon-green-800 text-sm">{title}</div>
+              <div class="text-gray-500 text-xs mt-0.5">{desc}</div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <a href="/" class="inline-flex items-center gap-2 bg-ceylon-green-700 text-white font-semibold px-6 py-3 rounded-full hover:bg-ceylon-green-800 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        Back to Homepage
+      </a>
+    </div>
+  </div>
+</BaseLayout>

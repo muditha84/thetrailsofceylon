@@ -3,11 +3,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ExpediaWidget from '../../components/ExpediaWidget.astro';
 import AuthorBio from '../../components/AuthorBio.astro';
 import RelatedArticles from '../../components/RelatedArticles.astro';
+
+const waterfallsFaq = [
+  { question: "What is the most famous waterfall in Sri Lanka?", answer: "Ravana Falls near Ella is the most visited waterfall — it falls 25 metres beside the A023 main road and is easy to reach on the way to or from Ella town (6km). For drama and swimming, Diyaluma Falls (170m) near Koslanda is Sri Lanka's second highest and has stunning rock pools at the top. Bambarakanda Falls (263m) is the tallest in Sri Lanka." },
+  { question: "Can you swim at Sri Lanka's waterfalls?", answer: "Yes — many waterfalls have swimming holes. Diyaluma Falls has beautiful natural rock pools at the top (reached by a 30-minute hike). Rawana Ella's base pool is swimmable. Devon Falls near Nuwara Eliya has a pool area. Avoid swimming in fast-flowing water directly below falls — currents can be dangerous, especially after rain. Always check conditions before entering." },
+  { question: "When is the best time to see Sri Lanka's waterfalls?", answer: "The waterfalls are at their most spectacular immediately after the monsoon rains — October to November and June to July see the highest flow. However, they are accessible year-round. During the dry season (December–March) the flow is lower but still impressive and the access paths are drier and less slippery." },
+  { question: "Are Sri Lanka's waterfalls easy to reach?", answer: "Most of the famous waterfalls are roadside or require short walks of under 30 minutes. Ravana Falls and Devon Falls are visible from the road. Diyaluma Falls requires a 30-minute uphill hike to reach the rock pools. Baker's Falls in Horton Plains requires entering the national park (entry fee applies). Bambarakanda is 30 minutes from the main road by footpath." },
+];
 ---
 
 <BaseLayout
   title="Sri Lanka's Most Spectacular Waterfalls: A Complete Guide | The Trails of Ceylon"
   description="Discover Sri Lanka's best waterfalls — from Diyaluma and Ravana Falls to Baker's Falls in Horton Plains. Locations, accessibility, swimming, and how to get there."
+  image="/images/ella.webp"
+  type="article"
+  publishDate="2025-04-25"
+  faqSchema={waterfallsFaq}
 >
   <article>
     <div class="relative py-24 bg-ceylon-green-900 overflow-hidden">

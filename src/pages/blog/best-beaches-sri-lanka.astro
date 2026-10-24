@@ -3,8 +3,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ExpediaWidget from '../../components/ExpediaWidget.astro';
 import AuthorBio from '../../components/AuthorBio.astro';
 import RelatedArticles from '../../components/RelatedArticles.astro';
+
+const beachesFaq = [
+  { question: "What is the best beach in Sri Lanka?", answer: "Mirissa consistently tops lists for its combination of a crescent bay, calm swimming conditions (November–April), whale watching boats, and a lively but not overcrowded beach scene. For untouched beauty, Tangalle's remote bays are hard to beat. Nilaveli on the east coast has the clearest water. Unawatuna suits families with young children for its shallow, calm bay." },
+  { question: "When is the best time to visit Sri Lanka's beaches?", answer: "The south and west coasts (Mirissa, Unawatuna, Hikkaduwa) are best November through April when the southwest monsoon has retreated and seas are calm. The east coast (Nilaveli, Arugam Bay, Pasikuda) is best May through October. Both coasts can be visited in the same trip in shoulder months (November and May) with a bit of luck on the weather." },
+  { question: "Are Sri Lanka's beaches safe for swimming?", answer: "Most popular beaches are safe for swimming during their respective dry seasons. Always check for rip current warning flags — red flags mean do not swim. Mirissa, Unawatuna and Hikkaduwa all have lifeguards during peak season. Avoid open ocean swimming at any beach during monsoon season when swells can be powerful and unpredictable." },
+  { question: "Which Sri Lanka beach is best for surfing?", answer: "Arugam Bay on the east coast is Sri Lanka's surf capital with the famous Point break rated in Asia's top 10. It is best July to September. On the west coast, Hikkaduwa and Weligama have consistent beginner and intermediate waves November through March. Kalpitiya is the top kitesurfing destination." },
+  { question: "Which Sri Lanka beaches are best for snorkelling?", answer: "Hikkaduwa has the most accessible reef snorkelling right from the beach — a coral sanctuary with turtles starting 30m offshore. Pigeon Island near Trincomalee has the best coral diversity. Unawatuna's Jungle Beach has good snorkelling off the rocks. The east coast beaches generally have clearer water than the south coast for snorkelling." },
+];
 ---
-<BaseLayout title="The 10 Best Beaches in Sri Lanka | The Trails of Ceylon" description="Sri Lanka's finest beaches — from the picture-perfect crescent of Mirissa to Nilaveli's pristine east coast sand and the untouched bays of Tangalle. The 10 best beaches ranked." type="article" publishDate="2025-03-20">
+<BaseLayout title="The 10 Best Beaches in Sri Lanka | The Trails of Ceylon" description="Sri Lanka's finest beaches — from the picture-perfect crescent of Mirissa to Nilaveli's pristine east coast sand and the untouched bays of Tangalle. The 10 best beaches ranked." image="/images/mirissa-beach.webp" type="article" publishDate="2025-03-20" faqSchema={beachesFaq}>
   <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
     <img src="/images/mirissa-beach.webp" alt="Mirissa beach, one of Sri Lanka's best beaches" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
