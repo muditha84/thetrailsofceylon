@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Pidurangala Rock Sri Lanka: Sunrise Hike, Sigiriya Views & Complete Guide | The Trails of Ceylon"
+  description="Pidurangala Rock Sri Lanka — the budget alternative to Sigiriya with arguably better views. Sunrise hike guide, entrance fee (LKR 1,000), cave temple, reclining Buddha and everything you need to know."
+  image="/images/pidurangala.webp"
+  type="article"
+  publishDate="2025-04-20"
+>
+  <div class="relative h-[60vh] min-h-[400px] overflow-hidden">
+    <img src="/images/pidurangala.webp" alt="View of Sigiriya Rock Fortress from the summit of Pidurangala Rock, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="1600" height="900" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <a href="/places/cultural-triangle" class="hover:text-white">Cultural Triangle</a><span>/</span>
+          <span class="text-white">Pidurangala Rock</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Cultural Triangle</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Pidurangala Rock Sri Lanka</h1>
+        <p class="text-white/80 mt-2 text-lg">Central Province &bull; Sunrise Hike &bull; Best View of Sigiriya &bull; LKR 1,000 Entry</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Entry Fee', 'LKR 1,000 (~USD 3)'],
+              ['Opens', '5:00am (ticket sales)'],
+              ['Climb Time', '30–45 minutes to summit'],
+              ['Difficulty', 'Moderate (boulder scramble)'],
+              ['Best Time', 'Sunrise — arrive by 5am'],
+              ['Dress Code', 'Cover shoulders & knees'],
+              ['From Sigiriya', '~200m walk / 3 min tuk-tuk'],
+              ['Wild Elephants', 'Do not walk there in the dark'],
+            ].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <p>Pidurangala Rock Sri Lanka is the most rewarding hike in the Cultural Triangle — and one of the great open secrets of Sri Lanka travel. Sitting just 200 metres north of the famous <a href="/places/sigiriya">Sigiriya Rock Fortress</a>, Pidurangala is its quieter, cheaper, wilder sibling: a rocky outcrop that takes 30–45 minutes to climb, costs LKR 1,000 (about USD 3) to enter, and rewards you at the summit with the single best view of Sigiriya Rock you can get anywhere on Earth. The Lion Rock, rising 200 metres from the surrounding jungle canopy, appears directly across from the Pidurangala summit in a way that no ground-level vantage point can match — silhouetted against a pink sky at sunrise, it is one of those images that justifies an entire trip.</p>
+
+        <p>The contrast with Sigiriya is striking. Sigiriya costs USD 35 per person, has engineered staircases, glass walkways and gets thousands of visitors a day. Pidurangala has a footpath, a boulder scramble, an ancient cave temple and a fraction of the crowd. Both are worth doing — but if you had to choose one sunrise, Pidurangala gives you the better photograph and the better experience.</p>
+
+        <h2>The Sunrise Hike — Everything You Need to Know</h2>
+        <p>Sunrise at Pidurangala is the defining experience. The summit faces east toward Sigiriya, which means the first light of day illuminates the Lion Rock directly in front of you — orange and gold against a brightening sky, reflected below in the reservoir — while you stand in the clear cool air on top of the boulders. It is, for many visitors, the single best moment of their Sri Lanka trip.</p>
+        <p>To reach the summit in time for sunrise, arrive at the ticket counter (which opens at 5:00am) no later than 5:15am, and ideally earlier. The climb takes around 30–40 minutes at a reasonable pace, and you want to be at the top with a few minutes to spare before the sun breaks the horizon. Sunrise time varies by month — check a local sunrise calculator for your visit date. April and May sunrises are around 6:00–6:05am; December and January closer to 6:10–6:15am. Bring a torch for the path up, as the first section through the monastery is dark.</p>
+        <p><strong>Important wildlife warning:</strong> Wild elephants move through the area around Pidurangala — particularly on the road between Sigiriya village and the rock entrance. Never walk this stretch alone in the dark. Take a tuk-tuk from your guesthouse directly to the ticket counter. The LKR 200–300 tuk-tuk fare is the safest option for any pre-dawn visit.</p>
+
+        <h2>The Climb</h2>
+        <p>The route from the ticket counter to the summit passes through three distinct sections, each with its own character. The first section winds through the monastery grounds — shaded, flat and lined with stone Buddhas and frangipani trees. The second section climbs through dense forest on a narrow rock path, moderately steep in places but with good footing in dry conditions. The third section — the final push to the summit ledge — involves scrambling over large boulders with some exposed drops. This last section requires confident footwork; it is not technical climbing but does demand care, particularly in wet conditions.</p>
+        <p>The total ascent is around 30–45 minutes for most visitors, with a descent of similar time. Overall fitness level: moderate. Anyone comfortable with hill walking will manage it. The one section to be aware of is the boulder scramble — wear shoes with good grip, keep hands free (a daypack rather than a handbag), and take your time. In wet or monsoon conditions, the rocks become dangerously slippery and the climb should be postponed.</p>
+
+        <h2>The Cave Temple & Reclining Buddha</h2>
+        <p>Before the climb begins, at the base of the rock, stands the Pidurangala Sigiri Rajamaha Viharaya — an active Buddhist monastery with origins dating back to the 5th century. The cave temple here is one of the least-visited ancient sites in the Cultural Triangle, despite being just metres from the Sigiriya ticket queue. Inside, a large reclining Buddha — constructed of brick and plaster and measuring approximately 12–15 metres in length — lies in the rock shelter, flanked by ancient cave paintings on the walls. The site dates to the reign of King Kashyapa (who built Sigiriya) and contains inscriptions carved directly into the rock face.</p>
+        <p>Dress modestly to enter the temple — shoulders and knees must be covered, and shoes must be removed before entering the cave. Sarongs are usually available to borrow at the entrance. The monastery is an active religious community; behave respectfully, and make a small donation to the temple fund when purchasing your entry ticket. The cash donation to this monastery is the LKR 1,000 entry fee — it goes directly to the temple, not to the government.</p>
+
+        <h2>Pidurangala vs Sigiriya — Which Should You Climb?</h2>
+        <p>The honest answer is both, if you have the time. They offer completely different experiences. <a href="/places/sigiriya">Sigiriya Rock Fortress</a> is an extraordinary archaeological site — the ancient palace complex, the mirror wall with centuries of graffiti, and the remarkable 5th-century frescoes of the Cloud Maidens make it one of the most important heritage sites in Asia. The views from Sigiriya's summit are sweeping in every direction. But you are looking out from Sigiriya, not at it.</p>
+        <p>Pidurangala gives you the reverse — the view OF Sigiriya, across a narrow gap, at the same height. For photography, Pidurangala wins decisively: the iconic image of Sigiriya rising from the jungle is shot from Pidurangala's summit. For archaeology and history, Sigiriya wins. For budget, Pidurangala wins by a factor of ten. A practical approach used by many visitors: climb Pidurangala at sunrise on day one (arriving dark, leaving by 7:30am), then visit Sigiriya when it opens at 7:00am the same morning — you will already be acclimatised to the area and can reach Sigiriya before the tour buses arrive from Colombo.</p>
+
+        <AffiliateBox
+          title="Find Hotels near Sigiriya & Pidurangala"
+          description="Staying in Sigiriya village gives you the earliest possible start for sunrise at Pidurangala. Book accommodation within walking distance to avoid the dark road."
+          buttonText="Search Hotels in Sigiriya"
+          buttonHref="https://www.booking.com/searchresults.html?ss=Sigiriya+Sri+Lanka"
+          variant="hotel"
+        />
+
+        <h2>Getting to Pidurangala</h2>
+        <p>Pidurangala Rock is in Sigiriya village, directly north of the Sigiriya ticket office — about a 200-metre walk or a 3-minute tuk-tuk ride from the main Sigiriya entrance. From Sigiriya village centre, it is around a 10-minute walk or a very short tuk-tuk (LKR 150–200). The elephant warning applies to any walking in this area before dawn — pre-book a tuk-tuk from your guesthouse the night before.</p>
+        <p>From Dambulla (the nearest major town), Sigiriya village is about 20km — a 30-minute tuk-tuk or short bus connection from Dambulla junction. From Colombo, the most common route is bus or private transfer to Dambulla (3.5–4 hours), then onward to Sigiriya. From <a href="/places/kandy">Kandy</a>, allow 3–3.5 hours by road via Matale or Kurunegala. Most Cultural Triangle itineraries combine Pidurangala and Sigiriya with <a href="/places/dambulla">Dambulla Cave Temple</a> and <a href="/places/polonnaruwa">Polonnaruwa</a> in a 2–3 day loop.</p>
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[
+              ['Entry Fee', 'LKR 1,000 (~USD 3)'],
+              ['Best Time', 'Sunrise (5–7am)'],
+              ['Time Needed', '2–3 hours total'],
+              ['Difficulty', 'Moderate'],
+              ["Don't Forget", 'Torch, grip shoes'],
+              ['Combine With', 'Sigiriya same morning'],
+            ].map(([k, v]) => (
+              <div class="flex justify-between gap-4">
+                <span class="font-medium text-white/80">{k}</span>
+                <span class="text-white/70 text-right">{v}</span>
+              </div>
+            ))}
+          </div>
+          <a
+            href="https://www.booking.com/searchresults.html?ss=Sigiriya+Sri+Lanka"
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            class="book-btn"
+          >
+            Book Hotel in Sigiriya
+          </a>
+        </div>
+
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/places/sigiriya',          label: 'Sigiriya Rock (200m)' },
+              { href: '/places/dambulla',          label: 'Dambulla Caves (20km)' },
+              { href: '/places/polonnaruwa',       label: 'Polonnaruwa (60km)' },
+              { href: '/places/minneriya',         label: 'Minneriya Park (30km)' },
+              { href: '/places/cultural-triangle', label: 'Cultural Triangle Guide' },
+            ].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-5">
+          <h3 class="font-serif font-bold text-amber-900 text-base mb-2">⚠️ Elephant Warning</h3>
+          <p class="text-sm text-amber-800">Wild elephants roam the road between Sigiriya village and Pidurangala at night. Never walk this road in darkness — always take a tuk-tuk for pre-dawn visits. Your guesthouse can arrange one the night before.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <ExpediaWidget heading="🏨 Find Hotels near Sigiriya & Pidurangala" />
+</BaseLayout>
