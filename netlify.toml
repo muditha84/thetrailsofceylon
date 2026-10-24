@@ -60,3 +60,15 @@
   to = "/guides/sri-lanka-eta-visa-guide/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/places/dambulla-cave-temple"
+  to = "/places/dambulla/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/places/dambulla-cave-temple/"
+  to = "/places/dambulla/"
+  status = 301
+  force = true

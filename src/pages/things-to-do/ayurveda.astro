@@ -1,8 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import AffiliateBox from '../../components/AffiliateBox.astro';
+
+const ayurvedaFaq = [
+  { question: "Is Ayurveda in Sri Lanka genuine?", answer: "Yes — Sri Lanka has practised Ayurveda for over 3,000 years and has its own distinct tradition. Look for resorts with resident BAMS-qualified physicians and government certification from the Sri Lanka Ayurvedic Drugs Corporation." },
+  { question: "How long should I spend at an Ayurveda retreat in Sri Lanka?", answer: "A minimum of 7 days is needed for any meaningful therapeutic benefit. A 5-day program can help with stress and general detox. A full panchakarma purification requires 14–28 days." },
+  { question: "How much does Ayurveda cost in Sri Lanka?", answer: "A single spa treatment costs USD 30–80. A quality residential retreat with a resident physician, all meals and treatments runs USD 150–400 per day all-inclusive. Budget resorts exist but quality varies significantly." },
+  { question: "Where is the best place for Ayurveda in Sri Lanka?", answer: "The west coast (Kalutara, Beruwala, Bentota) has the highest concentration of established Ayurveda resorts. The hill country near Kandy offers excellent retreat centres with a cooler climate. The south coast around Tangalle and Weligama has newer luxury wellness resorts." },
+  { question: "What is panchakarma and do I need it?", answer: "Panchakarma is Ayurveda's complete purification program — a 14–28 day medically supervised residential course. It is designed for serious therapeutic benefit and requires significant commitment. Most visitors benefit more from a shorter retreat or day treatments unless they have a specific health goal." },
+];
 ---
-<BaseLayout title="Ayurveda in Sri Lanka: Treatments, Retreats & Guide | The Trails of Ceylon" description="Sri Lanka has one of the world's most developed Ayurvedic traditions. A guide to Ayurveda in Sri Lanka — from single spa treatments to 14-day residential panchakarma retreats." type="article" publishDate="2025-03-10">
+<BaseLayout title="Ayurveda in Sri Lanka: Treatments, Retreats & Guide | The Trails of Ceylon" description="Sri Lanka has one of the world's most developed Ayurvedic traditions. A guide to Ayurveda in Sri Lanka — from single spa treatments to 14-day residential panchakarma retreats." image="/images/ayurveda.webp" type="article" publishDate="2025-03-10" faqSchema={ayurvedaFaq}>
   <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
     <img src="/images/ayurveda.webp" alt="Ayurvedic treatment Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -17,6 +25,7 @@ import AffiliateBox from '../../components/AffiliateBox.astro';
     </div>
   </div>
   <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
     <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
       <p>Ayurveda — the ancient Indian system of medicine meaning "knowledge of life" — has been practised in Sri Lanka for over 3,000 years and is deeply embedded in the culture. Sri Lanka's Ayurvedic tradition is distinct from the Indian version, incorporating local medicinal plants unique to the island's biodiversity and methods passed down through hereditary physician families (the vedamahattaya system). Today, Sri Lanka offers one of the most developed and credible Ayurveda tourism industries in the world — from luxury resort spa treatments to medically rigorous residential retreats supervised by qualified Ayurvedic physicians. Understanding the difference between these categories is crucial to finding the right experience.</p>
 
@@ -40,6 +49,59 @@ import AffiliateBox from '../../components/AffiliateBox.astro';
 
       <h2>Practical Advice</h2>
       <p>For serious therapeutic benefit, commit to a minimum of 7 days. For a resort stay of genuine quality, budget at least USD 150 per day (all-inclusive). Avoid roadside "Ayurveda clinics" with no physician on site — these are unregulated and can be unsafe. The best indicator of quality is a resident BAMS-qualified Ayurvedic physician (recognisable by a government-issued certificate) who conducts your initial consultation and prescribes your individual program. Genuine Ayurvedic treatment is prescribed individually — any resort that offers the same treatments to every guest regardless of their constitution is selling spa tourism, not medicine. Neither approach is wrong, but knowing which you want before booking saves disappointment.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="not-prose space-y-3 mt-4">
+        {ayurvedaFaq.map(item => (
+          <details class="border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between px-5 py-4 cursor-pointer font-semibold text-gray-900 hover:bg-gray-50 list-none">
+              {item.question}
+              <svg class="w-5 h-5 text-gray-400 shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-5 pb-4 pt-1 text-gray-600 text-base">{item.answer}</div>
+          </details>
+        ))}
+      </div>
     </article>
+
+    <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+      <div class="plan-visit-box">
+        <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Retreat</h3>
+        <div class="space-y-3 text-sm">
+          {[
+            ['Minimum Stay', '5–7 days'],
+            ['Budget', 'USD 150–400/day'],
+            ['Best Regions', 'West coast, Kandy'],
+            ['Check For', 'BAMS physician on site'],
+          ].map(([k, v]) => (
+            <div class="flex justify-between gap-4">
+              <span class="font-medium text-white/80">{k}</span>
+              <span class="text-white/70 text-right">{v}</span>
+            </div>
+          ))}
+        </div>
+        <a href="https://www.booking.com/searchresults.html?ss=Sri+Lanka+Ayurveda" target="_blank" rel="noopener noreferrer sponsored" class="book-btn">
+          Find Ayurveda Retreats
+        </a>
+      </div>
+      <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+        <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Related Guides</h3>
+        <div class="space-y-3">
+          {[
+            { href: '/places/bentota', label: 'Bentota (West Coast)' },
+            { href: '/places/kandy', label: 'Kandy (Hill Country)' },
+            { href: '/places/tangalle', label: 'Tangalle (South Coast)' },
+            { href: '/things-to-do/culture-history', label: 'Culture & History' },
+            { href: '/things-to-do/wellness', label: 'Wellness in Sri Lanka' },
+          ].map(link => (
+            <a href={link.href} class="nearby-pill">
+              <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </aside>
+    </div>
   </div>
 </BaseLayout>

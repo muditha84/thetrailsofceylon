@@ -2,6 +2,14 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ExpediaWidget from '../../components/ExpediaWidget.astro';
 import AffiliateBox from '../../components/AffiliateBox.astro';
+
+const hikkaduwaFaq = [
+  { question: "Is Hikkaduwa good for snorkelling?", answer: "Yes — Hikkaduwa has one of the most accessible coral reefs in Sri Lanka, starting just 30–50 metres from the beach at a maximum depth of 6 metres. It is ideal for beginners and features sea turtles, reef fish and a small coral sanctuary protected as a marine park." },
+  { question: "What is the best time to visit Hikkaduwa?", answer: "November through April is the best time, when the southwest monsoon has retreated and the sea is calm. January through March offers the clearest water for snorkelling and the most consistent surf. Avoid May–October when rough seas close most water activities." },
+  { question: "Is Hikkaduwa good for surfing?", answer: "Yes — Hikkaduwa has been a surf destination since the 1970s. The main reef break ('Hikka') suits intermediate surfers. Beginners will find more forgiving waves at the northern end of the beach near Narigama. Surf season is November to April." },
+  { question: "How far is Hikkaduwa from Colombo?", answer: "Hikkaduwa is 98km south of Colombo. The coastal train from Colombo Fort takes about 2.5 hours and is one of Sri Lanka's most scenic rail journeys. By car via the Southern Expressway it takes about 1.5 hours." },
+  { question: "How far is Hikkaduwa from Galle?", answer: "Hikkaduwa is 20km north of Galle — about 20 minutes by tuk-tuk or bus along the coastal road. It makes an easy day trip from Galle or a convenient stepping stone on the way south." },
+];
 ---
 <BaseLayout
   title="Hikkaduwa, Sri Lanka: Beaches, Coral Reefs & Nightlife Guide | The Trails of Ceylon"
@@ -9,6 +17,7 @@ import AffiliateBox from '../../components/AffiliateBox.astro';
   image="/images/hikkaduwa.webp"
   type="article"
   publishDate="2025-03-01"
+  faqSchema={hikkaduwaFaq}
 >
   <div class="relative h-[55vh] min-h-[380px] overflow-hidden">
     <img src="/images/hikkaduwa.webp" alt="Coral reef snorkelling at Hikkaduwa, Sri Lanka" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
@@ -75,6 +84,19 @@ import AffiliateBox from '../../components/AffiliateBox.astro';
           buttonHref="https://www.booking.com/searchresults.html?ss=Hikkaduwa+Sri+Lanka"
           variant="hotel"
         />
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="not-prose space-y-3 mt-4">
+          {hikkaduwaFaq.map(item => (
+            <details class="border border-gray-200 rounded-xl overflow-hidden">
+              <summary class="flex items-center justify-between px-5 py-4 cursor-pointer font-semibold text-gray-900 hover:bg-gray-50 list-none">
+                {item.question}
+                <svg class="w-5 h-5 text-gray-400 shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </summary>
+              <div class="px-5 pb-4 pt-1 text-gray-600 text-base">{item.answer}</div>
+            </details>
+          ))}
+        </div>
 
       </article>
 
