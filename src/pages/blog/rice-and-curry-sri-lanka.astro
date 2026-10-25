@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AuthorBio from '../../components/AuthorBio.astro';
+import RelatedArticles from '../../components/RelatedArticles.astro';
+---
+
+<BaseLayout
+  title="Rice and Curry in Sri Lanka: The National Dish Explained | The Trails of Ceylon"
+  description="Rice and curry is Sri Lanka's national dish and the heart of the cuisine. This guide covers what makes it different from Indian rice and curry, how to order it, the key components, and where to find the best versions."
+  image="/images/og-default.webp"
+  type="article"
+  publishDate="2026-04-18"
+>
+  <article>
+    <div class="relative py-24 bg-ceylon-green-900 overflow-hidden">
+      <div class="absolute inset-0 opacity-30">
+        <img src="/images/cooking-classes.webp" alt="Sri Lankan rice and curry served with multiple accompaniments" class="w-full h-full object-cover" loading="eager" width="1200" height="600" style="object-fit:cover;" />
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <nav class="flex items-center justify-center gap-2 text-white/60 text-xs mb-4" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/blog" class="hover:text-white">Blog</a><span>/</span>
+          <span class="text-white">Food & Drink</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-400 text-ceylon-green-900 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">Food & Drink</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl leading-tight">Rice and Curry: Sri Lanka's National Dish</h1>
+        <div class="flex items-center justify-center gap-4 text-white/70 text-sm mt-4">
+          <span>April 2026</span>
+          <span>·</span>
+          <span>9 min read</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-14">
+      <div class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+
+        <p class="lead text-xl text-gray-700 leading-relaxed">Order "rice and curry" at a Sri Lankan restaurant and what arrives is not a single dish but a meal — a mound of steamed white rice surrounded by five, six, or seven small bowls of curries, sambols and accompaniments. The combination of coconut milk curries, fresh sambols, fried accompaniments and bright, acidic relishes eaten together creates a harmony of flavours that has no real parallel in any other cuisine. It is the meal that defines Sri Lankan food and the one you will eat most often — and most happily — during your time in the country.</p>
+
+        <h2>What Makes Sri Lankan Rice and Curry Different</h2>
+
+        <p>The first thing to understand is that Sri Lankan rice and curry is not the same thing as Indian rice and curry, even though the two share some influences. Sri Lankan curries are generally darker, more coconut-milk-rich, and spiced differently — with particular emphasis on roasted spices, black pepper, curry leaves, pandan leaf and, in the southern style, dark roasted coconut (pol katta) that gives the dishes their characteristic depth. The sambol tradition (fresh, uncooked condiments made of coconut, chilli, onion and various aromatics) has no real equivalent in mainstream Indian cooking. And the way a Sri Lankan rice and curry is eaten — everything mixed together by hand, the curries progressively folded into the rice as you eat — creates a constantly evolving combination of flavours that changes from bite to bite.</p>
+
+        <p>Sri Lankan curries also tend to be thinner and saucier than their Indian counterparts, which makes them better suited to mixing with rice rather than scooping with bread.</p>
+
+        <h2>The Components of a Sri Lankan Rice and Curry</h2>
+
+        <h3>The Rice</h3>
+        <p>Steamed white rice is the foundation. Sri Lanka's traditional rice varieties — particularly the red and brown rices still grown in the Cultural Triangle area — are nuttier and more flavourful than standard white rice, and some good local restaurants serve these alongside or instead of white rice. At festival meals and in rural areas, you may be served rice cooked in coconut milk (kiribath), which is denser and more fragrant — traditionally eaten on the first day of each month and at new year.</p>
+
+        <h3>The Protein Curry</h3>
+        <p>The main curry — fish, chicken, beef, mutton, prawn or dhal — forms the centrepiece of the meal. Fish curries are the most distinctively Sri Lankan: ambul thiyal (sour fish curry made with goraka, a dried fruit with a strong acidic flavour) and jaffna-style fish curry (with fresh coconut and strong spicing) are two versions you'll encounter. Chicken curry cooked Sri Lankan style — with roasted coconut, curry leaves and coconut milk — is excellent. Beef and mutton curries are more common in Muslim-dominated areas. Dhal (red lentil curry) is the universal option and, at its best, is one of the most comforting things you can eat.</p>
+
+        <h3>Vegetable Curries</h3>
+        <p>A proper rice and curry comes with at least two, usually three or four vegetable curries. Typical versions include:</p>
+        <ul>
+          <li><strong>Parippu (dhal)</strong> — almost always present; thick red lentils cooked with coconut milk and turmeric</li>
+          <li><strong>Wambatu (aubergine/eggplant) curry</strong> — often cooked with mustard seeds and a dark, slightly caramelised sauce</li>
+          <li><strong>Polos (young jackfruit) curry</strong> — a distinctively Sri Lankan dish, the jackfruit's meaty texture absorbing the spiced coconut sauce</li>
+          <li><strong>Gotukola (pennywort) sambol</strong> — finely shredded fresh leaves with coconut, onion and chilli; cooling and slightly bitter</li>
+          <li><strong>Beans curry</strong> — green beans cooked with coconut milk and curry leaves</li>
+          <li><strong>Pumpkin curry</strong> — mildly spiced, often slightly sweet from the pumpkin</li>
+        </ul>
+
+        <h3>Sambols</h3>
+        <p>The sambols — fresh, uncooked condiments — are what elevate Sri Lankan rice and curry above mere comfort food. They provide heat, acidity and freshness that cut through the richness of the coconut curries:</p>
+        <ul>
+          <li><strong>Pol sambol</strong> — the essential, made every morning in good households and restaurants. Freshly grated coconut with dried chilli, red onion, lime juice and salt (and often dried Maldive fish). The quality of the pol sambol tells you more about a restaurant's cooking than almost anything else.</li>
+          <li><strong>Lunu miris</strong> — a paste of dried red chilli, red onion, salt and a little lime juice, intensely hot and sour. Used as a condiment in small amounts.</li>
+          <li><strong>Seeni sambol</strong> — caramelised onions cooked with Maldive fish, cinnamon and chilli. Sweet, sticky, deeply savoury.</li>
+          <li><strong>Katta sambol</strong> — a fresh chilli-onion relish, simpler and more intense than lunu miris.</li>
+        </ul>
+
+        <h3>The Accompaniments</h3>
+        <p>A full rice and curry also typically includes:</p>
+        <ul>
+          <li><strong>Papadum</strong> — crisp lentil wafers, excellent for scooping sambol</li>
+          <li><strong>Fried fish or meat</strong> — a piece of fried dried fish (karawala) or a fried piece of chicken alongside the curry</li>
+          <li><strong>Pickle</strong> — a sharp, vinegar-based pickle of mango, lime or mixed vegetables</li>
+        </ul>
+
+        <h2>How to Eat Rice and Curry</h2>
+
+        <p>Sri Lankan rice and curry is eaten with the right hand — not with a spoon, and definitely not a fork. Use your fingers to mix the rice and curries together, creating a ball of rice with a mixture of accompaniments. The technique takes a few minutes to get comfortable with, but eating with your fingers is genuinely different from using cutlery — you can control the mixture more precisely, and the warmth of the food in your hand is part of the sensory experience.</p>
+
+        <p>The order of eating is not fixed, but a common approach: start with a small amount of rice mixed with dhal and pol sambol to understand the baseline flavours, then progressively add the other curries as you go. The last mouthfuls of the meal, with the curries all mixed into the remaining rice, are often the best.</p>
+
+        <p>Cutlery is always available if you prefer it. No one will judge you for using a spoon.</p>
+
+        <h2>Rice and Curry at Lunchtime vs. Dinner</h2>
+
+        <p>The most abundant and best-value rice and curry is served at lunch (roughly 11:30am–2pm). Local restaurants prepare a set meal — known as the "rice packet" at takeaway counters or as the "meals" on the menu — with a fixed set of curries for a fixed price. This lunchtime rice and curry is genuinely excellent, made in large batches that are replenished throughout service, and the price is among the lowest in Asia for the quality of food you get.</p>
+
+        <p>At dinner, rice and curry is still available but the selection of curries may be smaller, prices slightly higher, and the meal may feel a little less abundant. For the definitive rice and curry experience, go at lunchtime.</p>
+
+        <h2>What Rice and Curry Costs</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Setting</th>
+              <th>Price per person</th>
+              <th>What you get</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Local restaurant (kade), lunch</td>
+              <td>LKR 300–600</td>
+              <td>Rice + 4–6 curries + sambol + papadum</td>
+            </tr>
+            <tr>
+              <td>Local restaurant, dinner</td>
+              <td>LKR 400–700</td>
+              <td>Rice + 3–5 curries + sambol</td>
+            </tr>
+            <tr>
+              <td>Tourist restaurant</td>
+              <td>LKR 900–2,000</td>
+              <td>Usually smaller selection, pricier proteins</td>
+            </tr>
+            <tr>
+              <td>High-end restaurant, Colombo</td>
+              <td>LKR 2,500–5,000+</td>
+              <td>Premium ingredients, refined presentation</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Regional Variations Worth Seeking Out</h2>
+
+        <p><strong>Jaffna rice and curry:</strong> The northern Tamil rice and curry is the most distinct regional variation — less coconut milk, stronger dry spicing, the use of palmyra palm vinegar and dried fish in ways that are specific to this region. A banana leaf meal (served on a fresh banana leaf rather than a plate) in Jaffna is one of the best eating experiences in Sri Lanka.</p>
+
+        <p><strong>South coast fish curries:</strong> Coastal areas around Galle, Unawatuna and Tangalle produce some of the best fish curries in the country — fresh reef fish, crab or prawn cooked in a dark, coconut-rich gravy. The best versions are found at the simple restaurants near the fish markets, not the beachfront tourist strip.</p>
+
+        <p><strong>Hill country rice and curry:</strong> The highlands around Kandy, Nuwara Eliya and Ella produce excellent vegetables — leeks, beans, potatoes — that make the vegetable curries particularly good. The meals here tend to be slightly heartier, reflecting the cooler climate.</p>
+
+        <AffiliateBox
+          title="Sri Lanka Cooking Classes"
+          description="Learn to make authentic rice and curry at a local cooking class — market visit, hands-on cooking and a full meal included."
+          buttonText="Find Cooking Classes"
+          buttonHref="https://www.getyourguide.com/sri-lanka-l867/cooking-classes-tc28/"
+          variant="tour"
+        />
+
+        <h2>Vegetarian and Vegan Rice and Curry</h2>
+
+        <p>Sri Lankan rice and curry is one of the best choices for vegetarians in Asia. The vast majority of the components — dhal, vegetable curries, pol sambol, rice, papadum — are plant-based. The main issue is Maldive fish (umbalakada), which is added to pol sambol and seeni sambol as a flavour base and appears in some vegetable curries. If you are strictly vegan, tell the restaurant you want "no Maldive fish" (umbalakada netthuva) — most can easily accommodate this, especially in Buddhist areas.</p>
+
+        <p>Purely vegetarian rice and curry restaurants (marked "pure veg" or "saivam") are common in Tamil-majority areas of the north and east and in the Cultural Triangle.</p>
+
+      </div>
+    </div>
+  </article>
+
+  <RelatedArticles
+    title="More Food & Drink Guides"
+    articles={[
+      { href: '/blog/sri-lanka-food-guide', title: 'Sri Lanka Food Guide', description: 'The complete guide to what to eat in Sri Lanka', image: '/images/cooking-classes.webp' },
+      { href: '/blog/hoppers-sri-lanka', title: 'Hoppers Guide', description: 'Everything about Sri Lanka\'s iconic breakfast food', image: '/images/og-default.webp' },
+      { href: '/blog/kottu-roti-sri-lanka', title: 'Kottu Roti Guide', description: 'Sri Lanka\'s favourite street food explained', image: '/images/og-default.webp' },
+    ]}
+  />
+  <ExpediaWidget heading="🏨 Find Accommodation in Sri Lanka" />
+  <AuthorBio />
+</BaseLayout>

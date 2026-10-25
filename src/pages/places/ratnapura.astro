@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+---
+<BaseLayout
+  title="Ratnapura Sri Lanka: Gem City, Mines & How to Buy Sapphires Safely | The Trails of Ceylon"
+  description="Ratnapura Sri Lanka — the City of Gems. How to visit gem mines, buy sapphires safely, visit the National Gem Museum and combine with Sinharaja rainforest. Complete guide."
+  image="/images/kandy.webp"
+  type="article"
+  publishDate="2025-06-01"
+>
+  <div class="relative h-[60vh] min-h-[400px] overflow-hidden">
+    <img src="/images/kandy.webp" alt="Ratnapura Sri Lanka — the City of Gems in Sabaragamuwa Province" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="1600" height="900" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/places" class="hover:text-white">Places</a><span>/</span>
+          <span class="text-white">Ratnapura</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Sabaragamuwa</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Ratnapura Sri Lanka</h1>
+        <p class="text-white/80 mt-2 text-lg">Sabaragamuwa Province &bull; City of Gems &bull; Blue Sapphires &bull; Gem Mining Tours</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <div class="grid lg:grid-cols-[1fr_280px] gap-12">
+      <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700 prose-strong:text-gray-900">
+
+        <div class="not-prose quick-facts-card">
+          <h2 class="font-serif font-bold text-gray-900 text-xl mb-3">Quick Facts</h2>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            {[
+              ['Province', 'Sabaragamuwa'],
+              ['Known For', 'Blue sapphires, rubies, cat\'s eye'],
+              ['From Colombo', '~100km (2.5 hrs by car)'],
+              ['Gem Museum', 'Ratnapura National Museum'],
+              ['Best Gems', 'Blue sapphires, cat\'s eye, spinel'],
+              ['Nearby', 'Sinharaja Forest (30km)'],
+              ['GIA Certificate', 'Essential for any purchase'],
+              ['Market Days', 'Daily — active all week'],
+            ].map(([k, v]) => (
+              <><dt class="font-semibold text-gray-700">{k}</dt><dd class="text-gray-600">{v}</dd></>
+            ))}
+          </dl>
+        </div>
+
+        <h2>Sri Lanka's Gem Capital</h2>
+        <p>Ratnapura has been producing precious stones for over 2,000 years. When Marco Polo sailed past Ceylon in 1293, he recorded "rubies, sapphires, topazes, amethysts and many other precious stones" — a reputation the island has sustained ever since. The reason lies beneath the Sabaragamuwa basin, a prehistoric lagoon whose alluvial deposits concentrated gemstones over millions of years into one of the richest gem-bearing regions on earth. The numbers speak for themselves: the blue star sapphire <em>Star of India</em> (563 carats, now in the American Museum of Natural History in New York) came from Sri Lanka. The <em>Blue Belle of Asia</em> sapphire (392 carats) sold at Christie's for USD 17.3 million. The <em>Logan Sapphire</em> (423 carats, Smithsonian Institution) is Sri Lankan. Today, Sri Lanka exports over USD 500 million worth of gems annually, and Ratnapura — whose very name translates as City of Gems (Ratna = gem, Pura = city) — is where most of this originates.</p>
+
+        <h2>What Gems Come from Sri Lanka</h2>
+        <p><strong>Blue sapphires</strong> are the crown jewel of Sri Lankan gemology. The cornflower-blue "Ceylon sapphire" is among the world's most prized coloured stones — lighter and more transparent in tone than the darker Burmese equivalents, with an exceptional clarity. Beyond blue, Sri Lanka produces star sapphires (with a six-pointed asterism), yellow sapphires, pink sapphires and padparadscha sapphires — an extremely rare pinkish-orange variety found almost exclusively here. <strong>Rubies</strong>, though less famous than Burma's, are mined in the Ratnapura district. <strong>Cat's eye chrysoberyl</strong> — the chatoyant honey-coloured stone that appears to have a moving slit of light across its surface — has its world primary source in Sri Lanka. <strong>Alexandrite</strong> (colour-changing from green in daylight to red under incandescent light) and <strong>spinel</strong> are also found here: the "Black Prince's Ruby" in the British Imperial State Crown is, in fact, a Sri Lankan spinel. The Ceylon designation on a GIA or AGL certificate is widely recognised as a quality marker that commands a premium.</p>
+
+        <h2>Gem Mining in Ratnapura</h2>
+        <p>The gem mines of Ratnapura are artisanal, family-run operations scattered through the rice paddies and riverbeds surrounding the town. The technique — called <em>illam</em> mining — has been unchanged for centuries: workers dig vertical shafts into the alluvial gravel deposits (the gem-bearing layer, called illam, typically sits 3–9 metres below the surface), haul up the gravel in baskets, and sift it through sieves in water to separate the heavier gem material from the lighter clay. A good day's sifting might yield a handful of rough stones, most low quality, a few worth cutting and grading. You can visit working mines in the fields around Ratnapura — many families welcome visitors for a small tip, and watching the process is genuinely fascinating. Several tour operators in Colombo and Ratnapura offer structured half-day tours covering a mine visit, a cutting and polishing workshop (where rough stones are shaped on grinding wheels and polished to their final form), and a guided walk through the gem bazaar — a solid introduction to the full supply chain.</p>
+
+        <h2>The Gem Bazaar</h2>
+        <p>The informal gem market that clusters around Ratnapura's main street and the banks of the Kalu Ganga river is one of Sri Lanka's most atmospheric daily spectacles. Dealers arrive in the morning with small paper parcels of rough and cut stones, spreading them on white cloths on low tables or held in the palm of a hand, examining each other's merchandise through loupe magnifying glasses, negotiating in whispers. The trade is conducted entirely by trust and reputation — the same dealer networks have operated for generations, and a stone's provenance is tracked through informal memory as much as documentation. Even if you have no intention of buying, spending an hour at the bazaar watching this centuries-old market operate is one of the more quietly extraordinary travel experiences in Sri Lanka. Bring a magnifying glass if you have one — dealers will cheerfully let you examine stones.</p>
+
+        <h2>How to Buy Gems Safely</h2>
+        <p>Sri Lanka's gem market has a well-earned reputation for both extraordinary value and elaborate scams. The rules for buying safely are simple but absolute:</p>
+        <p><strong>Never buy from street touts, tuk-tuk drivers, or unsolicited "friends".</strong> The classic scam runs as follows: a friendly driver or stranger offers to take you to "his uncle's gem shop" or a "government gem school" — the shop sells glass or synthetic stones at genuine-gem prices. The presentation is convincing; the certificates are forged. Walk away.</p>
+        <p><strong>Buy only from National Gem and Jewellery Authority (NGJA) licensed dealers.</strong> Licensed shops display their NGJA registration certificate. The <strong>Sri Lanka Gem & Jewellery Corporation</strong> in Colombo (a state-run enterprise) is the single most trustworthy retail option for visitors — prices are not the lowest, but authenticity is guaranteed. For the Ratnapura market, ask your guesthouse or hotel for a recommended licensed dealer introduction.</p>
+        <p><strong>Always request a certificate.</strong> For any purchase above USD 200, request a GIA (Gemological Institute of America) or NGJA certificate of authenticity. Legitimate dealers carry them; the absence of one is a red flag. Budget ranges: USD 20–50 for small semi-precious stones and low-grade sapphires; USD 200–2,000 for quality mid-range sapphires; fine stones in exceptional colours run to tens of thousands. Cutting and setting in custom jewellery is available from Colombo workshops at competitive prices — allow 2–3 days.</p>
+
+        <AffiliateBox
+          title="Book a Ratnapura Gem Mining Tour"
+          description="Guided day tours from Colombo cover a working gem mine, polishing workshop and the Ratnapura gem bazaar — with a guide who keeps you safe from scams."
+          buttonText="Find Gem Tours from Colombo"
+          buttonHref="https://www.getyourguide.com/colombo-l4831/sri-lanka-tc28/"
+          variant="tour"
+        />
+
+        <h2>The National Gem Museum</h2>
+        <p>The Ratnapura National Museum on Ehelapola Mawatha is an underrated stop before hitting the gem market. Its collection includes significant rough and cut specimens — a famous star cat's eye exhibit, geological cross-sections showing the alluvial gravel formations that contain gem deposits, and historical documentation of the gem trade stretching back to the Anuradhapura period. Entry is free or requires a nominal fee. The museum is open Tuesday to Sunday, typically 9am–5pm, and closed on public holidays. Spending 45 minutes here before the gem bazaar gives useful grounding — you'll understand what you're looking at, which makes you a harder target for misrepresentation.</p>
+
+        <h2>Bopath Ella Waterfall</h2>
+        <p>Three kilometres from Ratnapura town centre, Bopath Ella is one of Sri Lanka's most distinctive waterfalls — named for its shape, which resembles a bo leaf (the sacred fig leaf of the Bodhi tree). The waterfall drops around 30 metres into a rock pool that is safe for swimming during moderate water conditions. A short 15-minute walk from the road through a forested path leads to the base. The falls are most dramatic after rain, when the volume swells and the mist carries well beyond the pool. Entry is through a small park gate (nominal fee). Combining a morning at the Ratnapura gem bazaar with an afternoon at Bopath Ella makes a relaxed and varied half-day that shows two very different sides of Sabaragamuwa Province.</p>
+
+        <h2>Sinharaja Rainforest</h2>
+        <p>Thirty kilometres south of Ratnapura, <a href="/places/sinharaja">Sinharaja Forest Reserve</a> is Sri Lanka's last viable lowland tropical rainforest and a UNESCO World Heritage Site. The forest is extraordinary: towering dipterocarps, rattan palms, tree ferns, and a canopy that supports 60% of Sri Lanka's endemic bird species — including the red-faced malkoha, Sri Lanka blue magpie and the green-billed coucal. A guided walk of 3–4 hours into the Kudawa entrance of the forest is the standard visit; guides are mandatory and can be hired at the forest entrance (approximately LKR 2,500–3,500 per group). The combination of Ratnapura gem market in the morning and Sinharaja in the afternoon is an excellent full day from Colombo — allow an early start (Colombo departure by 6am) and a knowledgeable driver who knows both locations.</p>
+
+        <h2>Getting to Ratnapura</h2>
+        <p>Ratnapura is 100km southeast of Colombo via the A4 highway — a journey of 2.5–3 hours by car depending on traffic through the suburban sprawl south of the city. Public buses run regularly from Colombo's Bastian Mawatha terminus (2.5–3 hours, LKR 200–300). There is no direct train service to Ratnapura; the nearest railway is at Avissawella (40km north), which connects to Colombo, but the bus is more convenient. Most visitors come on day trips from Colombo, often as part of guided gem tours (USD 60–100 per person including transport, mine visit, market and lunch). Ratnapura can also be combined with a south coast itinerary — it sits roughly between Colombo and the deep south, and the A4 continues through to Wellawaya and Ella, making it possible to pass through on a route from Colombo to the south without significant detour.</p>
+
+      </article>
+
+      <aside class="lg:sticky lg:top-28 space-y-6 h-fit">
+        <div class="plan-visit-box">
+          <h3 class="font-serif font-bold text-white text-lg mb-4">Plan Your Visit</h3>
+          <div class="space-y-3 text-sm">
+            {[
+              ['From Colombo', '100km (2.5 hrs)'],
+              ['Gem Museum', 'Tue–Sun, 9am–5pm'],
+              ['Best Buy', 'Blue sapphire, cat\'s eye'],
+              ['Budget for Gems', 'USD 20–2,000+'],
+              ['Always Ask For', 'GIA/NGJA certificate'],
+              ['Combine With', 'Sinharaja Forest'],
+            ].map(([k, v]) => (
+              <div class="flex justify-between gap-4">
+                <span class="font-medium text-white/80">{k}</span>
+                <span class="text-white/70 text-right">{v}</span>
+              </div>
+            ))}
+          </div>
+          <a
+            href="https://www.booking.com/searchresults.html?ss=Ratnapura+Sri+Lanka"
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            class="book-btn"
+          >
+            Book Hotel in Ratnapura
+          </a>
+        </div>
+
+        <div class="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-4">Nearby Places</h3>
+          <div class="space-y-3">
+            {[
+              { href: '/places/sinharaja', label: 'Sinharaja Forest (30km)' },
+              { href: '/places/colombo',   label: 'Colombo (100km)' },
+              { href: '/places/kandy',     label: 'Kandy (120km)' },
+              { href: '/places/ella',      label: 'Ella (160km via A4)' },
+            ].map(link => (
+              <a href={link.href} class="nearby-pill">
+                <svg class="w-4 h-4 text-gray-300 group-hover:text-ceylon-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-5">
+          <h3 class="font-serif font-bold text-amber-900 text-base mb-2">Gem Tip</h3>
+          <p class="text-sm text-amber-800">The only safe way to buy gems in Sri Lanka is from a government-licensed dealer or the state-run Sri Lanka Gem &amp; Jewellery Corporation. Always ask for a GIA or NGJA certificate. If someone on the street, in a tuk-tuk or at a "gem school" approaches you about buying gems — walk away.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <ExpediaWidget heading="🏨 Find Hotels in Ratnapura" />
+</BaseLayout>

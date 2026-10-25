@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+---
+<BaseLayout
+  title="Sri Lanka Train Guide: How to Book Tickets, Best Routes & Tips | The Trails of Ceylon"
+  description="Everything you need to know about travelling by train in Sri Lanka — the Kandy to Ella route, how to book observation car tickets, class differences, timetables and insider tips."
+  type="article"
+  publishDate="2025-06-01"
+>
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/scenic-train.webp" alt="Sri Lanka train winding through tea plantations" class="w-full h-full object-cover" style="object-fit:cover;" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span>
+          <a href="/guides" class="hover:text-white">Travel Guides</a><span>/</span>
+          <span class="text-white">Sri Lanka Train Guide</span>
+        </nav>
+        <span class="inline-block bg-ceylon-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Transport</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">Sri Lanka Train Guide</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+      <p class="not-prose text-xs text-gray-400 mb-6 flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        Last Updated: June 2025
+      </p>
+
+      <p>The train journey from Kandy to Ella is consistently ranked among the world's most beautiful railway routes — winding for six hours through tea-carpeted mountains, over colonial-era viaducts, past waterfalls and misty cloud forest. But Sri Lanka's rail network offers much more than one famous stretch. This guide covers every major route, how to book seats (including the coveted observation car), class differences, timetables and everything else you need to travel Sri Lanka's railways with confidence.</p>
+
+      <h2>Why Take the Train in Sri Lanka?</h2>
+      <p>Sri Lanka's rail network is slow, sometimes unpunctual, occasionally crowded — and absolutely worth it. The highland mainline from Colombo through Kandy to Badulla cuts through some of the most dramatic scenery in Asia, climbing from sea-level coastal plains to the cool mountains of the Hill Country. Unlike the roads, which twist endlessly and can turn a 100km journey into three exhausting hours, the train tracks follow river valleys and ridgelines that offer continuously changing panoramas. It is also cheap — a reserved second-class seat from Kandy to Ella costs less than USD 5. The experience itself is the point: chai vendors working through the carriages, schoolchildren in white uniforms, monks in saffron, small stations whose names read like a poem.</p>
+
+      <h2>The Sri Lanka Rail Network: Overview</h2>
+      <p>Sri Lanka Railways (SLR) operates a network of about 1,500km of metre-gauge track, centred on Colombo Fort station. Five main lines radiate from Colombo:</p>
+      <ul>
+        <li><strong>Main Line</strong> — Colombo to Badulla via Kandy, Nanu Oya (Nuwara Eliya) and Ella. The most scenic route.</li>
+        <li><strong>Coastal Line</strong> — Colombo to Matara along the south coast, passing Aluthgama, Hikkaduwa, Galle and Weligama.</li>
+        <li><strong>Northern Line</strong> — Colombo to Jaffna via Anuradhapura. Restored after the war, now a full cross-island route.</li>
+        <li><strong>Puttalam Line</strong> — Colombo to Puttalam up the northwest coast, useful for Negombo and Kalpitiya.</li>
+        <li><strong>Kelani Valley Line</strong> — Colombo to Avissawella, a narrow suburban line with character.</li>
+      </ul>
+      <p>For tourists, the Main Line (especially the Kandy–Ella section) and the Coastal Line are the most useful. The Northern Line to Jaffna is worth considering if you're heading north.</p>
+
+      <h2>The Highland Route: Colombo to Badulla</h2>
+      <p>This is the one. The full journey from Colombo to Badulla takes roughly nine hours; most tourists join at Kandy (3.5 hours from Colombo) or Peradeniya Junction, and ride to Ella (about 6 hours from Kandy) or Badulla. The train climbs steadily from the hot lowlands, entering tea country above Hatton. From Nanu Oya onwards — the station for Nuwara Eliya — the scenery becomes extraordinary: rolling hills entirely covered in manicured green tea bushes, mist drifting through valleys, workers in bright saris carrying baskets of leaves. The Demodara Loop near Ella — where the track curves through a 360° spiral to gain elevation — is a feat of Victorian engineering that the train passes through without announcement, as if it's nothing special.</p>
+
+      <h3>Key Stations on the Main Line</h3>
+      <ul>
+        <li><strong>Colombo Fort</strong> — main terminus, all long-distance trains start here</li>
+        <li><strong>Peradeniya Junction</strong> — for Kandy (change here or alight at Kandy station)</li>
+        <li><strong>Kandy</strong> — spur from Peradeniya, 1km from town centre</li>
+        <li><strong>Hatton</strong> — gateway to Adam's Peak and tea country</li>
+        <li><strong>Nanu Oya</strong> — the station for Nuwara Eliya (9km away by bus or tuk-tuk)</li>
+        <li><strong>Haputale</strong> — a ridge-top town with extraordinary views, underrated</li>
+        <li><strong>Ella</strong> — the most popular stop; vibrant backpacker town with great hikes</li>
+        <li><strong>Badulla</strong> — end of the line, quieter town, less visited</li>
+      </ul>
+
+      <h2>Ticket Classes Explained</h2>
+      <p>Sri Lanka trains have three classes — and understanding the difference will significantly affect your experience.</p>
+
+      <h3>Third Class (Unreserved)</h3>
+      <p>Wooden benches, no reservations, can become very crowded. Fine for short journeys (under an hour). Not recommended for the Kandy–Ella stretch unless you're on an extremely tight budget — standing for six hours through winding mountain track is not comfortable.</p>
+
+      <h3>Second Class (Reserved)</h3>
+      <p>Padded seats, ceiling fans or AC, reserved seats. This is the sweet spot. Book a window seat on the right side when travelling Kandy→Ella, or the left side when going Ella→Kandy, for the best views (or just try both sides as scenery appears on both). Cost: approximately LKR 400–600 (USD 1.30–2) for the Kandy–Ella journey.</p>
+
+      <h3>First Class (AC)</h3>
+      <p>Air-conditioned, wider seats, quieter carriages. The comfort improvement over second class is modest and the sealed windows distance you from the experience — the tea-scented mountain air, the vendors at stations, the ability to lean out a window and take photographs. Most experienced travellers prefer second class for the highland route. Cost: approximately LKR 1,000–1,500 (USD 3–5) for Kandy–Ella.</p>
+
+      <h3>Observation Saloon Car</h3>
+      <p>The Expo Rail observation cars are private-operator carriages attached to certain Sri Lanka Railways trains. They have panoramic windows, forward-facing seats and a viewing platform. Enormously popular with tourists — they routinely sell out weeks in advance during peak season (December–March). The experience is genuinely excellent: the windows allow video and photography without obstruction, the carriages are comfortable, and the forward view from the observation platform is unmatched. Cost: approximately LKR 2,000–2,500 (USD 6–8) per person. Book at <strong>exporail.lk</strong> — the official Expo Rail website — as early as possible.</p>
+
+      <AffiliateBox
+        title="Book Observation Car Seats"
+        description="The Expo Rail observation cars on the Kandy–Ella route sell out weeks ahead. Book your seats online as early as possible, especially for December to March travel."
+        buttonText="Check Availability at Expo Rail"
+        buttonHref="https://exporail.lk"
+        variant="activity"
+      />
+
+      <h2>How to Book Train Tickets</h2>
+      <p>There are three ways to book Sri Lanka train tickets:</p>
+      <ol>
+        <li><strong>At the station</strong> — Reserved class tickets can be bought at Colombo Fort up to 30 days in advance. Queue at the reserved tickets window (typically to the right of the main hall). Bring cash. This is the most reliable method for second-class reserved tickets.</li>
+        <li><strong>Online via GoTicket</strong> — The official SLR online booking portal at <strong>railway.gov.lk</strong> allows reserved class tickets to be booked online, though the website can be temperamental. Accept payment by card.</li>
+        <li><strong>Via a guesthouse or agent</strong> — Most Kandy and Ella guesthouses can book train tickets for you for a small fee (LKR 200–500). This is often the most practical option for in-country booking.</li>
+      </ol>
+      <p><strong>Observation cars</strong> must be booked separately at exporail.lk — they are not sold through SLR channels.</p>
+      <p><strong>Key tip:</strong> Third class tickets cannot be reserved and are bought on the day at the station. For the Kandy–Ella route, showing up on the day for reserved second class is possible but risky during peak season — trains can be fully booked for days ahead. Book early or have a backup plan.</p>
+
+      <h2>Timetable: Key Train Times</h2>
+      <p>The timetable below shows the approximate departure times for major tourist trains in 2024–2025. Always verify current times at the station or online as schedules change seasonally.</p>
+
+      <h3>Kandy → Ella (Main Line)</h3>
+      <ul>
+        <li><strong>Train 1005 Podi Menike</strong> — Departs Kandy ~08:45, arrives Ella ~15:00. One of the most popular services; observation car often attached.</li>
+        <li><strong>Train 1007 Udarata Menike</strong> — Departs Kandy ~09:45, arrives Ella ~16:30. Very popular; observation car sometimes attached.</li>
+        <li><strong>Train 1015</strong> — Departs Kandy ~13:05, arrives Ella ~19:00. Fewer tourists; no observation car. Good budget option.</li>
+      </ul>
+
+      <h3>Ella → Kandy (Main Line)</h3>
+      <ul>
+        <li><strong>Train 1006 Podi Menike</strong> — Departs Ella ~06:05, arrives Kandy ~12:30. Beautiful early morning scenery.</li>
+        <li><strong>Train 1016</strong> — Departs Ella ~09:45, arrives Kandy ~16:30.</li>
+        <li><strong>Train 1008 Udarata Menike</strong> — Departs Ella ~11:15, arrives Kandy ~17:40.</li>
+      </ul>
+
+      <h3>Colombo → Galle (Coastal Line)</h3>
+      <ul>
+        <li>Several trains daily; journey takes 2.5–3 hours. No observation car on this route. Second class recommended. Runs along the coast with sea views.</li>
+      </ul>
+
+      <h3>Colombo → Jaffna (Northern Line)</h3>
+      <ul>
+        <li>The <strong>Yal Devi</strong> (Jaffna Queen) departs Colombo Fort daily; journey takes approximately 7–8 hours to Jaffna. First class with AC is recommended for this long journey.</li>
+      </ul>
+
+      <h2>Insider Tips</h2>
+      <ul>
+        <li><strong>Sit on the right side</strong> (window seat, right hand of direction of travel) between Kandy and Ella for the most dramatic views over the valleys. Left side is also scenic. Switch between stops.</li>
+        <li><strong>Leave the doors open</strong> in second class for the full experience — cool mountain air, the smell of tea, vendors calling out from station platforms.</li>
+        <li><strong>Bring snacks.</strong> Vendors board at major stations selling vadai, pineapple slices, tea and snacks, but the selection is hit or miss. Guesthouses in Kandy will often pack lunch for an early train.</li>
+        <li><strong>Don't stress delays.</strong> Trains in Sri Lanka can run 30–90 minutes late. Build buffer into your schedule; don't book a connection or activity immediately after your expected arrival time.</li>
+        <li><strong>For photography:</strong> the 08:45 Podi Menike from Kandy catches beautiful morning light over the tea estates. The afternoon trains (arriving Ella around sunset) are also gorgeous.</li>
+        <li><strong>Haputale is underrated.</strong> Most tourists rush from Ella back to the coast. Haputale sits on a knife-edge ridge with views stretching to both coasts — stunning, and far fewer crowds than Ella.</li>
+        <li><strong>The Demodara Loop:</strong> The train spirals through a tunnel beneath itself near Ella. Ask someone to alert you as it approaches — look back through the windows once you exit the tunnel to see the track above you.</li>
+      </ul>
+
+      <h2>The South Coast Coastal Line</h2>
+      <p>The coastal line from Colombo to Matara (the nearest station to Tangalle and the south coast) is a pleasant journey of about 2.5 hours to Galle and 3.5 hours to Matara. It runs close to the sea for much of the route — particularly between Hikkaduwa and Galle, where the track passes metres from the ocean. No observation cars, but second class is comfortable and the sea views are lovely. Trains depart Colombo Fort roughly every hour. From Matara, you'll need a bus or tuk-tuk to reach Tangalle, Mirissa or Unawatuna.</p>
+
+      <h2>Colombo Commuter Trains</h2>
+      <p>Colombo has a dense suburban rail network that's useful for getting from the airport area (Katunayake station on the Puttalam line) to Colombo Fort. It's extremely cheap (LKR 50–100), very crowded during rush hours, and an authentic slice of city life. For airport arrivals, the train is slower than the highway taxi but significantly cheaper if you're not in a hurry.</p>
+    </article>
+  </div>
+  <ExpediaWidget heading="🏨 Find Hotels Near Sri Lanka's Train Stations" />
+</BaseLayout>

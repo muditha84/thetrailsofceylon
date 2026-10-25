@@ -1,0 +1,202 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+import ExpediaWidget from '../../components/ExpediaWidget.astro';
+---
+
+<BaseLayout
+  title="First Time in Sri Lanka: Essential Guide for First-Time Visitors | The Trails of Ceylon"
+  description="Everything a first-time visitor to Sri Lanka needs to know — when to go, what to expect, how to get around, budget, visa, safety and the classic two-week itinerary."
+  type="article"
+  publishDate="2025-05-15"
+>
+  <div class="relative h-[50vh] min-h-[350px] overflow-hidden">
+    <img src="/images/hero-homepage.webp" alt="Sigiriya rock fortress Sri Lanka first time visitor" class="w-full h-full object-cover" fetchpriority="high" width="800" height="600" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-8">
+      <div class="max-w-4xl mx-auto">
+        <nav class="flex items-center gap-2 text-white/70 text-xs mb-3" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-white">Home</a><span>/</span><a href="/guides" class="hover:text-white">Travel Guides</a><span>/</span><span class="text-white">First-Time Guide</span>
+        </nav>
+        <span class="inline-block bg-ceylon-green-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-3">Essential Guide</span>
+        <h1 class="font-serif font-black text-white text-4xl sm:text-5xl">First Time in Sri Lanka</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-14">
+    <article class="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-ceylon-green-700">
+      <p class="not-prose text-xs text-gray-400 mb-6 flex items-center gap-1.5"><svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Last Updated: May 2025</p>
+
+      <p>Sri Lanka is one of the world's most rewarding destinations for a first-time visitor — compact enough to cover a lot of ground in two weeks, varied enough to feel like three countries in one, and genuinely, deeply welcoming in a way that is not simply a product of the tourist industry. Ancient ruins, wildlife safaris, world-class surf beaches, misty hill country tea estates and some of the most extraordinary food in Asia are all within a few hours of each other.</p>
+
+      <p>This guide covers everything a first-time visitor needs to know before they arrive: visa, best time to go, how to get around, budget, safety and the classic two-week circuit that most first-timers use as a framework.</p>
+
+      <h2>Is Sri Lanka Right for You?</h2>
+
+      <p>Sri Lanka rewards travellers who are comfortable with heat, some degree of improvisation and food that is genuinely spicy. It is not a destination where everything is pristinely organised — tuk-tuks break down, buses run late, the electricity occasionally fails, and haggling is expected in tourist markets. In return, the country offers scenery and experiences of extraordinary quality at prices that are very low by global standards.</p>
+
+      <p>If you want a relaxed beach holiday with all-inclusive hotels, the south and west coasts (particularly Bentota, Beruwala and the Negombo strip) can accommodate that. If you want an active cultural itinerary that takes in ancient cities, wildlife, mountains and local food, Sri Lanka will not disappoint. Most first-timers try to do both — and two weeks is enough time to do it properly.</p>
+
+      <h2>Visa</h2>
+
+      <p>Most nationalities require an Electronic Travel Authorization (ETA) to enter Sri Lanka. The process is straightforward: apply online at eta.gov.lk at least 48 hours before travel, pay the fee (currently USD 20 for a single-entry tourist visa, USD 35 for double-entry, waived for some nationalities — check the website), and receive your ETA by email. Print it or save it to your phone. The visa allows a 30-day stay, extendable at the Department of Immigration in Colombo.</p>
+
+      <p>Check the official eta.gov.lk site before travelling — policies change periodically. Be wary of third-party websites that charge premium fees for the same ETA; use only the official government portal.</p>
+
+      <h2>When to Go</h2>
+
+      <p>Sri Lanka has two monsoon seasons that affect different parts of the island at different times, which means that in theory some part of the island is always in good weather. In practice, most first-time visitors aim for the December–April window, when the south and west coasts (the most popular beach areas), the Cultural Triangle and the hill country are all in dry season.</p>
+
+      <p>May–September is the southwest monsoon — the south and west coasts get significant rain, but the east coast (Trincomalee, Arugam Bay) is in its dry season and excellent for surfing and beach holidays. October–November is the inter-monsoon, with occasional showers across much of the island.</p>
+
+      <p>The "shoulder" months of November and May can be excellent value — fewer crowds, lower prices, and weather that is less predictable but often perfectly fine. See our <a href="/blog/best-time-visit-sri-lanka">detailed guide to the best time to visit</a> for a month-by-month breakdown.</p>
+
+      <h2>How Long to Spend</h2>
+
+      <p><strong>1 week:</strong> Possible but rushed. Focus on one region — either the Cultural Triangle + hill country, or the south coast. You won't be able to do both justice.</p>
+
+      <p><strong>2 weeks:</strong> The sweet spot for a first visit. Enough time to cover the classic circuit — Cultural Triangle, hill country train journey, south coast beach — with time to slow down and actually enjoy each place rather than rushing through.</p>
+
+      <p><strong>3+ weeks:</strong> Add the east coast (Trincomalee, Arugam Bay), Jaffna in the north, or slower travel through the hill country. Sri Lanka rewards slower travel significantly.</p>
+
+      <h2>The Classic Two-Week Circuit</h2>
+
+      <p>This is the route that most first-time visitors follow, and it works well for a reason — it hits the highlights in a logical geographical order without excessive backtracking:</p>
+
+      <ol>
+        <li><strong>Days 1–2: Colombo</strong> — arrive, recover from the flight, eat well, explore the city</li>
+        <li><strong>Days 3–4: Negombo or drive north</strong> — beach day, then up to the Cultural Triangle</li>
+        <li><strong>Days 5–7: Cultural Triangle</strong> — Sigiriya, Dambulla, Anuradhapura or Polonnaruwa; base in Habarana or Sigiriya village</li>
+        <li><strong>Days 8–9: Kandy</strong> — temple of the tooth, Peradeniya botanical gardens, Knuckles foothills</li>
+        <li><strong>Days 10–11: Hill Country</strong> — train from Kandy to Ella via Nuwara Eliya, Nine Arch Bridge, Ella Rock</li>
+        <li><strong>Days 12–13: South Coast</strong> — Mirissa, Tangalle or Weligama for beaches and whale watching</li>
+        <li><strong>Day 14: Galle</strong> — Galle Fort, then back to Colombo for departure</li>
+      </ol>
+
+      <p>This itinerary involves significant travel distances — Sri Lanka is compact but road speeds are slow. Budget 3–5 hours for most inter-city transfers. Our <a href="/blog/2-weeks-in-sri-lanka-itinerary">full two-week itinerary</a> covers this route in detail with specific accommodation recommendations and day-by-day planning.</p>
+
+      <h2>Getting Around</h2>
+
+      <p><strong>Private driver/car hire:</strong> The most comfortable and efficient option for the Cultural Triangle and south coast. A private air-conditioned car with driver costs USD 60–90 per day — expensive by local standards but shared between two to four people it is excellent value. Your driver becomes an invaluable guide to local restaurants, hidden viewpoints and practical shortcuts.</p>
+
+      <p><strong>Train:</strong> Sri Lanka's trains are slow, often late, and genuinely excellent for scenic journeys. The Kandy–Ella train is one of the great rail journeys of Asia. Book observation car seats months in advance during peak season. The Colombo–Galle coastal line is also worth taking.</p>
+
+      <p><strong>Bus:</strong> The cheapest option, covering virtually every town in the country. Express buses are faster and air-conditioned; regular buses are slower and hot but genuinely local. Good for independent travellers on a tight budget but not recommended as the primary transport mode for a two-week first visit.</p>
+
+      <p><strong>Tuk-tuk:</strong> Essential for getting around within towns and for short-distance excursions. Always agree a price before getting in, or use a metered tuk-tuk in Colombo via apps like PickMe or Uber (both work well in the capital).</p>
+
+      <h2>Budget</h2>
+
+      <p>Sri Lanka is not as cheap as it was before the 2022 economic crisis, which caused significant price inflation across the board. Nevertheless, it remains very affordable by Western European or North American standards.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Style</th>
+            <th>Daily budget per person</th>
+            <th>What's included</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Budget</td>
+            <td>USD 25–40</td>
+            <td>Guesthouses, local food, buses, shared tuk-tuks</td>
+          </tr>
+          <tr>
+            <td>Mid-range</td>
+            <td>USD 60–100</td>
+            <td>Good guesthouses or boutique hotels, mix of local and tourist restaurants, private driver shared with a partner</td>
+          </tr>
+          <tr>
+            <td>Comfort</td>
+            <td>USD 120–200</td>
+            <td>Boutique hotels, restaurant dining, private driver full day</td>
+          </tr>
+          <tr>
+            <td>Luxury</td>
+            <td>USD 300+</td>
+            <td>Luxury resorts, fine dining, full private tour arrangements</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The biggest variable cost is accommodation — beach-town prices are significantly higher than inland prices. Wildlife safaris (USD 30–80 per person) and temple entry fees (USD 25–30 per site at major archaeological sites) add up quickly in the Cultural Triangle and are worth building into your budget.</p>
+
+      <p>See our full <a href="/blog/sri-lanka-budget-travel">Sri Lanka budget travel guide</a> for a detailed breakdown by category.</p>
+
+      <h2>Money</h2>
+
+      <p>The Sri Lankan rupee (LKR) is the currency. At the time of writing, USD 1 = approximately LKR 300–320 (check current rates before travelling). Cash is king outside Colombo and the main tourist towns — carry LKR for small guesthouses, local restaurants, tuk-tuks and market shopping.</p>
+
+      <p>ATMs are widely available in Colombo, Kandy, Galle and tourist areas. In smaller towns and the Cultural Triangle, they are less reliable — draw cash before leaving a major town. USD, EUR and GBP can be exchanged at banks and licensed money changers; avoid the unlicensed changers who approach you at tourist sites.</p>
+
+      <h2>Safety</h2>
+
+      <p>Sri Lanka is generally a safe country for tourists. Violent crime against visitors is rare. The main practical risks are:</p>
+
+      <ul>
+        <li><strong>Traffic:</strong> Sri Lankan roads are dangerous — the combination of narrow roads, fast buses and tuk-tuks weaving through traffic makes road accidents the most significant safety risk. Avoid night driving where possible.</li>
+        <li><strong>Touts and scams:</strong> Common at tourist sites, particularly Colombo and Sigiriya. Gem scams (being taken to a gem shop and pressured to buy at inflated prices), "free" cultural shows that turn out to be heavily commercialised, and drivers who take you to their cousin's guesthouse rather than your booked accommodation are the most common. A polite but firm "no thank you" handles most situations.</li>
+        <li><strong>Sun and heat:</strong> The combination of tropical heat and reflective white limestone at ancient sites causes sunstroke and severe sunburn faster than visitors expect. Wide-brimmed hats, sunscreen and staying hydrated are non-optional.</li>
+        <li><strong>Sea conditions:</strong> Several beaches (particularly on the south and west coasts during the monsoon) have dangerous rip currents. Swim only at beaches with lifeguards and within the flagged areas. Check local advice before entering the sea.</li>
+      </ul>
+
+      <h2>Health and Vaccinations</h2>
+
+      <p>Consult a travel health clinic at least 4–6 weeks before travelling. Commonly recommended vaccinations for Sri Lanka include hepatitis A, typhoid, tetanus and rabies (particularly if you plan to be in rural areas). Malaria prophylaxis may be recommended for some itineraries — the main Cultural Triangle and south coast circuit carries low malaria risk, but remote areas near the north and east carry moderate risk. Check current NHS or CDC guidance.</p>
+
+      <p>Drink only sealed bottled water. Avoid ice in local restaurants (most tourist-area restaurants use purified ice, but the simplest rule is to avoid it unless you're sure). Food safety at busy local restaurants is generally good — the food is freshly cooked — but street food from slow or uncovered stalls carries higher risk.</p>
+
+      <h2>Cultural Etiquette</h2>
+
+      <p><strong>Dress at temples:</strong> Remove shoes at all Buddhist and Hindu temples. Cover shoulders and knees before entering — a light scarf or sarong is worth carrying. At Anuradhapura, Polonnaruwa and other major sites, the rules are strictly enforced and sarong rental is available at the entrance.</p>
+
+      <p><strong>Posing with Buddha statues:</strong> Photographs with your back to a Buddha statue (facing the camera) are considered disrespectful and may result in arrest — this is enforced by law. Pose beside a statue, not in front of it with your back to it.</p>
+
+      <p><strong>Right hand:</strong> Use your right hand for eating, passing objects and greeting. The left hand is traditionally considered unclean.</p>
+
+      <p><strong>Head wobble:</strong> The side-to-side head wobble means yes/agreement/acknowledgement. It takes some getting used to but you will start doing it yourself within a week.</p>
+
+      <p><strong>Bargaining:</strong> Expected and accepted in markets and with tuk-tuk drivers who quote without a meter. Not appropriate in restaurants, hotels or shops with fixed prices displayed. A gentle negotiation rather than aggressive bargaining is the correct approach.</p>
+
+      <AffiliateBox
+        title="Sri Lanka Travel Insurance"
+        description="Don't travel without comprehensive travel insurance. Sri Lanka's medical facilities are limited outside Colombo — evacuation coverage is particularly important."
+        buttonText="Get Insured"
+        buttonHref="https://www.worldnomads.com/"
+        variant="book"
+      />
+
+      <h2>Essential Things to Pack</h2>
+
+      <ul>
+        <li>Light, breathable clothing (linen or merino wool rather than synthetic fabrics in the heat)</li>
+        <li>A light jacket or layer for the hill country (Nuwara Eliya can be genuinely cold at night)</li>
+        <li>A sarong (doubles as temple cover-up, beach towel, picnic blanket)</li>
+        <li>Wide-brimmed hat and high-SPF sunscreen</li>
+        <li>Insect repellent (DEET-based for jungle and wildlife areas)</li>
+        <li>Good walking sandals or shoes (many temple sites require extensive barefoot walking on hot stone)</li>
+        <li>A small day pack and padlock for guesthouse lockers</li>
+        <li>US dollar cash as a backup (widely accepted at major entry fees)</li>
+        <li>Power adapters (Sri Lanka uses type D and G plugs, 230V)</li>
+      </ul>
+
+      <h2>Useful Resources</h2>
+
+      <p>For further planning, our guides cover every major destination and activity:</p>
+
+      <ul>
+        <li><a href="/blog/2-weeks-in-sri-lanka-itinerary">Two-week Sri Lanka itinerary</a></li>
+        <li><a href="/blog/best-time-visit-sri-lanka">Best time to visit Sri Lanka</a></li>
+        <li><a href="/blog/sri-lanka-budget-travel">Budget travel in Sri Lanka</a></li>
+        <li><a href="/guides/sri-lanka-food-guide">Sri Lanka food guide</a></li>
+        <li><a href="/places/cultural-triangle">Cultural Triangle guide</a></li>
+        <li><a href="/places/hill-country">Hill country guide</a></li>
+      </ul>
+
+    </article>
+  </div>
+  <ExpediaWidget heading="🏨 Find Hotels in Sri Lanka" />
+</BaseLayout>
